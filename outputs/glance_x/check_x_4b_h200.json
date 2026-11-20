@@ -1,0 +1,83 @@
+{
+ "model": "Vision-Decision/Glance-X-4B",
+ "images": 4,
+ "requests": 16,
+ "gpu": "NVIDIA H200",
+ "torch": "2.11.0+cu128",
+ "directions": [
+  "image_first",
+  "text_first",
+  "joint"
+ ],
+ "bidir_k": 8,
+ "exact_image_first": {
+  "n": 64,
+  "max_dp": 0.0,
+  "mean_dp": 0.0,
+  "max_box_px": 0.0,
+  "median_box_px": 0.0,
+  "present_agree": "64/64",
+  "mean_diou": 0.0
+ },
+ "exact_text_first": {
+  "n": 64,
+  "max_dp": 0.0,
+  "mean_dp": 0.0,
+  "max_box_px": 0.0,
+  "median_box_px": 0.0,
+  "present_agree": "64/64",
+  "mean_diou": 0.0
+ },
+ "exact_joint": {
+  "n": 64,
+  "max_dp": 0.0,
+  "mean_dp": 0.0,
+  "max_box_px": 0.0,
+  "median_box_px": 0.0,
+  "present_agree": "64/64",
+  "mean_diou": 0.0
+ },
+ "fast_image_first": {
+  "n": 64,
+  "max_dp": 0.009,
+  "mean_dp": 0.000941,
+  "max_box_px": 10.7,
+  "median_box_px": 0.179,
+  "present_agree": "64/64",
+  "mean_diou": 0.002389
+ },
+ "fast_text_first": {
+  "n": 64,
+  "max_dp": 0.01153,
+  "mean_dp": 0.001097,
+  "max_box_px": 15.36,
+  "median_box_px": 0.305,
+  "present_agree": "64/64",
+  "mean_diou": 0.002289
+ },
+ "fast_joint": {
+  "n": 64,
+  "max_dp": 0.01028,
+  "mean_dp": 0.00093,
+  "max_box_px": 119.08,
+  "median_box_px": 0.174,
+  "present_agree": "64/64",
+  "mean_diou": 0.005717
+ },
+ "graphs_vs_eager_max_dp": 0.012796,
+ "graphs_vs_eager_max_box_px": 28.613,
+ "cache_followup_max_dp": 0.0,
+ "cache_scan_max_dp": 0.0,
+ "latency_ms": {
+  "engine_one_image_q1": 45.11,
+  "engine_one_image_q32": 60.98,
+  "engine_followup_q32": 27.76,
+  "engine_encode_128": 4953.9,
+  "engine_cached_scan_128": 75.03,
+  "engine_text_first_64": 1269.47,
+  "glancex_one_image_q1": 51.6,
+  "glancex_one_image_q32": 90.26,
+  "glancex_cached_scan_128": 79.51,
+  "glancex_text_first_64": 1432.7
+ }
+}

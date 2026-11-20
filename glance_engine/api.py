@@ -10,6 +10,11 @@
 ``Glance`` wraps the same :class:`speed.decision_worker.DecisionWorker` that serves HTTP requests,
 so the Python and HTTP paths batch, cache and read out identically. It is not thread-safe;
 for concurrent clients run the server (``glance-serve``), whose scheduler owns the device.
+
+Glance-X models (``Glance.from_pretrained("Vision-Decision/Glance-X-Lite")``) run on the X backend
+(:mod:`glance_engine.x`) behind the same calls. They answer ``Box`` questions, add every target
+(``BoxAnswer.boxes``) and take a reading ``direction``: ``image_first`` (default, cacheable),
+``text_first`` or ``joint``, where the checkpoint was trained in it.
 """
 
 from __future__ import annotations
@@ -22,7 +27,8 @@ import numpy as np
 from PIL import Image
 
 from glance_engine import checkpoints as C
-from glance_engine.questions import Answer, Question, YesNo, make_answer, to_wire
+from glance_engine.questions import Answer, Box, Question, YesNo, make_answer, to_wire
+from glance_engine.x.model import is_x_engine
 
 _ID = re.compile(r"^[0-9a-f]{64}$")
 
@@ -36,7 +42,10 @@ class Answers(list):
 class Glance:
     def __init__(self, engine, *, temperatures=None, max_vis=640, cache_gib=8.0, max_tokens=8192,
                  calibrated=True):
-        from speed.decision_worker import DecisionWorker
+        if is_x_engine(engine):
+            from glance_engine.x.worker import XDecisionWorker as DecisionWorker
+        else:
+            from speed.decision_worker import DecisionWorker
 
         self.worker = DecisionWorker(engine, max_tokens=max_tokens, cache_bytes=int(cache_gib * 2**30))
         self.temperatures = dict(temperatures or {})
@@ -47,13 +56,16 @@ class Glance:
     # ---------------------------------------------------------------------------------------- loading
     @classmethod
     def from_pretrained(cls, model: str = C.DEFAULT_MODEL, *, device: str = "cuda", fp8: bool = False,
-                        w12: str | None = None, graphs: bool = True, **kw) -> "Glance":
-        """Load a release repo/dir, a training ``.pt`` (local or ``repo:path``) or ``"tiny"``.
+                        w12: str | None = None, graphs: bool = True, exact: bool = False, **kw) -> "Glance":
+        """Load a release repo/dir, a training ``.pt`` (local or ``repo:path``), ``"tiny"`` or ``"tiny-x"``.
 
         ``fp8`` swaps in W8A8 FP8 language-model projections (changes numerics; reported separately).
         ``w12`` points at an offline lossless W12 export (see ``speed/w12.py``).
+        Glance-X checkpoints (``glancex_config.json`` releases or glancex ``.pt``) load the X backend;
+        ``exact=True`` keeps their LoRA unmerged.
         """
-        loaded = C.load(model, device=device if model != "tiny" else None, fp8=fp8, w12=w12, graphs=graphs)
+        tiny = model in ("tiny", "tiny-x")
+        loaded = C.load(model, device=None if tiny else device, fp8=fp8, w12=w12, graphs=graphs, exact=exact)
         kw.setdefault("max_vis", loaded.max_vis)
         return cls(loaded.engine, temperatures=loaded.temperatures, **kw)
 
@@ -64,9 +76,21 @@ class Glance:
         kw.setdefault("max_vis", loaded.max_vis)
         return cls(loaded.engine, **kw)
 
+    @classmethod
+    def tiny_x(cls, **kw) -> "Glance":
+        """Random tiny Glance-X on CPU (K=2, all three directions). For tests and smoke runs."""
+        loaded = C.tiny_x()
+        kw.setdefault("max_vis", loaded.max_vis)
+        return cls(loaded.engine, **kw)
+
     @property
     def engine(self):
         return self.worker.engine
+
+    @property
+    def family(self) -> str:
+        """``"x"`` for Glance-X models, ``"v1"`` otherwise."""
+        return "x" if is_x_engine(self.engine) else "v1"
 
     # ---------------------------------------------------------------------------------------- images
     def _image(self, image):
@@ -92,7 +116,8 @@ class Glance:
 
     def add_image(self, image) -> str:
         """Run the vision tower and prefill once and keep the image's prefix. Returns its id."""
-        return self.ask(image, [YesNo("Is there anything in the image?")]).image_id
+        probe = Box("an object") if self.family == "x" else YesNo("Is there anything in the image?")
+        return self.ask(image, [probe]).image_id
 
     def forget(self, image_id: str) -> None:
         self.worker.cache.entries.pop(("RGB", bytes.fromhex(image_id)), None)
@@ -100,27 +125,37 @@ class Glance:
         self._sizes.pop(image_id, None)
 
     # ---------------------------------------------------------------------------------------- questions
-    def ask(self, image, questions: Sequence[Question], *, cache: bool = True) -> Answers:
+    def ask(self, image, questions: Sequence[Question], *, cache: bool = True, direction: str | None = None) -> Answers:
         """Answer every question about one image (a PIL image, path, array, or an id from ``add_image``).
 
         All questions share one prefill. With ``cache=True`` the image prefix is kept, and the
         returned ``Answers.image_id`` answers later questions without the vision tower or prefill.
         A missing or evicted id raises ``KeyError``.
+
+        ``direction`` (Glance-X only): ``"image_first"`` (default), ``"text_first"`` or ``"joint"``.
+        Only ``image_first`` prefixes can be cached.
         """
-        return self._run([image], questions, cache)[0]
+        return self._run([image], questions, cache, direction)[0]
 
-    def ask_each(self, images: Iterable, questions: Sequence[Question], *, cache: bool = False) -> list:
+    def ask_each(self, images: Iterable, questions: Sequence[Question], *, cache: bool = False,
+                 direction: str | None = None) -> list:
         """Broadcast the same questions over several images in one batched call (for example video frames)."""
-        return self._run(list(images), questions, cache)
+        return self._run(list(images), questions, cache, direction)
 
-    def _run(self, images, questions, cache):
+    def _run(self, images, questions, cache, direction=None):
         from speed.decision_worker import Decision
 
         qs = [to_wire(q) for q in questions]
         if not qs:
             raise ValueError("ask at least one question")
+        if direction not in (None, "image_first") and self.family != "x":
+            raise ValueError("reading directions other than image_first need a Glance-X model")
+        if direction not in (None, "image_first"):
+            cache = False
         sizes, units = zip(*(self._unit(im) for im in images))
         req = Decision(list(units), qs, cache)
+        if direction is not None:
+            req.direction = direction
         [rows] = self.worker([req])
         temps = self.temperatures if self.calibrated else None
         out = []
@@ -142,6 +177,10 @@ class Glance:
         ``none_conformal``: a "not in any of these" verdict whose false-alarm rate on scans
         without the target is at most ``alpha`` (averaged over calibration draws).
         """
+        if self.family == "x":
+            from glance_engine.x.scanner import XScanner
+
+            return XScanner(self.engine, max_vis=max_vis, alpha=alpha, q=q)
         from scan.api import Scanner
 
         return Scanner(self.engine, max_vis=max_vis, alpha=alpha, q=q)

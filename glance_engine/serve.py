@@ -3,6 +3,7 @@
     glance-serve                                   # Vision-Decision/Glance-4B-preview on CUDA
     glance-serve --model ckpt_final.pt --port 8002
     glance-serve --tiny                            # random tiny model on CPU, for smoke tests
+    glance-serve --model Vision-Decision/Glance-X-Lite   # a Glance-X model (box questions, three directions)
 
 Endpoints (see docs/api.md): POST /v1/decisions, /v1/chat/completions, /encode, /scan,
 /score_clips; GET /health, /ready, /metrics. The server binds to loopback by default and
@@ -22,7 +23,8 @@ def build_parser():
                                 formatter_class=argparse.RawDescriptionHelpFormatter)
     src = p.add_mutually_exclusive_group()
     src.add_argument("--model", default=DEFAULT_MODEL,
-                     help="release repo or directory, training .pt, or 'org/repo:path.pt' (default: %(default)s)")
+                     help="release repo or directory (Glance or Glance-X), training .pt, 'org/repo:path.pt', "
+                          "or 'tiny-x' (default: %(default)s)")
     src.add_argument("--tiny", action="store_true", help="random tiny model on CPU (meaningless answers)")
     p.add_argument("--host", default="127.0.0.1")
     p.add_argument("--port", type=int, default=8002)
@@ -51,6 +53,8 @@ def main(argv=None):
     from speed.server import application
 
     loaded = C.load("tiny" if a.tiny else a.model, graphs=a.graphs)
+    if loaded.family == "x":
+        from glance_engine.x.worker import XDecisionWorker as DecisionWorker
     worker = DecisionWorker(loaded.engine, max_tokens=a.max_tokens, cache_bytes=int(a.cache_gib * 2**30),
                             packed_shared=a.shared_prefill == "packed", group_vision=a.group_vision)
     worker.engine.clip_max_vis = a.max_vis

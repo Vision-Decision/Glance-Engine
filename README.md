@@ -197,10 +197,21 @@ Python API and `glance-serve` load the public release directly. One command per 
 [docs/benchmarks.md](docs/benchmarks.md). The CPU test suite is
 `pip install -e '.[test]' && pytest`; the GPU exactness gates are in [docs/exactness.md](docs/exactness.md#running-the-gates).
 
+## Glance-X models
+
+The engine also serves the [Glance-X](docs/glance-x.md) series (X-4B, X2, X-Lite). These are box models with one
+backbone and three reading directions: `image_first`, `text_first` and `joint`. They use the same API and server:
+`Glance.from_pretrained("Vision-Decision/Glance-X-Lite")`, then `ask(..., direction=...)`. The answers add every target
+from the multi-box head. Install with `pip install -e '.[gpu,serve,x]'`.
+
+[Exactness gates and latency](docs/glance-x.md#exactness-and-speed-h200-bf16): with `exact=True` the engine matches
+glancex's reference bit for bit. On H200 it is faster than glancex's own CUDA-graph path, for example 61.0 vs 90.3 ms
+for 32 requests about one image on X-4B.
+
 ## Status and limitations
 
-- Serves Glance models only; tuned and measured on one GPU class (RTX PRO 6000, SM120). Optional kernels fall back
-  to reference paths elsewhere.
+- Serves Glance and Glance-X models. The v1 engine is tuned and measured on one GPU class (RTX PRO 6000, SM120), and its
+  optional kernels fall back to reference paths elsewhere. The X backend is measured on H200.
 - BF16 box centres can switch between adjacent patches near a tie; an FP32 backbone fixes this at 3.12× the latency
   and is not yet an engine mode.
 - The HTTP server returns raw (uncalibrated) head probabilities; the Python API applies the checkpoint's
@@ -218,6 +229,7 @@ The research history (the original engine, scan experiments and raw benchmark fi
 | [glance-core](https://github.com/Vision-Decision/glance-core) | The Glance model (`dv` package): architecture, training, evaluation |
 | [glance-video](https://github.com/Vision-Decision/glance-video) | Glance-Video, the clip-level model, and its agent-facing scan tools |
 | [Glance-4B-preview](https://huggingface.co/Vision-Decision/Glance-4B-preview) | Public model weights and model card |
+| [glancex](https://github.com/Vision-Decision/Glance-X-Lite) | The Glance-X model package; weights: [X-4B](https://huggingface.co/Vision-Decision/Glance-X-4B), [X-Lite](https://huggingface.co/Vision-Decision/Glance-X-Lite) |
 
 ## License
 

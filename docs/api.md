@@ -11,16 +11,19 @@ from glance_engine import Glance, Box, YesNo, Choice, Score
 | Member | Description |
 |---|---|
 | `Glance.from_pretrained(model="Vision-Decision/Glance-4B-preview", *, device="cuda", fp8=False, w12=None, graphs=True, max_vis=None, cache_gib=8.0, max_tokens=8192, calibrated=True)` | Load a checkpoint and build the engine with the benchmark weight path (merged LoRA, fused projections, CUDA graphs). `model` is a release repo or directory (`glance_config.json`, `adapter_model.safetensors`, `heads.safetensors`), a training `.pt` file, `"org/repo:path/ckpt.pt"` on the Hub, or `"tiny"`. Real checkpoints need CUDA. |
+| `Glance.tiny_x(**kw)` | Random tiny Glance-X (K=2, all three directions) in FP32 on CPU. See [Glance-X](glance-x.md). |
 | `Glance.tiny(**kw)` | Random tiny Qwen3.5 model in FP32 on CPU. Same code path, meaningless answers. Downloads only the base config and processor. |
 | `add_image(image) -> str` | Run the vision tower and prefill once; keep the prefix in the cache; return its 64-hex id. |
-| `ask(image, questions, *, cache=True) -> Answers` | Answer every question about one image in one forward. `image` is a PIL image, a path, an RGB `numpy` array or an id. With `cache=True`, `Answers.image_id` names the kept prefix. An unknown or evicted id raises `KeyError`. |
-| `ask_each(images, questions, *, cache=False) -> list[Answers]` | Broadcast the same questions over several images in one batched call. |
+| `ask(image, questions, *, cache=True, direction=None) -> Answers` | Answer every question about one image in one forward. `image` is a PIL image, a path, an RGB `numpy` array or an id. With `cache=True`, `Answers.image_id` names the kept prefix. An unknown or evicted id raises `KeyError`. `direction` (Glance-X only): `"image_first"` (default), `"text_first"` or `"joint"`. |
+| `ask_each(images, questions, *, cache=False, direction=None) -> list[Answers]` | Broadcast the same questions over several images in one batched call. |
 | `forget(image_id)` | Drop a cached prefix. |
 | `scanner(*, max_vis=256, alpha=0.1, q=0.1) -> Scanner` | One question over many images or clips (below). |
 | `engine`, `worker` | The underlying `ScanEngine` and `DecisionWorker`. |
 | `temperatures`, `calibrated` | Per-type temperatures from the release config (`presence`, `noul`, `choice`, `score`), and whether `ask` applies them. |
 
 Images are resized to at most `max_vis` visual tokens (one token is 32×32 pixels; sides are multiples of 32; upscaling is capped at 2×), as during training. `Glance` is not thread-safe; serve concurrent clients with `glance-serve`, whose scheduler owns the device.
+
+Glance-X checkpoints load through the same `from_pretrained`: a `glancex_config.json` release (for example `"Vision-Decision/Glance-X-Lite"`), a glancex training `.pt`, or `"tiny-x"`. `exact=True` keeps their LoRA unmerged. They answer `Box` questions only. `BoxAnswer` then also has `boxes`, `boxes_px` and `box_scores`, every target from the multi-box head, and `glance.scanner()` returns a Glance-X scanner with `mode="cached" | "fresh" | "text_first" | "joint"`. See [Glance-X](glance-x.md).
 
 ### Questions
 
@@ -96,6 +99,11 @@ One server owns one GPU. It binds to loopback by default and drains accepted req
 ```
 
 `results` is image-major, then question order. Typed `probs` follow label order: `[no, yes]` for `noul`, the supplied option order for `choice` and `score`. (Values above illustrate the shape.)
+
+With a Glance-X model (`glance-serve --model Vision-Decision/Glance-X-Lite`):
+- Requests may set `"direction": "image_first" | "text_first" | "joint"`. Only `image_first` is cached; v1 models reject the other two.
+- Box results add `boxes` and `box_scores`.
+- Non-box questions and the video endpoints return 400.
 
 ### Other endpoints
 
