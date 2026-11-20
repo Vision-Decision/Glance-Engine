@@ -73,3 +73,10 @@ def test_scanner_cached_matches_fresh(glance, images):
     assert "encode" in first["latency_ms"] and "encode" not in again["latency_ms"]
     assert [x["p_present"] for x in again["images"]] == pytest.approx([x["p_present"] for x in fresh["images"]],
                                                                        abs=1e-4)
+
+
+def test_scanner_does_not_reuse_a_bank_for_a_new_list(glance, images):
+    scanner = glance.scanner(max_vis=64)
+    first = scanner.scan("a dog", [images[0], images[1]])
+    other = scanner.scan("a dog", [images[2], images[0]])  # same length, new list object
+    assert "encode" in first["latency_ms"] and "encode" in other["latency_ms"]

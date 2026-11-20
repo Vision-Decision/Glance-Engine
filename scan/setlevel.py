@@ -83,6 +83,9 @@ class MaxStatByN:
         return self
 
     def alarm(self, scores):
+        if len(scores) not in self.m:
+            raise ValueError(f"calibrated for scans of {sorted(self.m)} images, not {len(scores)}; "
+                             "calibrate with negative scans of this length")
         return self.m[len(scores)].alarm(scores)
 
 

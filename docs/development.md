@@ -37,7 +37,7 @@ GPU equivalence gates need real weights and are run by hand; see [exactness](exa
 
 ## Continuous integration
 
-[`.github/workflows/cpu-tests.yml`](../.github/workflows/cpu-tests.yml) runs ruff and pytest on Python 3.10 and 3.12 with CPU torch. It needs no secrets: glance-core and glancex are public and install straight from GitHub.
+[`.github/workflows/cpu-tests.yml`](../.github/workflows/cpu-tests.yml) runs ruff and pytest on Python 3.11 and 3.12 with CPU torch. It needs no secrets: glance-core and glancex are public and install straight from GitHub.
 
 There are no GPU jobs.
 

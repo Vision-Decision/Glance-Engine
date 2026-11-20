@@ -237,7 +237,7 @@ class VideoService:
             stored = store.put(key, (r.digest, bank, r.times), size)
             if r.path == "/encode":
                 if not stored:
-                    raise Unavailable("video prefix exceeds cache budget")
+                    raise ValueError("video prefix exceeds the cache budget (--cache-gib); send fewer clips")
                 return {"n": bank.N, "cached": hit}
         # Bank-bound CUDA graphs belong to the bank. Eager execution keeps evictable bytes explicit.
         self.stats["queries"] += len(r.questions)

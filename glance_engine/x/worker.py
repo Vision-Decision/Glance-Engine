@@ -12,7 +12,7 @@ of every request block against its image. With ``cache=True`` encoded prefixes g
 
 from __future__ import annotations
 
-from collections import Counter
+from collections import Counter, defaultdict
 from time import perf_counter
 
 import torch
@@ -98,34 +98,43 @@ class XDecisionWorker:
                     pending.append((im, key))
                 units.append((i, j, req, None, pending_index[tag]))
         t1 = perf_counter()
-        # 2. encode the missing images in token-bounded batches
-        encoded = []
-        batch, tokens = [], 0
-        for im, key in pending:
+        # 2. encode the missing images in token-bounded batches and answer their rows right away, so only one batch
+        #    of uncached prefixes is alive at a time (ask_each over many frames would otherwise hold them all)
+        waiting = defaultdict(list)
+        for unit in units:
+            waiting[unit[4]].append(unit)
+        batches, batch, tokens = [], [], 0
+        for p, (im, _) in enumerate(pending):
             cost = image_tokens(im) + 2
             if batch and tokens + cost > self.max_tokens:
-                encoded += self._encode(batch)
+                batches.append(batch)
                 batch, tokens = [], 0
-            batch.append((im, key))
+            batch.append(p)
             tokens += cost
         if batch:
-            encoded += self._encode(batch)
-        t2 = perf_counter()
-        # 3. answer every request block against its image
-        work = []
-        for i, j, req, prefix, p in units:
-            prefix = prefix if prefix is not None else encoded[p]
-            for k, q in enumerate(req.questions):
-                work.append((i, j, k, prefix, eng.text_ids(q["text"])))
-        for row, out in zip(work, self._answer(work)):
-            i, j, k = row[:3]
-            results[i][j].append(out)
+            batches.append(batch)
+        encode_ms = 0.0
+        for batch in batches:
+            te = perf_counter()
+            prefixes = dict(zip(batch, self._encode([pending[p] for p in batch])))
+            encode_ms += (perf_counter() - te) * 1000
+            self._emit([u for p in batch for u in waiting[p]], lambda u, enc=prefixes: enc[u[4]], results)
+        # 3. cached prefixes, all in one answer
+        self._emit(waiting[None], lambda u: u[3], results)
         for i in indices:
             req = requests[i]
             if req.cache:
                 req.image_ids = [s if s and ("RGB", bytes.fromhex(s)) in self.cache.entries else None
                                  for s in req.image_ids]
-        self.timings.update(prep=(t1 - started) * 1000, encode=(t2 - t1) * 1000, lm=(perf_counter() - t2) * 1000)
+        self.timings.update(prep=(t1 - started) * 1000, encode=encode_ms,
+                            lm=(perf_counter() - t1) * 1000 - encode_ms)
+
+    def _emit(self, units, prefix_of, results):
+        """Answer every question of ``units`` and append the rows to ``results`` in question order."""
+        work = [(i, j, prefix_of(u), self.engine.text_ids(q["text"]))
+                for u in units for i, j, req in [u[:3]] for q in req.questions]
+        for (i, j, _, _), out in zip(work, self._answer(work)):
+            results[i][j].append(out)
 
     def _encode(self, batch):
         try:
@@ -148,8 +157,8 @@ class XDecisionWorker:
         while start < len(work):
             end, seen = start, {}
             while end < len(work) and end - start < self.max_rows:
-                seen.setdefault(id(work[end][3]), work[end][3])
-                if len(seen) > 64:
+                seen.setdefault(id(work[end][2]), work[end][2])
+                if len(seen) > 16:  # the largest CUDA-graph bucket of images per answer
                     break
                 end += 1
             out += self._answer_chunk(work[start:end])
@@ -159,11 +168,11 @@ class XDecisionWorker:
     def _answer_chunk(self, rows):
         index, prefixes = {}, []
         for row in rows:
-            if id(row[3]) not in index:
-                index[id(row[3])] = len(prefixes)
-                prefixes.append(row[3])
+            if id(row[2]) not in index:
+                index[id(row[2])] = len(prefixes)
+                prefixes.append(row[2])
         try:
-            res = self.engine.answer(prefixes, [(index[id(r[3])], r[4]) for r in rows])
+            res = self.engine.answer(prefixes, [(index[id(r[2])], r[3]) for r in rows])
         except torch.OutOfMemoryError:
             if len(rows) == 1:
                 raise

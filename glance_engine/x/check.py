@@ -15,6 +15,7 @@
 from __future__ import annotations
 
 import argparse
+import gc
 import glob
 import json
 import statistics
@@ -45,6 +46,11 @@ def timed(fn, warm=3, reps=20):
         sync()
         out.append((time.perf_counter() - t) * 1e3)
     return round(statistics.median(out), 2)
+
+
+def free():
+    gc.collect()
+    torch.cuda.empty_cache()
 
 
 def compare(engine_rows, ref_rows, sizes):
@@ -99,7 +105,7 @@ def main(argv=None):
         report[f"exact_{d}"] = compare(rows, ref_rows, sizes)
         print(d, "exact", report[f"exact_{d}"], flush=True)
     del exact
-    torch.cuda.empty_cache()
+    free()
 
     fast = Glance.from_pretrained(a.model)
     for d in fast.engine.directions:
@@ -108,7 +114,7 @@ def main(argv=None):
         report[f"fast_{d}"] = compare(rows, ref_rows, sizes)
         print(d, "fast", report[f"fast_{d}"], flush=True)
     del ref
-    torch.cuda.empty_cache()
+    free()
 
     # graphs: the CUDA-graph replay (bucketed shapes) against the eager engine on the same weights
     fast.engine.graphs = False
@@ -146,19 +152,24 @@ def main(argv=None):
         t = time.perf_counter()
         scanner.scan(requests[0], bank_images)
         sync()
-        lat[f"engine_encode_{a.scan_n}"] = round((time.perf_counter() - t) * 1e3, 1)
+        lat[f"engine_encode_and_first_scan_{a.scan_n}"] = round((time.perf_counter() - t) * 1e3, 1)
         lat[f"engine_cached_scan_{a.scan_n}"] = timed(lambda: scanner.scan(requests[1], bank_images), reps=10)
         if "text_first" in fast.engine.directions:
             few = bank_images[:64]
             lat["engine_text_first_64"] = timed(lambda: scanner.scan(requests[1], few, mode="text_first"), reps=5)
-        del fast
-        torch.cuda.empty_cache()
+        del fast, scanner, image_id  # the scanner holds the engine and its bank
+        free()
         gx = GlanceX.from_pretrained(a.model)  # glancex fast path: merged LoRA + CUDA graphs
         texts = [q.text for q in q32]
         lat["glancex_one_image_q1"] = timed(lambda: gx.ask(im, texts[:1]))
         lat["glancex_one_image_q32"] = timed(lambda: gx.ask(im, texts))
-        bank = gx.encode(bank_images)
-        lat[f"glancex_cached_scan_{a.scan_n}"] = timed(lambda: gx.search(requests[1], bank), reps=10)
+        try:
+            bank = gx.encode(bank_images)
+            lat[f"glancex_cached_scan_{a.scan_n}"] = timed(lambda: gx.search(requests[1], bank), reps=10)
+        except torch.OutOfMemoryError:
+            lat[f"glancex_cached_scan_{a.scan_n}"] = "OOM"
+            bank = None
+            free()
         if float(gx.cfg.mode_probs.split(",")[1]) > 0:
             lat["glancex_text_first_64"] = timed(lambda: gx.search(requests[1], bank_images[:64]), reps=5)
         report["latency_ms"] = lat

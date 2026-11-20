@@ -4,7 +4,7 @@
 models: it reads an image once, answers every question in one forward pass with readout heads instead of generated
 text, and scans one question across hundreds of cached images in about 100 ms.
 
-![python](https://img.shields.io/badge/python-3.10%20%7C%203.12-3776ab)
+![python](https://img.shields.io/badge/python-3.11%20%7C%203.12-3776ab)
 [![license](https://img.shields.io/badge/license-Apache--2.0-blue)](LICENSE)
 [![model](https://img.shields.io/badge/%F0%9F%A4%97%20model-Glance--4B--preview-ffcc4d)](https://huggingface.co/Vision-Decision/Glance-4B-preview)
 
@@ -205,7 +205,7 @@ backbone and three reading directions: `image_first`, `text_first` and `joint`. 
 from the multi-box head. Install with `pip install -e '.[gpu,serve,x]'`.
 
 [Exactness gates and latency](docs/glance-x.md#exactness-and-speed-h200-bf16): with `exact=True` the engine matches
-glancex's reference bit for bit. On H200 it is faster than glancex's own CUDA-graph path, for example 61.0 vs 90.3 ms
+glancex's reference bit for bit. On H200 it is faster than glancex's own CUDA-graph path, for example 61.6 vs 90.1 ms
 for 32 requests about one image on X-4B.
 
 ## Status and limitations

@@ -50,15 +50,15 @@
  "cache_followup_max_dp": 0.0,
  "cache_scan_max_dp": 0.0,
  "latency_ms": {
-  "engine_one_image_q1": 28.52,
-  "engine_one_image_q32": 32.79,
-  "engine_followup_q32": 13.01,
-  "engine_encode_256": 4024.1,
-  "engine_cached_scan_256": 58.08,
-  "engine_text_first_64": 477.98,
-  "glancex_one_image_q1": 30.8,
-  "glancex_one_image_q32": 42.48,
-  "glancex_cached_scan_256": 62.3,
-  "glancex_text_first_64": 530.25
+  "engine_one_image_q1": 28.37,
+  "engine_one_image_q32": 33.67,
+  "engine_followup_q32": 13.74,
+  "engine_encode_and_first_scan_256": 4207.4,
+  "engine_cached_scan_256": 57.24,
+  "engine_text_first_64": 479.63,
+  "glancex_one_image_q1": 30.25,
+  "glancex_one_image_q32": 44.4,
+  "glancex_cached_scan_256": 62.43,
+  "glancex_text_first_64": 533.11
  }
 }
