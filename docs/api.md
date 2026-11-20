@@ -10,7 +10,7 @@ from glance_engine import Glance, Box, YesNo, Choice, Score
 
 | Member | Description |
 |---|---|
-| `Glance.from_pretrained(model="Vision-Decision/Glance-4B-preview", *, device="cuda", fp8=False, w12=None, graphs=True, max_vis=None, cache_gib=8.0, max_tokens=8192, calibrated=True)` | Load a checkpoint and build the engine with the benchmark weight path (merged LoRA, fused projections, CUDA graphs). `model` is a release repo or directory (`glance_config.json`, `adapter_model.safetensors`, `heads.safetensors`), a training `.pt` file, `"org/repo:path/ckpt.pt"` on the Hub, or `"tiny"`. Real checkpoints need CUDA. |
+| `Glance.from_pretrained(model="Vision-Decision/Glance-4B-preview", *, device="cuda", fp8=False, w12=None, graphs=True, exact=False, max_vis=None, cache_gib=8.0, max_tokens=8192, calibrated=True)` | Load a checkpoint and build the engine with the benchmark weight path (merged LoRA, fused projections, CUDA graphs). `model` is a release repo or directory (`glance_config.json`, `adapter_model.safetensors`, `heads.safetensors`), a training `.pt` file, `"org/repo:path/ckpt.pt"` on the Hub, or `"tiny"`. Real checkpoints need CUDA. |
 | `Glance.tiny_x(**kw)` | Random tiny Glance-X (K=2, all three directions) in FP32 on CPU. See [Glance-X](glance-x.md). |
 | `Glance.tiny(**kw)` | Random tiny Qwen3.5 model in FP32 on CPU. Same code path, meaningless answers. Downloads only the base config and processor. |
 | `add_image(image) -> str` | Run the vision tower and prefill once; keep the prefix in the cache; return its 64-hex id. |
@@ -111,7 +111,7 @@ With a Glance-X model (`glance-serve --model Vision-Decision/Glance-X-Lite`):
 |---|---|
 | `POST /v1/chat/completions` | One user message with `image_url` data URLs and a yes/no question; the assistant message content is the decision results as JSON. No streaming. |
 | `POST /encode` | `{"video", "clips": [[frame, ...], ...], "times", "dt"}`: build and keep a clip bank under a name |
-| `POST /scan` | `{"video", "query", "ops": ["curve", "ever", "when", "count"], "alpha", "q"}` over a stored bank; `ever`/`when`/`count` carry guarantees only with `--calib` |
+| `POST /scan` | `{"video", "query", "ops": ["curve", "ever", "when", "count"], "alpha", "q"}` over a stored bank. With `--calib`, `ever`/`when`/`count` carry guarantees; without it the reply has `curve` and a naive `ever` (P > 0.5, no guarantee) and omits `when`/`count` |
 | `POST /score_clips` | Score clips directly (`kind`: `yesno` or `choice`), cached by content |
 | `GET /health`, `/ready`, `/metrics` | Status, readiness (503 while draining or not started), admission counts, batch sizes, latency, cache bytes |
 
@@ -121,6 +121,7 @@ With a Glance-X model (`glance-serve --model Vision-Decision/Glance-X-Lite`):
 |---|---|
 | 400 | Invalid JSON, question, image or option |
 | 400 | Malformed `image_ids` entry (not 64 hex characters) |
+| 400 | `/encode` bank larger than the cache budget (`--cache-gib`); retrying does not help |
 | 404 | Unknown or evicted `image_ids` entry; `/scan` on an unknown video |
 | 413 | Request body over 64 MiB |
 | 429 | Queue full |

@@ -99,7 +99,10 @@ def _text(value, name):
 def _options(values):
     if isinstance(values, str) or not isinstance(values, Sequence) or not 0 < len(values) <= MAX_OPTIONS:
         raise ValueError(f"expected a list of 1 to {MAX_OPTIONS} options")
-    return [_text(v, "option") for v in values]
+    out = [_text(v, "option") for v in values]
+    if len(set(out)) != len(out):  # answers map option -> probability; a repeat would drop one
+        raise ValueError("options must be distinct")
+    return out
 
 
 # ------------------------------------------------------------------------------------------------ answers

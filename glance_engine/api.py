@@ -66,21 +66,24 @@ class Glance:
         """
         tiny = model in ("tiny", "tiny-x")
         loaded = C.load(model, device=None if tiny else device, fp8=fp8, w12=w12, graphs=graphs, exact=exact)
-        kw.setdefault("max_vis", loaded.max_vis)
+        if kw.get("max_vis") is None:  # None (as documented) means the checkpoint's own limit
+            kw["max_vis"] = loaded.max_vis
         return cls(loaded.engine, temperatures=loaded.temperatures, **kw)
 
     @classmethod
     def tiny(cls, **kw) -> "Glance":
         """Random tiny model on CPU: the full engine path, meaningless answers. For tests and smoke runs."""
         loaded = C.tiny()
-        kw.setdefault("max_vis", loaded.max_vis)
+        if kw.get("max_vis") is None:
+            kw["max_vis"] = loaded.max_vis
         return cls(loaded.engine, **kw)
 
     @classmethod
     def tiny_x(cls, **kw) -> "Glance":
         """Random tiny Glance-X on CPU (K=2, all three directions). For tests and smoke runs."""
         loaded = C.tiny_x()
-        kw.setdefault("max_vis", loaded.max_vis)
+        if kw.get("max_vis") is None:
+            kw["max_vis"] = loaded.max_vis
         return cls(loaded.engine, **kw)
 
     @property
