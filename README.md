@@ -4,7 +4,7 @@
 models: it reads an image once, answers every question in one forward pass with readout heads instead of generated
 text, and scans one question across hundreds of cached images in about 100 ms.
 
-![python](https://img.shields.io/badge/python-3.10%20%7C%203.12-3776ab)
+![python](https://img.shields.io/badge/python-3.11%20%7C%203.12-3776ab)
 [![license](https://img.shields.io/badge/license-Apache--2.0-blue)](LICENSE)
 [![model](https://img.shields.io/badge/%F0%9F%A4%97%20model-Glance--4B--preview-ffcc4d)](https://huggingface.co/Vision-Decision/Glance-4B-preview)
 
