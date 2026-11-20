@@ -146,7 +146,7 @@ def main(argv=None):
         t = time.perf_counter()
         scanner.scan(requests[0], bank_images)
         sync()
-        lat[f"engine_encode_{a.scan_n}"] = round((time.perf_counter() - t) * 1e3, 1)
+        lat[f"engine_encode_and_first_scan_{a.scan_n}"] = round((time.perf_counter() - t) * 1e3, 1)
         lat[f"engine_cached_scan_{a.scan_n}"] = timed(lambda: scanner.scan(requests[1], bank_images), reps=10)
         if "text_first" in fast.engine.directions:
             few = bank_images[:64]
