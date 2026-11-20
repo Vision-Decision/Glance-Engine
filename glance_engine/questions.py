@@ -105,13 +105,20 @@ def _options(values):
 # ------------------------------------------------------------------------------------------------ answers
 @dataclass
 class BoxAnswer:
-    """``box`` is [x1, y1, x2, y2] normalized to the image (0..1); ``box_px`` is in input pixels."""
+    """``box`` is [x1, y1, x2, y2] normalized to the image (0..1); ``box_px`` is in input pixels.
+
+    Glance-X models also return every target found by their multi-box head: ``boxes`` (normalized),
+    ``boxes_px`` and ``box_scores`` (objectness). They stay ``None`` for Glance v1.
+    """
 
     question: str
     p_present: float
     box: list
     p_iou50: float
     box_px: list | None = None
+    boxes: list | None = None
+    box_scores: list | None = None
+    boxes_px: list | None = None
 
     @property
     def present(self) -> bool:
@@ -173,7 +180,14 @@ def make_answer(q: dict, row: dict, size=None, temperatures: Mapping | None = No
         if size is not None:
             w, h = size
             px = [box[0] * w, box[1] * h, box[2] * w, box[3] * h]
-        return BoxAnswer(q["text"], float(p), box, float(row["p_iou50"]), px)
+        answer = BoxAnswer(q["text"], float(p), box, float(row["p_iou50"]), px)
+        if "boxes" in row:  # Glance-X multi-box head
+            answer.boxes = [[float(v) for v in b] for b in row["boxes"]]
+            answer.box_scores = [float(v) for v in row["box_scores"]]
+            if size is not None:
+                w, h = size
+                answer.boxes_px = [[b[0] * w, b[1] * h, b[2] * w, b[3] * h] for b in answer.boxes]
+        return answer
     probs = [float(v) for v in row["probs"]]
     if q["type"] in t:
         probs = _tempered(probs, t[q["type"]])

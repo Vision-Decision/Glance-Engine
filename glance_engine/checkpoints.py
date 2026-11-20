@@ -14,6 +14,10 @@ Three sources are accepted:
     A tiny random Qwen3.5 configuration in FP32 on CPU. Answers are meaningless; it runs
     the same engine code paths and is what the CPU tests and the quickstart smoke test use.
 
+Glance-X checkpoints (``glancex_config.json`` releases such as ``"Vision-Decision/Glance-X-Lite"``,
+glancex training ``.pt`` files, and ``"tiny-x"``) are recognised here and built by
+:mod:`glance_engine.x` instead; see that module.
+
 Real checkpoints load the Qwen3.5-4B base weights from the Hub, merge the LoRA into
 BF16 weights and fuse projections, as in the benchmarks. They require CUDA.
 """
@@ -37,13 +41,29 @@ class Loaded:
     temperatures: dict = field(default_factory=dict)
     max_vis: int = 640
     source: str = ""
+    family: str = "v1"  # "x" for Glance-X models (glance_engine.x)
 
 
 def load(model: str = DEFAULT_MODEL, *, device: str | None = None, fp8: bool = False, w12: str | None = None,
-         graphs: bool = True) -> Loaded:
-    """Resolve ``model`` and return the engine plus its calibration temperatures."""
+         graphs: bool = True, exact: bool = False) -> Loaded:
+    """Resolve ``model`` and return the engine plus its calibration temperatures.
+
+    ``exact`` (Glance-X only) keeps the LoRA unmerged, the training-time computation.
+    """
     if model == "tiny":
         return tiny(device=device or "cpu")
+    if model == "tiny-x":
+        return tiny_x(device=device or "cpu")
+    x = _x_state(model)
+    if x is not None:
+        from glance_engine.x import model as X
+
+        if fp8 or w12:
+            raise ValueError("fp8 and w12 weight formats are not available for Glance-X models")
+        eng = X.load(x, device=device, exact=exact, graphs=graphs, source=model)
+        return Loaded(eng, {}, eng.max_vis, model, "x")
+    if exact:
+        raise ValueError("exact=True applies to Glance-X models")
     device = device or "cuda"
     if not str(device).startswith("cuda") or not torch.cuda.is_available():
         raise RuntimeError("real Glance checkpoints run in BF16 on CUDA; use model='tiny' for a CPU smoke test")
@@ -94,6 +114,22 @@ def tiny(device: str = "cpu", seed: int = 0, max_vis: int = 64) -> Loaded:
             torch.nn.init.normal_(p, std=0.02)
     eng = ScanEngine(net, heads, tok, proc, graphs=False, fast_ops=False)
     return Loaded(eng, {}, max_vis, "tiny")
+
+
+def tiny_x(device: str = "cpu", seed: int = 0, max_vis: int = 64) -> Loaded:
+    """Tiny random Glance-X (8 LM layers of width 128, K=2), all three directions. See glance_engine.x.model.tiny."""
+    from glance_engine.x import model as X
+
+    eng = X.tiny(device=device, seed=seed, max_vis=max_vis)
+    return Loaded(eng, {}, max_vis, "tiny-x", "x")
+
+
+def _x_state(model):
+    try:
+        from glance_engine.x.model import x_state
+    except ImportError:  # pragma: no cover
+        return None
+    return x_state(model)
 
 
 # ------------------------------------------------------------------------------------------------ sources

@@ -104,6 +104,12 @@ class VideoRequest:
     tokens = 1 << 60
 
 
+def _directed(decision, direction):
+    if direction is not None:
+        decision.direction = direction
+    return decision
+
+
 def parse(path, body):
     check(isinstance(body, dict), "expected a JSON object")
     decoder = Images()
@@ -126,11 +132,13 @@ def parse(path, body):
         }
     if path.startswith("/v1/"):
         qs = questions(body.get("questions"))
+        direction = body.get("direction")  # Glance-X reading direction; v1 models read image first
+        check(direction in (None, "image_first", "text_first", "joint"), "invalid direction")
         if "image_ids" in body:
             check("image" not in body and "images" not in body, "send image_ids or image data")
             ids = array(body["image_ids"], "image_ids", 256)
             check(all(isinstance(s, str) and len(s) == 64 for s in ids), "invalid image id")
-            return Decision([ImageRef(bytes.fromhex(s)) for s in ids], qs)
+            return _directed(Decision([ImageRef(bytes.fromhex(s)) for s in ids], qs), direction)
         encoded = array(body.get("images", [body.get("image")]), "images", 256)
         max_vis = body.get("max_vis", 640)
         check(type(max_vis) is int and 16 <= max_vis <= 4096, "max_vis must be between 16 and 4096")
@@ -141,7 +149,7 @@ def parse(path, body):
             im = decoder.decode(entry)
             size = resize_dims(*im.size, max_vis, 2.0)
             images.append(im if size == im.size else im.resize(size, Image.Resampling.BICUBIC))
-        return Decision(images, qs, cache)
+        return _directed(Decision(images, qs, cache and direction in (None, "image_first")), direction)
     video = string(body.get("video"), "video") if path != "/score_clips" else ""
     dt = float(body.get("dt", 0.5))
     check(math.isfinite(dt) and dt > 0, "dt must be positive")
@@ -294,6 +302,9 @@ def application(worker, *, timeout=120, queue_limit=256, wait_ms=0.5, max_batch=
         async def handle():
             raw = await request.read()
             job = await asyncio.to_thread(lambda: parse(path, json.loads(raw)))
+            if getattr(job, "direction", None) not in (None, "image_first") and \
+                    getattr(worker.engine, "family", None) != "x":
+                raise ValueError("reading directions other than image_first need a Glance-X model")
             out = await scheduler.submit(job, timeout)
             sec = time.monotonic() - t0
             if path == "/v1/chat/completions":
