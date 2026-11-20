@@ -5,7 +5,7 @@ The engine also serves the X series:
 - Glance-X2: same architecture as X-4B, training `.pt`
 - [Glance-X-Lite](https://huggingface.co/Vision-Decision/Glance-X-Lite): 0.8B, K=2, `image_first` and `text_first`
 
-The X models come from [glancex](https://github.com/Vision-Decision/Glance-X-Lite). They are box models with one
+The X models come from [glancex](https://github.com/Vision-Decision/Glance-X-MLX). They are box models with one
 backbone and three reading directions. They load through the same `Glance` API and `glance-serve` server. The Glance v1
 paths are unchanged.
 

@@ -229,7 +229,7 @@ The research history (the original engine, scan experiments and raw benchmark fi
 | [glance-core](https://github.com/Vision-Decision/glance-core) | The Glance model (`dv` package): architecture, training, evaluation |
 | [glance-video](https://github.com/Vision-Decision/glance-video) | Glance-Video, the clip-level model, and its agent-facing scan tools |
 | [Glance-4B-preview](https://huggingface.co/Vision-Decision/Glance-4B-preview) | Public model weights and model card |
-| [glancex](https://github.com/Vision-Decision/Glance-X-Lite) | The Glance-X model package; weights: [X-4B](https://huggingface.co/Vision-Decision/Glance-X-4B), [X-Lite](https://huggingface.co/Vision-Decision/Glance-X-Lite) |
+| [glancex](https://github.com/Vision-Decision/Glance-X-MLX) | The Glance-X model package; weights: [X-4B](https://huggingface.co/Vision-Decision/Glance-X-4B), [X-Lite](https://huggingface.co/Vision-Decision/Glance-X-Lite) |
 
 ## License
 

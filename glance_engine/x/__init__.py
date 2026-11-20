@@ -1,6 +1,6 @@
 """Glance-X models on the Glance engine.
 
-Glance-X (`glancex <https://github.com/Vision-Decision/Glance-X-Lite>`_) is a box model with one backbone and three
+Glance-X (`glancex <https://github.com/Vision-Decision/Glance-X-MLX>`_) is a box model with one backbone and three
 reading directions. It differs from Glance v1 in ways the v1 fused engine cannot absorb, so it has its own backend
 here, built on glancex's exact prefix/block layer kernels:
 
