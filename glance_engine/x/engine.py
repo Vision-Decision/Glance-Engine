@@ -233,6 +233,35 @@ class XEngine:
         centers = torch.stack([F.pad(p.centers, (0, 0, 0, N - len(p.centers))) for p in prefixes])
         return XBank(states, p_valid, vis, vis_valid, centers)
 
+    def empty_bank(self, n, like, Lp, N) -> XBank:
+        """An all-padding bank for ``n`` prefixes shaped like ``like``; fill it with :meth:`put`. Writing prefixes in
+        as they are encoded keeps a large scan at the size of its bank instead of bank + loose prefixes."""
+        states = []
+        for (a, c), (_, kind) in zip(like.states, self.layers[self.K:]):
+            if kind == "linear_attention":
+                states.append((a.new_zeros((n,) + a.shape), c.new_zeros((n,) + c.shape)))
+            else:
+                states.append(tuple(t.new_zeros((n, t.shape[0], Lp, t.shape[2])) for t in (a, c)))
+        flags = [torch.zeros(n, L, dtype=torch.bool, device=self.dev) for L in (Lp, N)]
+        return XBank(states, flags[0], like.vis.new_zeros((n, N, like.vis.shape[-1])), flags[1],
+                     like.centers.new_zeros((n, N, 2)))
+
+    @staticmethod
+    def put(bank, i, prefix):
+        """Write ``prefix`` into slot ``i`` of ``bank`` (the layout :meth:`stack` produces)."""
+        Lp, L, n = bank.p_valid.shape[1], prefix.length, len(prefix.vis)
+        for (a, c), (sa, sc) in zip(prefix.states, bank.states):
+            if sa.dim() == a.dim() + 1 and sa.shape[1:] == a.shape:
+                sa[i].copy_(a)
+                sc[i].copy_(c)
+            else:  # attention keys / values: left padded to Lp
+                sa[i, :, Lp - L:].copy_(a)
+                sc[i, :, Lp - L:].copy_(c)
+        bank.p_valid[i, Lp - L:] = True
+        bank.vis[i, :n] = prefix.vis
+        bank.vis_valid[i, :n] = True
+        bank.centers[i, :n] = prefix.centers
+
     def _text_stream(self, ids_list, Lt=None):
         """LEFT-padded request streams from ``cfg.text_pos0`` (as glancex.data.collate)."""
         Lt = Lt or max(len(q) for q in ids_list)
@@ -326,10 +355,12 @@ class XEngine:
         mode = _SHORT[d]
         items = self._items(images, requests)
         M = sum(len(it["q_ids"]) for it in items)
-        graph = self._use_graphs() and _bucket(len(items), _P_BUCKETS) and _bucket(M, _M_BUCKETS)
+        Bb = _bucket(len(items), _P_BUCKETS)
+        # images are padded to Bb by repeating the last one, so the padded pair count decides the bucket
+        padded = M + (Bb - len(items)) * len(items[-1]["q_ids"]) if Bb else None
+        graph = self._use_graphs() and Bb is not None and _bucket(padded, _M_BUCKETS) is not None
         cfg = self.cfg
         if graph:
-            Bb = _bucket(len(items), _P_BUCKETS)
             items = list(items) + [items[-1]] * (Bb - len(items))
             extra = _bucket(sum(len(it["q_ids"]) for it in items), _M_BUCKETS) - sum(len(it["q_ids"]) for it in items)
             if extra:

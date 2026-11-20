@@ -25,6 +25,7 @@ class XScanner:
     def __init__(self, eng, max_vis=640, alpha=0.1, q=0.1, chunk=256):
         self.eng, self.max_vis, self.alpha, self.q, self.chunk = eng, max_vis, alpha, q, chunk
         self._bank_key, self._bank = None, None
+        self._bank_src = None  # the list the bank was built from; holding it keeps its id from being reused
         self.none_rule = self.select_rule = self.first_rule = None
 
     def calibrate(self, neg_scans, pos_scans=None, onsets=None):
@@ -57,19 +58,32 @@ class XScanner:
         if mode in ("cached", "fresh"):
             eng.direction("image_first")
             key = (id(images), len(images), self.max_vis)
-            bank = self._bank if mode == "cached" and key == self._bank_key else None
+            bank = self._bank if mode == "cached" and key == self._bank_key and images is self._bank_src else None
             if bank is None:
                 te = time.perf_counter()
                 prepped = self._prep(images)
+                if mode == "cached":  # free the previous bank before building the next one
+                    self._bank_key = self._bank = self._bank_src = None
+                from glance_engine.x.engine import image_tokens
+
                 enc = 16  # images per encode forward (the largest CUDA-graph bucket)
-                prefixes = [p for a in range(0, len(prepped), enc) for p in eng.encode(prepped[a:a + enc])]
-                # stacked once per bank: later requests only run their blocks
-                bank = [eng.stack(prefixes[a:a + self.chunk]) for a in range(0, len(prefixes), self.chunk)]
-                del prefixes
+                bank = []
+                for c in range(0, len(prepped), self.chunk):
+                    part = prepped[c:c + self.chunk]
+                    tokens = [image_tokens(im) for im in part]
+                    stack = None
+                    for a in range(0, len(part), enc):
+                        # each encoded prefix goes straight into its slot: the scan never holds loose prefixes
+                        # and their stacked copy at the same time
+                        for k, p in enumerate(eng.encode(part[a:a + enc])):
+                            if stack is None:
+                                stack = eng.empty_bank(len(part), p, max(tokens) + 2, max(tokens))
+                            eng.put(stack, a + k, p)
+                    bank.append(stack)
                 self._sync()
                 lat["encode" if mode == "cached" else "vision_prefix"] = (time.perf_counter() - te) * 1e3
                 if mode == "cached":
-                    self._bank_key, self._bank = key, bank
+                    self._bank_key, self._bank, self._bank_src = key, bank, images
             tq = time.perf_counter()
             rows = []
             for part in bank:
