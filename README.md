@@ -205,7 +205,7 @@ backbone and three reading directions: `image_first`, `text_first` and `joint`. 
 from the multi-box head. Install with `pip install -e '.[gpu,serve,x]'`.
 
 [Exactness gates and latency](docs/glance-x.md#exactness-and-speed-h200-bf16): with `exact=True` the engine matches
-glancex's reference bit for bit. On H200 it is faster than glancex's own CUDA-graph path, for example 61.0 vs 90.3 ms
+glancex's reference bit for bit. On H200 it is faster than glancex's own CUDA-graph path, for example 61.6 vs 90.1 ms
 for 32 requests about one image on X-4B.
 
 ## Status and limitations

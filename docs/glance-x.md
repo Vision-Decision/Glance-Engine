@@ -73,14 +73,18 @@ Warm medians in ms on one H200. glancex's fast path (merged LoRA, CUDA graphs) r
 
 | Workload | X-Lite engine | X-Lite glancex | X-4B engine | X-4B glancex |
 |---|---:|---:|---:|---:|
-| One image, 1 request | **28.5** | 30.8 | **45.1** | 51.6 |
-| One image, 32 requests | **32.8** | 42.5 | **61.0** | 90.3 |
-| Follow-up on a cached image, 32 requests | 13.0 | — | 27.8 | — |
-| Cached scan, 1 request × 256 images (X-4B: 128) | **58.1** | 62.3 | **75.0** | 79.5 |
-| `text_first`, 1 request × 64 new images | **478** | 530 | **1,269** | 1,433 |
+| One image, 1 request | **28.4** | 30.3 | **44.6** | 52.5 |
+| One image, 32 requests | **33.7** | 44.4 | **61.6** | 90.1 |
+| Follow-up on a cached image, 32 requests | 13.7 | — | 27.9 | — |
+| Cached scan, 1 request × 256 images | **57.2** | 62.4 | **130.4** | out of memory¹ |
+| `text_first`, 1 request × 64 new images | **480** | 533 | **1,269** | 1,428 |
 
-Not yet fast: encoding a bank runs the vision tower and prefix eagerly per 16-image graph, and copies each prefix out
-of the batch. This took 4.0 s for 256 images on X-Lite and 5.0 s for 128 images on X-4B.
+¹ The GPU was shared with other jobs holding about 54 GB. The engine writes each encoded prefix straight into its
+bank, so the scan needs about the size of the bank. glancex's `encode` holds the per-batch states and the
+concatenated bank together, so its 256-image X-4B bank did not fit.
+
+Building a bank is the slow part. It includes the vision tower, the prefix, and the first (cold) scan: 4.2 s for 256
+images on X-Lite and 7.7 s on X-4B.
 
 ## Not supported for Glance-X
 
