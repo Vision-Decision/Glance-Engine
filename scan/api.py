@@ -31,6 +31,7 @@ class Scanner:
     def __init__(self, eng, max_vis=256, alpha=0.1, q=0.1):
         self.eng, self.max_vis, self.alpha, self.q = eng, max_vis, alpha, q
         self._bank_key, self._bank = None, None
+        self._bank_src = None  # the list the bank was built from; holding it keeps its id from being reused
         self.none_rule = self.select_rule = self.first_rule = None
 
     @classmethod
@@ -73,12 +74,12 @@ class Scanner:
         lat = {}
         if mode == "cached":
             key = (id(images), len(images), self.max_vis)
-            if key != self._bank_key:
+            if key != self._bank_key or images is not self._bank_src:
                 te = time.perf_counter()
                 self._bank = self.eng.encode(self._prep(images), chunk=64)
                 _sync()
                 lat["encode"] = (time.perf_counter() - te) * 1e3
-                self._bank_key = key
+                self._bank_key, self._bank_src = key, images
             T = {}
             out = self.eng.query(self._bank, q, timings=T)
             lat["query"] = T["total"]
