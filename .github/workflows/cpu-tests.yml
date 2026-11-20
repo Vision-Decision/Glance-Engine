@@ -32,15 +32,6 @@ jobs:
           cache: pip
           cache-dependency-path: pyproject.toml
 
-      # glance-core is private. GLANCE_CORE_TOKEN is a fine-grained token with read access
-      # to Vision-Decision/glance-core contents (see docs/development.md).
-      - name: Authenticate the glance-core dependency
-        env:
-          TOKEN: ${{ secrets.GLANCE_CORE_TOKEN }}
-        run: |
-          if [ -z "$TOKEN" ]; then echo "::error::set the GLANCE_CORE_TOKEN secret"; exit 1; fi
-          git config --global url."https://x-access-token:${TOKEN}@github.com/Vision-Decision/".insteadOf "https://github.com/Vision-Decision/"
-
       - name: Install (CPU torch)
         run: |
           python -m pip install --upgrade pip
