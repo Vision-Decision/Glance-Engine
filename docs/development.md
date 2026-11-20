@@ -37,9 +37,7 @@ GPU equivalence gates need real weights and are run by hand; see [exactness](exa
 
 ## Continuous integration
 
-[`.github/workflows/cpu-tests.yml`](../.github/workflows/cpu-tests.yml) runs ruff and pytest on Python 3.10 and 3.12 with CPU torch. It needs one repository secret:
-
-- `GLANCE_CORE_TOKEN`: a fine-grained personal access token with read-only *Contents* access to `Vision-Decision/glance-core`. The workflow rewrites `https://github.com/Vision-Decision/` URLs to use it. Now that glance-core is public the token is no longer needed; the step will be removed in a later change.
+[`.github/workflows/cpu-tests.yml`](../.github/workflows/cpu-tests.yml) runs ruff and pytest on Python 3.10 and 3.12 with CPU torch. It needs no secrets: glance-core and glancex are public and install straight from GitHub.
 
 There are no GPU jobs.
 
