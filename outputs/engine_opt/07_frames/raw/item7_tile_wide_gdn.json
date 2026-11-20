@@ -1,0 +1,50 @@
+{
+ "128": {
+  "packed_64": {
+   "ms": 0.8999999761581421,
+   "max_abs": 0.0,
+   "mean_abs": 0.0,
+   "relative_max": 0.0,
+   "equal": true
+  },
+  "packed_128": {
+   "supported": false,
+   "error": "Failed to set the allowed dynamic shared memory size to 112640"
+  },
+  "dense_64": {
+   "ms": 0.8789119720458984,
+   "max_abs": 0.0,
+   "mean_abs": 0.0,
+   "relative_max": 0.0,
+   "equal": true
+  },
+  "dense_128": {
+   "supported": false,
+   "error": "Failed to set the allowed dynamic shared memory size to 112640"
+  }
+ },
+ "256": {
+  "packed_64": {
+   "ms": 0.730463981628418,
+   "max_abs": 0.0,
+   "mean_abs": 0.0,
+   "relative_max": 0.0,
+   "equal": true
+  },
+  "packed_128": {
+   "supported": false,
+   "error": "Failed to set the allowed dynamic shared memory size to 112640"
+  },
+  "dense_64": {
+   "ms": 0.7321919798851013,
+   "max_abs": 0.0,
+   "mean_abs": 0.0,
+   "relative_max": 0.0,
+   "equal": true
+  },
+  "dense_128": {
+   "supported": false,
+   "error": "Failed to set the allowed dynamic shared memory size to 112640"
+  }
+ }
+}

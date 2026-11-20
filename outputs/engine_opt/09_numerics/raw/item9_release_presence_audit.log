@@ -1,0 +1,9 @@
+Thu Nov 19 07:50:06 PM UTC 2026
+name, driver_version, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 580.82.07, 0 MiB
+GPU compute process list empty
+GLANCE_BOX_REDUCTION=blocks
+python -m scan.bench_box_readout --presence-audit /content/ckpt/v1/ckpt_final.pt --out /content/out/scan/item9_release_presence_audit.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 17658.74it/s]
+{"count": 192, "agreed": {"legacy": 191, "blocks": 191}, "max_head_logit_change": 9.5367431640625e-07, "disagreements": [{"image_index": 40, "question": "man in a blue shirt holding a phone", "reference": 0.49046555161476135, "legacy": 0.508258581161499, "blocks": 0.508258581161499}]}
+presence_audit exit=0

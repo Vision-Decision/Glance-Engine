@@ -1,0 +1,7 @@
+Thu Nov 19 11:56:36 AM UTC 2026
+name, driver_version, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 580.82.07, 0 MiB
+GPU compute process list empty
+ncu --profile-from-start off --clock-control none --cache-control none --filter-mode per-launch-config --launch-count 1 --metrics dram__bytes.sum\,gpu__time_duration.sum --page raw --csv --print-units base --log-file /content/out/scan/item3_ncu_before_64.csv python -m scan.profile_lm --stage ncu_before --n 64 --ckpt /content/ckpt/v1/ckpt_final.pt --out /content/out/scan/item3_ncu_before_64.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 20476.18it/s]
+ncu_before_64 exit=0

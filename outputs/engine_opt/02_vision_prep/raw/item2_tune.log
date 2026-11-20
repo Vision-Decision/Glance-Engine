@@ -1,0 +1,16 @@
+Thu Nov 19 10:01:51 AM UTC 2026
+name, driver_version, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 580.82.07, 0 MiB
+GPU compute process list empty
+python -m scan.profile_vision --stage tune --ckpt /content/ckpt/v1/ckpt_final.pt --out /content/out/scan/item2_tune.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 17471.03it/s]
+USDT:2026-11-19 10:01:58 85236:85236 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 10:01:58 85236:85236 SyncActivityProfilerHandler.cpp:46] profiler_stop
+[W1119 10:01:59.560920754 Context.cpp:629] Warning: torch.backends.cuda.preferred_blas_library is an experimental feature. If you see any error or unexpected behavior when this flag is set please file an issue on GitHub. (function operator())
+USDT:2026-11-19 10:01:59 85236:85236 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 10:01:59 85236:85236 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-19 10:02:00 85236:85236 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 10:02:00 85236:85236 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-19 10:02:02 85236:85236 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 10:02:02 85236:85236 SyncActivityProfilerHandler.cpp:46] profiler_stop
+tune exit=0

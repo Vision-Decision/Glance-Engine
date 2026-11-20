@@ -1,0 +1,21 @@
+Thu Nov 19 06:44:27 PM UTC 2026
+name, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 0 MiB
+GPU compute process list empty
+6c55309da8444001f5adea3b51619e5cb4036f2234b83ed581f32616976048e7  scan/engine.py
+96eea3e007b2e1c8f61faab57fe9bae60451fa3bb3c0868becf94dcf5ba3b881  scan/bench_bank_memory.py
+a86a4c05f8b58d6701c9803e9b4ea9915df6a2b8fdc8031e3dc9d1b462e16428  scan/bench_bank_precision.py
+43e7c1cb4358089ca4ff76f1adfbf808f955133f4e644d80a6c3582ae064954e  scan/bench_bank_tier.py
+652c1f8e306e28d43cc6ec8189b1c2511333db3eecd02ab0ee4994ae6ad1bb3d  scan/bank_codec.py
+939c131e2154928965cbfef49ee8ff08f4696589d3dc4388984409a610bb3eda  scan/bank_kernels.py
+3f6823b1a3c3af3ad571a8ad03d3fa65a8ca43ce5c4cd347a59f95b42aec8fa0  scan/bank.py
+cd55e24229883f9310fd5b05b3be36078efb87a82c98f123ace55e1c37390a1d  scan/host_bank.py
+a477ad78aa1bfc77523500ab3ff8755ad775be8e2ea590b6b7b4b42bcd781a72  speed/gdn_branch.py
+python -m scan.bench_bank_memory --stage breakeven --out /content/out/scan/item8_exact_breakeven.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 17372.84it/s]
+[transformers] Qwen3VL video processing does not apply the per-frame pixel cap the reference implementation (qwen-vl-utils) applies, so some videos cost far more tokens than they would there. In v5.22 the capped behavior will become the default and `cap_pixels_per_frame` will be removed. Pass `cap_pixels_per_frame=True` to adopt the reference behavior now, or `False` to keep the current behavior and silence this warning.
+f4_v96 {'n': np.float64(64.0), 'encode_ms': np.float64(976.7884009997942), 'cached_ms': np.float64(57.38583900529193), 'fresh_ms': np.float64(833.5937930023647)}
+Tv256 {'n': np.float64(64.0), 'encode_ms': np.float64(820.3510630046367), 'cached_ms': np.float64(44.71647999889683), 'fresh_ms': np.float64(618.4633450029651)}
+Tv640 {'n': np.float64(64.0), 'encode_ms': np.float64(2107.222342005116), 'cached_ms': np.float64(46.8991699963226), 'fresh_ms': np.float64(1902.450162997411)}
+Tv64 {'n': np.float64(64.0), 'encode_ms': np.float64(304.8803779965965), 'cached_ms': np.float64(43.98038000363158), 'fresh_ms': np.float64(176.1149279991514)}
+breakeven exit=0

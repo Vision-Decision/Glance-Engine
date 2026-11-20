@@ -1,0 +1,48 @@
+[transformers] `chunk_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+/content/dv/dv/model/v1forward.py:14: UserWarning: CUDA is not available or torch_xla is imported. Disabling autocast.
+  with torch.autocast("cuda", dtype=torch.bfloat16):
+[transformers] `fused_recurrent_gated_delta_rule` is falling back to its reference PyTorch implementation because `flash-linear-attention` is not installed. This is correct but much slower; install `flash-linear-attention` for the optimized kernel.
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] Qwen3VL video processing does not apply the per-frame pixel cap the reference implementation (qwen-vl-utils) applies, so some videos cost far more tokens than they would there. In v5.22 the capped behavior will become the default and `cap_pixels_per_frame` will be removed. Pass `cap_pixels_per_frame=True` to adopt the reference behavior now, or `False` to keep the current behavior and silence this warning.
+api example: {'any': False, 'argmax': 5, 'count_frames_naive': 0, 'none_conformal': True, 'top': [5, 0, 2, 1, 4, 3], 'count_frames': 6, 'count_events': 1} {'query': 9.4, 'total': 9.42}
+server: {'ever': {'ever': True, 'threshold': -0.007795264322541184, 'max_score': 0.09948563575744629, 'method': 'maxstat', 'guarantee': 'P(ever=True | never happens) <= 0.1 (max-statistic conformal, N=6)'}, 'count': {'count': 1, 'n_selected_clips': 6, 'intervals': [{'t0': 0.0, 't1': 6.5, 'p_max': 0.5249, 't_peak': 0.75, 'n_clips': 6}], 'note': 'events = runs of selected clips (gap <= 1 clip merged); repeats closer than a clip merge'}} cached second call: True
+causal/box/cached_vs_alone                    9.736e-07
+causal/box/fresh_vs_alone                     7.789e-07
+causal/box/repeat                             0.000e+00
+causal/noul/cached_vs_alone                   3.595e-07
+causal/noul/fresh_vs_alone                    3.954e-07
+causal/noul/repeat                            0.000e+00
+causal/choice/cached_vs_alone                 9.898e-07
+causal/choice/fresh_vs_alone                  7.148e-07
+causal/choice/repeat                          0.000e+00
+causal/isolate_others_maxdiff                 0.000e+00
+causal/isolate_changed                        9.604e-03
+causal/qfirst_fresh_vs_alone                  9.753e-07
+causal/box/cached_vs_hf_plain_forward         1.887e-06
+causal/clip/noul/cached_vs_alone              2.891e-07
+causal/clip/noul/fresh_vs_alone               3.975e-07
+causal/clip/choice/cached_vs_alone            5.702e-07
+causal/clip/choice/fresh_vs_alone             4.751e-07
+causal/clip/qfirst_fresh_vs_alone             6.039e-07
+block_bidir/box/cached_vs_alone               1.051e-06
+block_bidir/box/fresh_vs_alone                6.687e-07
+block_bidir/box/repeat                        0.000e+00
+block_bidir/noul/cached_vs_alone              4.328e-07
+block_bidir/noul/fresh_vs_alone               2.597e-07
+block_bidir/noul/repeat                       0.000e+00
+block_bidir/choice/cached_vs_alone            7.437e-07
+block_bidir/choice/fresh_vs_alone             6.293e-07
+block_bidir/choice/repeat                     0.000e+00
+block_bidir/isolate_others_maxdiff            0.000e+00
+block_bidir/isolate_changed                   9.015e-03
+block_bidir/qfirst_fresh_vs_alone             8.569e-07
+block_bidir/clip/noul/cached_vs_alone         4.020e-07
+block_bidir/clip/noul/fresh_vs_alone          4.020e-07
+block_bidir/clip/choice/cached_vs_alone       4.301e-07
+block_bidir/clip/choice/fresh_vs_alone        4.301e-07
+block_bidir/clip/qfirst_fresh_vs_alone        2.779e-07
+api/cached_vs_fresh_p                         0.000e+00
+api/clips_short_cached_vs_fresh               0.000e+00
+server/score_clips_vs_direct                  5.960e-08
+N=6 images, bank Lp ok
+SCAN_EQUIVALENCE_OK

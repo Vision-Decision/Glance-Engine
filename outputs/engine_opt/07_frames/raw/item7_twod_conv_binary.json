@@ -1,0 +1,1206 @@
+{
+ "128": [
+  {
+   "offset": 0,
+   "query": "person standing",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.025415360927581787,
+   "outside_limit": 1,
+   "within_margin": 1,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 0,
+   "query": "a red car",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.003781914710998535,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 0,
+   "query": "the dog on the left",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.013960901647806168,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 0,
+   "query": "man in a blue shirt holding a phone",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.005053162574768066,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 0,
+   "query": "white plate",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.010256588459014893,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 0,
+   "query": "the umbrella",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.001246180385351181,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 0,
+   "query": "a cat sleeping on the sofa",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.00043696165084838867,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 0,
+   "query": "bus",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.008465707302093506,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 0,
+   "query": "woman with glasses near the window",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.01055365800857544,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 0,
+   "query": "green bottle",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.015865087509155273,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 32,
+   "query": "person standing",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.0197334885597229,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 32,
+   "query": "a red car",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.04050558805465698,
+   "outside_limit": 1,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 32,
+   "query": "the dog on the left",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.00017511844635009766,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 32,
+   "query": "man in a blue shirt holding a phone",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.003969162702560425,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 32,
+   "query": "white plate",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.012849777936935425,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 32,
+   "query": "the umbrella",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.0018506646156311035,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 32,
+   "query": "a cat sleeping on the sofa",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.0028834939002990723,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 32,
+   "query": "bus",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.0017303097993135452,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 32,
+   "query": "woman with glasses near the window",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.010089486837387085,
+   "outside_limit": 0,
+   "within_margin": 1,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 32,
+   "query": "green bottle",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.0010986719280481339,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 64,
+   "query": "person standing",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.017020761966705322,
+   "outside_limit": 0,
+   "within_margin": 1,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 64,
+   "query": "a red car",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.0037049055099487305,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 64,
+   "query": "the dog on the left",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.0003070235252380371,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 64,
+   "query": "man in a blue shirt holding a phone",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.004816986620426178,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 64,
+   "query": "white plate",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.026383578777313232,
+   "outside_limit": 1,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 64,
+   "query": "the umbrella",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.0007305145263671875,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 64,
+   "query": "a cat sleeping on the sofa",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.00017821183428168297,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 64,
+   "query": "bus",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.009802639484405518,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 64,
+   "query": "woman with glasses near the window",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.04541543126106262,
+   "outside_limit": 1,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 64,
+   "query": "green bottle",
+   "n": 32,
+   "changed": 1,
+   "max_abs": 0.03835761547088623,
+   "outside_limit": 2,
+   "within_margin": 1,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 96,
+   "query": "person standing",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.048832982778549194,
+   "outside_limit": 2,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 96,
+   "query": "a red car",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.004413962364196777,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 96,
+   "query": "the dog on the left",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.014452040195465088,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 96,
+   "query": "man in a blue shirt holding a phone",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.0034025385975837708,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 96,
+   "query": "white plate",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.01429411768913269,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 96,
+   "query": "the umbrella",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 5.042552947998047e-05,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 96,
+   "query": "a cat sleeping on the sofa",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.0002910494804382324,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 96,
+   "query": "bus",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.00030744075775146484,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 96,
+   "query": "woman with glasses near the window",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.012578725814819336,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 96,
+   "query": "green bottle",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.0038574635982513428,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 128,
+   "query": "person standing",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.01710033416748047,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 128,
+   "query": "a red car",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.018670082092285156,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 128,
+   "query": "the dog on the left",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.00933605432510376,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 128,
+   "query": "man in a blue shirt holding a phone",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.0034346431493759155,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 128,
+   "query": "white plate",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.04439264535903931,
+   "outside_limit": 1,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 128,
+   "query": "the umbrella",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.0016915202140808105,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 128,
+   "query": "a cat sleeping on the sofa",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.0022837594151496887,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 128,
+   "query": "bus",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.00046950578689575195,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 128,
+   "query": "woman with glasses near the window",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.014055311679840088,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 128,
+   "query": "green bottle",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.005777806043624878,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 160,
+   "query": "person standing",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.019364088773727417,
+   "outside_limit": 0,
+   "within_margin": 1,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 160,
+   "query": "a red car",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.00796574354171753,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 160,
+   "query": "the dog on the left",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.02583777904510498,
+   "outside_limit": 1,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 160,
+   "query": "man in a blue shirt holding a phone",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.004286050796508789,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 160,
+   "query": "white plate",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.006528109312057495,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 160,
+   "query": "the umbrella",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.014329135417938232,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 160,
+   "query": "a cat sleeping on the sofa",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.00027424097061157227,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 160,
+   "query": "bus",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.005780220031738281,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 160,
+   "query": "woman with glasses near the window",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.04434096813201904,
+   "outside_limit": 1,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 160,
+   "query": "green bottle",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.0045822858810424805,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 192,
+   "query": "person standing",
+   "n": 32,
+   "changed": 1,
+   "max_abs": 0.009438872337341309,
+   "outside_limit": 0,
+   "within_margin": 1,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 192,
+   "query": "a red car",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.0016468167304992676,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 192,
+   "query": "the dog on the left",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.0019930005073547363,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 192,
+   "query": "man in a blue shirt holding a phone",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.000907067209482193,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 192,
+   "query": "white plate",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.020137667655944824,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 192,
+   "query": "the umbrella",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.0011646151542663574,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 192,
+   "query": "a cat sleeping on the sofa",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 9.34600830078125e-05,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 192,
+   "query": "bus",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.0015475153923034668,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 192,
+   "query": "woman with glasses near the window",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.0056032538414001465,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 192,
+   "query": "green bottle",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.00636637955904007,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 224,
+   "query": "person standing",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.029922127723693848,
+   "outside_limit": 1,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 224,
+   "query": "a red car",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 7.887976244091988e-05,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 224,
+   "query": "the dog on the left",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.0109444260597229,
+   "outside_limit": 0,
+   "within_margin": 1,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 224,
+   "query": "man in a blue shirt holding a phone",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.01450127363204956,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 224,
+   "query": "white plate",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.012954145669937134,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 224,
+   "query": "the umbrella",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.002789795398712158,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 224,
+   "query": "a cat sleeping on the sofa",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.001530766487121582,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 224,
+   "query": "bus",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.00021229498088359833,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 224,
+   "query": "woman with glasses near the window",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.008576437830924988,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 224,
+   "query": "green bottle",
+   "n": 32,
+   "changed": 0,
+   "max_abs": 0.014776468276977539,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  }
+ ],
+ "256": [
+  {
+   "offset": 0,
+   "query": "person standing",
+   "n": 64,
+   "changed": 0,
+   "max_abs": 0.026838839054107666,
+   "outside_limit": 1,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 0,
+   "query": "a red car",
+   "n": 64,
+   "changed": 0,
+   "max_abs": 0.012325987219810486,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 0,
+   "query": "the dog on the left",
+   "n": 64,
+   "changed": 0,
+   "max_abs": 0.0017102956771850586,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 0,
+   "query": "man in a blue shirt holding a phone",
+   "n": 64,
+   "changed": 0,
+   "max_abs": 0.029894530773162842,
+   "outside_limit": 1,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 0,
+   "query": "white plate",
+   "n": 64,
+   "changed": 0,
+   "max_abs": 0.018859118223190308,
+   "outside_limit": 0,
+   "within_margin": 1,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 0,
+   "query": "the umbrella",
+   "n": 64,
+   "changed": 0,
+   "max_abs": 0.0020408034324645996,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 0,
+   "query": "a cat sleeping on the sofa",
+   "n": 64,
+   "changed": 0,
+   "max_abs": 0.004359573125839233,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 0,
+   "query": "bus",
+   "n": 64,
+   "changed": 0,
+   "max_abs": 0.020283669233322144,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 0,
+   "query": "woman with glasses near the window",
+   "n": 64,
+   "changed": 0,
+   "max_abs": 0.01132667064666748,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 0,
+   "query": "green bottle",
+   "n": 64,
+   "changed": 0,
+   "max_abs": 0.0028019314631819725,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 64,
+   "query": "person standing",
+   "n": 64,
+   "changed": 0,
+   "max_abs": 0.018188655376434326,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 64,
+   "query": "a red car",
+   "n": 64,
+   "changed": 0,
+   "max_abs": 0.04644221067428589,
+   "outside_limit": 1,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 64,
+   "query": "the dog on the left",
+   "n": 64,
+   "changed": 0,
+   "max_abs": 0.0038433074951171875,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 64,
+   "query": "man in a blue shirt holding a phone",
+   "n": 64,
+   "changed": 0,
+   "max_abs": 0.0009304378181695938,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 64,
+   "query": "white plate",
+   "n": 64,
+   "changed": 0,
+   "max_abs": 0.02180713415145874,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 64,
+   "query": "the umbrella",
+   "n": 64,
+   "changed": 0,
+   "max_abs": 0.0005387067794799805,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 64,
+   "query": "a cat sleeping on the sofa",
+   "n": 64,
+   "changed": 0,
+   "max_abs": 0.0003477097488939762,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 64,
+   "query": "bus",
+   "n": 64,
+   "changed": 0,
+   "max_abs": 0.005951941013336182,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 64,
+   "query": "woman with glasses near the window",
+   "n": 64,
+   "changed": 0,
+   "max_abs": 0.022976338863372803,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 64,
+   "query": "green bottle",
+   "n": 64,
+   "changed": 0,
+   "max_abs": 0.02152302861213684,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 128,
+   "query": "person standing",
+   "n": 64,
+   "changed": 0,
+   "max_abs": 0.015966564416885376,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 128,
+   "query": "a red car",
+   "n": 64,
+   "changed": 0,
+   "max_abs": 0.011640995740890503,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 128,
+   "query": "the dog on the left",
+   "n": 64,
+   "changed": 0,
+   "max_abs": 0.01996082067489624,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 128,
+   "query": "man in a blue shirt holding a phone",
+   "n": 64,
+   "changed": 0,
+   "max_abs": 0.0031412839889526367,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 128,
+   "query": "white plate",
+   "n": 64,
+   "changed": 0,
+   "max_abs": 0.018402278423309326,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 128,
+   "query": "the umbrella",
+   "n": 64,
+   "changed": 0,
+   "max_abs": 0.009823143482208252,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 128,
+   "query": "a cat sleeping on the sofa",
+   "n": 64,
+   "changed": 0,
+   "max_abs": 0.00026863813400268555,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 128,
+   "query": "bus",
+   "n": 64,
+   "changed": 0,
+   "max_abs": 0.0034034550189971924,
+   "outside_limit": 0,
+   "within_margin": 1,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 128,
+   "query": "woman with glasses near the window",
+   "n": 64,
+   "changed": 0,
+   "max_abs": 0.039810121059417725,
+   "outside_limit": 1,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 128,
+   "query": "green bottle",
+   "n": 64,
+   "changed": 0,
+   "max_abs": 0.03940552473068237,
+   "outside_limit": 1,
+   "within_margin": 1,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 192,
+   "query": "person standing",
+   "n": 64,
+   "changed": 0,
+   "max_abs": 0.011907100677490234,
+   "outside_limit": 0,
+   "within_margin": 1,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 192,
+   "query": "a red car",
+   "n": 64,
+   "changed": 0,
+   "max_abs": 0.004090607166290283,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 192,
+   "query": "the dog on the left",
+   "n": 64,
+   "changed": 0,
+   "max_abs": 0.0075855255126953125,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 192,
+   "query": "man in a blue shirt holding a phone",
+   "n": 64,
+   "changed": 0,
+   "max_abs": 0.020568549633026123,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 192,
+   "query": "white plate",
+   "n": 64,
+   "changed": 0,
+   "max_abs": 0.013938158750534058,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 192,
+   "query": "the umbrella",
+   "n": 64,
+   "changed": 0,
+   "max_abs": 0.00040900707244873047,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 192,
+   "query": "a cat sleeping on the sofa",
+   "n": 64,
+   "changed": 0,
+   "max_abs": 0.0003849584609270096,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 192,
+   "query": "bus",
+   "n": 64,
+   "changed": 0,
+   "max_abs": 0.0028858184814453125,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 192,
+   "query": "woman with glasses near the window",
+   "n": 64,
+   "changed": 0,
+   "max_abs": 0.01571732759475708,
+   "outside_limit": 0,
+   "within_margin": 0,
+   "changed_outside_margin": 0
+  },
+  {
+   "offset": 192,
+   "query": "green bottle",
+   "n": 64,
+   "changed": 0,
+   "max_abs": 0.007177174091339111,
+   "outside_limit": 0,
+   "within_margin": 1,
+   "changed_outside_margin": 0
+  }
+ ]
+}

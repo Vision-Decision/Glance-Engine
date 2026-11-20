@@ -1,0 +1,15 @@
+norm exit=0
+pushed /content/out/scan/item7_checked_norm.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item7_checked_norm.json -> Vision-Decision/collection-scan-results
+patch_control exit=0
+pushed /content/out/scan/item7_checked_patch_control.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item7_checked_patch_control.json -> Vision-Decision/collection-scan-results
+video_checks exit=0
+pushed /content/out/scan/item7_checked_video_checks.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item7_checked_video_checks.json -> Vision-Decision/collection-scan-results
+video exit=0
+pushed /content/out/scan/item7_checked_video.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item7_checked_video.json -> Vision-Decision/collection-scan-results
+diag exit=0
+pushed /content/out/scan/item7_checked_diag.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item7_checked_diag.json -> Vision-Decision/collection-scan-results

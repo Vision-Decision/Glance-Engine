@@ -1,0 +1,17 @@
+Thu Nov 19 04:59:09 PM UTC 2026
+name, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 0 MiB
+GPU_IDLE
+45dc18c000aeb143546bc28c5628f09a63c33c6e9e90ff622da0264f22480505  speed/engine.py
+0a869a41d6084b3781ec9773638d302d18f31a2b9c56ce9f9c5ca6f6fe05fae4  speed/decision_worker.py
+0e6727c52599da54b607ff4a3d29225e4c1d1297021eb2f270c9115c912428e4  speed/vision_mlp.py
+0e482bed9f7011d4b790f0e7c018f09b79e9bc5316f6768f66b4a2ff4fc79538  scan/engine.py
+python -m scan.profile_frames --stage kernels --ckpt /content/ckpt/v1/ckpt_final.pt --out /content/out/scan/item7_final_kernels.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 16736.01it/s]
+USDT:2026-11-19 16:59:18 271594:271594 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 16:59:18 271594:271594 SyncActivityProfilerHandler.cpp:46] profiler_stop
+kernels 128
+USDT:2026-11-19 16:59:20 271594:271594 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 16:59:21 271594:271594 SyncActivityProfilerHandler.cpp:46] profiler_stop
+kernels 256
+kernels exit=0

@@ -1,0 +1,79 @@
+{
+ "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "torch": "2.14.1+cu130",
+ "ckpt": "/content/ckpt/v1/ckpt_final.pt",
+ "modes": {
+  "eng_fused": {
+   "followup_box_N1": {
+    "prep_ms_median": 0.31082499845069833,
+    "model_ms_median": 10.190954999416135,
+    "model_ms_p90": 10.249883000869886,
+    "total_ms_median": 10.496920000150567,
+    "total_ms_p90": 10.60107800149126,
+    "ttfa_ms_median": 10.496920000150567,
+    "q_per_s": 95.0452141012541,
+    "n_calls": 50,
+    "questions_per_call": 1
+   },
+   "followup_mixed_N1": {
+    "prep_ms_median": 0.30626000079791993,
+    "model_ms_median": 10.17859500279883,
+    "model_ms_p90": 10.227364000456873,
+    "total_ms_median": 10.48505499966268,
+    "total_ms_p90": 10.543765998954768,
+    "ttfa_ms_median": 10.48505499966268,
+    "q_per_s": 95.21959633681485,
+    "n_calls": 50,
+    "questions_per_call": 1
+   },
+   "followup_box_N8": {
+    "prep_ms_median": 0.6134949999250239,
+    "model_ms_median": 12.63091950022499,
+    "model_ms_p90": 13.332383901433786,
+    "total_ms_median": 13.240459998996812,
+    "total_ms_p90": 13.961075001498102,
+    "ttfa_ms_median": 13.240459998996812,
+    "q_per_s": 593.5986887213471,
+    "n_calls": 50,
+    "questions_per_call": 8
+   },
+   "followup_mixed_N8": {
+    "prep_ms_median": 0.8141799989971332,
+    "model_ms_median": 18.204899999545887,
+    "model_ms_p90": 19.19438089862524,
+    "total_ms_median": 19.025644500288763,
+    "total_ms_p90": 20.03300589931314,
+    "ttfa_ms_median": 19.025644500288763,
+    "q_per_s": 416.0366389925106,
+    "n_calls": 50,
+    "questions_per_call": 8
+   },
+   "followup_box_N32": {
+    "prep_ms_median": 1.4753649993508589,
+    "model_ms_median": 25.785480000195093,
+    "model_ms_p90": 29.129786997509655,
+    "total_ms_median": 27.252614501776407,
+    "total_ms_p90": 30.66332210037217,
+    "ttfa_ms_median": 27.252614501776407,
+    "q_per_s": 1139.4054223811338,
+    "n_calls": 50,
+    "questions_per_call": 32
+   },
+   "followup_mixed_N32": {
+    "prep_ms_median": 2.2532644998136675,
+    "model_ms_median": 53.82285899941053,
+    "model_ms_p90": 61.491716102318605,
+    "total_ms_median": 56.07249450076779,
+    "total_ms_p90": 63.76538710283057,
+    "ttfa_ms_median": 56.07249450076779,
+    "q_per_s": 559.6830051183757,
+    "n_calls": 50,
+    "questions_per_call": 32
+   },
+   "peak_mem_gb": 15.12961196899414
+  }
+ },
+ "equiv": {},
+ "n_merged": 200,
+ "n_fp8": null
+}

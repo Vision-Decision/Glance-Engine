@@ -1,0 +1,1545 @@
+{
+ "matrices": {
+  "layers.0._gu": {
+   "shape": [
+    18432,
+    2560
+   ],
+   "weights": 47185920,
+   "bytes": 70885012,
+   "bits_per_weight": 12.017993842230903,
+   "escapes": 3492,
+   "escape_fraction": 7.4005126953125e-05,
+   "bit_exact": true
+  },
+  "layers.0.mlp.down_proj": {
+   "shape": [
+    2560,
+    9216
+   ],
+   "weights": 23592960,
+   "bytes": 35410720,
+   "bits_per_weight": 12.007215711805555,
+   "escapes": 2119,
+   "escape_fraction": 8.981492784288194e-05,
+   "bit_exact": true
+  },
+  "layers.0.linear_attn._in": {
+   "shape": [
+    12352,
+    2560
+   ],
+   "weights": 31621120,
+   "bytes": 47748832,
+   "bits_per_weight": 12.080238018134715,
+   "escapes": 2327,
+   "escape_fraction": 7.359005626619172e-05,
+   "bit_exact": true
+  },
+  "layers.0.linear_attn.out_proj": {
+   "shape": [
+    2560,
+    4096
+   ],
+   "weights": 10485760,
+   "bytes": 15744760,
+   "bits_per_weight": 12.012298583984375,
+   "escapes": 829,
+   "escape_fraction": 7.905960083007813e-05,
+   "bit_exact": true
+  },
+  "layers.1._gu": {
+   "shape": [
+    18432,
+    2560
+   ],
+   "weights": 47185920,
+   "bytes": 70885128,
+   "bits_per_weight": 12.018013509114583,
+   "escapes": 3521,
+   "escape_fraction": 7.461971706814236e-05,
+   "bit_exact": true
+  },
+  "layers.1.mlp.down_proj": {
+   "shape": [
+    2560,
+    9216
+   ],
+   "weights": 23592960,
+   "bytes": 35410776,
+   "bits_per_weight": 12.007234700520833,
+   "escapes": 2133,
+   "escape_fraction": 9.04083251953125e-05,
+   "bit_exact": true
+  },
+  "layers.1.linear_attn._in": {
+   "shape": [
+    12352,
+    2560
+   ],
+   "weights": 31621120,
+   "bytes": 47747828,
+   "bits_per_weight": 12.079984010686529,
+   "escapes": 2076,
+   "escape_fraction": 6.565232351036269e-05,
+   "bit_exact": true
+  },
+  "layers.1.linear_attn.out_proj": {
+   "shape": [
+    2560,
+    4096
+   ],
+   "weights": 10485760,
+   "bytes": 15744348,
+   "bits_per_weight": 12.011984252929688,
+   "escapes": 726,
+   "escape_fraction": 6.923675537109374e-05,
+   "bit_exact": true
+  },
+  "layers.2._gu": {
+   "shape": [
+    18432,
+    2560
+   ],
+   "weights": 47185920,
+   "bytes": 70884720,
+   "bits_per_weight": 12.0179443359375,
+   "escapes": 3419,
+   "escape_fraction": 7.245805528428819e-05,
+   "bit_exact": true
+  },
+  "layers.2.mlp.down_proj": {
+   "shape": [
+    2560,
+    9216
+   ],
+   "weights": 23592960,
+   "bytes": 35410552,
+   "bits_per_weight": 12.007158745659723,
+   "escapes": 2077,
+   "escape_fraction": 8.803473578559028e-05,
+   "bit_exact": true
+  },
+  "layers.2.linear_attn._in": {
+   "shape": [
+    12352,
+    2560
+   ],
+   "weights": 31621120,
+   "bytes": 47747620,
+   "bits_per_weight": 12.079931387629534,
+   "escapes": 2024,
+   "escape_fraction": 6.400785297927461e-05,
+   "bit_exact": true
+  },
+  "layers.2.linear_attn.out_proj": {
+   "shape": [
+    2560,
+    4096
+   ],
+   "weights": 10485760,
+   "bytes": 15744524,
+   "bits_per_weight": 12.012118530273437,
+   "escapes": 770,
+   "escape_fraction": 7.343292236328125e-05,
+   "bit_exact": true
+  },
+  "layers.3._gu": {
+   "shape": [
+    18432,
+    2560
+   ],
+   "weights": 47185920,
+   "bytes": 70885380,
+   "bits_per_weight": 12.018056233723959,
+   "escapes": 3584,
+   "escape_fraction": 7.595486111111111e-05,
+   "bit_exact": true
+  },
+  "layers.3.mlp.down_proj": {
+   "shape": [
+    2560,
+    9216
+   ],
+   "weights": 23592960,
+   "bytes": 35411144,
+   "bits_per_weight": 12.007359483506944,
+   "escapes": 2225,
+   "escape_fraction": 9.430779351128472e-05,
+   "bit_exact": true
+  },
+  "layers.3.self_attn._qkv": {
+   "shape": [
+    10240,
+    2560
+   ],
+   "weights": 26214400,
+   "bytes": 39380548,
+   "bits_per_weight": 12.017989501953124,
+   "escapes": 1936,
+   "escape_fraction": 7.38525390625e-05,
+   "bit_exact": true
+  },
+  "layers.3.self_attn.o_proj": {
+   "shape": [
+    2560,
+    4096
+   ],
+   "weights": 10485760,
+   "bytes": 15744472,
+   "bits_per_weight": 12.012078857421875,
+   "escapes": 757,
+   "escape_fraction": 7.219314575195313e-05,
+   "bit_exact": true
+  },
+  "layers.4._gu": {
+   "shape": [
+    18432,
+    2560
+   ],
+   "weights": 47185920,
+   "bytes": 70885436,
+   "bits_per_weight": 12.018065728081597,
+   "escapes": 3598,
+   "escape_fraction": 7.625155978732638e-05,
+   "bit_exact": true
+  },
+  "layers.4.mlp.down_proj": {
+   "shape": [
+    2560,
+    9216
+   ],
+   "weights": 23592960,
+   "bytes": 35410780,
+   "bits_per_weight": 12.00723605685764,
+   "escapes": 2134,
+   "escape_fraction": 9.045071072048612e-05,
+   "bit_exact": true
+  },
+  "layers.4.linear_attn._in": {
+   "shape": [
+    12352,
+    2560
+   ],
+   "weights": 31621120,
+   "bytes": 47747516,
+   "bits_per_weight": 12.079905076101037,
+   "escapes": 1998,
+   "escape_fraction": 6.318561771373057e-05,
+   "bit_exact": true
+  },
+  "layers.4.linear_attn.out_proj": {
+   "shape": [
+    2560,
+    4096
+   ],
+   "weights": 10485760,
+   "bytes": 15744380,
+   "bits_per_weight": 12.012008666992188,
+   "escapes": 734,
+   "escape_fraction": 6.999969482421876e-05,
+   "bit_exact": true
+  },
+  "layers.5._gu": {
+   "shape": [
+    18432,
+    2560
+   ],
+   "weights": 47185920,
+   "bytes": 70885132,
+   "bits_per_weight": 12.018014187282986,
+   "escapes": 3522,
+   "escape_fraction": 7.464090983072917e-05,
+   "bit_exact": true
+  },
+  "layers.5.mlp.down_proj": {
+   "shape": [
+    2560,
+    9216
+   ],
+   "weights": 23592960,
+   "bytes": 35411108,
+   "bits_per_weight": 12.007347276475695,
+   "escapes": 2216,
+   "escape_fraction": 9.392632378472223e-05,
+   "bit_exact": true
+  },
+  "layers.5.linear_attn._in": {
+   "shape": [
+    12352,
+    2560
+   ],
+   "weights": 31621120,
+   "bytes": 47747816,
+   "bits_per_weight": 12.079980974740932,
+   "escapes": 2073,
+   "escape_fraction": 6.555745021049223e-05,
+   "bit_exact": true
+  },
+  "layers.5.linear_attn.out_proj": {
+   "shape": [
+    2560,
+    4096
+   ],
+   "weights": 10485760,
+   "bytes": 15744684,
+   "bits_per_weight": 12.012240600585937,
+   "escapes": 810,
+   "escape_fraction": 7.724761962890625e-05,
+   "bit_exact": true
+  },
+  "layers.6._gu": {
+   "shape": [
+    18432,
+    2560
+   ],
+   "weights": 47185920,
+   "bytes": 70885392,
+   "bits_per_weight": 12.018058268229167,
+   "escapes": 3587,
+   "escape_fraction": 7.601843939887153e-05,
+   "bit_exact": true
+  },
+  "layers.6.mlp.down_proj": {
+   "shape": [
+    2560,
+    9216
+   ],
+   "weights": 23592960,
+   "bytes": 35412280,
+   "bits_per_weight": 12.007744683159721,
+   "escapes": 2509,
+   "escape_fraction": 0.00010634528266059027,
+   "bit_exact": true
+  },
+  "layers.6.linear_attn._in": {
+   "shape": [
+    12352,
+    2560
+   ],
+   "weights": 31621120,
+   "bytes": 47748256,
+   "bits_per_weight": 12.080092292746114,
+   "escapes": 2183,
+   "escape_fraction": 6.903613787240933e-05,
+   "bit_exact": true
+  },
+  "layers.6.linear_attn.out_proj": {
+   "shape": [
+    2560,
+    4096
+   ],
+   "weights": 10485760,
+   "bytes": 15744960,
+   "bits_per_weight": 12.012451171875,
+   "escapes": 879,
+   "escape_fraction": 8.382797241210938e-05,
+   "bit_exact": true
+  },
+  "layers.7._gu": {
+   "shape": [
+    18432,
+    2560
+   ],
+   "weights": 47185920,
+   "bytes": 70884992,
+   "bits_per_weight": 12.017990451388888,
+   "escapes": 3487,
+   "escape_fraction": 7.389916314019098e-05,
+   "bit_exact": true
+  },
+  "layers.7.mlp.down_proj": {
+   "shape": [
+    2560,
+    9216
+   ],
+   "weights": 23592960,
+   "bytes": 35411288,
+   "bits_per_weight": 12.007408311631945,
+   "escapes": 2261,
+   "escape_fraction": 9.583367241753473e-05,
+   "bit_exact": true
+  },
+  "layers.7.self_attn._qkv": {
+   "shape": [
+    10240,
+    2560
+   ],
+   "weights": 26214400,
+   "bytes": 39380768,
+   "bits_per_weight": 12.018056640625,
+   "escapes": 1991,
+   "escape_fraction": 7.595062255859375e-05,
+   "bit_exact": true
+  },
+  "layers.7.self_attn.o_proj": {
+   "shape": [
+    2560,
+    4096
+   ],
+   "weights": 10485760,
+   "bytes": 15744928,
+   "bits_per_weight": 12.0124267578125,
+   "escapes": 871,
+   "escape_fraction": 8.306503295898437e-05,
+   "bit_exact": true
+  },
+  "layers.8._gu": {
+   "shape": [
+    18432,
+    2560
+   ],
+   "weights": 47185920,
+   "bytes": 70885020,
+   "bits_per_weight": 12.017995198567709,
+   "escapes": 3494,
+   "escape_fraction": 7.404751247829861e-05,
+   "bit_exact": true
+  },
+  "layers.8.mlp.down_proj": {
+   "shape": [
+    2560,
+    9216
+   ],
+   "weights": 23592960,
+   "bytes": 35410484,
+   "bits_per_weight": 12.007135687934028,
+   "escapes": 2060,
+   "escape_fraction": 8.731418185763889e-05,
+   "bit_exact": true
+  },
+  "layers.8.linear_attn._in": {
+   "shape": [
+    12352,
+    2560
+   ],
+   "weights": 31621120,
+   "bytes": 47748340,
+   "bits_per_weight": 12.080113544365284,
+   "escapes": 2204,
+   "escape_fraction": 6.970025097150259e-05,
+   "bit_exact": true
+  },
+  "layers.8.linear_attn.out_proj": {
+   "shape": [
+    2560,
+    4096
+   ],
+   "weights": 10485760,
+   "bytes": 15744708,
+   "bits_per_weight": 12.012258911132813,
+   "escapes": 816,
+   "escape_fraction": 7.781982421875e-05,
+   "bit_exact": true
+  },
+  "layers.9._gu": {
+   "shape": [
+    18432,
+    2560
+   ],
+   "weights": 47185920,
+   "bytes": 70885192,
+   "bits_per_weight": 12.018024359809028,
+   "escapes": 3537,
+   "escape_fraction": 7.495880126953124e-05,
+   "bit_exact": true
+  },
+  "layers.9.mlp.down_proj": {
+   "shape": [
+    2560,
+    9216
+   ],
+   "weights": 23592960,
+   "bytes": 35411076,
+   "bits_per_weight": 12.00733642578125,
+   "escapes": 2208,
+   "escape_fraction": 9.358723958333334e-05,
+   "bit_exact": true
+  },
+  "layers.9.linear_attn._in": {
+   "shape": [
+    12352,
+    2560
+   ],
+   "weights": 31621120,
+   "bytes": 47748328,
+   "bits_per_weight": 12.08011050841969,
+   "escapes": 2201,
+   "escape_fraction": 6.960537767163212e-05,
+   "bit_exact": true
+  },
+  "layers.9.linear_attn.out_proj": {
+   "shape": [
+    2560,
+    4096
+   ],
+   "weights": 10485760,
+   "bytes": 15744412,
+   "bits_per_weight": 12.012033081054687,
+   "escapes": 742,
+   "escape_fraction": 7.076263427734375e-05,
+   "bit_exact": true
+  },
+  "layers.10._gu": {
+   "shape": [
+    18432,
+    2560
+   ],
+   "weights": 47185920,
+   "bytes": 70885816,
+   "bits_per_weight": 12.018130154079861,
+   "escapes": 3693,
+   "escape_fraction": 7.826487223307291e-05,
+   "bit_exact": true
+  },
+  "layers.10.mlp.down_proj": {
+   "shape": [
+    2560,
+    9216
+   ],
+   "weights": 23592960,
+   "bytes": 35410868,
+   "bits_per_weight": 12.007265896267361,
+   "escapes": 2156,
+   "escape_fraction": 9.138319227430556e-05,
+   "bit_exact": true
+  },
+  "layers.10.linear_attn._in": {
+   "shape": [
+    12352,
+    2560
+   ],
+   "weights": 31621120,
+   "bytes": 47748544,
+   "bits_per_weight": 12.080165155440415,
+   "escapes": 2255,
+   "escape_fraction": 7.131309706930051e-05,
+   "bit_exact": true
+  },
+  "layers.10.linear_attn.out_proj": {
+   "shape": [
+    2560,
+    4096
+   ],
+   "weights": 10485760,
+   "bytes": 15744788,
+   "bits_per_weight": 12.012319946289063,
+   "escapes": 836,
+   "escape_fraction": 7.97271728515625e-05,
+   "bit_exact": true
+  },
+  "layers.11._gu": {
+   "shape": [
+    18432,
+    2560
+   ],
+   "weights": 47185920,
+   "bytes": 70885980,
+   "bits_per_weight": 12.018157958984375,
+   "escapes": 3734,
+   "escape_fraction": 7.913377549913194e-05,
+   "bit_exact": true
+  },
+  "layers.11.mlp.down_proj": {
+   "shape": [
+    2560,
+    9216
+   ],
+   "weights": 23592960,
+   "bytes": 35410836,
+   "bits_per_weight": 12.007255045572917,
+   "escapes": 2148,
+   "escape_fraction": 9.104410807291667e-05,
+   "bit_exact": true
+  },
+  "layers.11.self_attn._qkv": {
+   "shape": [
+    10240,
+    2560
+   ],
+   "weights": 26214400,
+   "bytes": 39380576,
+   "bits_per_weight": 12.017998046875,
+   "escapes": 1943,
+   "escape_fraction": 7.411956787109375e-05,
+   "bit_exact": true
+  },
+  "layers.11.self_attn.o_proj": {
+   "shape": [
+    2560,
+    4096
+   ],
+   "weights": 10485760,
+   "bytes": 15744672,
+   "bits_per_weight": 12.0122314453125,
+   "escapes": 807,
+   "escape_fraction": 7.696151733398438e-05,
+   "bit_exact": true
+  },
+  "layers.12._gu": {
+   "shape": [
+    18432,
+    2560
+   ],
+   "weights": 47185920,
+   "bytes": 70885188,
+   "bits_per_weight": 12.018023681640624,
+   "escapes": 3536,
+   "escape_fraction": 7.493760850694445e-05,
+   "bit_exact": true
+  },
+  "layers.12.mlp.down_proj": {
+   "shape": [
+    2560,
+    9216
+   ],
+   "weights": 23592960,
+   "bytes": 35411396,
+   "bits_per_weight": 12.007444932725694,
+   "escapes": 2288,
+   "escape_fraction": 9.697808159722222e-05,
+   "bit_exact": true
+  },
+  "layers.12.linear_attn._in": {
+   "shape": [
+    12352,
+    2560
+   ],
+   "weights": 31621120,
+   "bytes": 47748452,
+   "bits_per_weight": 12.080141879857512,
+   "escapes": 2232,
+   "escape_fraction": 7.058573510362694e-05,
+   "bit_exact": true
+  },
+  "layers.12.linear_attn.out_proj": {
+   "shape": [
+    2560,
+    4096
+   ],
+   "weights": 10485760,
+   "bytes": 15744616,
+   "bits_per_weight": 12.012188720703126,
+   "escapes": 793,
+   "escape_fraction": 7.562637329101562e-05,
+   "bit_exact": true
+  },
+  "layers.13._gu": {
+   "shape": [
+    18432,
+    2560
+   ],
+   "weights": 47185920,
+   "bytes": 70885864,
+   "bits_per_weight": 12.018138292100694,
+   "escapes": 3705,
+   "escape_fraction": 7.851918538411458e-05,
+   "bit_exact": true
+  },
+  "layers.13.mlp.down_proj": {
+   "shape": [
+    2560,
+    9216
+   ],
+   "weights": 23592960,
+   "bytes": 35410928,
+   "bits_per_weight": 12.007286241319445,
+   "escapes": 2171,
+   "escape_fraction": 9.201897515190973e-05,
+   "bit_exact": true
+  },
+  "layers.13.linear_attn._in": {
+   "shape": [
+    12352,
+    2560
+   ],
+   "weights": 31621120,
+   "bytes": 47748544,
+   "bits_per_weight": 12.080165155440415,
+   "escapes": 2255,
+   "escape_fraction": 7.131309706930051e-05,
+   "bit_exact": true
+  },
+  "layers.13.linear_attn.out_proj": {
+   "shape": [
+    2560,
+    4096
+   ],
+   "weights": 10485760,
+   "bytes": 15744840,
+   "bits_per_weight": 12.012359619140625,
+   "escapes": 849,
+   "escape_fraction": 8.096694946289063e-05,
+   "bit_exact": true
+  },
+  "layers.14._gu": {
+   "shape": [
+    18432,
+    2560
+   ],
+   "weights": 47185920,
+   "bytes": 70885772,
+   "bits_per_weight": 12.018122694227431,
+   "escapes": 3682,
+   "escape_fraction": 7.803175184461806e-05,
+   "bit_exact": true
+  },
+  "layers.14.mlp.down_proj": {
+   "shape": [
+    2560,
+    9216
+   ],
+   "weights": 23592960,
+   "bytes": 35411028,
+   "bits_per_weight": 12.007320149739583,
+   "escapes": 2196,
+   "escape_fraction": 9.307861328125e-05,
+   "bit_exact": true
+  },
+  "layers.14.linear_attn._in": {
+   "shape": [
+    12352,
+    2560
+   ],
+   "weights": 31621120,
+   "bytes": 47748628,
+   "bits_per_weight": 12.080186407059585,
+   "escapes": 2276,
+   "escape_fraction": 7.197721016839379e-05,
+   "bit_exact": true
+  },
+  "layers.14.linear_attn.out_proj": {
+   "shape": [
+    2560,
+    4096
+   ],
+   "weights": 10485760,
+   "bytes": 15744808,
+   "bits_per_weight": 12.012335205078125,
+   "escapes": 841,
+   "escape_fraction": 8.020401000976562e-05,
+   "bit_exact": true
+  },
+  "layers.15._gu": {
+   "shape": [
+    18432,
+    2560
+   ],
+   "weights": 47185920,
+   "bytes": 70885596,
+   "bits_per_weight": 12.018092854817708,
+   "escapes": 3638,
+   "escape_fraction": 7.709927029079862e-05,
+   "bit_exact": true
+  },
+  "layers.15.mlp.down_proj": {
+   "shape": [
+    2560,
+    9216
+   ],
+   "weights": 23592960,
+   "bytes": 35411204,
+   "bits_per_weight": 12.007379828559028,
+   "escapes": 2240,
+   "escape_fraction": 9.494357638888889e-05,
+   "bit_exact": true
+  },
+  "layers.15.self_attn._qkv": {
+   "shape": [
+    10240,
+    2560
+   ],
+   "weights": 26214400,
+   "bytes": 39380404,
+   "bits_per_weight": 12.017945556640624,
+   "escapes": 1900,
+   "escape_fraction": 7.2479248046875e-05,
+   "bit_exact": true
+  },
+  "layers.15.self_attn.o_proj": {
+   "shape": [
+    2560,
+    4096
+   ],
+   "weights": 10485760,
+   "bytes": 15744596,
+   "bits_per_weight": 12.012173461914063,
+   "escapes": 788,
+   "escape_fraction": 7.51495361328125e-05,
+   "bit_exact": true
+  },
+  "layers.16._gu": {
+   "shape": [
+    18432,
+    2560
+   ],
+   "weights": 47185920,
+   "bytes": 70885608,
+   "bits_per_weight": 12.018094889322917,
+   "escapes": 3641,
+   "escape_fraction": 7.716284857855903e-05,
+   "bit_exact": true
+  },
+  "layers.16.mlp.down_proj": {
+   "shape": [
+    2560,
+    9216
+   ],
+   "weights": 23592960,
+   "bytes": 35411076,
+   "bits_per_weight": 12.00733642578125,
+   "escapes": 2208,
+   "escape_fraction": 9.358723958333334e-05,
+   "bit_exact": true
+  },
+  "layers.16.linear_attn._in": {
+   "shape": [
+    12352,
+    2560
+   ],
+   "weights": 31621120,
+   "bytes": 47748708,
+   "bits_per_weight": 12.080206646696892,
+   "escapes": 2296,
+   "escape_fraction": 7.260969883419689e-05,
+   "bit_exact": true
+  },
+  "layers.16.linear_attn.out_proj": {
+   "shape": [
+    2560,
+    4096
+   ],
+   "weights": 10485760,
+   "bytes": 15744864,
+   "bits_per_weight": 12.0123779296875,
+   "escapes": 855,
+   "escape_fraction": 8.153915405273438e-05,
+   "bit_exact": true
+  },
+  "layers.17._gu": {
+   "shape": [
+    18432,
+    2560
+   ],
+   "weights": 47185920,
+   "bytes": 70885552,
+   "bits_per_weight": 12.018085394965278,
+   "escapes": 3627,
+   "escape_fraction": 7.686614990234374e-05,
+   "bit_exact": true
+  },
+  "layers.17.mlp.down_proj": {
+   "shape": [
+    2560,
+    9216
+   ],
+   "weights": 23592960,
+   "bytes": 35410996,
+   "bits_per_weight": 12.007309299045138,
+   "escapes": 2188,
+   "escape_fraction": 9.273952907986111e-05,
+   "bit_exact": true
+  },
+  "layers.17.linear_attn._in": {
+   "shape": [
+    12352,
+    2560
+   ],
+   "weights": 31621120,
+   "bytes": 47748476,
+   "bits_per_weight": 12.080147951748705,
+   "escapes": 2238,
+   "escape_fraction": 7.077548170336788e-05,
+   "bit_exact": true
+  },
+  "layers.17.linear_attn.out_proj": {
+   "shape": [
+    2560,
+    4096
+   ],
+   "weights": 10485760,
+   "bytes": 15744528,
+   "bits_per_weight": 12.01212158203125,
+   "escapes": 771,
+   "escape_fraction": 7.352828979492187e-05,
+   "bit_exact": true
+  },
+  "layers.18._gu": {
+   "shape": [
+    18432,
+    2560
+   ],
+   "weights": 47185920,
+   "bytes": 70886260,
+   "bits_per_weight": 12.01820543077257,
+   "escapes": 3804,
+   "escape_fraction": 8.061726888020833e-05,
+   "bit_exact": true
+  },
+  "layers.18.mlp.down_proj": {
+   "shape": [
+    2560,
+    9216
+   ],
+   "weights": 23592960,
+   "bytes": 35411608,
+   "bits_per_weight": 12.00751681857639,
+   "escapes": 2341,
+   "escape_fraction": 9.922451443142362e-05,
+   "bit_exact": true
+  },
+  "layers.18.linear_attn._in": {
+   "shape": [
+    12352,
+    2560
+   ],
+   "weights": 31621120,
+   "bytes": 47748588,
+   "bits_per_weight": 12.080176287240933,
+   "escapes": 2266,
+   "escape_fraction": 7.166096583549223e-05,
+   "bit_exact": true
+  },
+  "layers.18.linear_attn.out_proj": {
+   "shape": [
+    2560,
+    4096
+   ],
+   "weights": 10485760,
+   "bytes": 15744844,
+   "bits_per_weight": 12.012362670898437,
+   "escapes": 850,
+   "escape_fraction": 8.106231689453125e-05,
+   "bit_exact": true
+  },
+  "layers.19._gu": {
+   "shape": [
+    18432,
+    2560
+   ],
+   "weights": 47185920,
+   "bytes": 70886092,
+   "bits_per_weight": 12.018176947699653,
+   "escapes": 3762,
+   "escape_fraction": 7.97271728515625e-05,
+   "bit_exact": true
+  },
+  "layers.19.mlp.down_proj": {
+   "shape": [
+    2560,
+    9216
+   ],
+   "weights": 23592960,
+   "bytes": 35411252,
+   "bits_per_weight": 12.007396104600694,
+   "escapes": 2252,
+   "escape_fraction": 9.545220269097222e-05,
+   "bit_exact": true
+  },
+  "layers.19.self_attn._qkv": {
+   "shape": [
+    10240,
+    2560
+   ],
+   "weights": 26214400,
+   "bytes": 39380860,
+   "bits_per_weight": 12.018084716796874,
+   "escapes": 2014,
+   "escape_fraction": 7.68280029296875e-05,
+   "bit_exact": true
+  },
+  "layers.19.self_attn.o_proj": {
+   "shape": [
+    2560,
+    4096
+   ],
+   "weights": 10485760,
+   "bytes": 15745292,
+   "bits_per_weight": 12.012704467773437,
+   "escapes": 962,
+   "escape_fraction": 9.174346923828125e-05,
+   "bit_exact": true
+  },
+  "layers.20._gu": {
+   "shape": [
+    18432,
+    2560
+   ],
+   "weights": 47185920,
+   "bytes": 70885904,
+   "bits_per_weight": 12.018145073784723,
+   "escapes": 3715,
+   "escape_fraction": 7.873111300998264e-05,
+   "bit_exact": true
+  },
+  "layers.20.mlp.down_proj": {
+   "shape": [
+    2560,
+    9216
+   ],
+   "weights": 23592960,
+   "bytes": 35411060,
+   "bits_per_weight": 12.007331000434029,
+   "escapes": 2204,
+   "escape_fraction": 9.341769748263888e-05,
+   "bit_exact": true
+  },
+  "layers.20.linear_attn._in": {
+   "shape": [
+    12352,
+    2560
+   ],
+   "weights": 31621120,
+   "bytes": 47748228,
+   "bits_per_weight": 12.080085208873056,
+   "escapes": 2176,
+   "escape_fraction": 6.881476683937823e-05,
+   "bit_exact": true
+  },
+  "layers.20.linear_attn.out_proj": {
+   "shape": [
+    2560,
+    4096
+   ],
+   "weights": 10485760,
+   "bytes": 15745064,
+   "bits_per_weight": 12.012530517578124,
+   "escapes": 905,
+   "escape_fraction": 8.630752563476562e-05,
+   "bit_exact": true
+  },
+  "layers.21._gu": {
+   "shape": [
+    18432,
+    2560
+   ],
+   "weights": 47185920,
+   "bytes": 70885496,
+   "bits_per_weight": 12.01807590060764,
+   "escapes": 3613,
+   "escape_fraction": 7.656945122612847e-05,
+   "bit_exact": true
+  },
+  "layers.21.mlp.down_proj": {
+   "shape": [
+    2560,
+    9216
+   ],
+   "weights": 23592960,
+   "bytes": 35410912,
+   "bits_per_weight": 12.007280815972223,
+   "escapes": 2167,
+   "escape_fraction": 9.184943305121528e-05,
+   "bit_exact": true
+  },
+  "layers.21.linear_attn._in": {
+   "shape": [
+    12352,
+    2560
+   ],
+   "weights": 31621120,
+   "bytes": 47748216,
+   "bits_per_weight": 12.080082172927462,
+   "escapes": 2173,
+   "escape_fraction": 6.871989353950777e-05,
+   "bit_exact": true
+  },
+  "layers.21.linear_attn.out_proj": {
+   "shape": [
+    2560,
+    4096
+   ],
+   "weights": 10485760,
+   "bytes": 15744872,
+   "bits_per_weight": 12.012384033203125,
+   "escapes": 857,
+   "escape_fraction": 8.172988891601563e-05,
+   "bit_exact": true
+  },
+  "layers.22._gu": {
+   "shape": [
+    18432,
+    2560
+   ],
+   "weights": 47185920,
+   "bytes": 70885788,
+   "bits_per_weight": 12.018125406901042,
+   "escapes": 3686,
+   "escape_fraction": 7.811652289496528e-05,
+   "bit_exact": true
+  },
+  "layers.22.mlp.down_proj": {
+   "shape": [
+    2560,
+    9216
+   ],
+   "weights": 23592960,
+   "bytes": 35410940,
+   "bits_per_weight": 12.00729031032986,
+   "escapes": 2174,
+   "escape_fraction": 9.214613172743055e-05,
+   "bit_exact": true
+  },
+  "layers.22.linear_attn._in": {
+   "shape": [
+    12352,
+    2560
+   ],
+   "weights": 31621120,
+   "bytes": 47748584,
+   "bits_per_weight": 12.080175275259068,
+   "escapes": 2265,
+   "escape_fraction": 7.162934140220207e-05,
+   "bit_exact": true
+  },
+  "layers.22.linear_attn.out_proj": {
+   "shape": [
+    2560,
+    4096
+   ],
+   "weights": 10485760,
+   "bytes": 15744804,
+   "bits_per_weight": 12.012332153320312,
+   "escapes": 840,
+   "escape_fraction": 8.0108642578125e-05,
+   "bit_exact": true
+  },
+  "layers.23._gu": {
+   "shape": [
+    18432,
+    2560
+   ],
+   "weights": 47185920,
+   "bytes": 70885188,
+   "bits_per_weight": 12.018023681640624,
+   "escapes": 3536,
+   "escape_fraction": 7.493760850694445e-05,
+   "bit_exact": true
+  },
+  "layers.23.mlp.down_proj": {
+   "shape": [
+    2560,
+    9216
+   ],
+   "weights": 23592960,
+   "bytes": 35410504,
+   "bits_per_weight": 12.007142469618056,
+   "escapes": 2065,
+   "escape_fraction": 8.752610948350694e-05,
+   "bit_exact": true
+  },
+  "layers.23.self_attn._qkv": {
+   "shape": [
+    10240,
+    2560
+   ],
+   "weights": 26214400,
+   "bytes": 39380580,
+   "bits_per_weight": 12.017999267578125,
+   "escapes": 1944,
+   "escape_fraction": 7.415771484375e-05,
+   "bit_exact": true
+  },
+  "layers.23.self_attn.o_proj": {
+   "shape": [
+    2560,
+    4096
+   ],
+   "weights": 10485760,
+   "bytes": 15745112,
+   "bits_per_weight": 12.012567138671875,
+   "escapes": 917,
+   "escape_fraction": 8.745193481445313e-05,
+   "bit_exact": true
+  },
+  "layers.24._gu": {
+   "shape": [
+    18432,
+    2560
+   ],
+   "weights": 47185920,
+   "bytes": 70885220,
+   "bits_per_weight": 12.018029106987846,
+   "escapes": 3544,
+   "escape_fraction": 7.510715060763889e-05,
+   "bit_exact": true
+  },
+  "layers.24.mlp.down_proj": {
+   "shape": [
+    2560,
+    9216
+   ],
+   "weights": 23592960,
+   "bytes": 35410324,
+   "bits_per_weight": 12.007081434461806,
+   "escapes": 2020,
+   "escape_fraction": 8.561876085069444e-05,
+   "bit_exact": true
+  },
+  "layers.24.linear_attn._in": {
+   "shape": [
+    12352,
+    2560
+   ],
+   "weights": 31621120,
+   "bytes": 47748680,
+   "bits_per_weight": 12.080199562823834,
+   "escapes": 2289,
+   "escape_fraction": 7.238832780116581e-05,
+   "bit_exact": true
+  },
+  "layers.24.linear_attn.out_proj": {
+   "shape": [
+    2560,
+    4096
+   ],
+   "weights": 10485760,
+   "bytes": 15744936,
+   "bits_per_weight": 12.012432861328126,
+   "escapes": 873,
+   "escape_fraction": 8.325576782226562e-05,
+   "bit_exact": true
+  },
+  "layers.25._gu": {
+   "shape": [
+    18432,
+    2560
+   ],
+   "weights": 47185920,
+   "bytes": 70884768,
+   "bits_per_weight": 12.017952473958333,
+   "escapes": 3431,
+   "escape_fraction": 7.271236843532986e-05,
+   "bit_exact": true
+  },
+  "layers.25.mlp.down_proj": {
+   "shape": [
+    2560,
+    9216
+   ],
+   "weights": 23592960,
+   "bytes": 35409936,
+   "bits_per_weight": 12.006949869791667,
+   "escapes": 1923,
+   "escape_fraction": 8.150736490885417e-05,
+   "bit_exact": true
+  },
+  "layers.25.linear_attn._in": {
+   "shape": [
+    12352,
+    2560
+   ],
+   "weights": 31621120,
+   "bytes": 47748608,
+   "bits_per_weight": 12.080181347150258,
+   "escapes": 2271,
+   "escape_fraction": 7.181908800194301e-05,
+   "bit_exact": true
+  },
+  "layers.25.linear_attn.out_proj": {
+   "shape": [
+    2560,
+    4096
+   ],
+   "weights": 10485760,
+   "bytes": 15745132,
+   "bits_per_weight": 12.012582397460937,
+   "escapes": 922,
+   "escape_fraction": 8.792877197265625e-05,
+   "bit_exact": true
+  },
+  "layers.26._gu": {
+   "shape": [
+    18432,
+    2560
+   ],
+   "weights": 47185920,
+   "bytes": 70884880,
+   "bits_per_weight": 12.01797146267361,
+   "escapes": 3459,
+   "escape_fraction": 7.330576578776041e-05,
+   "bit_exact": true
+  },
+  "layers.26.mlp.down_proj": {
+   "shape": [
+    2560,
+    9216
+   ],
+   "weights": 23592960,
+   "bytes": 35410036,
+   "bits_per_weight": 12.006983778211806,
+   "escapes": 1948,
+   "escape_fraction": 8.256700303819445e-05,
+   "bit_exact": true
+  },
+  "layers.26.linear_attn._in": {
+   "shape": [
+    12352,
+    2560
+   ],
+   "weights": 31621120,
+   "bytes": 47748408,
+   "bits_per_weight": 12.080130748056995,
+   "escapes": 2221,
+   "escape_fraction": 7.023786633743523e-05,
+   "bit_exact": true
+  },
+  "layers.26.linear_attn.out_proj": {
+   "shape": [
+    2560,
+    4096
+   ],
+   "weights": 10485760,
+   "bytes": 15744464,
+   "bits_per_weight": 12.01207275390625,
+   "escapes": 755,
+   "escape_fraction": 7.200241088867188e-05,
+   "bit_exact": true
+  },
+  "layers.27._gu": {
+   "shape": [
+    18432,
+    2560
+   ],
+   "weights": 47185920,
+   "bytes": 70885212,
+   "bits_per_weight": 12.018027750651042,
+   "escapes": 3542,
+   "escape_fraction": 7.506476508246528e-05,
+   "bit_exact": true
+  },
+  "layers.27.mlp.down_proj": {
+   "shape": [
+    2560,
+    9216
+   ],
+   "weights": 23592960,
+   "bytes": 35410148,
+   "bits_per_weight": 12.007021755642361,
+   "escapes": 1976,
+   "escape_fraction": 8.375379774305556e-05,
+   "bit_exact": true
+  },
+  "layers.27.self_attn._qkv": {
+   "shape": [
+    10240,
+    2560
+   ],
+   "weights": 26214400,
+   "bytes": 39382000,
+   "bits_per_weight": 12.0184326171875,
+   "escapes": 2299,
+   "escape_fraction": 8.769989013671874e-05,
+   "bit_exact": true
+  },
+  "layers.27.self_attn.o_proj": {
+   "shape": [
+    2560,
+    4096
+   ],
+   "weights": 10485760,
+   "bytes": 15745548,
+   "bits_per_weight": 12.012899780273438,
+   "escapes": 1026,
+   "escape_fraction": 9.784698486328124e-05,
+   "bit_exact": true
+  },
+  "layers.28._gu": {
+   "shape": [
+    18432,
+    2560
+   ],
+   "weights": 47185920,
+   "bytes": 70885268,
+   "bits_per_weight": 12.018037245008681,
+   "escapes": 3556,
+   "escape_fraction": 7.536146375868056e-05,
+   "bit_exact": true
+  },
+  "layers.28.mlp.down_proj": {
+   "shape": [
+    2560,
+    9216
+   ],
+   "weights": 23592960,
+   "bytes": 35410448,
+   "bits_per_weight": 12.007123480902777,
+   "escapes": 2051,
+   "escape_fraction": 8.693271213107638e-05,
+   "bit_exact": true
+  },
+  "layers.28.linear_attn._in": {
+   "shape": [
+    12352,
+    2560
+   ],
+   "weights": 31621120,
+   "bytes": 47748748,
+   "bits_per_weight": 12.080216766515544,
+   "escapes": 2306,
+   "escape_fraction": 7.292594316709844e-05,
+   "bit_exact": true
+  },
+  "layers.28.linear_attn.out_proj": {
+   "shape": [
+    2560,
+    4096
+   ],
+   "weights": 10485760,
+   "bytes": 15744400,
+   "bits_per_weight": 12.01202392578125,
+   "escapes": 739,
+   "escape_fraction": 7.047653198242188e-05,
+   "bit_exact": true
+  },
+  "layers.29._gu": {
+   "shape": [
+    18432,
+    2560
+   ],
+   "weights": 47185920,
+   "bytes": 70885160,
+   "bits_per_weight": 12.018018934461805,
+   "escapes": 3529,
+   "escape_fraction": 7.47892591688368e-05,
+   "bit_exact": true
+  },
+  "layers.29.mlp.down_proj": {
+   "shape": [
+    2560,
+    9216
+   ],
+   "weights": 23592960,
+   "bytes": 35410056,
+   "bits_per_weight": 12.006990559895833,
+   "escapes": 1953,
+   "escape_fraction": 8.27789306640625e-05,
+   "bit_exact": true
+  },
+  "layers.29.linear_attn._in": {
+   "shape": [
+    12352,
+    2560
+   ],
+   "weights": 31621120,
+   "bytes": 47748680,
+   "bits_per_weight": 12.080199562823834,
+   "escapes": 2289,
+   "escape_fraction": 7.238832780116581e-05,
+   "bit_exact": true
+  },
+  "layers.29.linear_attn.out_proj": {
+   "shape": [
+    2560,
+    4096
+   ],
+   "weights": 10485760,
+   "bytes": 15744604,
+   "bits_per_weight": 12.012179565429687,
+   "escapes": 790,
+   "escape_fraction": 7.534027099609375e-05,
+   "bit_exact": true
+  },
+  "layers.30._gu": {
+   "shape": [
+    18432,
+    2560
+   ],
+   "weights": 47185920,
+   "bytes": 70885596,
+   "bits_per_weight": 12.018092854817708,
+   "escapes": 3638,
+   "escape_fraction": 7.709927029079862e-05,
+   "bit_exact": true
+  },
+  "layers.30.mlp.down_proj": {
+   "shape": [
+    2560,
+    9216
+   ],
+   "weights": 23592960,
+   "bytes": 35410604,
+   "bits_per_weight": 12.007176378038194,
+   "escapes": 2090,
+   "escape_fraction": 8.858574761284722e-05,
+   "bit_exact": true
+  },
+  "layers.30.linear_attn._in": {
+   "shape": [
+    12352,
+    2560
+   ],
+   "weights": 31621120,
+   "bytes": 47749768,
+   "bits_per_weight": 12.080474821891192,
+   "escapes": 2561,
+   "escape_fraction": 8.099017365608808e-05,
+   "bit_exact": true
+  },
+  "layers.30.linear_attn.out_proj": {
+   "shape": [
+    2560,
+    4096
+   ],
+   "weights": 10485760,
+   "bytes": 15744944,
+   "bits_per_weight": 12.01243896484375,
+   "escapes": 875,
+   "escape_fraction": 8.344650268554688e-05,
+   "bit_exact": true
+  },
+  "layers.31._gu": {
+   "shape": [
+    18432,
+    2560
+   ],
+   "weights": 47185920,
+   "bytes": 70885676,
+   "bits_per_weight": 12.018106418185765,
+   "escapes": 3658,
+   "escape_fraction": 7.752312554253472e-05,
+   "bit_exact": true
+  },
+  "layers.31.mlp.down_proj": {
+   "shape": [
+    2560,
+    9216
+   ],
+   "weights": 23592960,
+   "bytes": 35412448,
+   "bits_per_weight": 12.007801649305556,
+   "escapes": 2551,
+   "escape_fraction": 0.00010812547471788195,
+   "bit_exact": true
+  },
+  "layers.31.self_attn._qkv": {
+   "shape": [
+    10240,
+    2560
+   ],
+   "weights": 26214400,
+   "bytes": 39382312,
+   "bits_per_weight": 12.01852783203125,
+   "escapes": 2377,
+   "escape_fraction": 9.067535400390625e-05,
+   "bit_exact": true
+  },
+  "layers.31.self_attn.o_proj": {
+   "shape": [
+    2560,
+    4096
+   ],
+   "weights": 10485760,
+   "bytes": 15746516,
+   "bits_per_weight": 12.013638305664063,
+   "escapes": 1268,
+   "escape_fraction": 0.0001209259033203125,
+   "bit_exact": true
+  }
+ },
+ "weights": 3569090560,
+ "bytes": 5366326968,
+ "escapes": 281134,
+ "bits_per_weight": 12.02844674919092,
+ "escape_fraction": 7.876908564628855e-05
+}

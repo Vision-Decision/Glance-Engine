@@ -1,0 +1,47 @@
+{
+ "cublas": "13.1.1.3",
+ "torch": "2.14.1+cu130",
+ "cuda": "13.0",
+ "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "capability": [
+  12,
+  0
+ ],
+ "triton": "3.8.0",
+ "tf32": false,
+ "bf16_reduced_precision": true,
+ "results": [
+  {
+   "case": "capture",
+   "question_tokens": 21,
+   "captures": 1,
+   "live_graphs": 1,
+   "prob_absdiff_max": 0.0,
+   "decision_agree": 1.0
+  },
+  {
+   "case": "question_overflow",
+   "question_tokens": 124,
+   "captures": 0,
+   "live_graphs": 1,
+   "prob_absdiff_max": 0.0,
+   "decision_agree": 1.0
+  },
+  {
+   "case": "cache_full",
+   "question_tokens": 21,
+   "captures": 0,
+   "live_graphs": 1,
+   "prob_absdiff_max": 0.0,
+   "decision_agree": 1.0
+  },
+  {
+   "case": "return",
+   "question_tokens": 21,
+   "captures": 0,
+   "live_graphs": 1,
+   "prob_absdiff_max": 0.0,
+   "decision_agree": 1.0
+  }
+ ]
+}

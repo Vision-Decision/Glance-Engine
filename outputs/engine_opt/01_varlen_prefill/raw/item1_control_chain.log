@@ -1,0 +1,7 @@
+pushed /content/out/scan/item1_scan_origin.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item1_scan_origin_autocast.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item1_diag_origin.log -> Vision-Decision/collection-scan-results
+push failed /content/out/scan/item1_diag_origin.json Vision-Decision/collection-scan-results (Request ID: Root=1-6afeb218-4a5a18875b1c50831f8b8918;87a2c6c2-aeb9-44e6-9ae8-261a3a47b8bb)
+
+429 Too Many Requests for u
+pushed /content/out/scan/item1_diag_origin.json -> Vision-Decision/collection-scan-data

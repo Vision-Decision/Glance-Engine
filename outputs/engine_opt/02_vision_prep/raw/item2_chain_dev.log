@@ -1,0 +1,21 @@
+features exit=0
+pushed /content/out/scan/item2_features.json -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item2_features.log -> Vision-Decision/collection-scan-results
+prep_only exit=0
+pushed /content/out/scan/item2_prep_only.json -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item2_prep_only.log -> Vision-Decision/collection-scan-results
+after exit=0
+pushed /content/out/scan/item2_after.json -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item2_after.log -> Vision-Decision/collection-scan-results
+profile_after exit=0
+pushed /content/out/scan/item2_profile_after.json -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item2_profile_after.log -> Vision-Decision/collection-scan-results
+real exit=0
+pushed /content/out/scan/item2_real.log -> Vision-Decision/collection-scan-results
+equiv exit=0
+pushed /content/out/scan/item2_equiv.json -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item2_equiv.log -> Vision-Decision/collection-scan-results
+diag exit=0
+pushed /content/out/scan/item2_diag.json -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item2_diag.log -> Vision-Decision/collection-scan-results
+scan/vm/vision_prep.sh: line 37: _opt/02_vision_prep: No such file or directory

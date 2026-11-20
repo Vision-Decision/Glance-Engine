@@ -1,0 +1,13 @@
+residual_probe exit=0
+pushed /content/out/scan/item9_controls_residual_probe.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item9_controls_residual_probe.json -> Vision-Decision/collection-scan-results
+precision_latency exit=0
+pushed /content/out/scan/item9_controls_precision_latency.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item9_controls_precision_latency.json -> Vision-Decision/collection-scan-results
+fault exit=1
+pushed /content/out/scan/item9_negative_fault.log -> Vision-Decision/collection-scan-results
+small_fault exit=1
+pushed /content/out/scan/item9_negative_small_fault.log -> Vision-Decision/collection-scan-results
+speed exit=0
+pushed /content/out/scan/item9_matched_speed.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item9_matched_speed.json -> Vision-Decision/collection-scan-results

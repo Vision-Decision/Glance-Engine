@@ -1,0 +1,78 @@
+{
+ "backend": "vllm",
+ "version": "0.34.0",
+ "engine_args": {
+  "model": "Qwen/Qwen3.5-4B",
+  "enable_prefix_caching": "True",
+  "max_model_len": "8192",
+  "limit_mm_per_prompt": "{'image': 1}",
+  "gpu_memory_utilization": "0.85",
+  "seed": "0",
+  "max_num_seqs": "256",
+  "max_num_batched_tokens": "16384",
+  "quantization": "fp8",
+  "speculative_config": "{'method': 'mtp', 'num_speculative_tokens': 2}",
+  "async_scheduling": "True"
+ },
+ "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "modes": {
+  "video_f32_N1": {
+   "total_ms_median": 387.08915100141894,
+   "total_ms_p90": 395.36086000007344,
+   "ttfa_ms_median": 332.1117875020718,
+   "q_per_s": 82.44446217551123,
+   "n_calls": 12,
+   "questions_per_call": 32,
+   "gen_tokens_mean": 19.239583333333332,
+   "cached_prompt_tokens_mean": 0.0,
+   "prompt_tokens_mean": 323.8151041666667,
+   "examples": [
+    "[697, 0, 891, 623]",
+    "```json\n[\n\t{\"bbox_2d\": [688, 115, 1",
+    "[580,0,713,412]",
+    "[0, 86, 100, 740]",
+    "[600,211,998,682]",
+    "[796,121,1000,989]"
+   ]
+  },
+  "video_f64_N1": {
+   "total_ms_median": 695.6718194996938,
+   "total_ms_p90": 702.6425848984218,
+   "ttfa_ms_median": 603.4352649985522,
+   "q_per_s": 91.79977728122101,
+   "n_calls": 12,
+   "questions_per_call": 64,
+   "gen_tokens_mean": 19.140625,
+   "cached_prompt_tokens_mean": 0.0,
+   "prompt_tokens_mean": 323.8151041666667,
+   "examples": [
+    "[697, 0, 891, 627]",
+    "[692, 113, 1000, 481]",
+    "[581, 0, 713, 412]",
+    "[0, 86, 100, 745]",
+    "[602, 212, 998, 679]",
+    "[796,121,1000,987]"
+   ]
+  }
+ },
+ "args": {
+  "backend": "vllm",
+  "prep": "data/prep/eval_refcoco_val.jsonl",
+  "image_root": "/content/data/coco/train2014",
+  "gui": "/content/gui/sspro40.jsonl",
+  "parts": "video1",
+  "n_images": 100,
+  "n_calls": 50,
+  "max_model_len": 8192,
+  "max_num_seqs": 256,
+  "max_batched": 16384,
+  "gpu_mem": 0.85,
+  "quant": "fp8",
+  "spec": "mtp",
+  "spec_k": 2,
+  "async_sched": true,
+  "one_token": false,
+  "quick": false,
+  "out": "/content/out/scan/item7_matched_video_tuned.json"
+ }
+}

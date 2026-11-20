@@ -1,0 +1,31 @@
+Thu Nov 19 12:03:20 PM UTC 2026
+name, driver_version, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 580.82.07, 0 MiB
+GPU compute process list empty
+env PYTHONPATH=/content/dv:/content/item3-qla-deps:/content/item3-extras LD_LIBRARY_PATH=/content/item3-qla-deps/z3/lib:/usr/lib64-nvidia FLA_FLASH_QLA=0 python -m scan.profile_lm --stage gdn_single_card --ckpt /content/ckpt/v1/ckpt_final.pt --out /content/out/scan/item3_gdn_single_card.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 16410.33it/s]
+{'n': 32, 'width': 146, 'dense': False, 'backend': 'persistent_recurrent', 'ms': 0.6409279704093933, 'max_abs': 0.0009765625, 'mean_abs': 3.5236726603216084e-07}
+2026-11-19 12:03:30  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:137): TileLang begins to compile kernel `tilelang_fused_chunk_gdr_fwd_kernel` with `out_idx=None`
+2026-11-19 12:03:36  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:145): TileLang completes to compile kernel `tilelang_fused_chunk_gdr_fwd_kernel`
+{'n': 32, 'width': 146, 'dense': False, 'backend': 'flash_qla', 'error': 'Failed to set the allowed dynamic shared memory size to 112640'}
+{'n': 32, 'width': 146, 'dense': True, 'backend': 'persistent_recurrent', 'ms': 0.6355839967727661, 'max_abs': 0.0009765625, 'mean_abs': 3.5236726603216084e-07}
+2026-11-19 12:03:38  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:137): TileLang begins to compile kernel `tilelang_chunk_local_cumsum_kernel` with `out_idx=None`
+2026-11-19 12:03:39  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:145): TileLang completes to compile kernel `tilelang_chunk_local_cumsum_kernel`
+2026-11-19 12:03:40  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:137): TileLang begins to compile kernel `tilelang_kkt_solve_kernel` with `out_idx=None`
+2026-11-19 12:03:42  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:145): TileLang completes to compile kernel `tilelang_kkt_solve_kernel`
+2026-11-19 12:03:42  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:137): TileLang begins to compile kernel `tilelang_fused_chunk_gdr_fwd_kernel` with `out_idx=None`
+2026-11-19 12:03:49  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:145): TileLang completes to compile kernel `tilelang_fused_chunk_gdr_fwd_kernel`
+{'n': 32, 'width': 146, 'dense': True, 'backend': 'flash_qla', 'error': 'Failed to set the allowed dynamic shared memory size to 112640'}
+{'n': 32, 'width': 281, 'dense': False, 'backend': 'persistent_recurrent', 'ms': 1.25273597240448, 'max_abs': 0.0009765625, 'mean_abs': 4.2129150301661866e-07}
+{'n': 32, 'width': 281, 'dense': False, 'backend': 'flash_qla', 'error': 'Failed to set the allowed dynamic shared memory size to 112640'}
+{'n': 32, 'width': 281, 'dense': True, 'backend': 'persistent_recurrent', 'ms': 1.2416319847106934, 'max_abs': 0.0009765625, 'mean_abs': 4.2129150301661866e-07}
+{'n': 32, 'width': 281, 'dense': True, 'backend': 'flash_qla', 'error': 'Failed to set the allowed dynamic shared memory size to 112640'}
+{'n': 128, 'width': 146, 'dense': False, 'backend': 'persistent_recurrent', 'ms': 2.388672113418579, 'max_abs': 0.0009765625, 'mean_abs': 3.601839182465483e-07}
+{'n': 128, 'width': 146, 'dense': False, 'backend': 'flash_qla', 'error': 'Failed to set the allowed dynamic shared memory size to 112640'}
+{'n': 128, 'width': 146, 'dense': True, 'backend': 'persistent_recurrent', 'ms': 2.3652799129486084, 'max_abs': 0.0009765625, 'mean_abs': 3.601839182465483e-07}
+{'n': 128, 'width': 146, 'dense': True, 'backend': 'flash_qla', 'error': 'Failed to set the allowed dynamic shared memory size to 112640'}
+{'n': 128, 'width': 281, 'dense': False, 'backend': 'persistent_recurrent', 'ms': 4.289663791656494, 'max_abs': 0.0009765625, 'mean_abs': 4.230099079904903e-07}
+{'n': 128, 'width': 281, 'dense': False, 'backend': 'flash_qla', 'error': 'Failed to set the allowed dynamic shared memory size to 112640'}
+{'n': 128, 'width': 281, 'dense': True, 'backend': 'persistent_recurrent', 'ms': 4.273312091827393, 'max_abs': 0.0009765625, 'mean_abs': 4.230099079904903e-07}
+{'n': 128, 'width': 281, 'dense': True, 'backend': 'flash_qla', 'error': 'Failed to set the allowed dynamic shared memory size to 112640'}
+gdn_single_card exit=0

@@ -1,0 +1,10 @@
+Thu Nov 19 10:41:25 AM UTC 2026
+name, driver_version, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 580.82.07, 0 MiB
+GPU compute process list empty
+python -m speed.bench_glance --ckpt /content/ckpt/v1/ckpt_final.pt --modes eng_fused --parts gui --gui_nv 4096 --out /content/out/scan/item2_fused_gui4096.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 16596.15it/s]
+eng_fused  gui4096_box_N1 {"prep_ms_median": 24.11, "vision_ms_median": 112.14, "lm_ms_median": 160.77, "model_ms_median": 272.92, "model_ms_p90": 276.59, "total_ms_median": 294.22, "total_ms_p90": 301.3, "ttfa_ms_median": 294.22, "q_per_s": 3.55, "n_calls": 30, "questions_per_call": 1}
+eng_fused  gui4096_box_N8 {"prep_ms_median": 24.78, "vision_ms_median": 112.41, "lm_ms_median": 166.08, "model_ms_median": 278.52, "model_ms_p90": 284.43, "total_ms_median": 301.73, "total_ms_p90": 307.27, "ttfa_ms_median": 301.73, "q_per_s": 27.81, "n_calls": 30, "questions_per_call": 8}
+eng_fused  gui4096_box_N32 {"prep_ms_median": 23.81, "vision_ms_median": 112.46, "lm_ms_median": 191.61, "model_ms_median": 305.38, "model_ms_p90": 313.65, "total_ms_median": 325.43, "total_ms_p90": 335.15, "ttfa_ms_median": 325.43, "q_per_s": 102.06, "n_calls": 30, "questions_per_call": 32}
+fused_gui4096 exit=0

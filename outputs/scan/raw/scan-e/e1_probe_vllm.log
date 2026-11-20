@@ -1,0 +1,23 @@
+W1119 04:21:28.549000 3233 torch/_opaque_base.py:6] torch._opaque_base is deprecated, use torch._custom_class_base instead
+W1119 04:21:28.549000 3233 torch/_library/opaque_object.py:288] register_opaque_type is deprecated, use register_custom_class instead
+W1119 04:21:28.549000 3233 torch/_library/opaque_object.py:211] typ='value' is deprecated, use typ='constant' instead
+block_size = annotation=NoneType required=False default=None metadata=[Gt(gt=0)]
+user_specified_block_size = False
+prefix_match_unit = annotation=NoneType required=False default=None metadata=[Gt(gt=0)]
+num_gpu_blocks_override = None
+enable_prefix_caching = True
+prefix_caching_hash_algo = sha256
+prefix_cache_retention_interval = annotation=NoneType required=False default=0 metadata=[Ge(ge=0)]
+mamba_page_size_padded = None
+mamba_block_size = annotation=NoneType required=False default=None metadata=[Gt(gt=0)]
+mamba_cache_dtype = auto
+mamba_ssm_cache_dtype = auto
+mamba_cache_mode = none
+enable_mamba_shared_prefix_checkpoint = False
+num_gpu_blocks = None
+num_cpu_blocks = None
+simple_cpu_offload_num_blocks = None
+effective_attention_block_size = None
+hash_block_size = None
+cache_hit_alignment_tokens = None
+_block_size_resolved = False

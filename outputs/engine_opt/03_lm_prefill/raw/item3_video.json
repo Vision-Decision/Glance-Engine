@@ -1,0 +1,39 @@
+{
+ "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "torch": "2.14.1+cu130",
+ "ckpt": "/content/ckpt/v1/ckpt_final.pt",
+ "modes": {
+  "eng_fused": {
+   "video_f32_N1": {
+    "prep_ms_median": 31.579145001160214,
+    "vision_ms_median": 166.5528740013542,
+    "lm_ms_median": 196.84103299914568,
+    "model_ms_median": 363.4800070012716,
+    "model_ms_p90": 366.9788040995627,
+    "total_ms_median": 395.8979570015799,
+    "total_ms_p90": 400.1014319983369,
+    "ttfa_ms_median": 395.8979570015799,
+    "q_per_s": 80.720387449614,
+    "n_calls": 12,
+    "questions_per_call": 32
+   },
+   "video_f64_N1": {
+    "prep_ms_median": 65.64457949752978,
+    "vision_ms_median": 337.2354270013602,
+    "lm_ms_median": 400.4163970021182,
+    "model_ms_median": 737.492503501926,
+    "model_ms_p90": 738.954340100463,
+    "total_ms_median": 802.4394480016781,
+    "total_ms_p90": 804.6050408975134,
+    "ttfa_ms_median": 802.4394480016781,
+    "q_per_s": 79.7383663595127,
+    "n_calls": 12,
+    "questions_per_call": 64
+   },
+   "peak_mem_gb": 16.163832187652588
+  }
+ },
+ "equiv": {},
+ "n_merged": 200,
+ "n_fp8": null
+}

@@ -1,0 +1,12 @@
+Thu Nov 19 05:39:11 PM UTC 2026
+name, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 0 MiB
+GPU_IDLE
+e19af4d85df2573df0fb9d83aecb2774aaea9340e53d0d9f45882234415ae49d  speed/engine.py
+0a869a41d6084b3781ec9773638d302d18f31a2b9c56ce9f9c5ca6f6fe05fae4  speed/decision_worker.py
+4cf59fe91a4637c26df3a2ee6d5d00e6851a5c843c9a3f35a98d839d4118834e  speed/vision_mlp.py
+1219ac6e0fc8e2935312904343afa2b46db6bbd6de484bdbd0528cad4b696d44  scan/engine.py
+python -m speed.test_scheduler_gpu --out /content/out/scan/item7_patch_interleaving.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 17332.03it/s]
+{"vs_isolated": {"counts": {"total": 254, "agreed": 254}, "max_abs": {"presence_prob": 0.014418065547943115, "iou_prob": 0.051116347312927246, "box_pred": 0.03906923532485962, "typed_prob": 0.018806621432304382}, "outliers": []}, "vs_shipped": {"counts": {"total": 254, "agreed": 254}, "max_abs": {"presence_prob": 0.013550281524658203, "iou_prob": 0.05073779821395874, "box_pred": 0.04003298282623291, "typed_prob": 0.011805154383182526}, "outliers": []}, "isolated_vs_shipped": {"counts": {"total": 127, "agreed": 127}, "max_abs": {"presence_prob": 0.006076157093048096, "iou_prob": 0.08704698085784912, "box_pred": 0.047692954540252686, "typed_prob": 0.0156438946723938}, "outliers": []}, "limits": {"presence_prob": 0.031703651, "iou_prob": 0.407418222, "box_pred": 0.424944818, "typed_prob": 0.0233531148}, "metrics": {"queue_depth": 0, "queue_limit": 256, "requests": {"completed": 96}, "batch_sizes": {"1": 32, "8": 3, "10": 1, "9": 2, "5": 1, "7": 1}, "latency_ms_histogram": {"2500": 22, "250": 10, "100": 6, "50": 15, "500": 17, "1000": 26}}}
+interleaving exit=0

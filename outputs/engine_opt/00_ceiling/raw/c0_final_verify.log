@@ -1,0 +1,4 @@
+real exit=0
+pushed /content/out/scan/c0_real.log -> Vision-Decision/collection-scan-results
+fault exit=1
+pushed /content/out/scan/c0_fault.log -> Vision-Decision/collection-scan-results

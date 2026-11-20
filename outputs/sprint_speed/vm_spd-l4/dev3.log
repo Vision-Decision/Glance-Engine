@@ -1,0 +1,122 @@
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights:  59%|█████▉    | 425/723 [00:00<00:00, 4238.23it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 4341.39it/s]
+equiv ref_lora {"vs_ref_lora": {"presence_absdiff_max": 0.0, "presence_absdiff_mean": 0.0, "piou_absdiff_max": 0.0, "box_px_maxdiff_max": 0.0, "box_px_maxdiff_mean": 0.0, "box_iou_vs_ref_min": 1.0, "box_iou_vs_ref_mean": 1.0, "typed_prob_absdiff_max": 0.0, "decision_agreement": 1.0, "acc50": 0.918918918918919, "acc50_ref": 0.918918918918919}, "vs_ref_merged": null}
+ref_lora  bs1_box_N1 {"prep_ms_median": 6.29, "model_ms_median": 323.88, "model_ms_p90": 328.6, "total_ms_median": 330.24, "total_ms_p90": 335.03, "ttfa_ms_median": 330.24, "q_per_s": 3.03, "n_calls": 10, "questions_per_call": 1}
+ref_lora  bs1_box_N2 {"prep_ms_median": 6.09, "model_ms_median": 301.42, "model_ms_p90": 321.75, "total_ms_median": 307.61, "total_ms_p90": 327.86, "ttfa_ms_median": 307.61, "q_per_s": 6.42, "n_calls": 10, "questions_per_call": 2}
+ref_lora  bs1_box_N4 {"prep_ms_median": 6.39, "model_ms_median": 303.15, "model_ms_p90": 308.97, "total_ms_median": 309.66, "total_ms_p90": 315.27, "ttfa_ms_median": 309.66, "q_per_s": 12.94, "n_calls": 10, "questions_per_call": 4}
+ref_lora  bs1_box_N8 {"prep_ms_median": 6.76, "model_ms_median": 318.48, "model_ms_p90": 326.22, "total_ms_median": 325.22, "total_ms_p90": 332.92, "ttfa_ms_median": 325.22, "q_per_s": 24.84, "n_calls": 10, "questions_per_call": 8}
+ref_lora  bs1_box_N16 {"prep_ms_median": 7.15, "model_ms_median": 359.23, "model_ms_p90": 399.9, "total_ms_median": 366.97, "total_ms_p90": 406.88, "ttfa_ms_median": 366.97, "q_per_s": 42.98, "n_calls": 10, "questions_per_call": 16}
+ref_lora  bs1_box_N32 {"prep_ms_median": 9.92, "model_ms_median": 443.22, "model_ms_p90": 540.2, "total_ms_median": 453.93, "total_ms_p90": 550.19, "ttfa_ms_median": 453.93, "q_per_s": 67.0, "n_calls": 10, "questions_per_call": 32}
+ref_lora  bs1_box_N64 {"prep_ms_median": 13.96, "model_ms_median": 602.24, "model_ms_p90": 858.08, "total_ms_median": 616.33, "total_ms_p90": 872.06, "ttfa_ms_median": 616.33, "q_per_s": 93.2, "n_calls": 10, "questions_per_call": 64}
+equiv eng_eager {"vs_ref_lora": {"presence_absdiff_max": 0.02625274658203125, "presence_absdiff_mean": 0.0009592441802329205, "piou_absdiff_max": 0.015224814414978027, "box_px_maxdiff_max": 35.83146572113037, "box_px_maxdiff_mean": 4.117060620734033, "box_iou_vs_ref_min": 0.7872876831903416, "box_iou_vs_ref_mean": 0.9610890020387893, "typed_prob_absdiff_max": 0.04518139362335205, "decision_agreement": 1.0, "acc50": 0.9054054054054054, "acc50_ref": 0.918918918918919}, "vs_ref_merged": null}
+eng_eager  bs1_box_N1 {"prep_ms_median": 6.29, "vision_ms_median": 65.02, "lm_ms_median": 159.92, "model_ms_median": 222.72, "model_ms_p90": 232.34, "total_ms_median": 229.04, "total_ms_p90": 238.64, "ttfa_ms_median": 229.04, "q_per_s": 4.33, "n_calls": 10, "questions_per_call": 1}
+eng_eager  bs1_box_N2 {"prep_ms_median": 6.35, "vision_ms_median": 65.25, "lm_ms_median": 163.24, "model_ms_median": 228.68, "model_ms_p90": 237.66, "total_ms_median": 234.96, "total_ms_p90": 243.87, "ttfa_ms_median": 234.96, "q_per_s": 8.5, "n_calls": 10, "questions_per_call": 2}
+eng_eager  bs1_box_N4 {"prep_ms_median": 5.85, "vision_ms_median": 64.93, "lm_ms_median": 168.93, "model_ms_median": 234.49, "model_ms_p90": 244.01, "total_ms_median": 240.39, "total_ms_p90": 249.94, "ttfa_ms_median": 240.39, "q_per_s": 16.7, "n_calls": 10, "questions_per_call": 4}
+eng_eager  bs1_box_N8 {"prep_ms_median": 7.26, "vision_ms_median": 63.71, "lm_ms_median": 195.04, "model_ms_median": 258.7, "model_ms_p90": 270.27, "total_ms_median": 265.95, "total_ms_p90": 277.56, "ttfa_ms_median": 265.95, "q_per_s": 30.51, "n_calls": 10, "questions_per_call": 8}
+eng_eager  bs1_box_N16 {"prep_ms_median": 8.06, "vision_ms_median": 65.23, "lm_ms_median": 228.99, "model_ms_median": 295.6, "model_ms_p90": 336.11, "total_ms_median": 303.92, "total_ms_p90": 345.24, "ttfa_ms_median": 303.92, "q_per_s": 51.86, "n_calls": 10, "questions_per_call": 16}
+eng_eager  bs1_box_N32 {"prep_ms_median": 10.69, "vision_ms_median": 63.17, "lm_ms_median": 317.28, "model_ms_median": 381.58, "model_ms_p90": 506.12, "total_ms_median": 392.49, "total_ms_p90": 515.97, "ttfa_ms_median": 392.49, "q_per_s": 78.21, "n_calls": 10, "questions_per_call": 32}
+eng_eager  bs1_box_N64 {"prep_ms_median": 14.55, "vision_ms_median": 61.4, "lm_ms_median": 489.82, "model_ms_median": 545.86, "model_ms_p90": 711.69, "total_ms_median": 560.18, "total_ms_p90": 726.33, "ttfa_ms_median": 560.18, "q_per_s": 106.87, "n_calls": 10, "questions_per_call": 64}
+eng_eager followup_box_N1 {"prep_ms_median": 0.8, "model_ms_median": 86.43, "model_ms_p90": 88.14, "total_ms_median": 87.25, "total_ms_p90": 89.02, "ttfa_ms_median": 87.25, "q_per_s": 11.39, "n_calls": 10, "questions_per_call": 1}
+eng_eager followup_mixed_N1 {"prep_ms_median": 0.8, "model_ms_median": 86.52, "model_ms_p90": 87.2, "total_ms_median": 87.34, "total_ms_p90": 87.99, "ttfa_ms_median": 87.34, "q_per_s": 11.45, "n_calls": 10, "questions_per_call": 1}
+eng_eager followup_box_N8 {"prep_ms_median": 1.78, "model_ms_median": 85.73, "model_ms_p90": 87.06, "total_ms_median": 87.51, "total_ms_p90": 88.85, "ttfa_ms_median": 87.51, "q_per_s": 91.47, "n_calls": 10, "questions_per_call": 8}
+eng_eager followup_mixed_N8 {"prep_ms_median": 2.37, "model_ms_median": 119.56, "model_ms_p90": 127.43, "total_ms_median": 121.9, "total_ms_p90": 129.8, "ttfa_ms_median": 121.9, "q_per_s": 63.7, "n_calls": 10, "questions_per_call": 8}
+eng_eager followup_box_N32 {"prep_ms_median": 4.84, "model_ms_median": 157.48, "model_ms_p90": 250.62, "total_ms_median": 162.27, "total_ms_p90": 255.65, "ttfa_ms_median": 162.27, "q_per_s": 168.93, "n_calls": 10, "questions_per_call": 32}
+eng_eager followup_mixed_N32 {"prep_ms_median": 7.02, "model_ms_median": 469.92, "model_ms_p90": 488.0, "total_ms_median": 476.79, "total_ms_p90": 495.3, "ttfa_ms_median": 476.79, "q_per_s": 65.17, "n_calls": 10, "questions_per_call": 32}
+equiv eng_graph {"vs_ref_lora": {"presence_absdiff_max": 0.02625274658203125, "presence_absdiff_mean": 0.0009592441802329205, "piou_absdiff_max": 0.015224814414978027, "box_px_maxdiff_max": 35.83146572113037, "box_px_maxdiff_mean": 4.117060620734033, "box_iou_vs_ref_min": 0.7872876831903416, "box_iou_vs_ref_mean": 0.9610890020387893, "typed_prob_absdiff_max": 0.04518139362335205, "decision_agreement": 1.0, "acc50": 0.9054054054054054, "acc50_ref": 0.918918918918919}, "vs_ref_merged": null}
+eng_graph  bs1_box_N1 {"prep_ms_median": 6.57, "vision_ms_median": 64.39, "lm_ms_median": 158.27, "model_ms_median": 221.25, "model_ms_p90": 232.15, "total_ms_median": 227.72, "total_ms_p90": 238.83, "ttfa_ms_median": 227.72, "q_per_s": 4.34, "n_calls": 10, "questions_per_call": 1}
+eng_graph  bs1_box_N2 {"prep_ms_median": 6.78, "vision_ms_median": 64.88, "lm_ms_median": 160.64, "model_ms_median": 223.62, "model_ms_p90": 235.25, "total_ms_median": 230.44, "total_ms_p90": 242.33, "ttfa_ms_median": 230.44, "q_per_s": 8.6, "n_calls": 10, "questions_per_call": 2}
+eng_graph  bs1_box_N4 {"prep_ms_median": 7.21, "vision_ms_median": 64.43, "lm_ms_median": 167.89, "model_ms_median": 230.47, "model_ms_p90": 241.23, "total_ms_median": 237.65, "total_ms_p90": 248.5, "ttfa_ms_median": 237.65, "q_per_s": 16.67, "n_calls": 10, "questions_per_call": 4}
+eng_graph  bs1_box_N8 {"prep_ms_median": 7.66, "vision_ms_median": 63.97, "lm_ms_median": 195.53, "model_ms_median": 259.9, "model_ms_p90": 270.11, "total_ms_median": 267.64, "total_ms_p90": 277.79, "ttfa_ms_median": 267.64, "q_per_s": 30.56, "n_calls": 10, "questions_per_call": 8}
+[W1118 08:44:28.298468844 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 33554432 bytes (free: 32636928, total: 23659151360).
+[W1118 08:44:28.306445831 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 33554432 bytes (free: 24248320, total: 23659151360).
+[W1118 08:44:28.306613318 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 33554432 bytes (free: 24248320, total: 23659151360).
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/content/dv/speed/bench_glance.py", line 314, in <module>
+    main()
+    ~~~~^^
+  File "/content/dv/speed/bench_glance.py", line 292, in main
+    r.update(sweep(R, imgs, [(f"bs1_box_N{n}", 1, n, "box", 640) for n in QS], a.n_calls))
+             ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/dv/speed/bench_glance.py", line 171, in sweep
+    R.call(im, qs, Nv=Nv)
+    ~~~~~~^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "/content/dv/speed/bench_glance.py", line 104, in call
+    res, cache, vis = self.eng.run(E, host)
+                      ~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "/content/dv/speed/engine.py", line 477, in run
+    self._graphs[key] = self._capture(lambda S: self._core(S, host), E)
+                        ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/dv/speed/engine.py", line 505, in _capture
+    fn(S)
+    ~~^^^
+  File "/content/dv/speed/engine.py", line 477, in <lambda>
+    self._graphs[key] = self._capture(lambda S: self._core(S, host), E)
+                                                ~~~~~~~~~~^^^^^^^^^
+  File "/content/dv/speed/engine.py", line 438, in _core
+    h, cache = self.lm_forward(x, P, Q)
+               ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/content/dv/speed/engine.py", line 352, in lm_forward
+    oq = self._mix_gdn_q(m, mixed[Np:], z[Np:], beta[Np:], g[Np:], M, Tq, S, tail, q_img)
+  File "/content/dv/speed/engine.py", line 308, in _mix_gdn_q
+    o, _ = _gdn_core_noproj(m, conv, z.view(M, Tq, -1, m.head_v_dim), beta.view(M, Tq, -1), g.view(M, Tq, -1),
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        S[q_img].contiguous())
+                        ^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/dv/speed/engine.py", line 137, in _gdn_core_noproj
+    o, S = bb._gdr(q, k, v, g, beta, init)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/dv/dv/model/backbone.py", line 30, in _gdr
+    return fla_chunk_gdr(q, k, v, g=g, beta=beta, initial_state=initial_state, output_final_state=True,
+                         use_qk_l2norm_in_kernel=True)
+  File "/usr/local/lib/python3.13/dist-packages/torch/_dynamo/eval_frame.py", line 1548, in _fn
+    return fn(*args, **kwargs)
+  File "/usr/local/lib/python3.13/dist-packages/fla/backends.py", line 200, in wrapper
+    return default_function(*args, **kwargs)
+  File "/usr/local/lib/python3.13/dist-packages/fla/ops/gated_delta_rule/chunk.py", line 571, in chunk_gated_delta_rule
+    o, final_state = ChunkGatedDeltaRuleFunction.apply(
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        q,
+        ^^
+    ...<18 lines>...
+        chunk_size,
+        ^^^^^^^^^^^
+    )
+    ^
+  File "/usr/local/lib/python3.13/dist-packages/fla/utils/decorators.py", line 152, in wrapper
+    return fn(*processed_args, **processed_kwargs)
+  File "/usr/local/lib/python3.13/dist-packages/torch/amp/autocast_mode.py", line 481, in decorate_fwd
+    return fwd(*args, **kwargs)  # pyrefly: ignore [not-callable]
+  File "/usr/local/lib/python3.13/dist-packages/fla/ops/gated_delta_rule/chunk.py", line 292, in forward
+    g, o, A, final_state, initial_state, g_input = chunk_gated_delta_rule_fwd(
+                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        q=q,
+        ^^^^
+    ...<14 lines>...
+        chunk_size=chunk_size,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/usr/local/lib/python3.13/dist-packages/fla/ops/gated_delta_rule/chunk.py", line 95, in chunk_gated_delta_rule_fwd
+    h, v_new, final_state = chunk_gated_delta_rule_fwd_h(
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        k=k,
+        ^^^^
+    ...<8 lines>...
+        chunk_size=chunk_size,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/usr/local/lib/python3.13/dist-packages/torch/_dynamo/eval_frame.py", line 1548, in _fn
+    return fn(*args, **kwargs)
+  File "/usr/local/lib/python3.13/dist-packages/fla/backends.py", line 200, in wrapper
+    return default_function(*args, **kwargs)
+  File "/usr/local/lib/python3.13/dist-packages/fla/ops/common/chunk_delta_h.py", line 723, in chunk_gated_delta_rule_fwd_h
+    final_state = k.new_zeros(N, HV, K, V, dtype=torch.float32) if output_final_state else None
+                  ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 32.00 MiB. GPU 0 has a total capacity of 22.03 GiB of which 23.12 MiB is free. Including non-PyTorch memory, this process has 22.00 GiB memory in use. Of the allocated memory 20.82 GiB is allocated by PyTorch, with 863.86 MiB allocated in private pools (e.g., CUDA Graphs), and 427.45 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)
+exit 1

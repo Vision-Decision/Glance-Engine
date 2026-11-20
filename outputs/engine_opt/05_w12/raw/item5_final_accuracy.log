@@ -1,0 +1,19 @@
+Thu Nov 19 02:05:55 PM UTC 2026
+name, driver_version, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 580.82.07, 0 MiB
+GPU compute process list empty
+35f8223f8bee0163c688d3e661c39d54ad75685a02107503c9a0dfb57b01fcd9  speed/engine.py
+1dddb90995b7b27a4f98c9f93b7b1ad7a441862faad435d5ba4ace39190e3843  speed/bench_glance.py
+f4183b0e71473da4db1cc28a8b5fc1aace276e03dade6c5e709a933bedaec578  speed/bench_w12.py
+605da8e8814d62300202d9ce58c86e0b7e703f4fb1342fd2ba7a8185aa2cc243  speed/w12.py
+2953973a6c7a15ffc37d36a290fdcf5416cebfe5989b7587a03e5126d5b015d3  speed/specpilot/w12.cu
+783ab0eca111f8631b32ec7b1ddc786aa12cd120cf19cf72f9fec56a96689d3a  scan/engine.py
+bbd6ba5baf19263dfca5255ef2a4ca23a6abdaab5ed1937b6d15ef64ee83b172  scan/bench_scan.py
+python -m speed.bench_w12 --stage accuracy --ckpt /content/ckpt/v1/ckpt_final.pt --out /content/out/scan/item5_final_accuracy.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 15891.34it/s]
+eng_fused {'cold': {'n': 930, 'presence_absdiff_max': 0.0, 'presence_absdiff_mean': 0.0, 'piou_absdiff_max': 0.0, 'box_px_maxdiff_max': 0.0, 'box_px_maxdiff_mean': 0.0, 'box_iou_vs_ref_min': 1.0, 'box_iou_vs_ref_mean': 1.0, 'typed_prob_absdiff_max': 0.0, 'decision_agreement': 1.0, 'acc50': 0.94, 'acc50_ref': 0.94}, 'followup': {'n': 2460, 'agreed': 2460, 'presence_abs': 0.0, 'iou_abs': 0.0, 'box_abs': 0.0, 'typed_abs': 0.0}, 'gref_presence': {'auroc': 0.9696989847940772, 'positive': 146, 'negative': 309, 'agreed': 455, 'max_abs': 0.0}, 'n_box_gt': 450}
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 16764.51it/s]
+eng_w12 {'cold': {'n': 930, 'presence_absdiff_max': 0.0, 'presence_absdiff_mean': 0.0, 'piou_absdiff_max': 0.0, 'box_px_maxdiff_max': 0.0, 'box_px_maxdiff_mean': 0.0, 'box_iou_vs_ref_min': 1.0, 'box_iou_vs_ref_mean': 1.0, 'typed_prob_absdiff_max': 0.0, 'decision_agreement': 1.0, 'acc50': 0.94, 'acc50_ref': 0.94}, 'followup': {'n': 2460, 'agreed': 2460, 'presence_abs': 0.00021255016326904297, 'iou_abs': 0.0036721229553222656, 'box_abs': 0.001209855079650879, 'typed_abs': 0.006323516368865967}, 'gref_presence': {'auroc': 0.9696768187258944, 'positive': 146, 'negative': 309, 'agreed': 455, 'max_abs': 0.008908182382583618}, 'n_box_gt': 450}
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 17192.89it/s]
+eng_fp8 {'cold': {'n': 930, 'presence_absdiff_max': 0.08095496892929077, 'presence_absdiff_mean': 0.0021146563192208606, 'piou_absdiff_max': 0.10747522115707397, 'box_px_maxdiff_max': 49.814849853515625, 'box_px_maxdiff_mean': 4.344226917885898, 'box_iou_vs_ref_min': 0.6700420676379617, 'box_iou_vs_ref_mean': 0.9583783043234163, 'typed_prob_absdiff_max': 0.09989327192306519, 'decision_agreement': 0.9956989247311828, 'acc50': 0.9355555555555556, 'acc50_ref': 0.94}, 'followup': {'n': 2460, 'agreed': 2444, 'presence_abs': 0.04321110248565674, 'iou_abs': 0.08856034278869629, 'box_abs': 0.05118376016616821, 'typed_abs': 0.10945066809654236}, 'gref_presence': {'auroc': 0.9689896706122268, 'positive': 146, 'negative': 309, 'agreed': 452, 'max_abs': 0.11919963359832764}, 'n_box_gt': 450}
+final_accuracy exit=0

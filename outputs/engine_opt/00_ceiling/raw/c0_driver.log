@@ -1,0 +1,22 @@
+shapes exit=0
+pushed /content/out/scan/c0_shapes.json -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/c0_shapes.log -> Vision-Decision/collection-scan-results
+profile_bank exit=0
+pushed /content/out/scan/c0_profile_bank.json -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/c0_profile_bank.log -> Vision-Decision/collection-scan-results
+sglang_clean exit=0
+pushed /content/out/scan/c0_sglang_clean.json -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/c0_sglang_clean.log -> Vision-Decision/collection-scan-results
+sglang_bank exit=1
+pushed /content/out/scan/c0_sglang_bank.log -> Vision-Decision/collection-scan-results
+scan/vm/ceiling.sh: line 40: syntax error near unexpected token `)'
+photo_equiv exit=0
+pushed /content/out/scan/c0_photo_equiv.json -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/c0_photo_equiv.log -> Vision-Decision/collection-scan-results
+reference_noise exit=0
+pushed /content/out/scan/c0_reference_noise.json -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/c0_reference_noise.log -> Vision-Decision/collection-scan-results
+real exit=0
+pushed /content/out/scan/c0_real.log -> Vision-Decision/collection-scan-results
+fault exit=1
+pushed /content/out/scan/c0_fault.log -> Vision-Decision/collection-scan-results

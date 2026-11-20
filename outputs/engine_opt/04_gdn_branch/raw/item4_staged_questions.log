@@ -1,0 +1,27 @@
+Thu Nov 19 01:14:48 PM UTC 2026
+name, driver_version, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 580.82.07, 0 MiB
+GPU compute process list empty
+5e5c04f41452517c926e640b23bcc880b728e50acf78ee189a09b810425ebcb4  speed/engine.py
+e1be1b00ca3082e11f2352d19f99840fbb5f202001d149eede24cbace9c838f9  scan/engine.py
+4874a3db7a89bbb30756b051e5c60545a082c45fe56d8c94986d4e142e8bd250  scan/profile_branch.py
+4b941416ac2bc2658da5b9db02dd946fade458cec7c2ebdae21fe2f3d1929a58  scan/branch_micro.py
+1dd589287dc9bed44c2964c26e5ac90b2f906f65dca5b0ee37f2ade05444f17a  speed/gdn_branch.py
+GLANCE_BRANCH_MODE=fused
+python -m scan.profile_branch --stage questions --ckpt /content/ckpt/v1/ckpt_final.pt --out /content/out/scan/item4_staged_questions.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 18089.90it/s]
+block_bidir 308 309
+causal 617 618
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/content/dv/scan/profile_branch.py", line 80, in <module>
+    compare_questions(a)
+    ~~~~~~~~~~~~~~~~~^^^
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "/content/dv/scan/branch_micro.py", line 182, in compare_questions
+    assert all(v["agreed"] == v["n"] for v in results.values())
+           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+staged_questions exit=1

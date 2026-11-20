@@ -1,0 +1,8 @@
+profile_before exit=0
+pushed /content/out/scan/item3_profile_before.json -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item3_profile_before.log -> Vision-Decision/collection-scan-results
+dispatch exit=0
+pushed /content/out/scan/item3_dispatch.json -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item3_dispatch.log -> Vision-Decision/collection-scan-results
+cpu exit=1
+pushed /content/out/scan/item3_cpu.log -> Vision-Decision/collection-scan-results

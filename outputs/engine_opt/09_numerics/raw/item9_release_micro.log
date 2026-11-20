@@ -1,0 +1,8 @@
+Thu Nov 19 07:31:19 PM UTC 2026
+name, driver_version, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 580.82.07, 0 MiB
+GPU compute process list empty
+GLANCE_BOX_REDUCTION=blocks
+python -m scan.bench_box_readout --out /content/out/scan/item9_release_micro.json 
+{"controls": {"fixed": {"max_score": 3.823617570342108e-07, "different_scores": 189, "different_centers": 0}, "tiled": {"max_score": 0.0, "different_scores": 0, "different_centers": 0}, "blocks": {"max_score": 0.0, "different_scores": 0, "different_centers": 0}, "blocks_box_outputs": {"presence_logit": 0.0, "pred_idx": 0.0, "box_pred": 0.0, "iou_logit": 0.0}, "tiled_box_outputs": {"presence_logit": 0.0, "pred_idx": 0.0, "box_pred": 0.0, "iou_logit": 0.0}}, "fp64_gemm": {"n": 4096, "ms": 91.37385559082031, "tflops": 1.5041387121439092}, "workloads": {"followup_1": {"legacy_ms": 0.04576000012457371, "eager_fp64_ms": 0.04318400099873543, "fixed_ms": 0.02947199996560812, "dots": 640, "width": 512, "key_bytes": 1310720}, "image_32": {"legacy_ms": 0.05788799934089184, "eager_fp64_ms": 0.1971839964389801, "fixed_ms": 0.08761599659919739, "dots": 20480, "width": 512, "key_bytes": 1310720}, "cached_256": {"legacy_ms": 0.2391040027141571, "eager_fp64_ms": 2.098528027534485, "fixed_ms": 0.519247978925705, "dots": 163840, "width": 512, "key_bytes": 335544320}, "fresh_128": {"legacy_ms": 0.045183999463915825, "eager_fp64_ms": 0.1303199976682663, "fixed_ms": 0.06508799642324448, "dots": 14976, "width": 512, "key_bytes": 30670848}}}
+micro exit=0

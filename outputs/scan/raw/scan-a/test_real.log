@@ -1,0 +1,23 @@
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 16460.75it/s]
+[transformers] Qwen3VL video processing does not apply the per-frame pixel cap the reference implementation (qwen-vl-utils) applies, so some videos cost far more tokens than they would there. In v5.22 the capped behavior will become the default and `cap_pixels_per_frame` will be removed. Pass `cap_pixels_per_frame=True` to adopt the reference behavior now, or `False` to keep the current behavior and silence this warning.
+api example: {'any': False, 'argmax': 5, 'count_frames_naive': 0, 'none_conformal': True, 'top': [], 'count_frames': 0, 'count_events': 0} {'query': 42.78, 'total': 42.82}
+block_bidir/box/cached_vs_alone               6.851e-01
+block_bidir/box/fresh_vs_alone                2.654e-02
+block_bidir/box/repeat                        0.000e+00
+block_bidir/noul/cached_vs_alone              1.475e-02
+block_bidir/noul/fresh_vs_alone               1.094e-02
+block_bidir/noul/repeat                       0.000e+00
+block_bidir/choice/cached_vs_alone            1.881e-02
+block_bidir/choice/fresh_vs_alone             1.283e-02
+block_bidir/choice/repeat                     0.000e+00
+block_bidir/isolate_others_maxdiff            0.000e+00
+block_bidir/isolate_changed                   6.182e-01
+block_bidir/qfirst_fresh_vs_alone             3.612e-02
+block_bidir/clip/noul/cached_vs_alone         1.213e-02
+block_bidir/clip/noul/fresh_vs_alone          1.252e-02
+block_bidir/clip/choice/cached_vs_alone       1.179e-02
+block_bidir/clip/choice/fresh_vs_alone        1.184e-02
+block_bidir/clip/qfirst_fresh_vs_alone        2.401e-02
+api/cached_vs_fresh_p                         1.200e-03
+N=6 images, bank Lp ok
+SCAN_EQUIVALENCE_FAIL

@@ -1,0 +1,2166 @@
+{
+ "128": [
+  {
+   "order": [
+    3,
+    2,
+    4
+   ],
+   "reverse": [],
+   "pad": 3,
+   "differences": 3
+  },
+  {
+   "order": [
+    3,
+    2,
+    4
+   ],
+   "reverse": [
+    4
+   ],
+   "pad": 3,
+   "differences": 5
+  },
+  {
+   "order": [
+    3,
+    4,
+    2
+   ],
+   "reverse": [],
+   "pad": 3,
+   "differences": 5
+  },
+  {
+   "order": [
+    3,
+    4,
+    2
+   ],
+   "reverse": [
+    2
+   ],
+   "pad": 3,
+   "differences": 5
+  },
+  {
+   "order": [
+    2,
+    3,
+    4
+   ],
+   "reverse": [],
+   "pad": 3,
+   "differences": 6
+  },
+  {
+   "order": [
+    2,
+    3,
+    4
+   ],
+   "reverse": [
+    4
+   ],
+   "pad": 3,
+   "differences": 6
+  },
+  {
+   "order": [
+    2,
+    4,
+    3
+   ],
+   "reverse": [],
+   "pad": 3,
+   "differences": 6
+  },
+  {
+   "order": [
+    2,
+    4,
+    3
+   ],
+   "reverse": [
+    2,
+    4,
+    3
+   ],
+   "pad": 3,
+   "differences": 7
+  },
+  {
+   "order": [
+    2,
+    3,
+    4
+   ],
+   "reverse": [
+    2,
+    3,
+    4
+   ],
+   "pad": 3,
+   "differences": 8
+  },
+  {
+   "order": [
+    2,
+    4,
+    3
+   ],
+   "reverse": [
+    3
+   ],
+   "pad": 3,
+   "differences": 8
+  },
+  {
+   "order": [
+    4,
+    2,
+    3
+   ],
+   "reverse": [
+    4,
+    2,
+    3
+   ],
+   "pad": 3,
+   "differences": 9
+  },
+  {
+   "order": [
+    4,
+    3,
+    2
+   ],
+   "reverse": [
+    4,
+    3,
+    2
+   ],
+   "pad": 3,
+   "differences": 9
+  },
+  {
+   "order": [
+    3,
+    4,
+    2
+   ],
+   "reverse": [
+    3,
+    4,
+    2
+   ],
+   "pad": 3,
+   "differences": 11
+  },
+  {
+   "order": [
+    4,
+    3,
+    2
+   ],
+   "reverse": [
+    2
+   ],
+   "pad": 3,
+   "differences": 11
+  },
+  {
+   "order": [
+    3,
+    2,
+    4
+   ],
+   "reverse": [
+    3,
+    2,
+    4
+   ],
+   "pad": 3,
+   "differences": 12
+  },
+  {
+   "order": [
+    4,
+    2,
+    3
+   ],
+   "reverse": [],
+   "pad": 3,
+   "differences": 12
+  },
+  {
+   "order": [
+    4,
+    2,
+    3
+   ],
+   "reverse": [
+    3
+   ],
+   "pad": 3,
+   "differences": 12
+  },
+  {
+   "order": [
+    4,
+    3,
+    2
+   ],
+   "reverse": [],
+   "pad": 3,
+   "differences": 12
+  },
+  {
+   "order": [
+    2,
+    4,
+    3
+   ],
+   "reverse": [
+    2,
+    4,
+    3
+   ],
+   "pad": 4,
+   "differences": 15140
+  },
+  {
+   "order": [
+    2,
+    4,
+    3
+   ],
+   "reverse": [],
+   "pad": 4,
+   "differences": 15142
+  },
+  {
+   "order": [
+    2,
+    4,
+    3
+   ],
+   "reverse": [
+    3
+   ],
+   "pad": 4,
+   "differences": 15142
+  },
+  {
+   "order": [
+    2,
+    3,
+    4
+   ],
+   "reverse": [],
+   "pad": 4,
+   "differences": 15704
+  },
+  {
+   "order": [
+    2,
+    3,
+    4
+   ],
+   "reverse": [
+    2,
+    3,
+    4
+   ],
+   "pad": 4,
+   "differences": 15704
+  },
+  {
+   "order": [
+    2,
+    3,
+    4
+   ],
+   "reverse": [
+    4
+   ],
+   "pad": 4,
+   "differences": 15704
+  },
+  {
+   "order": [
+    2,
+    4,
+    3
+   ],
+   "reverse": [
+    3
+   ],
+   "pad": 8,
+   "differences": 16967
+  },
+  {
+   "order": [
+    2,
+    4,
+    3
+   ],
+   "reverse": [],
+   "pad": 8,
+   "differences": 16968
+  },
+  {
+   "order": [
+    2,
+    4,
+    3
+   ],
+   "reverse": [
+    2,
+    4,
+    3
+   ],
+   "pad": 8,
+   "differences": 16968
+  },
+  {
+   "order": [
+    2,
+    3,
+    4
+   ],
+   "reverse": [
+    2,
+    3,
+    4
+   ],
+   "pad": 8,
+   "differences": 16977
+  },
+  {
+   "order": [
+    2,
+    3,
+    4
+   ],
+   "reverse": [
+    4
+   ],
+   "pad": 8,
+   "differences": 16977
+  },
+  {
+   "order": [
+    2,
+    3,
+    4
+   ],
+   "reverse": [],
+   "pad": 8,
+   "differences": 16978
+  },
+  {
+   "order": [
+    2,
+    4,
+    3
+   ],
+   "reverse": [
+    2,
+    4,
+    3
+   ],
+   "pad": 16,
+   "differences": 17610
+  },
+  {
+   "order": [
+    2,
+    4,
+    3
+   ],
+   "reverse": [
+    3
+   ],
+   "pad": 16,
+   "differences": 17610
+  },
+  {
+   "order": [
+    4,
+    2,
+    3
+   ],
+   "reverse": [
+    4,
+    2,
+    3
+   ],
+   "pad": 16,
+   "differences": 17610
+  },
+  {
+   "order": [
+    4,
+    2,
+    3
+   ],
+   "reverse": [
+    3
+   ],
+   "pad": 16,
+   "differences": 17610
+  },
+  {
+   "order": [
+    2,
+    4,
+    3
+   ],
+   "reverse": [],
+   "pad": 16,
+   "differences": 17611
+  },
+  {
+   "order": [
+    4,
+    2,
+    3
+   ],
+   "reverse": [],
+   "pad": 16,
+   "differences": 17611
+  },
+  {
+   "order": [
+    2,
+    3,
+    4
+   ],
+   "reverse": [
+    2,
+    3,
+    4
+   ],
+   "pad": 32,
+   "differences": 17705
+  },
+  {
+   "order": [
+    2,
+    3,
+    4
+   ],
+   "reverse": [
+    2,
+    3,
+    4
+   ],
+   "pad": 16,
+   "differences": 17723
+  },
+  {
+   "order": [
+    2,
+    3,
+    4
+   ],
+   "reverse": [
+    4
+   ],
+   "pad": 16,
+   "differences": 17723
+  },
+  {
+   "order": [
+    3,
+    2,
+    4
+   ],
+   "reverse": [
+    3,
+    2,
+    4
+   ],
+   "pad": 16,
+   "differences": 17723
+  },
+  {
+   "order": [
+    3,
+    2,
+    4
+   ],
+   "reverse": [
+    4
+   ],
+   "pad": 16,
+   "differences": 17723
+  },
+  {
+   "order": [
+    2,
+    3,
+    4
+   ],
+   "reverse": [],
+   "pad": 16,
+   "differences": 17724
+  },
+  {
+   "order": [
+    3,
+    2,
+    4
+   ],
+   "reverse": [],
+   "pad": 16,
+   "differences": 17724
+  },
+  {
+   "order": [
+    2,
+    3,
+    4
+   ],
+   "reverse": [
+    4
+   ],
+   "pad": 32,
+   "differences": 17744
+  },
+  {
+   "order": [
+    4,
+    2,
+    3
+   ],
+   "reverse": [],
+   "pad": 32,
+   "differences": 17791
+  },
+  {
+   "order": [
+    3,
+    2,
+    4
+   ],
+   "reverse": [
+    3,
+    2,
+    4
+   ],
+   "pad": 32,
+   "differences": 17803
+  },
+  {
+   "order": [
+    2,
+    4,
+    3
+   ],
+   "reverse": [],
+   "pad": 32,
+   "differences": 17812
+  },
+  {
+   "order": [
+    2,
+    4,
+    3
+   ],
+   "reverse": [
+    3
+   ],
+   "pad": 32,
+   "differences": 17857
+  },
+  {
+   "order": [
+    2,
+    4,
+    3
+   ],
+   "reverse": [
+    2,
+    4,
+    3
+   ],
+   "pad": 32,
+   "differences": 17881
+  },
+  {
+   "order": [
+    2,
+    3,
+    4
+   ],
+   "reverse": [],
+   "pad": 32,
+   "differences": 17889
+  },
+  {
+   "order": [
+    3,
+    2,
+    4
+   ],
+   "reverse": [],
+   "pad": 32,
+   "differences": 17938
+  },
+  {
+   "order": [
+    4,
+    2,
+    3
+   ],
+   "reverse": [
+    4,
+    2,
+    3
+   ],
+   "pad": 32,
+   "differences": 17941
+  },
+  {
+   "order": [
+    3,
+    2,
+    4
+   ],
+   "reverse": [
+    4
+   ],
+   "pad": 32,
+   "differences": 17984
+  },
+  {
+   "order": [
+    4,
+    2,
+    3
+   ],
+   "reverse": [
+    3
+   ],
+   "pad": 32,
+   "differences": 18244
+  },
+  {
+   "order": [
+    4,
+    2,
+    3
+   ],
+   "reverse": [
+    3
+   ],
+   "pad": 4,
+   "differences": 21520
+  },
+  {
+   "order": [
+    4,
+    3,
+    2
+   ],
+   "reverse": [],
+   "pad": 4,
+   "differences": 21520
+  },
+  {
+   "order": [
+    4,
+    3,
+    2
+   ],
+   "reverse": [
+    2
+   ],
+   "pad": 4,
+   "differences": 21520
+  },
+  {
+   "order": [
+    4,
+    2,
+    3
+   ],
+   "reverse": [],
+   "pad": 4,
+   "differences": 21521
+  },
+  {
+   "order": [
+    4,
+    2,
+    3
+   ],
+   "reverse": [
+    4,
+    2,
+    3
+   ],
+   "pad": 4,
+   "differences": 21521
+  },
+  {
+   "order": [
+    4,
+    3,
+    2
+   ],
+   "reverse": [
+    4,
+    3,
+    2
+   ],
+   "pad": 4,
+   "differences": 21521
+  },
+  {
+   "order": [
+    3,
+    2,
+    4
+   ],
+   "reverse": [],
+   "pad": 4,
+   "differences": 21619
+  },
+  {
+   "order": [
+    3,
+    2,
+    4
+   ],
+   "reverse": [
+    3,
+    2,
+    4
+   ],
+   "pad": 4,
+   "differences": 21619
+  },
+  {
+   "order": [
+    3,
+    2,
+    4
+   ],
+   "reverse": [
+    4
+   ],
+   "pad": 4,
+   "differences": 21619
+  },
+  {
+   "order": [
+    3,
+    4,
+    2
+   ],
+   "reverse": [],
+   "pad": 4,
+   "differences": 21620
+  },
+  {
+   "order": [
+    3,
+    4,
+    2
+   ],
+   "reverse": [
+    2
+   ],
+   "pad": 4,
+   "differences": 21620
+  },
+  {
+   "order": [
+    3,
+    4,
+    2
+   ],
+   "reverse": [
+    3,
+    4,
+    2
+   ],
+   "pad": 4,
+   "differences": 21621
+  },
+  {
+   "order": [
+    3,
+    4,
+    2
+   ],
+   "reverse": [],
+   "pad": 32,
+   "differences": 22056
+  },
+  {
+   "order": [
+    3,
+    4,
+    2
+   ],
+   "reverse": [
+    2
+   ],
+   "pad": 32,
+   "differences": 22056
+  },
+  {
+   "order": [
+    3,
+    4,
+    2
+   ],
+   "reverse": [
+    3,
+    4,
+    2
+   ],
+   "pad": 32,
+   "differences": 22096
+  },
+  {
+   "order": [
+    3,
+    4,
+    2
+   ],
+   "reverse": [
+    3,
+    4,
+    2
+   ],
+   "pad": 8,
+   "differences": 22308
+  },
+  {
+   "order": [
+    3,
+    2,
+    4
+   ],
+   "reverse": [],
+   "pad": 8,
+   "differences": 22309
+  },
+  {
+   "order": [
+    3,
+    2,
+    4
+   ],
+   "reverse": [
+    3,
+    2,
+    4
+   ],
+   "pad": 8,
+   "differences": 22309
+  },
+  {
+   "order": [
+    3,
+    2,
+    4
+   ],
+   "reverse": [
+    4
+   ],
+   "pad": 8,
+   "differences": 22309
+  },
+  {
+   "order": [
+    3,
+    4,
+    2
+   ],
+   "reverse": [],
+   "pad": 8,
+   "differences": 22309
+  },
+  {
+   "order": [
+    3,
+    4,
+    2
+   ],
+   "reverse": [
+    2
+   ],
+   "pad": 8,
+   "differences": 22309
+  },
+  {
+   "order": [
+    4,
+    3,
+    2
+   ],
+   "reverse": [],
+   "pad": 32,
+   "differences": 22332
+  },
+  {
+   "order": [
+    4,
+    3,
+    2
+   ],
+   "reverse": [
+    2
+   ],
+   "pad": 32,
+   "differences": 22332
+  },
+  {
+   "order": [
+    4,
+    3,
+    2
+   ],
+   "reverse": [
+    4,
+    3,
+    2
+   ],
+   "pad": 32,
+   "differences": 22397
+  },
+  {
+   "order": [
+    4,
+    3,
+    2
+   ],
+   "reverse": [],
+   "pad": 16,
+   "differences": 22552
+  },
+  {
+   "order": [
+    4,
+    3,
+    2
+   ],
+   "reverse": [
+    4,
+    3,
+    2
+   ],
+   "pad": 16,
+   "differences": 22552
+  },
+  {
+   "order": [
+    4,
+    3,
+    2
+   ],
+   "reverse": [
+    2
+   ],
+   "pad": 16,
+   "differences": 22552
+  },
+  {
+   "order": [
+    3,
+    4,
+    2
+   ],
+   "reverse": [],
+   "pad": 16,
+   "differences": 22559
+  },
+  {
+   "order": [
+    3,
+    4,
+    2
+   ],
+   "reverse": [
+    2
+   ],
+   "pad": 16,
+   "differences": 22559
+  },
+  {
+   "order": [
+    3,
+    4,
+    2
+   ],
+   "reverse": [
+    3,
+    4,
+    2
+   ],
+   "pad": 16,
+   "differences": 22561
+  },
+  {
+   "order": [
+    4,
+    2,
+    3
+   ],
+   "reverse": [],
+   "pad": 8,
+   "differences": 22808
+  },
+  {
+   "order": [
+    4,
+    2,
+    3
+   ],
+   "reverse": [
+    4,
+    2,
+    3
+   ],
+   "pad": 8,
+   "differences": 22808
+  },
+  {
+   "order": [
+    4,
+    2,
+    3
+   ],
+   "reverse": [
+    3
+   ],
+   "pad": 8,
+   "differences": 22808
+  },
+  {
+   "order": [
+    4,
+    3,
+    2
+   ],
+   "reverse": [
+    4,
+    3,
+    2
+   ],
+   "pad": 8,
+   "differences": 22808
+  },
+  {
+   "order": [
+    4,
+    3,
+    2
+   ],
+   "reverse": [],
+   "pad": 8,
+   "differences": 22809
+  },
+  {
+   "order": [
+    4,
+    3,
+    2
+   ],
+   "reverse": [
+    2
+   ],
+   "pad": 8,
+   "differences": 22809
+  }
+ ],
+ "256": [
+  {
+   "order": [
+    2,
+    3,
+    4
+   ],
+   "reverse": [],
+   "pad": 3,
+   "differences": 13
+  },
+  {
+   "order": [
+    2,
+    3,
+    4
+   ],
+   "reverse": [
+    4
+   ],
+   "pad": 3,
+   "differences": 13
+  },
+  {
+   "order": [
+    2,
+    4,
+    3
+   ],
+   "reverse": [],
+   "pad": 3,
+   "differences": 13
+  },
+  {
+   "order": [
+    3,
+    4,
+    2
+   ],
+   "reverse": [
+    2
+   ],
+   "pad": 3,
+   "differences": 13
+  },
+  {
+   "order": [
+    3,
+    2,
+    4
+   ],
+   "reverse": [],
+   "pad": 3,
+   "differences": 14
+  },
+  {
+   "order": [
+    4,
+    2,
+    3
+   ],
+   "reverse": [
+    4,
+    2,
+    3
+   ],
+   "pad": 3,
+   "differences": 14
+  },
+  {
+   "order": [
+    4,
+    3,
+    2
+   ],
+   "reverse": [
+    4,
+    3,
+    2
+   ],
+   "pad": 3,
+   "differences": 14
+  },
+  {
+   "order": [
+    2,
+    4,
+    3
+   ],
+   "reverse": [
+    2,
+    4,
+    3
+   ],
+   "pad": 3,
+   "differences": 15
+  },
+  {
+   "order": [
+    2,
+    4,
+    3
+   ],
+   "reverse": [
+    3
+   ],
+   "pad": 3,
+   "differences": 15
+  },
+  {
+   "order": [
+    3,
+    2,
+    4
+   ],
+   "reverse": [
+    4
+   ],
+   "pad": 3,
+   "differences": 15
+  },
+  {
+   "order": [
+    3,
+    4,
+    2
+   ],
+   "reverse": [],
+   "pad": 3,
+   "differences": 15
+  },
+  {
+   "order": [
+    3,
+    4,
+    2
+   ],
+   "reverse": [
+    3,
+    4,
+    2
+   ],
+   "pad": 3,
+   "differences": 15
+  },
+  {
+   "order": [
+    2,
+    3,
+    4
+   ],
+   "reverse": [
+    2,
+    3,
+    4
+   ],
+   "pad": 3,
+   "differences": 16
+  },
+  {
+   "order": [
+    4,
+    2,
+    3
+   ],
+   "reverse": [],
+   "pad": 3,
+   "differences": 16
+  },
+  {
+   "order": [
+    4,
+    2,
+    3
+   ],
+   "reverse": [
+    3
+   ],
+   "pad": 3,
+   "differences": 16
+  },
+  {
+   "order": [
+    4,
+    3,
+    2
+   ],
+   "reverse": [],
+   "pad": 3,
+   "differences": 16
+  },
+  {
+   "order": [
+    4,
+    3,
+    2
+   ],
+   "reverse": [
+    2
+   ],
+   "pad": 3,
+   "differences": 16
+  },
+  {
+   "order": [
+    3,
+    2,
+    4
+   ],
+   "reverse": [
+    3,
+    2,
+    4
+   ],
+   "pad": 3,
+   "differences": 18
+  },
+  {
+   "order": [
+    2,
+    4,
+    3
+   ],
+   "reverse": [
+    2,
+    4,
+    3
+   ],
+   "pad": 4,
+   "differences": 15349
+  },
+  {
+   "order": [
+    2,
+    4,
+    3
+   ],
+   "reverse": [
+    3
+   ],
+   "pad": 4,
+   "differences": 15351
+  },
+  {
+   "order": [
+    2,
+    4,
+    3
+   ],
+   "reverse": [],
+   "pad": 4,
+   "differences": 15352
+  },
+  {
+   "order": [
+    2,
+    3,
+    4
+   ],
+   "reverse": [
+    2,
+    3,
+    4
+   ],
+   "pad": 4,
+   "differences": 15850
+  },
+  {
+   "order": [
+    2,
+    3,
+    4
+   ],
+   "reverse": [
+    4
+   ],
+   "pad": 4,
+   "differences": 15850
+  },
+  {
+   "order": [
+    2,
+    3,
+    4
+   ],
+   "reverse": [],
+   "pad": 4,
+   "differences": 15851
+  },
+  {
+   "order": [
+    2,
+    4,
+    3
+   ],
+   "reverse": [],
+   "pad": 8,
+   "differences": 17014
+  },
+  {
+   "order": [
+    2,
+    4,
+    3
+   ],
+   "reverse": [
+    2,
+    4,
+    3
+   ],
+   "pad": 8,
+   "differences": 17014
+  },
+  {
+   "order": [
+    2,
+    4,
+    3
+   ],
+   "reverse": [
+    3
+   ],
+   "pad": 8,
+   "differences": 17014
+  },
+  {
+   "order": [
+    2,
+    3,
+    4
+   ],
+   "reverse": [
+    2,
+    3,
+    4
+   ],
+   "pad": 8,
+   "differences": 17264
+  },
+  {
+   "order": [
+    2,
+    3,
+    4
+   ],
+   "reverse": [],
+   "pad": 8,
+   "differences": 17265
+  },
+  {
+   "order": [
+    2,
+    3,
+    4
+   ],
+   "reverse": [
+    4
+   ],
+   "pad": 8,
+   "differences": 17265
+  },
+  {
+   "order": [
+    2,
+    3,
+    4
+   ],
+   "reverse": [
+    2,
+    3,
+    4
+   ],
+   "pad": 32,
+   "differences": 17721
+  },
+  {
+   "order": [
+    2,
+    3,
+    4
+   ],
+   "reverse": [],
+   "pad": 32,
+   "differences": 17759
+  },
+  {
+   "order": [
+    2,
+    4,
+    3
+   ],
+   "reverse": [],
+   "pad": 16,
+   "differences": 17783
+  },
+  {
+   "order": [
+    4,
+    2,
+    3
+   ],
+   "reverse": [],
+   "pad": 16,
+   "differences": 17783
+  },
+  {
+   "order": [
+    2,
+    4,
+    3
+   ],
+   "reverse": [
+    2,
+    4,
+    3
+   ],
+   "pad": 16,
+   "differences": 17784
+  },
+  {
+   "order": [
+    2,
+    4,
+    3
+   ],
+   "reverse": [
+    3
+   ],
+   "pad": 16,
+   "differences": 17784
+  },
+  {
+   "order": [
+    4,
+    2,
+    3
+   ],
+   "reverse": [
+    4,
+    2,
+    3
+   ],
+   "pad": 16,
+   "differences": 17784
+  },
+  {
+   "order": [
+    4,
+    2,
+    3
+   ],
+   "reverse": [
+    3
+   ],
+   "pad": 16,
+   "differences": 17784
+  },
+  {
+   "order": [
+    2,
+    4,
+    3
+   ],
+   "reverse": [
+    3
+   ],
+   "pad": 32,
+   "differences": 17791
+  },
+  {
+   "order": [
+    2,
+    4,
+    3
+   ],
+   "reverse": [
+    2,
+    4,
+    3
+   ],
+   "pad": 32,
+   "differences": 17833
+  },
+  {
+   "order": [
+    2,
+    3,
+    4
+   ],
+   "reverse": [],
+   "pad": 16,
+   "differences": 17835
+  },
+  {
+   "order": [
+    2,
+    3,
+    4
+   ],
+   "reverse": [
+    2,
+    3,
+    4
+   ],
+   "pad": 16,
+   "differences": 17835
+  },
+  {
+   "order": [
+    2,
+    3,
+    4
+   ],
+   "reverse": [
+    4
+   ],
+   "pad": 16,
+   "differences": 17835
+  },
+  {
+   "order": [
+    3,
+    2,
+    4
+   ],
+   "reverse": [],
+   "pad": 16,
+   "differences": 17835
+  },
+  {
+   "order": [
+    3,
+    2,
+    4
+   ],
+   "reverse": [
+    3,
+    2,
+    4
+   ],
+   "pad": 16,
+   "differences": 17835
+  },
+  {
+   "order": [
+    3,
+    2,
+    4
+   ],
+   "reverse": [
+    4
+   ],
+   "pad": 16,
+   "differences": 17835
+  },
+  {
+   "order": [
+    2,
+    4,
+    3
+   ],
+   "reverse": [],
+   "pad": 32,
+   "differences": 17853
+  },
+  {
+   "order": [
+    2,
+    3,
+    4
+   ],
+   "reverse": [
+    4
+   ],
+   "pad": 32,
+   "differences": 17937
+  },
+  {
+   "order": [
+    3,
+    2,
+    4
+   ],
+   "reverse": [
+    4
+   ],
+   "pad": 32,
+   "differences": 17939
+  },
+  {
+   "order": [
+    4,
+    2,
+    3
+   ],
+   "reverse": [
+    4,
+    2,
+    3
+   ],
+   "pad": 32,
+   "differences": 17954
+  },
+  {
+   "order": [
+    4,
+    2,
+    3
+   ],
+   "reverse": [],
+   "pad": 32,
+   "differences": 17964
+  },
+  {
+   "order": [
+    4,
+    2,
+    3
+   ],
+   "reverse": [
+    3
+   ],
+   "pad": 32,
+   "differences": 17965
+  },
+  {
+   "order": [
+    3,
+    2,
+    4
+   ],
+   "reverse": [],
+   "pad": 32,
+   "differences": 17966
+  },
+  {
+   "order": [
+    3,
+    2,
+    4
+   ],
+   "reverse": [
+    3,
+    2,
+    4
+   ],
+   "pad": 32,
+   "differences": 17987
+  },
+  {
+   "order": [
+    4,
+    2,
+    3
+   ],
+   "reverse": [],
+   "pad": 4,
+   "differences": 21428
+  },
+  {
+   "order": [
+    4,
+    2,
+    3
+   ],
+   "reverse": [
+    4,
+    2,
+    3
+   ],
+   "pad": 4,
+   "differences": 21428
+  },
+  {
+   "order": [
+    4,
+    2,
+    3
+   ],
+   "reverse": [
+    3
+   ],
+   "pad": 4,
+   "differences": 21428
+  },
+  {
+   "order": [
+    4,
+    3,
+    2
+   ],
+   "reverse": [
+    4,
+    3,
+    2
+   ],
+   "pad": 4,
+   "differences": 21428
+  },
+  {
+   "order": [
+    4,
+    3,
+    2
+   ],
+   "reverse": [],
+   "pad": 4,
+   "differences": 21429
+  },
+  {
+   "order": [
+    4,
+    3,
+    2
+   ],
+   "reverse": [
+    2
+   ],
+   "pad": 4,
+   "differences": 21429
+  },
+  {
+   "order": [
+    3,
+    2,
+    4
+   ],
+   "reverse": [],
+   "pad": 4,
+   "differences": 21587
+  },
+  {
+   "order": [
+    3,
+    2,
+    4
+   ],
+   "reverse": [
+    3,
+    2,
+    4
+   ],
+   "pad": 4,
+   "differences": 21587
+  },
+  {
+   "order": [
+    3,
+    2,
+    4
+   ],
+   "reverse": [
+    4
+   ],
+   "pad": 4,
+   "differences": 21587
+  },
+  {
+   "order": [
+    3,
+    4,
+    2
+   ],
+   "reverse": [],
+   "pad": 4,
+   "differences": 21587
+  },
+  {
+   "order": [
+    3,
+    4,
+    2
+   ],
+   "reverse": [
+    3,
+    4,
+    2
+   ],
+   "pad": 4,
+   "differences": 21587
+  },
+  {
+   "order": [
+    3,
+    4,
+    2
+   ],
+   "reverse": [
+    2
+   ],
+   "pad": 4,
+   "differences": 21587
+  },
+  {
+   "order": [
+    3,
+    4,
+    2
+   ],
+   "reverse": [],
+   "pad": 32,
+   "differences": 21964
+  },
+  {
+   "order": [
+    3,
+    4,
+    2
+   ],
+   "reverse": [
+    2
+   ],
+   "pad": 32,
+   "differences": 21964
+  },
+  {
+   "order": [
+    3,
+    4,
+    2
+   ],
+   "reverse": [
+    3,
+    4,
+    2
+   ],
+   "pad": 32,
+   "differences": 22085
+  },
+  {
+   "order": [
+    4,
+    3,
+    2
+   ],
+   "reverse": [],
+   "pad": 32,
+   "differences": 22263
+  },
+  {
+   "order": [
+    4,
+    3,
+    2
+   ],
+   "reverse": [
+    2
+   ],
+   "pad": 32,
+   "differences": 22263
+  },
+  {
+   "order": [
+    3,
+    2,
+    4
+   ],
+   "reverse": [
+    3,
+    2,
+    4
+   ],
+   "pad": 8,
+   "differences": 22315
+  },
+  {
+   "order": [
+    3,
+    2,
+    4
+   ],
+   "reverse": [
+    4
+   ],
+   "pad": 8,
+   "differences": 22315
+  },
+  {
+   "order": [
+    3,
+    4,
+    2
+   ],
+   "reverse": [],
+   "pad": 8,
+   "differences": 22315
+  },
+  {
+   "order": [
+    3,
+    4,
+    2
+   ],
+   "reverse": [
+    3,
+    4,
+    2
+   ],
+   "pad": 8,
+   "differences": 22315
+  },
+  {
+   "order": [
+    3,
+    4,
+    2
+   ],
+   "reverse": [
+    2
+   ],
+   "pad": 8,
+   "differences": 22315
+  },
+  {
+   "order": [
+    3,
+    2,
+    4
+   ],
+   "reverse": [],
+   "pad": 8,
+   "differences": 22316
+  },
+  {
+   "order": [
+    4,
+    3,
+    2
+   ],
+   "reverse": [
+    4,
+    3,
+    2
+   ],
+   "pad": 32,
+   "differences": 22358
+  },
+  {
+   "order": [
+    3,
+    4,
+    2
+   ],
+   "reverse": [],
+   "pad": 16,
+   "differences": 22366
+  },
+  {
+   "order": [
+    3,
+    4,
+    2
+   ],
+   "reverse": [
+    3,
+    4,
+    2
+   ],
+   "pad": 16,
+   "differences": 22366
+  },
+  {
+   "order": [
+    3,
+    4,
+    2
+   ],
+   "reverse": [
+    2
+   ],
+   "pad": 16,
+   "differences": 22366
+  },
+  {
+   "order": [
+    4,
+    3,
+    2
+   ],
+   "reverse": [],
+   "pad": 16,
+   "differences": 22483
+  },
+  {
+   "order": [
+    4,
+    3,
+    2
+   ],
+   "reverse": [
+    4,
+    3,
+    2
+   ],
+   "pad": 16,
+   "differences": 22483
+  },
+  {
+   "order": [
+    4,
+    3,
+    2
+   ],
+   "reverse": [
+    2
+   ],
+   "pad": 16,
+   "differences": 22483
+  },
+  {
+   "order": [
+    4,
+    3,
+    2
+   ],
+   "reverse": [],
+   "pad": 8,
+   "differences": 22671
+  },
+  {
+   "order": [
+    4,
+    3,
+    2
+   ],
+   "reverse": [
+    2
+   ],
+   "pad": 8,
+   "differences": 22671
+  },
+  {
+   "order": [
+    4,
+    2,
+    3
+   ],
+   "reverse": [],
+   "pad": 8,
+   "differences": 22672
+  },
+  {
+   "order": [
+    4,
+    2,
+    3
+   ],
+   "reverse": [
+    3
+   ],
+   "pad": 8,
+   "differences": 22672
+  },
+  {
+   "order": [
+    4,
+    3,
+    2
+   ],
+   "reverse": [
+    4,
+    3,
+    2
+   ],
+   "pad": 8,
+   "differences": 22672
+  },
+  {
+   "order": [
+    4,
+    2,
+    3
+   ],
+   "reverse": [
+    4,
+    2,
+    3
+   ],
+   "pad": 8,
+   "differences": 22673
+  }
+ ]
+}

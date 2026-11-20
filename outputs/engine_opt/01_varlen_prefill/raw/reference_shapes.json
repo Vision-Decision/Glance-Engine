@@ -1,0 +1,173 @@
+{
+  "source": "CPU collator and Qwen config; single call, before any E1b outer chunking. Cache bytes derived from live tensor views, not measured GPU allocations.",
+  "rows": {
+    "Tv128_N32": {
+      "prefix_tokens_per_image": 122,
+      "question_tokens_per_image": [
+        24,
+        25,
+        27,
+        30,
+        24,
+        24,
+        28,
+        23,
+        28,
+        24
+      ],
+      "execute_without_prefix_mask": true,
+      "graph_eligible": true,
+      "distinct_lm_keys": 4,
+      "warmup_lm_keys": 4,
+      "total_live_rows_first_query": 4672,
+      "derived_prefix_cache_bytes_first_query": 5210046464
+    },
+    "Tv128_N64": {
+      "prefix_tokens_per_image": 122,
+      "question_tokens_per_image": [
+        24,
+        25,
+        27,
+        30,
+        24,
+        24,
+        28,
+        23,
+        28,
+        24
+      ],
+      "execute_without_prefix_mask": true,
+      "graph_eligible": true,
+      "distinct_lm_keys": 6,
+      "warmup_lm_keys": 4,
+      "total_live_rows_first_query": 9344,
+      "derived_prefix_cache_bytes_first_query": 10420092928
+    },
+    "Tv128_N128": {
+      "prefix_tokens_per_image": 122,
+      "question_tokens_per_image": [
+        24,
+        25,
+        27,
+        30,
+        24,
+        24,
+        28,
+        23,
+        28,
+        24
+      ],
+      "execute_without_prefix_mask": true,
+      "graph_eligible": true,
+      "distinct_lm_keys": 6,
+      "warmup_lm_keys": 4,
+      "total_live_rows_first_query": 18688,
+      "derived_prefix_cache_bytes_first_query": 20840185856
+    },
+    "Tv128_N256": {
+      "prefix_tokens_per_image": 122,
+      "question_tokens_per_image": [
+        24,
+        25,
+        27,
+        30,
+        24,
+        24,
+        28,
+        23,
+        28,
+        24
+      ],
+      "execute_without_prefix_mask": true,
+      "graph_eligible": false,
+      "distinct_lm_keys": 6,
+      "warmup_lm_keys": 4,
+      "total_live_rows_first_query": 37376,
+      "derived_prefix_cache_bytes_first_query": 41680371712
+    },
+    "Tv256_N32": {
+      "prefix_tokens_per_image": 257,
+      "question_tokens_per_image": [
+        24,
+        25,
+        27,
+        30,
+        24,
+        24,
+        28,
+        23,
+        28,
+        24
+      ],
+      "execute_without_prefix_mask": true,
+      "graph_eligible": true,
+      "distinct_lm_keys": 4,
+      "warmup_lm_keys": 4,
+      "total_live_rows_first_query": 8992,
+      "derived_prefix_cache_bytes_first_query": 8549924864
+    },
+    "Tv256_N64": {
+      "prefix_tokens_per_image": 257,
+      "question_tokens_per_image": [
+        24,
+        25,
+        27,
+        30,
+        24,
+        24,
+        28,
+        23,
+        28,
+        24
+      ],
+      "execute_without_prefix_mask": true,
+      "graph_eligible": true,
+      "distinct_lm_keys": 6,
+      "warmup_lm_keys": 4,
+      "total_live_rows_first_query": 17984,
+      "derived_prefix_cache_bytes_first_query": 17099849728
+    },
+    "Tv256_N128": {
+      "prefix_tokens_per_image": 257,
+      "question_tokens_per_image": [
+        24,
+        25,
+        27,
+        30,
+        24,
+        24,
+        28,
+        23,
+        28,
+        24
+      ],
+      "execute_without_prefix_mask": true,
+      "graph_eligible": false,
+      "distinct_lm_keys": 6,
+      "warmup_lm_keys": 4,
+      "total_live_rows_first_query": 35968,
+      "derived_prefix_cache_bytes_first_query": 34199699456
+    },
+    "Tv256_N256": {
+      "prefix_tokens_per_image": 257,
+      "question_tokens_per_image": [
+        24,
+        25,
+        27,
+        30,
+        24,
+        24,
+        28,
+        23,
+        28,
+        24
+      ],
+      "execute_without_prefix_mask": true,
+      "graph_eligible": false,
+      "distinct_lm_keys": 6,
+      "warmup_lm_keys": 4,
+      "total_live_rows_first_query": 71936,
+      "derived_prefix_cache_bytes_first_query": 68399398912
+    }
+  }
+}

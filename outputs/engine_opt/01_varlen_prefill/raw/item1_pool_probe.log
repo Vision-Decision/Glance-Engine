@@ -1,0 +1,12 @@
+expandable_segments=True handle=stale
+capture passed stale 2.14.1+cu130
+exit=0
+expandable_segments=True handle=fresh
+capture passed fresh 2.14.1+cu130
+exit=0
+expandable_segments=False handle=stale
+capture passed stale 2.14.1+cu130
+exit=0
+expandable_segments=False handle=fresh
+capture passed fresh 2.14.1+cu130
+exit=0

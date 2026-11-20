@@ -1,0 +1,29 @@
+Thu Nov 19 04:25:53 PM UTC 2026
+name, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 0 MiB
+GPU_IDLE
+python -m scan.profile_frames --stage split --ckpt /content/ckpt/v1/ckpt_final.pt --out /content/out/scan/item7_split.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 20503.18it/s]
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/content/dv/scan/profile_frames.py", line 114, in <module>
+    main()
+    ~~~~^^
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "/content/dv/scan/profile_frames.py", line 77, in main
+    px = prep.pixels(upload_frames(frames))
+  File "/content/dv/scan/vision_prep.py", line 107, in pixels
+    return patches(raw, self._lut())
+  File "/content/dv/speed/frame_pixels.py", line 39, in patches
+    _patches[(maximum, n)](raw, lut, layout, w, maximum, layout is not None)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/triton/runtime/jit.py", line 374, in <lambda>
+    return lambda *args, **kwargs: self.run(grid=grid, warmup=False, *args, **kwargs)
+                                   ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/triton/runtime/jit.py", line 741, in run
+    bound_args, specialization, options = binder(*args, **kwargs)
+                                          ~~~~~~^^^^^^^^^^^^^^^^^
+TypeError: dynamic_func() missing 1 required positional argument: 'MIXED'
+split exit=1

@@ -1,0 +1,38 @@
+{
+ "ckpt": "/content/ckpt/scan/short_gv0/ckpt_final.pt",
+ "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "n_long": 1800,
+ "encode_ms_per_clip": 21.121086925784738,
+ "bank_MB_per_clip": {
+  "gdn_state": 48.0,
+  "gdn_conv": 1.125,
+  "attn_k": 4.0,
+  "attn_v": 4.0,
+  "vis_hidden": 0.0048828125,
+  "box_keys": 0.001953125
+ },
+ "bank_MB_per_clip_total": 57.1318359375,
+ "gpu_resident_ms": {
+  "64": 32.61959700012085,
+  "256": 108.38784299994586
+ },
+ "host_tier_ms": {
+  "256": 391.4815839998482,
+  "1024": 1563.1034269999873,
+  "1800": 2762.6963619995877
+ },
+ "host_bank_GB": 100.41411590576172,
+ "state_precision": {
+  "bf16": {
+   "max_dP": 0.006197094917297363,
+   "mean_dP": 0.0006406019092537463,
+   "decision_agree": 0.9986979166666666
+  },
+  "fp8": {
+   "max_dP": 0.0063362717628479,
+   "mean_dP": 0.0007514855242334306,
+   "decision_agree": 0.9993489583333334
+  }
+ },
+ "throughput_qps_4x256": 8.615067245053481
+}

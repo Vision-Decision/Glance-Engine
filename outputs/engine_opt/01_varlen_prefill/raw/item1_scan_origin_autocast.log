@@ -1,0 +1,43 @@
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 17304.83it/s]
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] Qwen3VL video processing does not apply the per-frame pixel cap the reference implementation (qwen-vl-utils) applies, so some videos cost far more tokens than they would there. In v5.22 the capped behavior will become the default and `cap_pixels_per_frame` will be removed. Pass `cap_pixels_per_frame=True` to adopt the reference behavior now, or `False` to keep the current behavior and silence this warning.
+api example: {'any': False, 'argmax': 5, 'count_frames_naive': 0, 'none_conformal': True, 'top': [], 'count_frames': 0, 'count_events': 0} {'query': 34.33, 'total': 34.36}
+causal/box/cached_vs_alone                    2.483e-01
+causal/box/fresh_vs_alone                     4.023e-01
+causal/box/repeat                             0.000e+00
+causal/noul/cached_vs_alone                   1.343e-02
+causal/noul/fresh_vs_alone                    1.576e-02
+causal/noul/repeat                            0.000e+00
+causal/choice/cached_vs_alone                 8.991e-03
+causal/choice/fresh_vs_alone                  1.065e-02
+causal/choice/repeat                          0.000e+00
+causal/isolate_others_maxdiff                 0.000e+00
+causal/isolate_changed                        7.747e-01
+causal/qfirst_fresh_vs_alone                  2.430e-02
+causal/box/cached_vs_hf_plain_forward         2.504e-01
+causal/clip/noul/cached_vs_alone              1.147e-02
+causal/clip/noul/fresh_vs_alone               1.552e-02
+causal/clip/choice/cached_vs_alone            1.625e-02
+causal/clip/choice/fresh_vs_alone             9.118e-03
+causal/clip/qfirst_fresh_vs_alone             2.528e-02
+block_bidir/box/cached_vs_alone               6.952e-01
+block_bidir/box/fresh_vs_alone                2.654e-02
+block_bidir/box/repeat                        0.000e+00
+block_bidir/noul/cached_vs_alone              1.510e-02
+block_bidir/noul/fresh_vs_alone               1.094e-02
+block_bidir/noul/repeat                       0.000e+00
+block_bidir/choice/cached_vs_alone            1.231e-02
+block_bidir/choice/fresh_vs_alone             1.283e-02
+block_bidir/choice/repeat                     0.000e+00
+block_bidir/isolate_others_maxdiff            0.000e+00
+block_bidir/isolate_changed                   6.302e-01
+block_bidir/qfirst_fresh_vs_alone             3.612e-02
+block_bidir/clip/noul/cached_vs_alone         1.198e-02
+block_bidir/clip/noul/fresh_vs_alone          1.363e-02
+block_bidir/clip/choice/cached_vs_alone       5.586e-03
+block_bidir/clip/choice/fresh_vs_alone        5.938e-03
+block_bidir/clip/qfirst_fresh_vs_alone        1.329e-02
+api/cached_vs_fresh_p                         6.000e-04
+api/clips_short_cached_vs_fresh               1.100e-03
+N=6 images, bank Lp ok
+SCAN_EQUIVALENCE_FAIL

@@ -1,0 +1,31 @@
+Thu Nov 19 11:33:40 AM UTC 2026
+name, driver_version, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 580.82.07, 0 MiB
+GPU compute process list empty
+python -m scan.profile_lm --stage graphs --ckpt /content/ckpt/v1/ckpt_final.pt --out /content/out/scan/item3_graphs.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 17086.04it/s]
+causal 1 0 0 1 8.870271682739258 {'prob_absdiff_max': 4.0619634091854095e-06, 'decision_agree': 1.0}
+causal 1 1 1 1 8.867839813232422 {'prob_absdiff_max': 1.6748905181884766e-05, 'decision_agree': 1.0}
+causal 1 2 1 1 8.86956787109375 {'prob_absdiff_max': 1.335999695584178e-05, 'decision_agree': 1.0}
+causal 1 3 1 1 8.87116813659668 {'prob_absdiff_max': 4.0619634091854095e-06, 'decision_agree': 1.0}
+causal 4 0 1 2 20.235647201538086 {'prob_absdiff_max': 2.827600110322237e-05, 'decision_agree': 1.0}
+causal 4 1 2 2 20.255647659301758 {'prob_absdiff_max': 7.546658162027597e-05, 'decision_agree': 1.0}
+causal 4 2 2 2 20.248512268066406 {'prob_absdiff_max': 1.991898170672357e-05, 'decision_agree': 1.0}
+causal 4 3 2 2 20.240224838256836 {'prob_absdiff_max': 2.827600110322237e-05, 'decision_agree': 1.0}
+causal 8 0 2 3 34.1644172668457 {'prob_absdiff_max': 1.9490718841552734e-05, 'decision_agree': 1.0}
+causal 8 1 3 3 34.18048095703125 {'prob_absdiff_max': 0.00013709068298339844, 'decision_agree': 1.0}
+causal 8 2 3 3 34.185150146484375 {'prob_absdiff_max': 2.5391578674316406e-05, 'decision_agree': 1.0}
+causal 8 3 3 3 34.169822692871094 {'prob_absdiff_max': 1.9490718841552734e-05, 'decision_agree': 1.0}
+block_bidir 1 0 0 1 8.963359832763672 {'prob_absdiff_max': 9.443785529583693e-06, 'decision_agree': 1.0}
+block_bidir 1 1 1 1 8.963552474975586 {'prob_absdiff_max': 1.1682510375976562e-05, 'decision_agree': 1.0}
+block_bidir 1 2 1 1 8.967967987060547 {'prob_absdiff_max': 6.481772288680077e-06, 'decision_agree': 1.0}
+block_bidir 1 3 1 1 8.980735778808594 {'prob_absdiff_max': 9.443785529583693e-06, 'decision_agree': 1.0}
+block_bidir 4 0 1 2 20.396320343017578 {'prob_absdiff_max': 2.5153160095214844e-05, 'decision_agree': 1.0}
+block_bidir 4 1 2 2 20.393695831298828 {'prob_absdiff_max': 0.0001252293586730957, 'decision_agree': 1.0}
+block_bidir 4 2 2 2 20.390304565429688 {'prob_absdiff_max': 2.3186206817626953e-05, 'decision_agree': 1.0}
+block_bidir 4 3 2 2 20.390527725219727 {'prob_absdiff_max': 2.5153160095214844e-05, 'decision_agree': 1.0}
+block_bidir 8 0 2 3 34.44179153442383 {'prob_absdiff_max': 1.5114521374925971e-05, 'decision_agree': 1.0}
+block_bidir 8 1 3 3 34.4469108581543 {'prob_absdiff_max': 0.00012182258069515228, 'decision_agree': 1.0}
+block_bidir 8 2 3 3 34.4284782409668 {'prob_absdiff_max': 1.1585623724386096e-05, 'decision_agree': 1.0}
+block_bidir 8 3 3 3 34.43360137939453 {'prob_absdiff_max': 1.5114521374925971e-05, 'decision_agree': 1.0}
+graphs exit=0

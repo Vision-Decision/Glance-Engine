@@ -1,0 +1,13 @@
+Thu Nov 19 07:45:21 PM UTC 2026
+name, driver_version, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 580.82.07, 0 MiB
+GPU compute process list empty
+GLANCE_BOX_REDUCTION=blocks
+python -m speed.bench_glance --modes eng_fused --parts mixed --ckpt /content/ckpt/v1/ckpt_final.pt --out /content/out/scan/item9_release_mixed.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 16777.77it/s]
+eng_fused  bs1_mixed_N4 {"prep_ms_median": 2.55, "vision_ms_median": 9.87, "lm_ms_median": 28.15, "model_ms_median": 38.05, "model_ms_p90": 38.69, "total_ms_median": 40.67, "total_ms_p90": 41.4, "ttfa_ms_median": 40.67, "q_per_s": 98.17, "n_calls": 50, "questions_per_call": 4}
+eng_fused  bs1_mixed_N8 {"prep_ms_median": 2.74, "vision_ms_median": 9.86, "lm_ms_median": 33.39, "model_ms_median": 43.28, "model_ms_p90": 44.07, "total_ms_median": 46.24, "total_ms_p90": 46.92, "ttfa_ms_median": 46.24, "q_per_s": 172.69, "n_calls": 50, "questions_per_call": 8}
+eng_fused  bs1_mixed_N16 {"prep_ms_median": 2.92, "vision_ms_median": 9.82, "lm_ms_median": 38.85, "model_ms_median": 48.68, "model_ms_p90": 51.94, "total_ms_median": 51.64, "total_ms_p90": 54.96, "ttfa_ms_median": 51.64, "q_per_s": 301.04, "n_calls": 50, "questions_per_call": 16}
+eng_fused  bs1_mixed_N32 {"prep_ms_median": 4.05, "vision_ms_median": 9.86, "lm_ms_median": 55.29, "model_ms_median": 65.17, "model_ms_p90": 70.5, "total_ms_median": 69.21, "total_ms_p90": 74.5, "ttfa_ms_median": 69.21, "q_per_s": 455.15, "n_calls": 50, "questions_per_call": 32}
+eng_fused  bs1_mixed_N64 {"prep_ms_median": 6.14, "vision_ms_median": 9.93, "lm_ms_median": 92.34, "model_ms_median": 102.2, "model_ms_p90": 112.97, "total_ms_median": 108.46, "total_ms_p90": 119.22, "ttfa_ms_median": 108.46, "q_per_s": 585.22, "n_calls": 50, "questions_per_call": 64}
+mixed exit=0

@@ -1,0 +1,13 @@
+Thu Nov 19 03:13:50 PM UTC 2026
+name, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 0 MiB
+GPU_IDLE
+python -m speed.bench_scheduler --backend scheduled --clients 4\,16\,64 --parts box\,followup --tokens 16384 --out /content/out/scan/item6_tune16384.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 17585.11it/s]
+box_4 {'burst_median_ms': 103.45, 'requests_s': 38.4, 'p50_ms': 103.44, 'p90_ms': 106.94, 'p99_ms': 106.94}
+box_16 {'burst_median_ms': 389.33, 'requests_s': 41.17, 'p50_ms': 389.31, 'p90_ms': 394.83, 'p99_ms': 394.85}
+box_64 {'burst_median_ms': 1545.27, 'requests_s': 41.38, 'p50_ms': 1207.68, 'p90_ms': 1545.26, 'p99_ms': 1553.8}
+followup_4 {'burst_median_ms': 17.59, 'requests_s': 227.85, 'p50_ms': 17.59, 'p90_ms': 17.69, 'p99_ms': 17.69}
+followup_16 {'burst_median_ms': 41.8, 'requests_s': 269.52, 'p50_ms': 41.79, 'p90_ms': 129.08, 'p99_ms': 129.09}
+followup_64 {'burst_median_ms': 155.05, 'requests_s': 364.18, 'p50_ms': 119.39, 'p90_ms': 155.04, 'p99_ms': 260.49}
+exit=0

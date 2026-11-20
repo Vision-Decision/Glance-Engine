@@ -1,0 +1,95 @@
+{
+ "cublas": "13.1.1.3",
+ "torch": "2.14.1+cu130",
+ "cuda": "13.0",
+ "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "capability": [
+  12,
+  0
+ ],
+ "triton": "3.8.0",
+ "tf32": false,
+ "bf16_reduced_precision": true,
+ "results": [
+  {
+   "n": 32,
+   "call": 0,
+   "p_absdiff_max": 0.004931390285491943,
+   "p_absdiff_mean": 0.000249359174631536,
+   "decision_agree": 1.0,
+   "box_absdiff_max": 0.035286903381347656,
+   "box_absdiff_mean": 0.001688856165856123,
+   "piou_absdiff_max": 0.006780147552490234
+  },
+  {
+   "n": 32,
+   "call": 1,
+   "p_absdiff_max": 0.003119349479675293,
+   "p_absdiff_mean": 0.00027761817909777164,
+   "decision_agree": 1.0,
+   "box_absdiff_max": 0.032089293003082275,
+   "box_absdiff_mean": 0.0024567577056586742,
+   "piou_absdiff_max": 0.08718383312225342
+  },
+  {
+   "n": 32,
+   "call": 2,
+   "p_absdiff_max": 0.006088554859161377,
+   "p_absdiff_mean": 0.0004881545901298523,
+   "decision_agree": 1.0,
+   "box_absdiff_max": 0.05374947190284729,
+   "box_absdiff_mean": 0.003796040778979659,
+   "piou_absdiff_max": 0.010288476943969727
+  },
+  {
+   "n": 32,
+   "call": 3,
+   "p_absdiff_max": 0.004931390285491943,
+   "p_absdiff_mean": 0.000259141786955297,
+   "decision_agree": 1.0,
+   "box_absdiff_max": 0.035286903381347656,
+   "box_absdiff_mean": 0.0017131799831986427,
+   "piou_absdiff_max": 0.006780147552490234
+  },
+  {
+   "n": 64,
+   "call": 0,
+   "p_absdiff_max": 0.017153918743133545,
+   "p_absdiff_mean": 0.00045716308522969484,
+   "decision_agree": 1.0,
+   "box_absdiff_max": 0.05221220850944519,
+   "box_absdiff_mean": 0.00206339661963284,
+   "piou_absdiff_max": 0.007107377052307129
+  },
+  {
+   "n": 64,
+   "call": 1,
+   "p_absdiff_max": 0.009588181972503662,
+   "p_absdiff_mean": 0.00035193213261663914,
+   "decision_agree": 1.0,
+   "box_absdiff_max": 0.0724717378616333,
+   "box_absdiff_mean": 0.0021531647071242332,
+   "piou_absdiff_max": 0.09298181533813477
+  },
+  {
+   "n": 64,
+   "call": 2,
+   "p_absdiff_max": 0.017153918743133545,
+   "p_absdiff_mean": 0.0005740084452554584,
+   "decision_agree": 1.0,
+   "box_absdiff_max": 0.0724717378616333,
+   "box_absdiff_mean": 0.0025313652586191893,
+   "piou_absdiff_max": 0.09298181533813477
+  },
+  {
+   "n": 64,
+   "call": 3,
+   "p_absdiff_max": 0.002023935317993164,
+   "p_absdiff_mean": 0.00022214569617062807,
+   "decision_agree": 1.0,
+   "box_absdiff_max": 0.05221220850944519,
+   "box_absdiff_mean": 0.001893708249554038,
+   "piou_absdiff_max": 0.007107377052307129
+  }
+ ]
+}

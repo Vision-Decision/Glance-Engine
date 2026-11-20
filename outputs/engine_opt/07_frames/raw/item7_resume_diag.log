@@ -1,0 +1,25 @@
+Thu Nov 19 04:38:04 PM UTC 2026
+name, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 0 MiB
+GPU_IDLE
+python -m speed.diag_equiv --ckpt /content/ckpt/v1/ckpt_final.pt --out /content/out/scan/item7_resume_diag.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 16544.18it/s]
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/content/dv/speed/diag_equiv.py", line 103, in <module>
+    main()
+    ~~~~^^
+  File "/content/dv/speed/diag_equiv.py", line 63, in main
+    rows["ref_lora"] = equiv_outputs(R, imgs, a.n_img)
+                       ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/content/dv/speed/bench_glance.py", line 272, in equiv_outputs
+    out, _ = R.call([im["img"]], [qs], Nv=640)
+             ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "/content/dv/speed/bench_glance.py", line 98, in call
+    rgb_batch = (self.frames is not None and self.frames.fused and not keep_prefix and len(imgs) > 1
+                 ^^^^^^^^^^^
+AttributeError: 'Runner' object has no attribute 'frames'
+diag exit=1

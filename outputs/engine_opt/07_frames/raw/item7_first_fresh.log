@@ -1,0 +1,38 @@
+Thu Nov 19 04:23:49 PM UTC 2026
+name, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 0 MiB
+GPU_IDLE
+python -m scan.bench_scan --ckpt /content/ckpt/v1/ckpt_final.pt --parts fresh --Tvs 128\,256 --Ns_fresh 32\,64\,128\,256 --n_calls 10 --fresh_kind yesno --fresh_chunked 1 --max_fresh_tokens 16384 --out /content/out/scan/item7_first_fresh.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 16858.73it/s]
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/content/dv/scan/bench_scan.py", line 423, in <module>
+    main()
+    ~~~~^^
+  File "/content/dv/scan/bench_scan.py", line 398, in main
+    part_fresh(B, a, res)
+    ~~~~~~~~~~^^^^^^^^^^^
+  File "/content/dv/scan/bench_scan.py", line 268, in part_fresh
+    run(ims, q)
+    ~~~^^^^^^^^
+  File "/content/dv/scan/bench_scan.py", line 259, in run
+    eng.fresh(ims[c0:c0 + chunk], q, query_first=query_first, timings=t)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "/content/dv/scan/engine.py", line 365, in fresh
+    pixels = self.frame_prep.pixels(host)
+  File "/content/dv/scan/vision_prep.py", line 107, in pixels
+    return patches(raw, self._lut())
+  File "/content/dv/speed/frame_pixels.py", line 39, in patches
+    _patches[(maximum, n)](raw, lut, layout, w, maximum, layout is not None)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/triton/runtime/jit.py", line 374, in <lambda>
+    return lambda *args, **kwargs: self.run(grid=grid, warmup=False, *args, **kwargs)
+                                   ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/triton/runtime/jit.py", line 741, in run
+    bound_args, specialization, options = binder(*args, **kwargs)
+                                          ~~~~~~^^^^^^^^^^^^^^^^^
+TypeError: dynamic_func() missing 1 required positional argument: 'MIXED'
+fresh exit=1

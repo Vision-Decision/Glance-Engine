@@ -1,0 +1,104 @@
+backend _BlasBackend.Cublas BF16 reduced precision, splitK False True
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 16331.85it/s]
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] Qwen3VL video processing does not apply the per-frame pixel cap the reference implementation (qwen-vl-utils) applies, so some videos cost far more tokens than they would there. In v5.22 the capped behavior will become the default and `cap_pixels_per_frame` will be removed. Pass `cap_pixels_per_frame=True` to adopt the reference behavior now, or `False` to keep the current behavior and silence this warning.
+api example: {'any': False, 'argmax': 5, 'count_frames_naive': 0, 'none_conformal': True, 'top': [], 'count_frames': 0, 'count_events': 0} {'query': 35.36, 'total': 35.39}
+causal/box/cached_vs_alone                    7.098e-02
+causal/box/fresh_vs_alone                     6.969e-02
+causal/box/repeat                             0.000e+00
+causal/noul/cached_vs_alone                   1.556e-02
+causal/noul/fresh_vs_alone                    1.200e-02
+causal/noul/repeat                            0.000e+00
+causal/choice/cached_vs_alone                 1.477e-02
+causal/choice/fresh_vs_alone                  1.736e-02
+causal/choice/repeat                          0.000e+00
+causal/varlen_mixed/box/reference             3.377e-02
+causal/varlen_mixed/box/reference/max_dP      5.279e-03
+causal/varlen_mixed/box/reference/decision_agreement 1.000e+00
+causal/varlen_mixed/box/separate              1.623e-02
+causal/varlen_mixed/box/separate/max_dP       2.529e-03
+causal/varlen_mixed/box/separate/decision_agreement 1.000e+00
+causal/varlen_mixed/box/old                   1.705e-02
+causal/varlen_mixed/box/old/max_dP            2.657e-03
+causal/varlen_mixed/box/old/decision_agreement 1.000e+00
+causal/varlen_mixed/box/chunked               2.431e-02
+causal/varlen_mixed/noul/reference            4.599e-03
+causal/varlen_mixed/noul/reference/max_dP     9.992e-04
+causal/varlen_mixed/noul/reference/decision_agreement 1.000e+00
+causal/varlen_mixed/noul/separate             3.198e-03
+causal/varlen_mixed/noul/separate/max_dP      3.945e-04
+causal/varlen_mixed/noul/separate/decision_agreement 1.000e+00
+causal/varlen_mixed/noul/old                  4.773e-03
+causal/varlen_mixed/noul/old/max_dP           1.034e-03
+causal/varlen_mixed/noul/old/decision_agreement 1.000e+00
+causal/varlen_mixed/noul/chunked              9.850e-03
+causal/varlen_mixed/choice/reference          4.392e-03
+causal/varlen_mixed/choice/reference/max_dP   2.517e-04
+causal/varlen_mixed/choice/reference/decision_agreement 1.000e+00
+causal/varlen_mixed/choice/separate           2.519e-03
+causal/varlen_mixed/choice/separate/max_dP    2.556e-04
+causal/varlen_mixed/choice/separate/decision_agreement 1.000e+00
+causal/varlen_mixed/choice/old                3.864e-03
+causal/varlen_mixed/choice/old/max_dP         1.024e-04
+causal/varlen_mixed/choice/old/decision_agreement 1.000e+00
+causal/varlen_mixed/choice/chunked            2.534e-03
+causal/isolate_others_maxdiff                 0.000e+00
+causal/isolate_changed                        7.862e-01
+causal/qfirst_fresh_vs_alone                  3.958e-02
+causal/box/cached_vs_hf_plain_forward         7.694e-02
+causal/clip/noul/cached_vs_alone              1.192e-02
+causal/clip/noul/fresh_vs_alone               1.194e-02
+causal/clip/choice/cached_vs_alone            1.364e-02
+causal/clip/choice/fresh_vs_alone             1.582e-02
+causal/clip/qfirst_fresh_vs_alone             1.202e-02
+block_bidir/box/cached_vs_alone               6.695e-01
+block_bidir/box/fresh_vs_alone                6.739e-01
+block_bidir/box/repeat                        0.000e+00
+block_bidir/noul/cached_vs_alone              3.130e-02
+block_bidir/noul/fresh_vs_alone               2.334e-02
+block_bidir/noul/repeat                       0.000e+00
+block_bidir/choice/cached_vs_alone            1.369e-02
+block_bidir/choice/fresh_vs_alone             1.479e-02
+block_bidir/choice/repeat                     0.000e+00
+block_bidir/varlen_mixed/box/reference        4.107e-02
+block_bidir/varlen_mixed/box/reference/max_dP 8.453e-03
+block_bidir/varlen_mixed/box/reference/decision_agreement 1.000e+00
+block_bidir/varlen_mixed/box/separate         9.410e-03
+block_bidir/varlen_mixed/box/separate/max_dP  1.951e-03
+block_bidir/varlen_mixed/box/separate/decision_agreement 1.000e+00
+block_bidir/varlen_mixed/box/old              3.377e-02
+block_bidir/varlen_mixed/box/old/max_dP       6.961e-03
+block_bidir/varlen_mixed/box/old/decision_agreement 1.000e+00
+block_bidir/varlen_mixed/box/chunked          2.951e-02
+block_bidir/varlen_mixed/noul/reference       6.075e-03
+block_bidir/varlen_mixed/noul/reference/max_dP 3.032e-03
+block_bidir/varlen_mixed/noul/reference/decision_agreement 1.000e+00
+block_bidir/varlen_mixed/noul/separate        5.666e-03
+block_bidir/varlen_mixed/noul/separate/max_dP 1.966e-03
+block_bidir/varlen_mixed/noul/separate/decision_agreement 1.000e+00
+block_bidir/varlen_mixed/noul/old             6.301e-03
+block_bidir/varlen_mixed/noul/old/max_dP      8.432e-04
+block_bidir/varlen_mixed/noul/old/decision_agreement 1.000e+00
+block_bidir/varlen_mixed/noul/chunked         5.919e-03
+block_bidir/varlen_mixed/choice/reference     4.731e-03
+block_bidir/varlen_mixed/choice/reference/max_dP 1.902e-04
+block_bidir/varlen_mixed/choice/reference/decision_agreement 1.000e+00
+block_bidir/varlen_mixed/choice/separate      7.927e-03
+block_bidir/varlen_mixed/choice/separate/max_dP 4.082e-04
+block_bidir/varlen_mixed/choice/separate/decision_agreement 1.000e+00
+block_bidir/varlen_mixed/choice/old           3.859e-03
+block_bidir/varlen_mixed/choice/old/max_dP    4.206e-04
+block_bidir/varlen_mixed/choice/old/decision_agreement 1.000e+00
+block_bidir/varlen_mixed/choice/chunked       9.727e-03
+block_bidir/isolate_others_maxdiff            0.000e+00
+block_bidir/isolate_changed                   6.383e-01
+block_bidir/qfirst_fresh_vs_alone             2.852e-02
+block_bidir/clip/noul/cached_vs_alone         1.393e-02
+block_bidir/clip/noul/fresh_vs_alone          1.063e-02
+block_bidir/clip/choice/cached_vs_alone       1.045e-02
+block_bidir/clip/choice/fresh_vs_alone        5.468e-03
+block_bidir/clip/qfirst_fresh_vs_alone        1.466e-02
+api/cached_vs_fresh_p                         8.000e-04
+api/clips_short_cached_vs_fresh               1.400e-03
+N=6 images, bank Lp ok
+SCAN_EQUIVALENCE_FAIL

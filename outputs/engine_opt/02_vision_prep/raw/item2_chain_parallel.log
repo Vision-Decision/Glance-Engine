@@ -1,0 +1,21 @@
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.provenance'
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.provenance'
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.provenance'
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.provenance'
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.provenance'
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.provenance'
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.provenance'
+features_fast exit=0
+pushed /content/out/scan/item2_features_fast.json -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item2_features_fast.log -> Vision-Decision/collection-scan-results
+fast exit=0
+pushed /content/out/scan/item2_fast.json -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item2_fast.log -> Vision-Decision/collection-scan-results
+profile_fast exit=0
+pushed /content/out/scan/item2_profile_fast.json -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item2_profile_fast.log -> Vision-Decision/collection-scan-results
+real_fast exit=0
+pushed /content/out/scan/item2_real_fast.log -> Vision-Decision/collection-scan-results
+equiv_fast exit=0
+pushed /content/out/scan/item2_equiv_fast.json -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item2_equiv_fast.log -> Vision-Decision/collection-scan-results

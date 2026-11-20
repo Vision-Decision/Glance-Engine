@@ -1,0 +1,48 @@
+Thu Nov 19 12:53:31 PM UTC 2026
+name, driver_version, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 580.82.07, 0 MiB
+GPU compute process list empty
+e735ee2ecbd667ff2c69a75e8bf28d255001af664158a0827f60570f1d2c0e01  speed/engine.py
+7173a7582f11fb8182a643dfe4450886acc0a91d4cffa6eea59da51bd1fa6293  scan/engine.py
+010288780491db3695fb8d0b39e492b13bf6e7627516236bc99c50dbb6074261  speed/gdn_branch.py
+GLANCE_BRANCH_MODE=fused
+python -m scan.test_scan_equivalence --real --fused-prefill optimized --ckpt /content/ckpt/v1/ckpt_final.pt 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 17205.67it/s]
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/content/dv/scan/test_scan_equivalence.py", line 223, in <module>
+    compare(f"{mode}/{q['type']}/cached_vs_alone", eng.query(bank, q), ref)
+                                                   ~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "/content/dv/scan/engine.py", line 621, in query
+    outs = self._core_branch(E, host, bank)
+  File "/content/dv/scan/engine.py", line 608, in _core_branch
+    h = self._branch_lm(xq, Q, bank)
+  File "/content/dv/scan/engine.py", line 527, in _branch_lm
+    oq = self.branch_output(m, mixed, z, beta, g, S, tail, M, Q["L"])
+  File "/content/dv/speed/gdn_branch.py", line 166, in branch_output
+    out = branch_core(m, mixed, beta, g, state, tail, blocks, max_length, offsets, images, recurrent)
+  File "/content/dv/speed/gdn_branch.py", line 159, in branch_core
+    _branch_wy[(blocks // shared, vd // 128, 128 // 32)](
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        conv, beta, g, state, offsets, images, out, blocks, kd // 128, vd // 128, *state.stride(),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        uniform, shared, bt, 32, bt.bit_length() - 1)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/triton/runtime/jit.py", line 374, in <lambda>
+    return lambda *args, **kwargs: self.run(grid=grid, warmup=False, *args, **kwargs)
+                                   ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/triton/runtime/jit.py", line 778, in run
+    launch_metadata = kernel.launch_metadata(grid, stream, *bound_args.values())
+  File "/usr/local/lib/python3.13/dist-packages/triton/compiler/compiler.py", line 496, in launch_metadata
+    self._init_handles()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/usr/local/lib/python3.13/dist-packages/triton/compiler/compiler.py", line 468, in _init_handles
+    raise_(OutOfResources(self.metadata.shared, max_shared, "shared memory"))
+    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/triton/compiler/compiler.py", line 460, in raise_
+    raise err
+triton.runtime.errors.OutOfResources: out of resource: shared memory, Required: 123392, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+fused_merged exit=1

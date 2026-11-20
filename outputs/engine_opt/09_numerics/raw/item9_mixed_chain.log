@@ -1,0 +1,6 @@
+mixed exit=0
+pushed /content/out/scan/item9_matched_mixed.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item9_matched_mixed.json -> Vision-Decision/collection-scan-results
+mixed exit=0
+pushed /content/out/scan/item9_release_mixed.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item9_release_mixed.json -> Vision-Decision/collection-scan-results

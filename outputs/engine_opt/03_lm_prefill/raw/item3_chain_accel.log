@@ -1,0 +1,29 @@
+accel_fixed_features exit=0
+pushed /content/out/scan/item3_accel_fixed_features.json -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item3_accel_fixed_features.log -> Vision-Decision/collection-scan-results
+accel_video_equiv exit=0
+pushed /content/out/scan/item3_accel_video_equiv.json -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item3_accel_video_equiv.log -> Vision-Decision/collection-scan-results
+accel_profile_production exit=0
+pushed /content/out/scan/item3_accel_profile_production.json -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item3_accel_profile_production.log -> Vision-Decision/collection-scan-results
+accel_real_release exit=0
+pushed /content/out/scan/item3_accel_real_release.log -> Vision-Decision/collection-scan-results
+accel_equiv exit=0
+pushed /content/out/scan/item3_accel_equiv.json -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item3_accel_equiv.log -> Vision-Decision/collection-scan-results
+accel_diag exit=0
+pushed /content/out/scan/item3_accel_diag.json -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item3_accel_diag.log -> Vision-Decision/collection-scan-results
+accel_video_packed exit=0
+pushed /content/out/scan/item3_accel_video_packed.json -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item3_accel_video_packed.log -> Vision-Decision/collection-scan-results
+accel_stages_final exit=0
+pushed /content/out/scan/item3_accel_stages_final.json -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item3_accel_stages_final.log -> Vision-Decision/collection-scan-results
+accel_production exit=0
+pushed /content/out/scan/item3_accel_production.json -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item3_accel_production.log -> Vision-Decision/collection-scan-results
+accel_headline exit=0
+pushed /content/out/scan/item3_accel_headline.json -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item3_accel_headline.log -> Vision-Decision/collection-scan-results

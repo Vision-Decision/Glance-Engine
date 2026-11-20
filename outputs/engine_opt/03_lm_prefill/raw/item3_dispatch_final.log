@@ -1,0 +1,128 @@
+Thu Nov 19 11:37:29 AM UTC 2026
+name, driver_version, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 580.82.07, 0 MiB
+GPU compute process list empty
+python -m scan.profile_lm --stage dispatch_final --ckpt /content/ckpt/v1/ckpt_final.pt --out /content/out/scan/item3_dispatch_final.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 16595.61it/s]
+dispatch 4672 gdn_in
+USDT:2026-11-19 11:37:36 125154:125154 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 11:37:36 125154:125154 SyncActivityProfilerHandler.cpp:46] profiler_stop
+[W1119 11:37:36.696807586 Context.cpp:629] Warning: torch.backends.cuda.preferred_blas_library is an experimental feature. If you see any error or unexpected behavior when this flag is set please file an issue on GitHub. (function operator())
+USDT:2026-11-19 11:37:36 125154:125154 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 11:37:36 125154:125154 SyncActivityProfilerHandler.cpp:46] profiler_stop
+dispatch 4672 gdn_out
+USDT:2026-11-19 11:37:37 125154:125154 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 11:37:37 125154:125154 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-19 11:37:37 125154:125154 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 11:37:37 125154:125154 SyncActivityProfilerHandler.cpp:46] profiler_stop
+dispatch 4672 qkv
+USDT:2026-11-19 11:37:37 125154:125154 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 11:37:37 125154:125154 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-19 11:37:37 125154:125154 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 11:37:37 125154:125154 SyncActivityProfilerHandler.cpp:46] profiler_stop
+dispatch 4672 attn_out
+USDT:2026-11-19 11:37:38 125154:125154 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 11:37:38 125154:125154 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-19 11:37:38 125154:125154 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 11:37:38 125154:125154 SyncActivityProfilerHandler.cpp:46] profiler_stop
+dispatch 4672 gate_up
+USDT:2026-11-19 11:37:38 125154:125154 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 11:37:38 125154:125154 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-19 11:37:38 125154:125154 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 11:37:38 125154:125154 SyncActivityProfilerHandler.cpp:46] profiler_stop
+dispatch 4672 down
+USDT:2026-11-19 11:37:40 125154:125154 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 11:37:40 125154:125154 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-19 11:37:40 125154:125154 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 11:37:40 125154:125154 SyncActivityProfilerHandler.cpp:46] profiler_stop
+dispatch 9344 gdn_in
+USDT:2026-11-19 11:37:40 125154:125154 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 11:37:40 125154:125154 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-19 11:37:40 125154:125154 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 11:37:40 125154:125154 SyncActivityProfilerHandler.cpp:46] profiler_stop
+dispatch 9344 gdn_out
+USDT:2026-11-19 11:37:40 125154:125154 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 11:37:40 125154:125154 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-19 11:37:40 125154:125154 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 11:37:40 125154:125154 SyncActivityProfilerHandler.cpp:46] profiler_stop
+dispatch 9344 qkv
+USDT:2026-11-19 11:37:40 125154:125154 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 11:37:40 125154:125154 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-19 11:37:40 125154:125154 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 11:37:40 125154:125154 SyncActivityProfilerHandler.cpp:46] profiler_stop
+dispatch 9344 attn_out
+USDT:2026-11-19 11:37:40 125154:125154 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 11:37:40 125154:125154 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-19 11:37:40 125154:125154 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 11:37:40 125154:125154 SyncActivityProfilerHandler.cpp:46] profiler_stop
+dispatch 9344 gate_up
+USDT:2026-11-19 11:37:40 125154:125154 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 11:37:40 125154:125154 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-19 11:37:40 125154:125154 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 11:37:40 125154:125154 SyncActivityProfilerHandler.cpp:46] profiler_stop
+dispatch 9344 down
+USDT:2026-11-19 11:37:41 125154:125154 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 11:37:41 125154:125154 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-19 11:37:41 125154:125154 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 11:37:41 125154:125154 SyncActivityProfilerHandler.cpp:46] profiler_stop
+dispatch 18688 gdn_in
+USDT:2026-11-19 11:37:41 125154:125154 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 11:37:41 125154:125154 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-19 11:37:41 125154:125154 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 11:37:41 125154:125154 SyncActivityProfilerHandler.cpp:46] profiler_stop
+dispatch 18688 gdn_out
+USDT:2026-11-19 11:37:41 125154:125154 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 11:37:41 125154:125154 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-19 11:37:41 125154:125154 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 11:37:41 125154:125154 SyncActivityProfilerHandler.cpp:46] profiler_stop
+dispatch 18688 qkv
+USDT:2026-11-19 11:37:41 125154:125154 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 11:37:41 125154:125154 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-19 11:37:41 125154:125154 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 11:37:41 125154:125154 SyncActivityProfilerHandler.cpp:46] profiler_stop
+dispatch 18688 attn_out
+USDT:2026-11-19 11:37:41 125154:125154 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 11:37:41 125154:125154 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-19 11:37:41 125154:125154 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 11:37:41 125154:125154 SyncActivityProfilerHandler.cpp:46] profiler_stop
+dispatch 18688 gate_up
+USDT:2026-11-19 11:37:41 125154:125154 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 11:37:41 125154:125154 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-19 11:37:41 125154:125154 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 11:37:41 125154:125154 SyncActivityProfilerHandler.cpp:46] profiler_stop
+dispatch 18688 down
+USDT:2026-11-19 11:37:41 125154:125154 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 11:37:41 125154:125154 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-19 11:37:41 125154:125154 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 11:37:41 125154:125154 SyncActivityProfilerHandler.cpp:46] profiler_stop
+dispatch 37376 gdn_in
+USDT:2026-11-19 11:37:42 125154:125154 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 11:37:42 125154:125154 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-19 11:37:42 125154:125154 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 11:37:42 125154:125154 SyncActivityProfilerHandler.cpp:46] profiler_stop
+dispatch 37376 gdn_out
+USDT:2026-11-19 11:37:42 125154:125154 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 11:37:42 125154:125154 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-19 11:37:42 125154:125154 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 11:37:42 125154:125154 SyncActivityProfilerHandler.cpp:46] profiler_stop
+dispatch 37376 qkv
+USDT:2026-11-19 11:37:42 125154:125154 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 11:37:42 125154:125154 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-19 11:37:42 125154:125154 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 11:37:42 125154:125154 SyncActivityProfilerHandler.cpp:46] profiler_stop
+dispatch 37376 attn_out
+USDT:2026-11-19 11:37:42 125154:125154 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 11:37:42 125154:125154 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-19 11:37:42 125154:125154 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 11:37:42 125154:125154 SyncActivityProfilerHandler.cpp:46] profiler_stop
+dispatch 37376 gate_up
+USDT:2026-11-19 11:37:42 125154:125154 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 11:37:42 125154:125154 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-19 11:37:42 125154:125154 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 11:37:42 125154:125154 SyncActivityProfilerHandler.cpp:46] profiler_stop
+dispatch 37376 down
+USDT:2026-11-19 11:37:43 125154:125154 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 11:37:43 125154:125154 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-19 11:37:43 125154:125154 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 11:37:43 125154:125154 SyncActivityProfilerHandler.cpp:46] profiler_stop
+dispatch_final exit=0

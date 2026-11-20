@@ -1,0 +1,31 @@
+Thu Nov 19 11:36:11 AM UTC 2026
+name, driver_version, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 580.82.07, 0 MiB
+GPU compute process list empty
+python -m scan.profile_lm --stage gdn --ckpt /content/ckpt/v1/ckpt_final.pt --out /content/out/scan/item3_gdn.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 18210.15it/s]
+{'n': 32, 'width': 146, 'dense': False, 'chunk_size': 64, 'ms': 0.508575975894928, 'max_abs': 0.0, 'mean_abs': 0.0}
+{'n': 32, 'width': 146, 'dense': False, 'chunk_size': 32, 'ms': 0.6381120085716248, 'max_abs': 0.00048828125, 'mean_abs': 2.936804719411157e-07}
+{'n': 32, 'width': 146, 'dense': False, 'chunk_size': 16, 'ms': 0.8854719996452332, 'max_abs': 0.0006103515625, 'mean_abs': 3.4303647566957807e-07}
+{'n': 32, 'width': 146, 'dense': True, 'chunk_size': 64, 'ms': 0.5743039846420288, 'max_abs': 0.0, 'mean_abs': 0.0}
+{'n': 32, 'width': 146, 'dense': True, 'chunk_size': 32, 'ms': 0.6616640090942383, 'max_abs': 0.00048828125, 'mean_abs': 2.9368098353188543e-07}
+{'n': 32, 'width': 146, 'dense': True, 'chunk_size': 16, 'ms': 0.898751974105835, 'max_abs': 0.0006103515625, 'mean_abs': 3.4303627671761205e-07}
+{'n': 32, 'width': 281, 'dense': False, 'chunk_size': 64, 'ms': 0.9347839951515198, 'max_abs': 0.0, 'mean_abs': 0.0}
+{'n': 32, 'width': 281, 'dense': False, 'chunk_size': 32, 'ms': 1.1282240152359009, 'max_abs': 0.000732421875, 'mean_abs': 3.799032128881663e-07}
+{'n': 32, 'width': 281, 'dense': False, 'chunk_size': 16, 'ms': 1.532096028327942, 'max_abs': 0.0006103515625, 'mean_abs': 4.312996964017657e-07}
+{'n': 32, 'width': 281, 'dense': True, 'chunk_size': 64, 'ms': 0.9881600141525269, 'max_abs': 0.0, 'mean_abs': 0.0}
+{'n': 32, 'width': 281, 'dense': True, 'chunk_size': 32, 'ms': 1.1291199922561646, 'max_abs': 0.000732421875, 'mean_abs': 3.79902928671072e-07}
+{'n': 32, 'width': 281, 'dense': True, 'chunk_size': 16, 'ms': 1.5361920595169067, 'max_abs': 0.0006103515625, 'mean_abs': 4.313025954161276e-07}
+{'n': 128, 'width': 146, 'dense': False, 'chunk_size': 64, 'ms': 1.9457919597625732, 'max_abs': 0.0, 'mean_abs': 0.0}
+{'n': 128, 'width': 146, 'dense': False, 'chunk_size': 32, 'ms': 2.3288960456848145, 'max_abs': 0.0009765625, 'mean_abs': 2.981895761422493e-07}
+{'n': 128, 'width': 146, 'dense': False, 'chunk_size': 16, 'ms': 3.2232000827789307, 'max_abs': 0.0009765625, 'mean_abs': 3.4968402928825526e-07}
+{'n': 128, 'width': 146, 'dense': True, 'chunk_size': 64, 'ms': 2.0388479232788086, 'max_abs': 0.0, 'mean_abs': 0.0}
+{'n': 128, 'width': 146, 'dense': True, 'chunk_size': 32, 'ms': 2.3156800270080566, 'max_abs': 0.0009765625, 'mean_abs': 2.9818946245541156e-07}
+{'n': 128, 'width': 146, 'dense': True, 'chunk_size': 16, 'ms': 3.207263946533203, 'max_abs': 0.0009765625, 'mean_abs': 3.4968329032381007e-07}
+{'n': 128, 'width': 281, 'dense': False, 'chunk_size': 64, 'ms': 3.5211520195007324, 'max_abs': 0.0, 'mean_abs': 0.0}
+{'n': 128, 'width': 281, 'dense': False, 'chunk_size': 32, 'ms': 4.3191680908203125, 'max_abs': 0.0009765625, 'mean_abs': 3.7885618553445966e-07}
+{'n': 128, 'width': 281, 'dense': False, 'chunk_size': 16, 'ms': 5.9617600440979, 'max_abs': 0.0009765625, 'mean_abs': 4.3015012352043414e-07}
+{'n': 128, 'width': 281, 'dense': True, 'chunk_size': 64, 'ms': 3.679487943649292, 'max_abs': 0.0, 'mean_abs': 0.0}
+{'n': 128, 'width': 281, 'dense': True, 'chunk_size': 32, 'ms': 4.2491841316223145, 'max_abs': 0.0009765625, 'mean_abs': 3.788556455219805e-07}
+{'n': 128, 'width': 281, 'dense': True, 'chunk_size': 16, 'ms': 5.846591949462891, 'max_abs': 0.0009765625, 'mean_abs': 4.3014986772504926e-07}
+gdn exit=0

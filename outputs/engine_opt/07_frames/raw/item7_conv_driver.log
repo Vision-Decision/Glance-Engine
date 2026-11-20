@@ -1,0 +1,14 @@
+patch_conv exit=0
+pushed /content/out/scan/item7_patch_patch_conv.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item7_patch_patch_conv.json -> Vision-Decision/collection-scan-results
+serial exit=0
+pushed /content/out/scan/item7_patch_serial.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item7_patch_serial.json -> Vision-Decision/collection-scan-results
+singleton exit=0
+pushed /content/out/scan/item7_patch_singleton.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item7_patch_singleton.json -> Vision-Decision/collection-scan-results
+interleaving exit=0
+pushed /content/out/scan/item7_patch_interleaving.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item7_patch_interleaving.json -> Vision-Decision/collection-scan-results
+real exit=0
+pushed /content/out/scan/item7_patch_real.log -> Vision-Decision/collection-scan-results

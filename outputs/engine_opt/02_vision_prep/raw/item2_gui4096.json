@@ -1,0 +1,52 @@
+{
+ "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "torch": "2.14.1+cu130",
+ "ckpt": "/content/ckpt/v1/ckpt_final.pt",
+ "modes": {
+  "eng_fused": {
+   "gui4096_box_N1": {
+    "prep_ms_median": 23.292494499401073,
+    "vision_ms_median": 134.02299900008074,
+    "lm_ms_median": 160.50711349998892,
+    "model_ms_median": 294.55117199995584,
+    "model_ms_p90": 298.8344919996962,
+    "total_ms_median": 315.4952470003991,
+    "total_ms_p90": 322.7079959013281,
+    "ttfa_ms_median": 315.4952470003991,
+    "q_per_s": 3.3201817496003785,
+    "n_calls": 30,
+    "questions_per_call": 1
+   },
+   "gui4096_box_N8": {
+    "prep_ms_median": 23.559249499157886,
+    "vision_ms_median": 134.40728399928048,
+    "lm_ms_median": 165.79962849937147,
+    "model_ms_median": 300.1282125005673,
+    "model_ms_p90": 306.6751040001691,
+    "total_ms_median": 320.03370199981873,
+    "total_ms_p90": 329.67671700025676,
+    "ttfa_ms_median": 320.03370199981873,
+    "q_per_s": 26.123743952427045,
+    "n_calls": 30,
+    "questions_per_call": 8
+   },
+   "gui4096_box_N32": {
+    "prep_ms_median": 25.175210000270454,
+    "vision_ms_median": 134.45320900063962,
+    "lm_ms_median": 191.2646284999937,
+    "model_ms_median": 326.90429749982286,
+    "model_ms_p90": 335.8634299991536,
+    "total_ms_median": 348.1222020000132,
+    "total_ms_p90": 358.0182639998384,
+    "ttfa_ms_median": 348.1222020000132,
+    "q_per_s": 95.38684713689868,
+    "n_calls": 30,
+    "questions_per_call": 32
+   },
+   "peak_mem_gb": 14.971731662750244
+  }
+ },
+ "equiv": {},
+ "n_merged": 200,
+ "n_fp8": null
+}

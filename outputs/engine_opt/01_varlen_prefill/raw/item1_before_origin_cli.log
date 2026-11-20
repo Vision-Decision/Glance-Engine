@@ -1,0 +1,14 @@
+Thu Nov 19 08:29:38 UTC 2026
+name, memory.total [MiB], memory.used [MiB], driver_version
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 97887 MiB, 0 MiB, 580.82.07
+GPU compute process list empty before before in /content/item1-origin-30e7d19
+python -m scan.bench_scan --ckpt /content/ckpt/v1/ckpt_final.pt --parts fresh --Tvs 128\,256 --Ns_fresh 32\,64\,128\,256 --n_calls 10 --fresh_kind yesno --fresh_chunked 1 --max_fresh_tokens 16384 --out /content/out/scan/item1_before.json 
+usage: bench_scan.py [-h] --ckpt CKPT [--prep PREP] [--gprep GPREP]
+                     [--image_root IMAGE_ROOT] [--parts PARTS] [--Ns NS]
+                     [--Ns_fresh NS_FRESH] [--Tvs TVS]
+                     [--max_fresh_tokens MAX_FRESH_TOKENS] [--n_equiv N_EQUIV]
+                     [--clip_cfgs CLIP_CFGS] [--clip_fresh CLIP_FRESH]
+                     [--cached_tvs CACHED_TVS] [--short SHORT] [--fp8 FP8]
+                     [--n_acc N_ACC] [--n_calls N_CALLS] --out OUT
+bench_scan.py: error: unrecognized arguments: --fresh_kind yesno --fresh_chunked 1
+stage=before exit=2

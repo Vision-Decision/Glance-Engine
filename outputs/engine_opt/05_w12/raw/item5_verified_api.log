@@ -1,0 +1,17 @@
+Thu Nov 19 02:32:20 PM UTC 2026
+name, driver_version, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 580.82.07, 0 MiB
+GPU compute process list empty
+112c8141744dfc626a75c49707b253cf50d475ffae084d43bc4dd32ed5c68a2b  speed/engine.py
+264dc486606b4e239e9a2aaedc59cd302bc4d38649dc0ae7c5919f4758a09dd8  speed/bench_glance.py
+2411def1e9d7f4b19b0701beb0bb132d6da4441151ccf76f39319ce9a1d0189d  speed/bench_w12.py
+6df0e68afed540b705d9382d07ab698ddced824e03388baf90211e5c65db8422  speed/test_w12.py
+25023c4ce1df39e817adcdb264396eae33253f10e9b6f00d7aa6a8ca875fc317  speed/w12.py
+13b072b822abf9cbdb664032e57387422215e8d72d0e34446becf1206d1b052d  speed/specpilot/w12.cu
+783ab0eca111f8631b32ec7b1ddc786aa12cd120cf19cf72f9fec56a96689d3a  scan/engine.py
+bbd6ba5baf19263dfca5255ef2a4ca23a6abdaab5ed1937b6d15ef64ee83b172  scan/bench_scan.py
+python -m speed.bench_w12 --stage api --ckpt /content/ckpt/v1/ckpt_final.pt --out /content/out/scan/item5_verified_api.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 17325.30it/s]
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 16154.02it/s]
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 16378.87it/s]
+verified_api exit=0

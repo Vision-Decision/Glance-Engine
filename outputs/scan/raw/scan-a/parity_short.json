@@ -1,0 +1,107 @@
+{
+ "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "torch": "2.14.1+cu130",
+ "ckpt": "/content/out/distill_v1/ckpt_final.pt",
+ "args": {
+  "ckpt": "/content/out/distill_v1/ckpt_final.pt",
+  "prep": "data/prep/eval_refcoco_val.jsonl",
+  "gprep": "data/prep/eval_grefcoco_val.jsonl",
+  "image_root": "/content/data/coco/train2014",
+  "parts": "acc",
+  "Ns": [
+   1,
+   8,
+   16,
+   32,
+   64,
+   128,
+   256
+  ],
+  "Ns_fresh": [
+   1,
+   2,
+   4,
+   8,
+   16,
+   32,
+   64
+  ],
+  "Tvs": [
+   256
+  ],
+  "max_fresh_tokens": 16384,
+  "n_equiv": 24,
+  "clip_cfgs": "4x96,4x48,2x96",
+  "clip_fresh": 1,
+  "cached_tvs": "640,256,64",
+  "short": 0,
+  "fp8": 0,
+  "n_acc": 60,
+  "n_calls": 30,
+  "out": "/content/out/scan/parity_short.json"
+ },
+ "n_merged": 200,
+ "acc_vs_tokens": {
+  "Tv256": {
+   "refcoco_val": {
+    "n_pos": 393,
+    "n_neg": 0,
+    "acc50": 0.8447837150127226
+   },
+   "grefcoco_val": {
+    "n_pos": 146,
+    "n_neg": 309,
+    "acc50": null,
+    "auroc": 0.975439996453429,
+    "false_alarm_at_05": 0.1423948220064725,
+    "miss_at_05": 0.0410958904109589
+   }
+  },
+  "Tv256_qfirst": {
+   "refcoco_val": {
+    "n_pos": 393,
+    "n_neg": 0,
+    "acc50": 0.8295165394402035
+   },
+   "grefcoco_val": {
+    "n_pos": 146,
+    "n_neg": 309,
+    "acc50": null,
+    "auroc": 0.9638028106574456,
+    "false_alarm_at_05": 0.28802588996763756,
+    "miss_at_05": 0.0136986301369863
+   }
+  },
+  "Tv640": {
+   "refcoco_val": {
+    "n_pos": 393,
+    "n_neg": 0,
+    "acc50": 0.9338422391857506
+   },
+   "grefcoco_val": {
+    "n_pos": 146,
+    "n_neg": 309,
+    "acc50": null,
+    "auroc": 0.9775901050671632,
+    "false_alarm_at_05": 0.15210355987055016,
+    "miss_at_05": 0.0273972602739726
+   }
+  },
+  "Tv640_qfirst": {
+   "refcoco_val": {
+    "n_pos": 393,
+    "n_neg": 0,
+    "acc50": 0.910941475826972
+   },
+   "grefcoco_val": {
+    "n_pos": 146,
+    "n_neg": 309,
+    "acc50": null,
+    "auroc": 0.9685463492485703,
+    "false_alarm_at_05": 0.2783171521035599,
+    "miss_at_05": 0.0136986301369863
+   }
+  }
+ },
+ "peak_mem_gb": 10.467877864837646
+}

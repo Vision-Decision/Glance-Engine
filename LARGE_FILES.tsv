@@ -1,0 +1,3 @@
+# path	bytes	sha256   (stored at HF Vision-Decision/glance-train-data:git_large_files/<path>; restore with scripts/fetch_large_files.py)
+outputs/scan/raw/scan-a/pilot_frames_v1.json.gz	10969519	162648fd7efb25e765bb482b02f9982f8533b1b9fe8f7bfa7833aa9acfdb5768
+outputs/scan/raw/scan-a/pilot_clips_short.json.gz	9705756	d23f800e2c61aa1f053d9864f967c47bc3b9cf7f6551826889b68253a19b94ea

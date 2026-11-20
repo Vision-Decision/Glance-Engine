@@ -1,0 +1,21 @@
+margins exit=0
+pushed /content/out/scan/item9_fixed_margins.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item9_fixed_margins.json -> Vision-Decision/collection-scan-results
+diag exit=0
+pushed /content/out/scan/item9_fixed_diag.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item9_fixed_diag.json -> Vision-Decision/collection-scan-results
+cached exit=0
+pushed /content/out/scan/item9_fixed_cached.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item9_fixed_cached.json -> Vision-Decision/collection-scan-results
+fresh exit=0
+pushed /content/out/scan/item9_fixed_fresh.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item9_fixed_fresh.json -> Vision-Decision/collection-scan-results
+speed exit=0
+pushed /content/out/scan/item9_fixed_speed.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item9_fixed_speed.json -> Vision-Decision/collection-scan-results
+equiv exit=0
+pushed /content/out/scan/item9_fixed_equiv.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item9_fixed_equiv.json -> Vision-Decision/collection-scan-results
+interleaving exit=0
+pushed /content/out/scan/item9_fixed_interleaving.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item9_fixed_interleaving.json -> Vision-Decision/collection-scan-results

@@ -1,0 +1,9 @@
+followup exit=0
+pushed /content/out/scan/item7_rgb_followup.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item7_rgb_followup.json -> Vision-Decision/collection-scan-results
+video exit=0
+pushed /content/out/scan/item7_rgb_video.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item7_rgb_video.json -> Vision-Decision/collection-scan-results
+fresh exit=0
+pushed /content/out/scan/item7_rgb_fresh.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item7_rgb_fresh.json -> Vision-Decision/collection-scan-results

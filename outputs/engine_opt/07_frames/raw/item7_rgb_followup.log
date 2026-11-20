@@ -1,0 +1,11 @@
+Thu Nov 19 04:26:39 PM UTC 2026
+name, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 0 MiB
+GPU_IDLE
+python -m speed.bench_scheduler --backend scheduled --warm-shapes --parts followup --out /content/out/scan/item7_rgb_followup.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 19361.54it/s]
+followup_1 {'burst_median_ms': 10.21, 'requests_s': 97.4, 'p50_ms': 10.21, 'p90_ms': 10.45, 'p99_ms': 10.55}
+followup_4 {'burst_median_ms': 17.3, 'requests_s': 230.97, 'p50_ms': 17.3, 'p90_ms': 17.54, 'p99_ms': 17.54}
+followup_16 {'burst_median_ms': 49.15, 'requests_s': 325.92, 'p50_ms': 32.91, 'p90_ms': 49.15, 'p99_ms': 49.34}
+followup_64 {'burst_median_ms': 197.67, 'requests_s': 323.52, 'p50_ms': 109.34, 'p90_ms': 181.32, 'p99_ms': 199.04}
+followup exit=0

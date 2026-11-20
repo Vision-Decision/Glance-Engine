@@ -1,0 +1,3 @@
+patch exit=0
+pushed /content/out/scan/item2_patch.json -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item2_patch.log -> Vision-Decision/collection-scan-results

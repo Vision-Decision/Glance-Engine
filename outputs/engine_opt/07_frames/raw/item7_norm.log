@@ -1,0 +1,50 @@
+Thu Nov 19 04:45:05 PM UTC 2026
+name, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 0 MiB
+GPU_IDLE
+python -m scan.profile_frames --stage norm --ckpt /content/ckpt/v1/ckpt_final.pt --out /content/out/scan/item7_norm.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 16621.89it/s]
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/content/dv/scan/profile_frames.py", line 222, in <module>
+    main()
+    ~~~~^^
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "/content/dv/scan/profile_frames.py", line 152, in main
+    rf, yf = fused()
+             ~~~~~^^
+  File "/content/dv/scan/profile_frames.py", line 150, in fused
+    return add_norm(x, update, norm)
+  File "/content/dv/speed/vision_norm.py", line 46, in add_norm
+    _add_norm[(len(x),)](x, update, norm.weight, norm.bias, residual, y, norm.eps, num_warps=4)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/triton/runtime/jit.py", line 374, in <lambda>
+    return lambda *args, **kwargs: self.run(grid=grid, warmup=False, *args, **kwargs)
+                                   ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/triton/runtime/jit.py", line 757, in run
+    kernel = self._do_compile(key, signature, device, constexprs, options, attrs, warmup)
+  File "/usr/local/lib/python3.13/dist-packages/triton/runtime/jit.py", line 902, in _do_compile
+    kernel = self.compile(src, target=target, options=options.__dict__)
+  File "/usr/local/lib/python3.13/dist-packages/triton/compiler/compiler.py", line 307, in compile
+    module = src.make_ir(target, options, codegen_fns, module_map, context)
+  File "/usr/local/lib/python3.13/dist-packages/triton/compiler/compiler.py", line 80, in make_ir
+    return ast_to_ttir(self.fn, self, context=context, options=options, codegen_fns=codegen_fns,
+                       module_map=module_map)
+triton.compiler.errors.CompilationError: at 19:8:
+        col = (i // 4) * 512 + lane * 4 + i % 4
+        offset = row * 1024 + col
+        val = (tl.load(X + offset).to(tl.float32) +
+               tl.load(Update + offset).to(tl.float32)).to(tl.bfloat16)
+        tl.store(Residual + offset, val)
+        val = val.to(tl.float32)
+        delta = val - mu
+        mu = tl.fma(delta, 1.0 / (i + 1), mu)
+        m2 = tl.fma(delta, val - mu, m2)
+    # Each warp reduces its own lane groups, then the four warp leaders merge.
+    for i in tl.static_range(7):
+        peer: tl.constexpr = (16 >> i) if i < 5 else (64 >> (i - 5))
+        ^
+ValueError('peer is already defined. constexpr cannot be reassigned.')
+norm exit=1

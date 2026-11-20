@@ -1,0 +1,38 @@
+Thu Nov 19 06:20:18 PM UTC 2026
+name, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 0 MiB
+GPU compute process list empty
+8d89e7d355d06df0ae9eb7b8e8bc8f454d61d23dd4affc27809f1ee54650c372  scan/engine.py
+bf0d851a393a539ddabc67871cf3aa846d93c74240b613f66fdfe47e70435cce  scan/bench_bank_memory.py
+461e390ffe56783ca996c6998f508fecb9cb35211f8efc3a053124e6c40bf8d3  scan/bench_bank_precision.py
+861cd9caac831ec807242058e95edf9f64953bf2616650ae4f7cdf45c0a22b0a  scan/bench_bank_tier.py
+dc095e1f3b72ae82f3e9b3d52dddf1f751b984612ca205037da8d8aa25b45cde  scan/bank_codec.py
+afc6ffa6ed928c4654de922acaae7c54ec099fcac8d9bcaa3327a3d64369a00b  scan/bank_kernels.py
+03c9775128922536c2a757f5dd2e1b55106f9334f3fbab57064c86458a2e75c5  scan/bank.py
+4d7ea94e9db7225ffc5976884587f93f8e0b3ba3cb3a6716788a500c8e93452e  scan/host_bank.py
+3aacc206f295a3ff2f6419327511f94c19e6efea2a3bb974de0d884621c77adf  speed/gdn_branch.py
+python -m scan.profile_branch --stage stages --ckpt /content/ckpt/v1/ckpt_final.pt --out /content/out/scan/item8_planes_stages.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 17323.02it/s]
+Tv640_N64_box {'LM dense': 17.196320056915283, 'GDN': 3.894239977002144, 'LM attention': 1.822720006108284, 'heads': 0.4055039882659912}
+Tv640_N64_noul {'LM dense': 31.576031990349293, 'GDN': 12.088383913040161, 'LM attention': 3.4979200065135956, 'heads': 0.42905598878860474}
+Tv640_N256_box {'LM dense': 55.45155231654644, 'GDN': 16.89142417907715, 'LM attention': 14.064736008644104, 'heads': 1.1704319715499878}
+Tv640_N256_noul {'LM dense': 111.43843242526054, 'GDN': 48.57408118247986, 'LM attention': 27.021504402160645, 'heads': 1.2093440294265747}
+Tv256_N64_box {'LM dense': 17.219968136399984, 'GDN': 3.8867199569940567, 'LM attention': 0.7989759892225266, 'heads': 0.33792001008987427}
+Tv256_N256_box {'LM dense': 55.79788814485073, 'GDN': 16.904064178466797, 'LM attention': 3.027807980775833, 'heads': 0.5847039818763733}
+Tv64_N64_box {'LM dense': 17.198752030730247, 'GDN': 3.891743987798691, 'LM attention': 0.32361599802970886, 'heads': 0.317440003156662}
+Tv64_N256_box {'LM dense': 55.759488090872765, 'GDN': 16.92499190568924, 'LM attention': 1.1839360147714615, 'heads': 0.5212159752845764}
+[transformers] Qwen3VL video processing does not apply the per-frame pixel cap the reference implementation (qwen-vl-utils) applies, so some videos cost far more tokens than they would there. In v5.22 the capped behavior will become the default and `cap_pixels_per_frame` will be removed. Pass `cap_pixels_per_frame=True` to adopt the reference behavior now, or `False` to keep the current behavior and silence this warning.
+f4_v96_N64_noul {'LM dense': 30.524448089301586, 'GDN': 14.823008000850677, 'LM attention': 2.7443520426750183, 'heads': 0.30723199248313904}
+f4_v96_N256_noul {'LM dense': 112.27088049054146, 'GDN': 77.51603245735168, 'LM attention': 19.572799921035767, 'heads': 0.4935680031776428}
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 16598.33it/s]
+bs1_box_N1 {'LM dense': 17.55433614552021, 'GDN': 5.304672027006745, 'LM attention': 1.3644480109214783, 'heads': 0.28060799837112427}
+followup_box_N1 {'LM dense': 6.175840022042394, 'GDN': 0.6256640013307333, 'LM attention': 0.6061440259218216, 'heads': 0.27033600211143494}
+bs1_box_N8 {'LM dense': 19.22847992181778, 'GDN': 5.794368054717779, 'LM attention': 1.4856320321559906, 'heads': 0.3195199966430664}
+followup_box_N8 {'LM dense': 6.772096013650298, 'GDN': 1.1088000163435936, 'LM attention': 0.6225279718637466, 'heads': 0.3051519989967346}
+bs1_mixed_N8 {'LM dense': 23.409023873507977, 'GDN': 7.6365120857954025, 'LM attention': 2.113536037504673, 'heads': 0.32259199023246765}
+followup_mixed_N8 {'LM dense': 9.971487950533628, 'GDN': 2.932447984814644, 'LM attention': 1.2431999891996384, 'heads': 0.30720001459121704}
+bs1_box_N32 {'LM dense': 24.25161599367857, 'GDN': 7.513151951134205, 'LM attention': 2.580704003572464, 'heads': 0.3768320083618164}
+followup_box_N32 {'LM dense': 12.788959950208664, 'GDN': 2.8083840534090996, 'LM attention': 1.753151997923851, 'heads': 0.3614720106124878}
+bs1_mixed_N32 {'LM dense': 42.55750370025635, 'GDN': 14.574880003929138, 'LM attention': 4.971295975148678, 'heads': 0.3768639862537384}
+followup_mixed_N32 {'LM dense': 26.901536233723164, 'GDN': 9.690880000591278, 'LM attention': 4.075711965560913, 'heads': 0.3686720132827759}
+stages exit=0

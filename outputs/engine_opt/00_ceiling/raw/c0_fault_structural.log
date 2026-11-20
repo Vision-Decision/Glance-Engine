@@ -1,0 +1,17 @@
+Thu Nov 19 09:29:52 AM UTC 2026
+name, driver_version, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 580.82.07, 0 MiB
+GPU compute process list empty
+python -c $'import runpy, sys; from scan.varlen import FreshPack; init = FreshPack.__init__\ndef off_by_one(self, *args):\n    init(self, *args)\n    self.heads["q_last_packed"] -= 1\nFreshPack.__init__ = off_by_one\nrunpy.run_module("scan.test_scan_equivalence", run_name="__main__")' --real --ckpt /content/ckpt/v1/ckpt_final.pt 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 17576.34it/s]
+Traceback (most recent call last):
+  File "<string>", line 6, in <module>
+    runpy.run_module("scan.test_scan_equivalence", run_name="__main__")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen runpy>", line 234, in run_module
+  File "<frozen runpy>", line 88, in _run_code
+  File "/content/dv/scan/test_scan_equivalence.py", line 232, in <module>
+    assert pack.ids[pack.heads["q_last_packed"]].tolist() == [it["q_ids"][0][-1] for it in items]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+fault exit=1

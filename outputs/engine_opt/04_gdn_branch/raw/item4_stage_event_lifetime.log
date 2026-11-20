@@ -1,0 +1,26 @@
+Thu Nov 19 01:29:02 PM UTC 2026
+name, driver_version, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 580.82.07, 0 MiB
+GPU compute process list empty
+cda4f10367e262a06d8c48d4d24ece9a3f6a8b0df8f106bc15eb20a061188f32  speed/engine.py
+3f9b98a7759cae721e03f51b02c4796d0b07630a5d22e80cf9165530fa7c8a0d  scan/engine.py
+365fb5a5a9516f1483dfc97fc68ab4675462824e8567e7bdebdb5b35a462c192  scan/profile_branch.py
+870594755da3bc6af0c0f132c327c6c6944e44c2d42596fffa56bcc5210071f0  scan/branch_micro.py
+3c1993955c937908f218080dd7d6950f9646be86b9394a3e2f0a5d9f438fb7d5  speed/gdn_branch.py
+GLANCE_BRANCH_MODE=fused
+python -m scan.profile_branch --stage stages --ckpt /content/ckpt/v1/ckpt_final.pt --out /content/out/scan/item4_checked_stages.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 17286.29it/s]
+Tv640_N64_box {'LM dense': 17.198815997689962, 'GDN': 3.361824005842209, 'LM attention': 1.8933440297842026, 'heads': 0.3850240111351013}
+Tv640_N64_noul {'LM dense': 31.570848040282726, 'GDN': 6.693759948015213, 'LM attention': 3.8054080605506897, 'heads': 0.3993920087814331}
+Tv640_N256_box {'LM dense': 55.40646407008171, 'GDN': 16.026336073875427, 'LM attention': 15.072191953659058, 'heads': 0.7423999905586243}
+Tv640_N256_noul {'LM dense': 111.73625645041466, 'GDN': 27.340927958488464, 'LM attention': 30.575424194335938, 'heads': 0.7485439777374268}
+Tv256_N64_box {'LM dense': 17.231136061251163, 'GDN': 3.361376017332077, 'LM attention': 0.7413120120763779, 'heads': 0.3338240087032318}
+Tv256_N256_box {'LM dense': 55.47084800899029, 'GDN': 16.017696142196655, 'LM attention': 3.061920017004013, 'heads': 0.579584002494812}
+Tv64_N64_box {'LM dense': 17.21475212275982, 'GDN': 3.3596480041742325, 'LM attention': 0.2970240078866482, 'heads': 0.31539198756217957}
+Tv64_N256_box {'LM dense': 55.45593625307083, 'GDN': 16.06051194667816, 'LM attention': 1.1663680225610733, 'heads': 0.52019202709198}
+[transformers] Qwen3VL video processing does not apply the per-frame pixel cap the reference implementation (qwen-vl-utils) applies, so some videos cost far more tokens than they would there. In v5.22 the capped behavior will become the default and `cap_pixels_per_frame` will be removed. Pass `cap_pixels_per_frame=True` to adopt the reference behavior now, or `False` to keep the current behavior and silence this warning.
+f4_v96_N64_noul {'LM dense': 30.501984149217606, 'GDN': 14.828672051429749, 'LM attention': 2.7984319925308228, 'heads': 0.30723199248313904}
+f4_v96_N256_noul {'LM dense': 112.22243276238441, 'GDN': 77.54300832748413, 'LM attention': 19.567808151245117, 'heads': 0.49459201097488403}
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 21922.08it/s]
+bs1_box_N1 {'LM dense': 17.557024132460356, 'GDN': 5.302560035139322, 'LM attention': 1.3588800095021725, 'heads': 0.28060799837112427}
+checked_stages exit=139

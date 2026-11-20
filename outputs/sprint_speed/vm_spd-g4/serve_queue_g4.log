@@ -1,0 +1,18 @@
+[serve] vllm start 09:20:28
+[serve] vllm end 09:32:48 exit 0
+[serve] vllm_async start 09:32:53
+[serve] vllm_async end 09:43:38 exit 0
+[serve] vllm_mtp start 09:43:43
+[serve] vllm_mtp end 09:53:32 exit 0
+[serve] sglang start 09:53:37
+[serve] sglang end 09:54:09 exit 137
+[serve] sglang_mtp start 09:54:14
+[serve] sglang_mtp end 09:54:43 exit 137
+[serve] vllm_fp8mtp start 09:54:48
+[serve] vllm_fp8mtp end 10:02:37 exit 0
+[serve] ALL DONE
+[serve] sglang start 10:41:12
+[serve] sglang end 10:57:20 exit 0
+[serve] sglang_mtp start 10:57:25
+[serve] sglang_mtp end 11:15:19 exit 0
+[serve] ALL DONE

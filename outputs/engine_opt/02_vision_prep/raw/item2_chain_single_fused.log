@@ -1,0 +1,18 @@
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.provenance'
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.provenance'
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.provenance'
+diag_fused exit=0
+pushed /content/out/scan/item2_diag_fused.json -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item2_diag_fused.log -> Vision-Decision/collection-scan-results
+single_fused exit=0
+pushed /content/out/scan/item2_single_fused.json -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item2_single_fused.log -> Vision-Decision/collection-scan-results
+fused_gui2048 exit=0
+pushed /content/out/scan/item2_fused_gui2048.json -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item2_fused_gui2048.log -> Vision-Decision/collection-scan-results
+fused_gui4096 exit=0
+pushed /content/out/scan/item2_fused_gui4096.json -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item2_fused_gui4096.log -> Vision-Decision/collection-scan-results
+clients_fused exit=0
+pushed /content/out/scan/item2_clients_fused.json -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item2_clients_fused.log -> Vision-Decision/collection-scan-results

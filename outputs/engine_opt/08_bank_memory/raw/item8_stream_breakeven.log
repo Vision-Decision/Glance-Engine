@@ -1,0 +1,14 @@
+Thu Nov 19 06:13:56 PM UTC 2026
+name, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 0 MiB
+GPU compute process list empty
+04bf1e9bd75d2797b40d7a0d105e8474d119247bc34e5f1e1383ea7bf1096f8d  scan/engine.py
+75c9a166966f06ceb2e586dd97b019aafe068306b0cc094ee497a3fce0016904  scan/bench_bank_memory.py
+python -m scan.bench_bank_memory --stage breakeven --out /content/out/scan/item8_stream_breakeven.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 16611.42it/s]
+[transformers] Qwen3VL video processing does not apply the per-frame pixel cap the reference implementation (qwen-vl-utils) applies, so some videos cost far more tokens than they would there. In v5.22 the capped behavior will become the default and `cap_pixels_per_frame` will be removed. Pass `cap_pixels_per_frame=True` to adopt the reference behavior now, or `False` to keep the current behavior and silence this warning.
+f4_v96 {'n': np.float64(64.0), 'encode_ms': np.float64(894.9095320058404), 'cached_ms': np.float64(53.70416000369005), 'fresh_ms': np.float64(782.5407529962831)}
+Tv256 {'n': np.float64(64.0), 'encode_ms': np.float64(765.9955529961735), 'cached_ms': np.float64(40.96562999620801), 'fresh_ms': np.float64(618.7914350011852)}
+Tv640 {'n': np.float64(64.0), 'encode_ms': np.float64(2034.009861999948), 'cached_ms': np.float64(43.19527999905404), 'fresh_ms': np.float64(1906.1218639981234)}
+Tv64 {'n': np.float64(64.0), 'encode_ms': np.float64(256.41545800317544), 'cached_ms': np.float64(40.29348000040045), 'fresh_ms': np.float64(175.91750800056616)}
+breakeven exit=0

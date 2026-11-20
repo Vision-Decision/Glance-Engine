@@ -1,0 +1,6 @@
+engopt, 2026-11-19, preflight before model setup
+2.14.1+cu130 NVIDIA RTX PRO 6000 Blackwell Server Edition
+bf16, 16 query heads, 4 KV heads, head dimension 256, seed 0
+Reference: per-sequence scaled_dot_product_attention with enable_gqa=True
+causal True, lengths [146,281] for Q/KV: finite True, mean/max |delta| 3.288046718807891e-05 0.00390625
+causal False, query lengths [24,24] and KV lengths [146,281]: finite True, mean/max |delta| 9.568718814989552e-05 0.00390625

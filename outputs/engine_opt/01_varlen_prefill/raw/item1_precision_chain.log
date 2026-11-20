@@ -1,0 +1,5 @@
+default exit=1
+pushed /content/out/scan/item1_reduction_default.log -> Vision-Decision/collection-scan-results
+cublaslt exit=1
+pushed /content/out/scan/item1_reduction_cublaslt.log -> Vision-Decision/collection-scan-results
+PRECISION_DONE

@@ -1,0 +1,13 @@
+Thu Nov 19 05:45:51 PM UTC 2026
+name, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 0 MiB
+GPU_IDLE
+e19af4d85df2573df0fb9d83aecb2774aaea9340e53d0d9f45882234415ae49d  speed/engine.py
+0a869a41d6084b3781ec9773638d302d18f31a2b9c56ce9f9c5ca6f6fe05fae4  speed/decision_worker.py
+4cf59fe91a4637c26df3a2ee6d5d00e6851a5c843c9a3f35a98d839d4118834e  speed/vision_mlp.py
+1219ac6e0fc8e2935312904343afa2b46db6bbd6de484bdbd0528cad4b696d44  scan/engine.py
+python -m scan.profile_frames --stage wide_gdn --ckpt /content/ckpt/v1/ckpt_final.pt --out /content/out/scan/item7_tile_wide_gdn.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 16662.99it/s]
+wide_gdn 128
+wide_gdn 256
+wide_gdn exit=0

@@ -1,0 +1,13 @@
+# Stack behind outputs/engine_opt/CEILING.md, as recorded in the raw result files.
+# GPU: NVIDIA RTX PRO 6000 Blackwell Server Edition (Colab "G4", SM120), driver 580.82.07.
+# Glance environment (system Python on the VM, see speed/setup_vm.sh):
+torch==2.14.1  # +cu130 wheel, recorded in outputs/engine_opt/00_ceiling/raw/c0_peaks.json
+transformers==5.23.0
+flash-linear-attention==0.6.0
+# [sm120-prefill], with FLA_FLASH_QLA=0: loaded for the item 7 and item 9 runners (video, fresh, burst,
+# single-image and cached rows); the GUI (item 3) and bank (item 8) rows used the standard FLA stack.
+flash-qla==0.1.3
+tilelang==0.1.15
+# Serving baselines, each in its own Python 3.12 virtualenv (speed/install_serve.sh):
+#   vllm==0.34.0     /content/vllm_env
+#   sglang==0.5.23   /content/sglang_env

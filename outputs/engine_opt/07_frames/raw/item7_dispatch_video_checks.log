@@ -1,0 +1,7 @@
+Thu Nov 19 04:39:34 PM UTC 2026
+name, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 0 MiB
+GPU_IDLE
+python -m scan.profile_frames --stage video_checks --ckpt /content/ckpt/v1/ckpt_final.pt --out /content/out/scan/item7_dispatch_video_checks.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 16330.00it/s]
+video_checks exit=0

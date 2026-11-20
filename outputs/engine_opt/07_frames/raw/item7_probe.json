@@ -1,0 +1,924 @@
+{
+ "128": {
+  "patch": {
+   "reference": {
+    "ms": 1.1424000263214111,
+    "kernels": [
+     {
+      "calls": 1,
+      "ms": 1.041802,
+      "transfer_bytes": 0,
+      "kernel": "sm80_xmma_fprop_implicit_gemm_indexed_bf16bf16_bf16f32_f32_nhwckrsc_nhwc_tilesize64x128x32_stage5_warpsize2x2x1_g1_tensor16x8x16_execute_kernel__5x_cudnn",
+      "op": "aten::cudnn_convolution",
+      "dims": [
+       [
+        3744,
+        3,
+        2,
+        16,
+        16
+       ],
+       [
+        1024,
+        3,
+        2,
+        16,
+        16
+       ],
+       [],
+       [],
+       [],
+       [],
+       [],
+       [],
+       []
+      ],
+      "types": [
+       "c10::BFloat16",
+       "c10::BFloat16",
+       "ScalarList",
+       "ScalarList",
+       "ScalarList",
+       "Scalar",
+       "Scalar",
+       "Scalar",
+       "Scalar"
+      ],
+      "group": "gemm"
+     },
+     {
+      "calls": 2,
+      "ms": 0.06435300000000001,
+      "transfer_bytes": 0,
+      "kernel": "void cudnn::engines_precompiled::nchwToNhwcKernel<__nv_bfloat16, __nv_bfloat16, float, false, true, (cudnnKernelDataType_t)0>(cudnn::engines_precompiled::nchw2nhwc_params_t<float>, __nv_bfloat16 const*, __nv_bfloat16*)",
+      "op": "aten::cudnn_convolution",
+      "dims": [
+       [
+        3744,
+        3,
+        2,
+        16,
+        16
+       ],
+       [
+        1024,
+        3,
+        2,
+        16,
+        16
+       ],
+       [],
+       [],
+       [],
+       [],
+       [],
+       [],
+       []
+      ],
+      "types": [
+       "c10::BFloat16",
+       "c10::BFloat16",
+       "ScalarList",
+       "ScalarList",
+       "ScalarList",
+       "Scalar",
+       "Scalar",
+       "Scalar",
+       "Scalar"
+      ],
+      "group": "other"
+     },
+     {
+      "calls": 3,
+      "ms": 0.012352,
+      "transfer_bytes": 39063232,
+      "kernel": "Memset (Device)",
+      "op": "aten::cudnn_convolution",
+      "dims": [
+       [
+        3744,
+        3,
+        2,
+        16,
+        16
+       ],
+       [
+        1024,
+        3,
+        2,
+        16,
+        16
+       ],
+       [],
+       [],
+       [],
+       [],
+       [],
+       [],
+       []
+      ],
+      "types": [
+       "c10::BFloat16",
+       "c10::BFloat16",
+       "ScalarList",
+       "ScalarList",
+       "ScalarList",
+       "Scalar",
+       "Scalar",
+       "Scalar",
+       "Scalar"
+      ],
+      "group": "data_movement",
+      "transfer_GBs": 3162.502590673575
+     },
+     {
+      "calls": 1,
+      "ms": 0.006464,
+      "transfer_bytes": 0,
+      "kernel": "void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native::CUDAFunctor_add<c10::BFloat16> >(at::TensorIteratorBase&, at::native::CUDAFunctor_add<c10::BFloat16> const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::CUDAFunctor_add<c10::BFloat16> >(at::TensorIteratorBase&, at::native::CUDAFunctor_add<c10::BFloat16> const&)::{lambda(int)#1})",
+      "op": "aten::add_",
+      "dims": [
+       [
+        3744,
+        1024,
+        1,
+        1,
+        1
+       ],
+       [
+        1,
+        1024,
+        1,
+        1,
+        1
+       ],
+       []
+      ],
+      "types": [
+       "c10::BFloat16",
+       "c10::BFloat16",
+       "Scalar"
+      ],
+      "group": "other"
+     }
+    ]
+   },
+   "cthw": {
+    "ms": 0.06460800021886826,
+    "max_abs": 0.03125,
+    "mean_abs": 0.00025415397249162197,
+    "relative_max": 0.003968254197388887,
+    "equal": false
+   },
+   "thwc": {
+    "ms": 0.06358399987220764,
+    "max_abs": 0.03125,
+    "mean_abs": 0.00028730242047458887,
+    "relative_max": 0.003968254197388887,
+    "equal": false
+   },
+   "whct": {
+    "ms": 0.0634239986538887,
+    "max_abs": 0.03125,
+    "mean_abs": 0.0003628456615842879,
+    "relative_max": 0.003968254197388887,
+    "equal": false
+   }
+  },
+  "attention": {
+   "468/1/468": {
+    "ms": 0.07449600100517273,
+    "max_abs": 0.015625,
+    "mean_abs": 9.811944437387865e-06,
+    "relative_max": 0.004032257944345474,
+    "equal": false,
+    "per_image": [
+     36936,
+     45277,
+     52956,
+     53026,
+     50021,
+     52099,
+     56334,
+     49698
+    ]
+   },
+   "468/1/512": {
+    "ms": 0.0735040009021759,
+    "max_abs": 0.015625,
+    "mean_abs": 9.811944437387865e-06,
+    "relative_max": 0.004032257944345474,
+    "equal": false,
+    "per_image": [
+     36936,
+     45277,
+     52956,
+     53026,
+     50021,
+     52099,
+     56334,
+     49698
+    ]
+   },
+   "468/2/468": {
+    "ms": 0.11564800143241882,
+    "max_abs": 5.546875,
+    "mean_abs": 0.0050847516395151615,
+    "relative_max": 1.4314515590667725,
+    "equal": false,
+    "per_image": [
+     477684,
+     45277,
+     52956,
+     53026,
+     50021,
+     52099,
+     56334,
+     49698
+    ]
+   },
+   "468/2/512": {
+    "ms": 0.11795199662446976,
+    "max_abs": 5.546875,
+    "mean_abs": 0.0050847516395151615,
+    "relative_max": 1.4314515590667725,
+    "equal": false,
+    "per_image": [
+     477684,
+     45277,
+     52956,
+     53026,
+     50021,
+     52099,
+     56334,
+     49698
+    ]
+   },
+   "468/3/468": {
+    "ms": 0.11913599818944931,
+    "max_abs": 5.546875,
+    "mean_abs": 0.0050847516395151615,
+    "relative_max": 1.4314515590667725,
+    "equal": false,
+    "per_image": [
+     477684,
+     45277,
+     52956,
+     53026,
+     50021,
+     52099,
+     56334,
+     49698
+    ]
+   },
+   "468/3/512": {
+    "ms": 0.11865600198507309,
+    "max_abs": 5.546875,
+    "mean_abs": 0.0050847516395151615,
+    "relative_max": 1.4314515590667725,
+    "equal": false,
+    "per_image": [
+     477684,
+     45277,
+     52956,
+     53026,
+     50021,
+     52099,
+     56334,
+     49698
+    ]
+   },
+   "468/4/468": {
+    "ms": 0.12460800260305405,
+    "max_abs": 5.546875,
+    "mean_abs": 0.0050847516395151615,
+    "relative_max": 1.4314515590667725,
+    "equal": false,
+    "per_image": [
+     477684,
+     45277,
+     52956,
+     53026,
+     50021,
+     52099,
+     56334,
+     49698
+    ]
+   },
+   "468/4/512": {
+    "ms": 0.12268800288438797,
+    "max_abs": 5.546875,
+    "mean_abs": 0.0050847516395151615,
+    "relative_max": 1.4314515590667725,
+    "equal": false,
+    "per_image": [
+     477684,
+     45277,
+     52956,
+     53026,
+     50021,
+     52099,
+     56334,
+     49698
+    ]
+   },
+   "512/1/468": {
+    "ms": 0.07049600034952164,
+    "max_abs": 0.015625,
+    "mean_abs": 9.811944437387865e-06,
+    "relative_max": 0.004032257944345474,
+    "equal": false,
+    "per_image": [
+     36936,
+     45277,
+     52956,
+     53026,
+     50021,
+     52099,
+     56334,
+     49698
+    ]
+   },
+   "512/1/512": {
+    "ms": 0.07056000083684921,
+    "max_abs": 0.015625,
+    "mean_abs": 9.811944437387865e-06,
+    "relative_max": 0.004032257944345474,
+    "equal": false,
+    "per_image": [
+     36936,
+     45277,
+     52956,
+     53026,
+     50021,
+     52099,
+     56334,
+     49698
+    ]
+   },
+   "512/2/468": {
+    "ms": 0.11555200070142746,
+    "max_abs": 5.546875,
+    "mean_abs": 0.0050847516395151615,
+    "relative_max": 1.4314515590667725,
+    "equal": false,
+    "per_image": [
+     477684,
+     45277,
+     52956,
+     53026,
+     50021,
+     52099,
+     56334,
+     49698
+    ]
+   },
+   "512/2/512": {
+    "ms": 0.11459200084209442,
+    "max_abs": 5.546875,
+    "mean_abs": 0.0050847516395151615,
+    "relative_max": 1.4314515590667725,
+    "equal": false,
+    "per_image": [
+     477684,
+     45277,
+     52956,
+     53026,
+     50021,
+     52099,
+     56334,
+     49698
+    ]
+   },
+   "512/3/468": {
+    "ms": 0.12092799693346024,
+    "max_abs": 5.546875,
+    "mean_abs": 0.0050847516395151615,
+    "relative_max": 1.4314515590667725,
+    "equal": false,
+    "per_image": [
+     477684,
+     45277,
+     52956,
+     53026,
+     50021,
+     52099,
+     56334,
+     49698
+    ]
+   },
+   "512/3/512": {
+    "ms": 0.12099199742078781,
+    "max_abs": 5.546875,
+    "mean_abs": 0.0050847516395151615,
+    "relative_max": 1.4314515590667725,
+    "equal": false,
+    "per_image": [
+     477684,
+     45277,
+     52956,
+     53026,
+     50021,
+     52099,
+     56334,
+     49698
+    ]
+   },
+   "512/4/468": {
+    "ms": 0.12518399953842163,
+    "max_abs": 5.546875,
+    "mean_abs": 0.0050847516395151615,
+    "relative_max": 1.4314515590667725,
+    "equal": false,
+    "per_image": [
+     477684,
+     45277,
+     52956,
+     53026,
+     50021,
+     52099,
+     56334,
+     49698
+    ]
+   },
+   "512/4/512": {
+    "ms": 0.12643200159072876,
+    "max_abs": 5.546875,
+    "mean_abs": 0.0050847516395151615,
+    "relative_max": 1.4314515590667725,
+    "equal": false,
+    "per_image": [
+     477684,
+     45277,
+     52956,
+     53026,
+     50021,
+     52099,
+     56334,
+     49698
+    ]
+   }
+  }
+ },
+ "256": {
+  "patch": {
+   "reference": {
+    "ms": 2.37555193901062,
+    "kernels": [
+     {
+      "calls": 1,
+      "ms": 2.164313,
+      "transfer_bytes": 0,
+      "kernel": "sm80_xmma_fprop_implicit_gemm_indexed_bf16bf16_bf16f32_f32_nhwckrsc_nhwc_tilesize64x128x32_stage5_warpsize2x2x1_g1_tensor16x8x16_execute_kernel__5x_cudnn",
+      "op": "aten::cudnn_convolution",
+      "dims": [
+       [
+        8064,
+        3,
+        2,
+        16,
+        16
+       ],
+       [
+        1024,
+        3,
+        2,
+        16,
+        16
+       ],
+       [],
+       [],
+       [],
+       [],
+       [],
+       [],
+       []
+      ],
+      "types": [
+       "c10::BFloat16",
+       "c10::BFloat16",
+       "ScalarList",
+       "ScalarList",
+       "ScalarList",
+       "Scalar",
+       "Scalar",
+       "Scalar",
+       "Scalar"
+      ],
+      "group": "gemm"
+     },
+     {
+      "calls": 2,
+      "ms": 0.157986,
+      "transfer_bytes": 0,
+      "kernel": "void cudnn::engines_precompiled::nchwToNhwcKernel<__nv_bfloat16, __nv_bfloat16, float, false, true, (cudnnKernelDataType_t)0>(cudnn::engines_precompiled::nchw2nhwc_params_t<float>, __nv_bfloat16 const*, __nv_bfloat16*)",
+      "op": "aten::cudnn_convolution",
+      "dims": [
+       [
+        8064,
+        3,
+        2,
+        16,
+        16
+       ],
+       [
+        1024,
+        3,
+        2,
+        16,
+        16
+       ],
+       [],
+       [],
+       [],
+       [],
+       [],
+       [],
+       []
+      ],
+      "types": [
+       "c10::BFloat16",
+       "c10::BFloat16",
+       "ScalarList",
+       "ScalarList",
+       "ScalarList",
+       "Scalar",
+       "Scalar",
+       "Scalar",
+       "Scalar"
+      ],
+      "group": "other"
+     },
+     {
+      "calls": 3,
+      "ms": 0.023648,
+      "transfer_bytes": 74456960,
+      "kernel": "Memset (Device)",
+      "op": "aten::cudnn_convolution",
+      "dims": [
+       [
+        8064,
+        3,
+        2,
+        16,
+        16
+       ],
+       [
+        1024,
+        3,
+        2,
+        16,
+        16
+       ],
+       [],
+       [],
+       [],
+       [],
+       [],
+       [],
+       []
+      ],
+      "types": [
+       "c10::BFloat16",
+       "c10::BFloat16",
+       "ScalarList",
+       "ScalarList",
+       "ScalarList",
+       "Scalar",
+       "Scalar",
+       "Scalar",
+       "Scalar"
+      ],
+      "group": "data_movement",
+      "transfer_GBs": 3148.5520974289584
+     },
+     {
+      "calls": 1,
+      "ms": 0.012864,
+      "transfer_bytes": 0,
+      "kernel": "void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native::CUDAFunctor_add<c10::BFloat16> >(at::TensorIteratorBase&, at::native::CUDAFunctor_add<c10::BFloat16> const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::CUDAFunctor_add<c10::BFloat16> >(at::TensorIteratorBase&, at::native::CUDAFunctor_add<c10::BFloat16> const&)::{lambda(int)#1})",
+      "op": "aten::add_",
+      "dims": [
+       [
+        8064,
+        1024,
+        1,
+        1,
+        1
+       ],
+       [
+        1,
+        1024,
+        1,
+        1,
+        1
+       ],
+       []
+      ],
+      "types": [
+       "c10::BFloat16",
+       "c10::BFloat16",
+       "Scalar"
+      ],
+      "group": "other"
+     }
+    ]
+   },
+   "cthw": {
+    "ms": 0.10844799876213074,
+    "max_abs": 0.046875,
+    "mean_abs": 0.00016104339738376439,
+    "relative_max": 0.0060240961611270905,
+    "equal": false
+   },
+   "thwc": {
+    "ms": 0.1056319996714592,
+    "max_abs": 0.046875,
+    "mean_abs": 0.00016534545284230262,
+    "relative_max": 0.0060240961611270905,
+    "equal": false
+   },
+   "whct": {
+    "ms": 0.10556799918413162,
+    "max_abs": 0.046875,
+    "mean_abs": 0.00023286273062694818,
+    "relative_max": 0.0060240961611270905,
+    "equal": false
+   }
+  },
+  "attention": {
+   "1008/1/1008": {
+    "ms": 0.15807999670505524,
+    "max_abs": 0.0078125,
+    "mean_abs": 9.89158343145391e-06,
+    "relative_max": 0.0017857142956927419,
+    "equal": false,
+    "per_image": [
+     72317,
+     108274,
+     124444,
+     121306,
+     111657,
+     118962,
+     120358,
+     111371
+    ]
+   },
+   "1008/1/1024": {
+    "ms": 0.1581439971923828,
+    "max_abs": 0.0078125,
+    "mean_abs": 9.89158343145391e-06,
+    "relative_max": 0.0017857142956927419,
+    "equal": false,
+    "per_image": [
+     72317,
+     108274,
+     124444,
+     121306,
+     111657,
+     118962,
+     120358,
+     111371
+    ]
+   },
+   "1008/2/1008": {
+    "ms": 0.24928000569343567,
+    "max_abs": 4.1953125,
+    "mean_abs": 0.004428149200975895,
+    "relative_max": 0.9589285850524902,
+    "equal": false,
+    "per_image": [
+     1028455,
+     108274,
+     124444,
+     121306,
+     111657,
+     118962,
+     120358,
+     111371
+    ]
+   },
+   "1008/2/1024": {
+    "ms": 0.24963200092315674,
+    "max_abs": 4.1953125,
+    "mean_abs": 0.004428149200975895,
+    "relative_max": 0.9589285850524902,
+    "equal": false,
+    "per_image": [
+     1028455,
+     108274,
+     124444,
+     121306,
+     111657,
+     118962,
+     120358,
+     111371
+    ]
+   },
+   "1008/3/1008": {
+    "ms": 0.2871679961681366,
+    "max_abs": 4.1953125,
+    "mean_abs": 0.004428149200975895,
+    "relative_max": 0.9589285850524902,
+    "equal": false,
+    "per_image": [
+     1028455,
+     108274,
+     124444,
+     121306,
+     111657,
+     118962,
+     120358,
+     111371
+    ]
+   },
+   "1008/3/1024": {
+    "ms": 0.28803199529647827,
+    "max_abs": 4.1953125,
+    "mean_abs": 0.004428149200975895,
+    "relative_max": 0.9589285850524902,
+    "equal": false,
+    "per_image": [
+     1028455,
+     108274,
+     124444,
+     121306,
+     111657,
+     118962,
+     120358,
+     111371
+    ]
+   },
+   "1008/4/1008": {
+    "ms": 0.3630079925060272,
+    "max_abs": 4.1953125,
+    "mean_abs": 0.004424985032528639,
+    "relative_max": 0.9589285850524902,
+    "equal": false,
+    "per_image": [
+     1028439,
+     108274,
+     124444,
+     121306,
+     111657,
+     118962,
+     120358,
+     111371
+    ]
+   },
+   "1008/4/1024": {
+    "ms": 0.356224000453949,
+    "max_abs": 4.1953125,
+    "mean_abs": 0.004422228783369064,
+    "relative_max": 0.9589285850524902,
+    "equal": false,
+    "per_image": [
+     1028433,
+     108274,
+     124444,
+     121306,
+     111657,
+     118962,
+     120358,
+     111371
+    ]
+   },
+   "1024/1/1008": {
+    "ms": 0.157151997089386,
+    "max_abs": 0.0078125,
+    "mean_abs": 9.89158343145391e-06,
+    "relative_max": 0.0017857142956927419,
+    "equal": false,
+    "per_image": [
+     72317,
+     108274,
+     124444,
+     121306,
+     111657,
+     118962,
+     120358,
+     111371
+    ]
+   },
+   "1024/1/1024": {
+    "ms": 0.15561600029468536,
+    "max_abs": 0.0078125,
+    "mean_abs": 9.89158343145391e-06,
+    "relative_max": 0.0017857142956927419,
+    "equal": false,
+    "per_image": [
+     72317,
+     108274,
+     124444,
+     121306,
+     111657,
+     118962,
+     120358,
+     111371
+    ]
+   },
+   "1024/2/1008": {
+    "ms": 0.2510719895362854,
+    "max_abs": 4.1953125,
+    "mean_abs": 0.004428149200975895,
+    "relative_max": 0.9589285850524902,
+    "equal": false,
+    "per_image": [
+     1028455,
+     108274,
+     124444,
+     121306,
+     111657,
+     118962,
+     120358,
+     111371
+    ]
+   },
+   "1024/2/1024": {
+    "ms": 0.25123199820518494,
+    "max_abs": 4.1953125,
+    "mean_abs": 0.004428149200975895,
+    "relative_max": 0.9589285850524902,
+    "equal": false,
+    "per_image": [
+     1028455,
+     108274,
+     124444,
+     121306,
+     111657,
+     118962,
+     120358,
+     111371
+    ]
+   },
+   "1024/3/1008": {
+    "ms": 0.289792001247406,
+    "max_abs": 4.1953125,
+    "mean_abs": 0.004428149200975895,
+    "relative_max": 0.9589285850524902,
+    "equal": false,
+    "per_image": [
+     1028455,
+     108274,
+     124444,
+     121306,
+     111657,
+     118962,
+     120358,
+     111371
+    ]
+   },
+   "1024/3/1024": {
+    "ms": 0.2903999984264374,
+    "max_abs": 4.1953125,
+    "mean_abs": 0.004428149200975895,
+    "relative_max": 0.9589285850524902,
+    "equal": false,
+    "per_image": [
+     1028455,
+     108274,
+     124444,
+     121306,
+     111657,
+     118962,
+     120358,
+     111371
+    ]
+   },
+   "1024/4/1008": {
+    "ms": 0.3593280017375946,
+    "max_abs": 4.1953125,
+    "mean_abs": 0.0044286008924245834,
+    "relative_max": 0.9589285850524902,
+    "equal": false,
+    "per_image": [
+     1028438,
+     108274,
+     124444,
+     121306,
+     111657,
+     118962,
+     120358,
+     111371
+    ]
+   },
+   "1024/4/1024": {
+    "ms": 0.3607040047645569,
+    "max_abs": 4.1953125,
+    "mean_abs": 0.004429446533322334,
+    "relative_max": 0.9589285850524902,
+    "equal": false,
+    "per_image": [
+     1028439,
+     108274,
+     124444,
+     121306,
+     111657,
+     118962,
+     120358,
+     111371
+    ]
+   }
+  }
+ }
+}

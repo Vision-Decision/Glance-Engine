@@ -1,0 +1,6 @@
+followup exit=0
+pushed /content/out/scan/item3_followup.json -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item3_followup.log -> Vision-Decision/collection-scan-results
+clients exit=0
+pushed /content/out/scan/item3_clients.json -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item3_clients.log -> Vision-Decision/collection-scan-results

@@ -1,0 +1,8 @@
+real exit=0
+pushed /content/out/scan/item9_gates_real.log -> Vision-Decision/collection-scan-results
+fused exit=0
+pushed /content/out/scan/item9_gates_fused.log -> Vision-Decision/collection-scan-results
+fault exit=1
+pushed /content/out/scan/item9_gates_fault.log -> Vision-Decision/collection-scan-results
+small_fault exit=1
+pushed /content/out/scan/item9_gates_small_fault.log -> Vision-Decision/collection-scan-results

@@ -1,0 +1,83 @@
+expandable_segments=True pool=stale
+capture passed stale 2.14.1+cu130
+exit=0
+expandable_segments=True pool=fresh
+capture passed fresh 2.14.1+cu130
+exit=0
+expandable_segments=True pool=stale purge
+capture passed stale 2.14.1+cu130
+exit=0
+expandable_segments=True pool=stale hold
+Traceback (most recent call last):
+  File "/content/item1_pool_lifetime_matrix.py", line 23, in <module>
+    capture(torch.cuda.graph_pool_handle() if sys.argv[1] == "fresh" else pool)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/item1_pool_lifetime_matrix.py", line 10, in capture
+    with torch.cuda.graph(g, pool=handle):
+         ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/torch/cuda/graphs.py", line 1183, in __enter__
+    self.cuda_graph.capture_begin(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        # type: ignore[misc]
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        check_input_liveness=self.check_input_liveness,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/usr/local/lib/python3.13/dist-packages/torch/cuda/graphs.py", line 610, in capture_begin
+    super().capture_begin(
+    ~~~~~~~~~~~~~~~~~~~~~^
+        pool=_get_pool_id(pool), capture_error_mode=capture_error_mode
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+RuntimeError: it->second->use_count > 0 INTERNAL ASSERT FAILED at "/__w/pytorch/pytorch/c10/cuda/CUDACachingAllocator.cpp":3329, please report a bug to PyTorch. 
+exit=1
+expandable_segments=True pool=fresh hold
+capture passed fresh 2.14.1+cu130
+exit=0
+expandable_segments=False pool=stale
+capture passed stale 2.14.1+cu130
+exit=0
+expandable_segments=False pool=fresh
+capture passed fresh 2.14.1+cu130
+exit=0
+expandable_segments=False pool=stale purge
+capture passed stale 2.14.1+cu130
+exit=0
+expandable_segments=False pool=stale hold
+Traceback (most recent call last):
+  File "/content/item1_pool_lifetime_matrix.py", line 23, in <module>
+    capture(torch.cuda.graph_pool_handle() if sys.argv[1] == "fresh" else pool)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/item1_pool_lifetime_matrix.py", line 10, in capture
+    with torch.cuda.graph(g, pool=handle):
+         ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/torch/cuda/graphs.py", line 1183, in __enter__
+    self.cuda_graph.capture_begin(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        # type: ignore[misc]
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        check_input_liveness=self.check_input_liveness,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/usr/local/lib/python3.13/dist-packages/torch/cuda/graphs.py", line 610, in capture_begin
+    super().capture_begin(
+    ~~~~~~~~~~~~~~~~~~~~~^
+        pool=_get_pool_id(pool), capture_error_mode=capture_error_mode
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+RuntimeError: it->second->use_count > 0 INTERNAL ASSERT FAILED at "/__w/pytorch/pytorch/c10/cuda/CUDACachingAllocator.cpp":3329, please report a bug to PyTorch. 
+exit=1
+expandable_segments=False pool=fresh hold
+capture passed fresh 2.14.1+cu130
+exit=0
+POOL_MATRIX_DONE
+push failed /content/out/scan/item1_pool_matrix.log Vision-Decision/collection-scan-results (Request ID: Root=1-6afeb5ad-72ac4b964c08893d48077d44;e320f7b2-ae51-420a-a1cd-aa88884ebd5d)
+
+429 Too Many Requests for u
+pushed /content/out/scan/item1_pool_matrix.log -> Vision-Decision/collection-scan-data

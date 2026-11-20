@@ -1,0 +1,16 @@
+glance-engine
+Copyright (c) 2026 Vision-Decision
+
+This product includes software adapted from SpecPilot
+(https://github.com/StargazerX0/SpecPilot, commit 1058dc29481150e66ae11b8e8cf55ed60caf254a),
+licensed under the Apache License, Version 2.0. The adapted file is
+speed/specpilot/w12.cu; it was modified (standalone PyTorch binding, exact linear
+specializations only, direct driver API, Glance-selected stream-K geometry).
+The license text is in speed/specpilot/LICENSE.
+
+This product includes a parameter declaration from FlashAttention
+(https://github.com/Dao-AILab/flash-attention, revision 14c377950125c70b7a9dabf9c561fca53715ac7d,
+as vendored by PyTorch), Copyright (c) 2023, Tri Dao, licensed under the
+BSD 3-Clause License. The files are scan/flash_vision/params.h and the launcher
+scan/flash_vision/attention.cpp that uses it. The license text is in
+scan/flash_vision/LICENSE.

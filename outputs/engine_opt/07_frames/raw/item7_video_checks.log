@@ -1,0 +1,22 @@
+Thu Nov 19 04:32:04 PM UTC 2026
+name, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 0 MiB
+GPU_IDLE
+python -m scan.profile_frames --stage video_checks --ckpt /content/ckpt/v1/ckpt_final.pt --out /content/out/scan/item7_video_checks.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 19932.57it/s]
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/content/dv/scan/profile_frames.py", line 193, in <module>
+    main()
+    ~~~~^^
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "/content/dv/scan/profile_frames.py", line 126, in main
+    check_outputs([r[key] for r in rows])
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/dv/scan/profile_lm.py", line 478, in check_outputs
+    assert row["decision_agree"] == 1.0, row
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: {'p_absdiff_max': 0.019183367490768433, 'p_absdiff_mean': 0.0010358323343098164, 'decision_agree': 0.96875, 'box_absdiff_max': 0.045789241790771484, 'box_absdiff_mean': 0.002890327014029026, 'piou_absdiff_max': 0.030491411685943604}
+video_checks exit=1

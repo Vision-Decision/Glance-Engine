@@ -1,0 +1,36 @@
+Thu Nov 19 04:23:27 PM UTC 2026
+name, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 0 MiB
+GPU_IDLE
+python -m speed.bench_glance --ckpt /content/ckpt/v1/ckpt_final.pt --modes eng_fused --parts video1 --out /content/out/scan/item7_first_video.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 17262.57it/s]
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/content/dv/speed/bench_glance.py", line 380, in <module>
+    main()
+    ~~~~^^
+  File "/content/dv/speed/bench_glance.py", line 365, in main
+    r.update(sweep(R, frames, cf, max(6, a.n_calls // 4)))
+             ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/dv/speed/bench_glance.py", line 219, in sweep
+    R.call(im, qs, Nv=Nv)
+    ~~~~~~^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "/content/dv/speed/bench_glance.py", line 135, in call
+    pv = self.frames.mixed_pixels(imgs)
+  File "/content/dv/scan/vision_prep.py", line 94, in mixed_pixels
+    return patches(host.to(self.device, non_blocking=True), self._lut(), layout,
+                   count=start, maximum=max(counts))
+  File "/content/dv/speed/frame_pixels.py", line 39, in patches
+    _patches[(maximum, n)](raw, lut, layout, w, maximum, layout is not None)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/triton/runtime/jit.py", line 374, in <lambda>
+    return lambda *args, **kwargs: self.run(grid=grid, warmup=False, *args, **kwargs)
+                                   ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/triton/runtime/jit.py", line 741, in run
+    bound_args, specialization, options = binder(*args, **kwargs)
+                                          ~~~~~~^^^^^^^^^^^^^^^^^
+TypeError: dynamic_func() missing 1 required positional argument: 'MIXED'
+video exit=1

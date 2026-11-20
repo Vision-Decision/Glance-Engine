@@ -1,0 +1,16 @@
+Thu Nov 19 06:58:22 PM UTC 2026
+name, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 0 MiB
+GPU compute process list empty
+d2aa4f72b51e8ac14de0355e42b70a62905d3feb395cb57f9c4aaf90bc6978a7  scan/engine.py
+17c12cac56f153027a98cf5897e224fc06239ebc7f9bd8a9fe8d8525b2767164  scan/bench_bank_memory.py
+a86a4c05f8b58d6701c9803e9b4ea9915df6a2b8fdc8031e3dc9d1b462e16428  scan/bench_bank_precision.py
+43e7c1cb4358089ca4ff76f1adfbf808f955133f4e644d80a6c3582ae064954e  scan/bench_bank_tier.py
+652c1f8e306e28d43cc6ec8189b1c2511333db3eecd02ab0ee4994ae6ad1bb3d  scan/bank_codec.py
+939c131e2154928965cbfef49ee8ff08f4696589d3dc4388984409a610bb3eda  scan/bank_kernels.py
+3f6823b1a3c3af3ad571a8ad03d3fa65a8ca43ce5c4cd347a59f95b42aec8fa0  scan/bank.py
+e26262d050dfcd2f79772e3d811089f592b145c89d0fae9e4cbd839ef1767004  scan/host_bank.py
+a477ad78aa1bfc77523500ab3ff8755ad775be8e2ea590b6b7b4b42bcd781a72  speed/gdn_branch.py
+python -m scan.bench_bank_memory --stage entry --out /content/out/scan/item8_shipping_entry.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 17156.02it/s]
+entry exit=0

@@ -1,0 +1,19 @@
+Thu Nov 19 12:07:28 PM UTC 2026
+name, driver_version, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 580.82.07, 0 MiB
+GPU compute process list empty
+411d36724e64943c71b338751ab1fd43aa41cce0ec46b960937ddaf614770fb1  speed/lm_prefill.py
+3cafe0a9e63b6015c2ab085b7fb1430e04e38c4a674f33854987984e9d1566d7  speed/engine.py
+1f9d0b846c8546514ad65fcf48dc37770a9ca8c50661bc4888fee9663fb2c3b0  scan/varlen.py
+3d3632ee9720f7a73075a2cb22456a49fdb15b6643cd55386cbd2a04c3569201  scan/engine.py
+python -m scan.profile_lm --stage fixed_features --ckpt /content/ckpt/v1/ckpt_final.pt --out /content/out/scan/item3_fixed_features.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 19539.31it/s]
+{'n': 32, 'tokens': 4352, 'kind': 'box', 'p_absdiff_max': 0.00019107386469841003, 'p_absdiff_mean': 1.7669512089923956e-05, 'decision_agree': 1.0, 'box_absdiff_max': 0.08132600784301758, 'box_absdiff_mean': 0.0020931116305291653, 'piou_absdiff_max': 0.08276224136352539}
+{'n': 32, 'tokens': 4672, 'kind': 'noul', 'prob_absdiff_max': 0.0036908090114593506, 'decision_agree': 1.0}
+{'n': 64, 'tokens': 8704, 'kind': 'box', 'p_absdiff_max': 0.0007176324725151062, 'p_absdiff_mean': 3.0161148970364593e-05, 'decision_agree': 1.0, 'box_absdiff_max': 0.324565052986145, 'box_absdiff_mean': 0.005055902525782585, 'piou_absdiff_max': 0.14883705973625183}
+{'n': 64, 'tokens': 9344, 'kind': 'noul', 'prob_absdiff_max': 0.004431217908859253, 'decision_agree': 1.0}
+{'n': 128, 'tokens': 17408, 'kind': 'box', 'p_absdiff_max': 0.0022015050053596497, 'p_absdiff_mean': 4.696450923802331e-05, 'decision_agree': 1.0, 'box_absdiff_max': 0.3259182870388031, 'box_absdiff_mean': 0.0024682991206645966, 'piou_absdiff_max': 0.15079855918884277}
+{'n': 128, 'tokens': 18688, 'kind': 'noul', 'prob_absdiff_max': 0.010909318923950195, 'decision_agree': 1.0}
+{'n': 256, 'tokens': 34816, 'kind': 'box', 'p_absdiff_max': 0.009232103824615479, 'p_absdiff_mean': 0.00012973806587979198, 'decision_agree': 1.0, 'box_absdiff_max': 0.1729479432106018, 'box_absdiff_mean': 0.0021373166237026453, 'piou_absdiff_max': 0.12816709280014038}
+{'n': 256, 'tokens': 37376, 'kind': 'noul', 'prob_absdiff_max': 0.010909318923950195, 'decision_agree': 1.0}
+fixed_features exit=0

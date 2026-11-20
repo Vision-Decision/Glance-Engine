@@ -1,0 +1,35 @@
+Thu Nov 19 01:35:43 PM UTC 2026
+name, driver_version, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 580.82.07, 0 MiB
+GPU compute process list empty
+cda4f10367e262a06d8c48d4d24ece9a3f6a8b0df8f106bc15eb20a061188f32  speed/engine.py
+3f9b98a7759cae721e03f51b02c4796d0b07630a5d22e80cf9165530fa7c8a0d  scan/engine.py
+7f6ffe04f004df73a41f81990638adb3bae97147f2944db937a650760e00c92f  scan/profile_branch.py
+870594755da3bc6af0c0f132c327c6c6944e44c2d42596fffa56bcc5210071f0  scan/branch_micro.py
+3c1993955c937908f218080dd7d6950f9646be86b9394a3e2f0a5d9f438fb7d5  speed/gdn_branch.py
+GLANCE_BRANCH_MODE=fused
+python -m scan.profile_branch --stage stages --ckpt /content/ckpt/v1/ckpt_final.pt --out /content/out/scan/item4_checked_stages.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 17244.81it/s]
+Tv640_N64_box {'LM dense': 17.177536115050316, 'GDN': 3.362431973218918, 'LM attention': 1.8875200301408768, 'heads': 0.3850240111351013}
+Tv640_N64_noul {'LM dense': 31.507296063005924, 'GDN': 6.6832320392131805, 'LM attention': 3.801216036081314, 'heads': 0.3993600010871887}
+Tv640_N256_box {'LM dense': 55.27974437177181, 'GDN': 16.026911973953247, 'LM attention': 15.083648085594177, 'heads': 0.7423999905586243}
+Tv640_N256_noul {'LM dense': 111.12518334388733, 'GDN': 27.32268762588501, 'LM attention': 30.52239966392517, 'heads': 0.749567985534668}
+Tv256_N64_box {'LM dense': 17.20102398470044, 'GDN': 3.362176015973091, 'LM attention': 0.7414080128073692, 'heads': 0.33587199449539185}
+Tv256_N256_box {'LM dense': 55.36009618639946, 'GDN': 16.027104079723358, 'LM attention': 3.0824959874153137, 'heads': 0.5816320180892944}
+Tv64_N64_box {'LM dense': 17.211168009787798, 'GDN': 3.362399995326996, 'LM attention': 0.2969920039176941, 'heads': 0.31539198756217957}
+Tv64_N256_box {'LM dense': 55.3675521761179, 'GDN': 16.059359967708588, 'LM attention': 1.1662399917840958, 'heads': 0.5181440114974976}
+[transformers] Qwen3VL video processing does not apply the per-frame pixel cap the reference implementation (qwen-vl-utils) applies, so some videos cost far more tokens than they would there. In v5.22 the capped behavior will become the default and `cap_pixels_per_frame` will be removed. Pass `cap_pixels_per_frame=True` to adopt the reference behavior now, or `False` to keep the current behavior and silence this warning.
+f4_v96_N64_noul {'LM dense': 30.491488054394722, 'GDN': 14.850464046001434, 'LM attention': 2.80252805352211, 'heads': 0.30720001459121704}
+f4_v96_N256_noul {'LM dense': 111.96732875704765, 'GDN': 77.57228875160217, 'LM attention': 19.55020809173584, 'heads': 0.4935680031776428}
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 16412.73it/s]
+bs1_box_N1 {'LM dense': 17.550528056919575, 'GDN': 5.302880078554153, 'LM attention': 1.3610240146517754, 'heads': 0.2805759906768799}
+followup_box_N1 {'LM dense': 6.181440033018589, 'GDN': 0.6251520048826933, 'LM attention': 0.5999360233545303, 'heads': 0.27033600211143494}
+bs1_box_N8 {'LM dense': 19.21775995194912, 'GDN': 5.798720080405474, 'LM attention': 1.4887040257453918, 'heads': 0.3195199966430664}
+followup_box_N8 {'LM dense': 6.783711964264512, 'GDN': 1.110368013381958, 'LM attention': 0.6183359920978546, 'heads': 0.3051519989967346}
+bs1_mixed_N8 {'LM dense': 23.408287942409515, 'GDN': 7.63862407207489, 'LM attention': 2.117632009088993, 'heads': 0.32361599802970886}
+followup_mixed_N8 {'LM dense': 9.964031916111708, 'GDN': 2.932223990559578, 'LM attention': 1.2553919702768326, 'heads': 0.30720001459121704}
+bs1_box_N32 {'LM dense': 24.235711991786957, 'GDN': 7.503456026315689, 'LM attention': 2.580512009561062, 'heads': 0.3768639862537384}
+followup_box_N32 {'LM dense': 12.80550391227007, 'GDN': 2.804288052022457, 'LM attention': 1.7470080107450485, 'heads': 0.3615039885044098}
+bs1_mixed_N32 {'LM dense': 42.518176041543484, 'GDN': 14.556576013565063, 'LM attention': 4.972992025315762, 'heads': 0.3768639862537384}
+followup_mixed_N32 {'LM dense': 26.896960116922855, 'GDN': 9.691328018903732, 'LM attention': 4.081824004650116, 'heads': 0.3686720132827759}
+checked_stages exit=0

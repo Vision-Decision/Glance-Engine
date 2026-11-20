@@ -1,0 +1,111 @@
+{
+ "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "torch": "2.14.1+cu130",
+ "ckpt": "/content/ckpt/v1/ckpt_final.pt",
+ "args": {
+  "ckpt": "/content/ckpt/v1/ckpt_final.pt",
+  "prep": "data/prep/eval_refcoco_val.jsonl",
+  "gprep": "data/prep/eval_grefcoco_val.jsonl",
+  "image_root": "/content/data/coco/train2014",
+  "parts": "acc",
+  "Ns": [
+   1,
+   8,
+   16,
+   32,
+   64,
+   128,
+   256
+  ],
+  "Ns_fresh": [
+   1,
+   2,
+   4,
+   8,
+   16,
+   32,
+   64
+  ],
+  "Tvs": [
+   256
+  ],
+  "max_fresh_tokens": 16384,
+  "n_equiv": 24,
+  "clip_cfgs": "4x96,4x48,2x96",
+  "clip_fresh": 1,
+  "cached_tvs": "640,256,64",
+  "short": 0,
+  "fp8": 0,
+  "n_acc": 150,
+  "n_calls": 30,
+  "out": "/content/out/scan/parity150_v1.json"
+ },
+ "n_merged": 200,
+ "acc_vs_tokens": {
+  "Tv256": {
+   "refcoco_val": {
+    "n_pos": 957,
+    "n_neg": 0,
+    "acc50": 0.8861024033437827
+   },
+   "grefcoco_val": {
+    "n_pos": 368,
+    "n_neg": 744,
+    "acc50": null,
+    "auroc": 0.9608133181393175,
+    "false_alarm_at_05": 0.1586021505376344,
+    "miss_at_05": 0.057065217391304345,
+    "ece15": 0.08163031357315037
+   }
+  },
+  "Tv256_qfirst": {
+   "refcoco_val": {
+    "n_pos": 957,
+    "n_neg": 0,
+    "acc50": 0.8714733542319749
+   },
+   "grefcoco_val": {
+    "n_pos": 368,
+    "n_neg": 744,
+    "acc50": null,
+    "auroc": 0.9349725338943432,
+    "false_alarm_at_05": 0.2782258064516129,
+    "miss_at_05": 0.035326086956521736,
+    "ece15": 0.1707276170072219
+   }
+  },
+  "Tv640": {
+   "refcoco_val": {
+    "n_pos": 957,
+    "n_neg": 0,
+    "acc50": 0.9456635318704284
+   },
+   "grefcoco_val": {
+    "n_pos": 368,
+    "n_neg": 744,
+    "acc50": null,
+    "auroc": 0.9601084034595605,
+    "false_alarm_at_05": 0.15994623655913978,
+    "miss_at_05": 0.04619565217391304,
+    "ece15": 0.0888708650427263
+   }
+  },
+  "Tv640_qfirst": {
+   "refcoco_val": {
+    "n_pos": 957,
+    "n_neg": 0,
+    "acc50": 0.93521421107628
+   },
+   "grefcoco_val": {
+    "n_pos": 368,
+    "n_neg": 744,
+    "acc50": null,
+    "auroc": 0.9390267064048621,
+    "false_alarm_at_05": 0.28897849462365593,
+    "miss_at_05": 0.024456521739130436,
+    "ece15": 0.17558058144630642
+   }
+  }
+ },
+ "peak_mem_gb": 11.1288743019104
+}

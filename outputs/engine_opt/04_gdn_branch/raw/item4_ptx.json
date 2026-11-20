@@ -1,0 +1,30 @@
+{
+ "_branch_wy": {
+  "cache_key": "WR62T5MYFLIFIKNZKWQP7WOBFOIQZNF24WG3DRZEKJIZGH3K4H3A",
+  "target": ".target sm_120a",
+  "mma": [
+   "mma.sync.aligned.m16n8k16.row.col.f32.bf16.bf16.f32"
+  ]
+ },
+ "_seed_products": {
+  "cache_key": "ADIC6LXU7LVXXUF4RXB32LEE7P3YLUE6OAV4PZZV6RFKN3MNQWDA",
+  "target": ".target sm_120a",
+  "mma": [
+   "mma.sync.aligned.m16n8k16.row.col.f32.bf16.bf16.f32"
+  ]
+ },
+ "_chunk_output": {
+  "cache_key": "2UML7YKP6HINQAO25E7OQT4QUBUW45APC3IKAGAMMP62E2XNNOTQ",
+  "target": ".target sm_120a",
+  "mma": [
+   "mma.sync.aligned.m16n8k16.row.col.f32.bf16.bf16.f32"
+  ]
+ },
+ "_branch_attention": {
+  "cache_key": "CVQ5RKOQEID6A7LDM4DDLII24PZN7CD64MKB6WY63SUES6ZAQW5A",
+  "target": ".target sm_120a",
+  "mma": [
+   "mma.sync.aligned.m16n8k16.row.col.f32.bf16.bf16.f32"
+  ]
+ }
+}

@@ -1,0 +1,68 @@
+{
+ "128": {
+  "count": 32,
+  "exact_ms": 41.07408142089844,
+  "candidate_ms": 37.02544021606445,
+  "features": {
+   "max_abs": 4.390625,
+   "mean_abs": 0.004067210480570793,
+   "relative_max": 0.344362735748291,
+   "equal": false
+  },
+  "decisions": [
+   {
+    "p_absdiff_max": 0.012120664119720459,
+    "p_absdiff_mean": 0.0009406702592968941,
+    "decision_agree": 1.0,
+    "box_absdiff_max": 0.06712359189987183,
+    "box_absdiff_mean": 0.003980710171163082,
+    "piou_absdiff_max": 0.03603455424308777
+   },
+   {
+    "prob_absdiff_max": 0.0170610249042511,
+    "decision_agree": 1.0
+   },
+   {
+    "prob_absdiff_max": 0.010056115686893463,
+    "decision_agree": 1.0
+   },
+   {
+    "prob_absdiff_max": 0.014652788639068604,
+    "decision_agree": 1.0
+   }
+  ]
+ },
+ "256": {
+  "count": 64,
+  "exact_ms": 202.4403533935547,
+  "candidate_ms": 184.81292724609375,
+  "features": {
+   "max_abs": 4.0859375,
+   "mean_abs": 0.003628395963460207,
+   "relative_max": 0.29581448435783386,
+   "equal": false
+  },
+  "decisions": [
+   {
+    "p_absdiff_max": 0.00929597020149231,
+    "p_absdiff_mean": 0.0007858838653191924,
+    "decision_agree": 1.0,
+    "box_absdiff_max": 0.044546425342559814,
+    "box_absdiff_mean": 0.0025293356738984585,
+    "piou_absdiff_max": 0.06361725926399231
+   },
+   {
+    "prob_absdiff_max": 0.014033198356628418,
+    "decision_agree": 1.0
+   },
+   {
+    "prob_absdiff_max": 0.0012787580490112305,
+    "decision_agree": 1.0
+   },
+   {
+    "prob_absdiff_max": 0.021401703357696533,
+    "decision_agree": 0.984375
+   }
+  ]
+ }
+}

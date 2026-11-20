@@ -1,0 +1,10 @@
+Thu Nov 19 06:03:05 PM UTC 2026
+name, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 0 MiB
+GPU compute process list empty
+04bf1e9bd75d2797b40d7a0d105e8474d119247bc34e5f1e1383ea7bf1096f8d  scan/engine.py
+75c9a166966f06ceb2e586dd97b019aafe068306b0cc094ee497a3fce0016904  scan/bench_bank_memory.py
+python -m scan.bench_bank_precision --stage fixtures --ckpt /content/ckpt/v1/ckpt_final.pt --out /content/out/scan/item8_measured_fixtures.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 17457.35it/s]
+[transformers] Qwen3VL video processing does not apply the per-frame pixel cap the reference implementation (qwen-vl-utils) applies, so some videos cost far more tokens than they would there. In v5.22 the capped behavior will become the default and `cap_pixels_per_frame` will be removed. Pass `cap_pixels_per_frame=True` to adopt the reference behavior now, or `False` to keep the current behavior and silence this warning.
+fixtures exit=0

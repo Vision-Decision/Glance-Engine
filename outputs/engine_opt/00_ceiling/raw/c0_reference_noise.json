@@ -1,0 +1,2060 @@
+{
+  "max": {
+    "presence_logit": 0.17065787315368652,
+    "presence_prob": 0.01585182547569275,
+    "box_pred": 0.21247240900993347,
+    "iou_logit": 0.9209500551223755,
+    "iou_prob": 0.20370911061763763,
+    "typed_prob": 0.01167655736207962
+  },
+  "fixtures": {
+    "causal/image/box": {
+      "batch1_pad64_batch1_pad1": {
+        "errors": {
+          "presence_logit": 0.038552284240722656,
+          "presence_prob": 0.0002812421880662441,
+          "box_pred": 0.05447113513946533,
+          "iou_logit": 0.06723427772521973,
+          "iou_prob": 0.013652056455612183
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad64_batch2_pad64": {
+        "errors": {
+          "presence_logit": 0.035888671875,
+          "presence_prob": 0.0004981216043233871,
+          "box_pred": 0.16660159826278687,
+          "iou_logit": 0.6139254570007324,
+          "iou_prob": 0.11148229241371155
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad64_batch6_pad64": {
+        "errors": {
+          "presence_logit": 0.07364559173583984,
+          "presence_prob": 0.0011595077812671661,
+          "box_pred": 0.20519399642944336,
+          "iou_logit": 0.18146204948425293,
+          "iou_prob": 0.0261097252368927
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad64_batch6_pad1": {
+        "errors": {
+          "presence_logit": 0.09054422378540039,
+          "presence_prob": 0.001502474769949913,
+          "box_pred": 0.20548617839813232,
+          "iou_logit": 0.18826556205749512,
+          "iou_prob": 0.027029097080230713
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad1_batch2_pad64": {
+        "errors": {
+          "presence_logit": 0.053870201110839844,
+          "presence_prob": 0.0005491580814123154,
+          "box_pred": 0.16663801670074463,
+          "iou_logit": 0.6137979030609131,
+          "iou_prob": 0.11146284639835358
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad1_batch6_pad64": {
+        "errors": {
+          "presence_logit": 0.05996370315551758,
+          "presence_prob": 0.001229308545589447,
+          "box_pred": 0.20523041486740112,
+          "iou_logit": 0.18158960342407227,
+          "iou_prob": 0.02612917125225067
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad1_batch6_pad1": {
+        "errors": {
+          "presence_logit": 0.07732701301574707,
+          "presence_prob": 0.001572275534272194,
+          "box_pred": 0.2055225968360901,
+          "iou_logit": 0.18839311599731445,
+          "iou_prob": 0.027048543095588684
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch2_pad64_batch6_pad64": {
+        "errors": {
+          "presence_logit": 0.06681585311889648,
+          "presence_prob": 0.0009884089231491089,
+          "box_pred": 0.0735631063580513,
+          "iou_logit": 0.7953875064849854,
+          "iou_prob": 0.13759201765060425
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch2_pad64_batch6_pad1": {
+        "errors": {
+          "presence_logit": 0.08303546905517578,
+          "presence_prob": 0.0013313759118318558,
+          "box_pred": 0.07419677078723907,
+          "iou_logit": 0.8021910190582275,
+          "iou_prob": 0.13851138949394226
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch6_pad64_batch6_pad1": {
+        "errors": {
+          "presence_logit": 0.047132015228271484,
+          "presence_prob": 0.00048709195107221603,
+          "box_pred": 0.0027859508991241455,
+          "iou_logit": 0.01656317710876465,
+          "iou_prob": 0.002806425094604492
+        },
+        "agreed": 6,
+        "count": 6
+      }
+    },
+    "causal/image/noul": {
+      "batch1_pad64_batch1_pad1": {
+        "errors": {
+          "typed_prob": 0.0021469593048095703
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad64_batch2_pad64": {
+        "errors": {
+          "typed_prob": 0.002880789339542389
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad64_batch6_pad64": {
+        "errors": {
+          "typed_prob": 0.0054446011781692505
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad64_batch6_pad1": {
+        "errors": {
+          "typed_prob": 0.005214214324951172
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad1_batch2_pad64": {
+        "errors": {
+          "typed_prob": 0.0035815387964248657
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad1_batch6_pad64": {
+        "errors": {
+          "typed_prob": 0.005820058286190033
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad1_batch6_pad1": {
+        "errors": {
+          "typed_prob": 0.005589723587036133
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch2_pad64_batch6_pad64": {
+        "errors": {
+          "typed_prob": 0.006626039743423462
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch2_pad64_batch6_pad1": {
+        "errors": {
+          "typed_prob": 0.007582426071166992
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch6_pad64_batch6_pad1": {
+        "errors": {
+          "typed_prob": 0.0016155540943145752
+        },
+        "agreed": 6,
+        "count": 6
+      }
+    },
+    "causal/image/choice": {
+      "batch1_pad64_batch1_pad1": {
+        "errors": {
+          "typed_prob": 0.00021278858184814453
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad64_batch2_pad64": {
+        "errors": {
+          "typed_prob": 0.0003172755241394043
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad64_batch6_pad64": {
+        "errors": {
+          "typed_prob": 0.00043773651123046875
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad64_batch6_pad1": {
+        "errors": {
+          "typed_prob": 0.0004137754440307617
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad1_batch2_pad64": {
+        "errors": {
+          "typed_prob": 0.00023752450942993164
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad1_batch6_pad64": {
+        "errors": {
+          "typed_prob": 0.0002765655517578125
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad1_batch6_pad1": {
+        "errors": {
+          "typed_prob": 0.00022804737091064453
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch2_pad64_batch6_pad64": {
+        "errors": {
+          "typed_prob": 0.0005140900611877441
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch2_pad64_batch6_pad1": {
+        "errors": {
+          "typed_prob": 0.00027692317962646484
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch6_pad64_batch6_pad1": {
+        "errors": {
+          "typed_prob": 0.0002371668815612793
+        },
+        "agreed": 6,
+        "count": 6
+      }
+    },
+    "causal/mixed/box": {
+      "batch1_pad64_batch1_pad1": {
+        "errors": {
+          "presence_logit": 0.011252045631408691,
+          "presence_prob": 0.0017880350351333618,
+          "box_pred": 0.0013785362243652344,
+          "iou_logit": 0.0025911331176757812,
+          "iou_prob": 0.00037980079650878906
+        },
+        "agreed": 3,
+        "count": 3
+      },
+      "batch1_pad64_batch2_pad64": {
+        "errors": {
+          "presence_logit": 0.0058820247650146484,
+          "presence_prob": 0.00042310357093811035,
+          "box_pred": 0.0021448135375976562,
+          "iou_logit": 0.03527677059173584,
+          "iou_prob": 0.006695866584777832
+        },
+        "agreed": 3,
+        "count": 3
+      },
+      "batch1_pad64_batch3_pad64": {
+        "errors": {
+          "presence_logit": 0.028964519500732422,
+          "presence_prob": 0.0029897689819335938,
+          "box_pred": 0.0022777318954467773,
+          "iou_logit": 0.0034333467483520508,
+          "iou_prob": 0.0006465911865234375
+        },
+        "agreed": 3,
+        "count": 3
+      },
+      "batch1_pad64_batch3_pad1": {
+        "errors": {
+          "presence_logit": 0.07263565063476562,
+          "presence_prob": 0.004317328333854675,
+          "box_pred": 0.0015079975128173828,
+          "iou_logit": 0.018991827964782715,
+          "iou_prob": 0.0035904347896575928
+        },
+        "agreed": 3,
+        "count": 3
+      },
+      "batch1_pad1_batch2_pad64": {
+        "errors": {
+          "presence_logit": 0.013926029205322266,
+          "presence_prob": 0.002211138606071472,
+          "box_pred": 0.0020887255668640137,
+          "iou_logit": 0.03517317771911621,
+          "iou_prob": 0.006676375865936279
+        },
+        "agreed": 3,
+        "count": 3
+      },
+      "batch1_pad1_batch3_pad64": {
+        "errors": {
+          "presence_logit": 0.0360562801361084,
+          "presence_prob": 0.004777804017066956,
+          "box_pred": 0.0030896663665771484,
+          "iou_logit": 0.003329753875732422,
+          "iou_prob": 0.0006271004676818848
+        },
+        "agreed": 3,
+        "count": 3
+      },
+      "batch1_pad1_batch3_pad1": {
+        "errors": {
+          "presence_logit": 0.0797274112701416,
+          "presence_prob": 0.004753671586513519,
+          "box_pred": 0.002319931983947754,
+          "iou_logit": 0.018888235092163086,
+          "iou_prob": 0.00357094407081604
+        },
+        "agreed": 3,
+        "count": 3
+      },
+      "batch2_pad64_batch3_pad64": {
+        "errors": {
+          "presence_logit": 0.03484654426574707,
+          "presence_prob": 0.0025666654109954834,
+          "box_pred": 0.0022777318954467773,
+          "iou_logit": 0.03184342384338379,
+          "iou_prob": 0.0060492753982543945
+        },
+        "agreed": 3,
+        "count": 3
+      },
+      "batch2_pad64_batch3_pad1": {
+        "errors": {
+          "presence_logit": 0.07851767539978027,
+          "presence_prob": 0.00467904657125473,
+          "box_pred": 0.0015079975128173828,
+          "iou_logit": 0.016284942626953125,
+          "iou_prob": 0.0031054317951202393
+        },
+        "agreed": 3,
+        "count": 3
+      },
+      "batch3_pad64_batch3_pad1": {
+        "errors": {
+          "presence_logit": 0.0436711311340332,
+          "presence_prob": 0.003077581524848938,
+          "box_pred": 0.0016041696071624756,
+          "iou_logit": 0.015558481216430664,
+          "iou_prob": 0.0029438436031341553
+        },
+        "agreed": 3,
+        "count": 3
+      }
+    },
+    "causal/mixed/noul": {
+      "batch1_pad64_batch1_pad1": {
+        "errors": {
+          "typed_prob": 0.0011583417654037476
+        },
+        "agreed": 3,
+        "count": 3
+      },
+      "batch1_pad64_batch2_pad64": {
+        "errors": {
+          "typed_prob": 0.001287698745727539
+        },
+        "agreed": 3,
+        "count": 3
+      },
+      "batch1_pad64_batch3_pad64": {
+        "errors": {
+          "typed_prob": 0.002584695816040039
+        },
+        "agreed": 3,
+        "count": 3
+      },
+      "batch1_pad64_batch3_pad1": {
+        "errors": {
+          "typed_prob": 0.001012563705444336
+        },
+        "agreed": 3,
+        "count": 3
+      },
+      "batch1_pad1_batch2_pad64": {
+        "errors": {
+          "typed_prob": 0.0007185488939285278
+        },
+        "agreed": 3,
+        "count": 3
+      },
+      "batch1_pad1_batch3_pad64": {
+        "errors": {
+          "typed_prob": 0.001426398754119873
+        },
+        "agreed": 3,
+        "count": 3
+      },
+      "batch1_pad1_batch3_pad1": {
+        "errors": {
+          "typed_prob": 0.00014580786228179932
+        },
+        "agreed": 3,
+        "count": 3
+      },
+      "batch2_pad64_batch3_pad64": {
+        "errors": {
+          "typed_prob": 0.0012969970703125
+        },
+        "agreed": 3,
+        "count": 3
+      },
+      "batch2_pad64_batch3_pad1": {
+        "errors": {
+          "typed_prob": 0.0006400048732757568
+        },
+        "agreed": 3,
+        "count": 3
+      },
+      "batch3_pad64_batch3_pad1": {
+        "errors": {
+          "typed_prob": 0.001572147011756897
+        },
+        "agreed": 3,
+        "count": 3
+      }
+    },
+    "causal/mixed/choice": {
+      "batch1_pad64_batch1_pad1": {
+        "errors": {
+          "typed_prob": 0.0002067089080810547
+        },
+        "agreed": 3,
+        "count": 3
+      },
+      "batch1_pad64_batch2_pad64": {
+        "errors": {
+          "typed_prob": 8.490728214383125e-05
+        },
+        "agreed": 3,
+        "count": 3
+      },
+      "batch1_pad64_batch3_pad64": {
+        "errors": {
+          "typed_prob": 0.0001666545867919922
+        },
+        "agreed": 3,
+        "count": 3
+      },
+      "batch1_pad64_batch3_pad1": {
+        "errors": {
+          "typed_prob": 8.63303430378437e-05
+        },
+        "agreed": 3,
+        "count": 3
+      },
+      "batch1_pad1_batch2_pad64": {
+        "errors": {
+          "typed_prob": 0.00018584541976451874
+        },
+        "agreed": 3,
+        "count": 3
+      },
+      "batch1_pad1_batch3_pad64": {
+        "errors": {
+          "typed_prob": 0.0003733634948730469
+        },
+        "agreed": 3,
+        "count": 3
+      },
+      "batch1_pad1_batch3_pad1": {
+        "errors": {
+          "typed_prob": 0.0001965658739209175
+        },
+        "agreed": 3,
+        "count": 3
+      },
+      "batch2_pad64_batch3_pad64": {
+        "errors": {
+          "typed_prob": 0.0002281665802001953
+        },
+        "agreed": 3,
+        "count": 3
+      },
+      "batch2_pad64_batch3_pad1": {
+        "errors": {
+          "typed_prob": 5.46332448720932e-05
+        },
+        "agreed": 3,
+        "count": 3
+      },
+      "batch3_pad64_batch3_pad1": {
+        "errors": {
+          "typed_prob": 0.00021886825561523438
+        },
+        "agreed": 3,
+        "count": 3
+      }
+    },
+    "causal/clip/noul": {
+      "batch1_pad64_batch1_pad1": {
+        "errors": {
+          "typed_prob": 0.002926960587501526
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad64_batch2_pad64": {
+        "errors": {
+          "typed_prob": 0.0036847591400146484
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad64_batch6_pad64": {
+        "errors": {
+          "typed_prob": 0.003779396414756775
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad64_batch6_pad1": {
+        "errors": {
+          "typed_prob": 0.002916112542152405
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad1_batch2_pad64": {
+        "errors": {
+          "typed_prob": 0.001682579517364502
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad1_batch6_pad64": {
+        "errors": {
+          "typed_prob": 0.0022341012954711914
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad1_batch6_pad1": {
+        "errors": {
+          "typed_prob": 0.002887427806854248
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch2_pad64_batch6_pad64": {
+        "errors": {
+          "typed_prob": 0.001931905746459961
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch2_pad64_batch6_pad1": {
+        "errors": {
+          "typed_prob": 0.002619519829750061
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch6_pad64_batch6_pad1": {
+        "errors": {
+          "typed_prob": 0.004551410675048828
+        },
+        "agreed": 6,
+        "count": 6
+      }
+    },
+    "causal/clip/choice": {
+      "batch1_pad64_batch1_pad1": {
+        "errors": {
+          "typed_prob": 0.00018346309661865234
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad64_batch2_pad64": {
+        "errors": {
+          "typed_prob": 0.0005483031272888184
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad64_batch6_pad64": {
+        "errors": {
+          "typed_prob": 0.00043964385986328125
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad64_batch6_pad1": {
+        "errors": {
+          "typed_prob": 0.00028330087661743164
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad1_batch2_pad64": {
+        "errors": {
+          "typed_prob": 0.0004495978355407715
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad1_batch6_pad64": {
+        "errors": {
+          "typed_prob": 0.000453948974609375
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad1_batch6_pad1": {
+        "errors": {
+          "typed_prob": 0.0002865791320800781
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch2_pad64_batch6_pad64": {
+        "errors": {
+          "typed_prob": 0.0004082322120666504
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch2_pad64_batch6_pad1": {
+        "errors": {
+          "typed_prob": 0.00047916173934936523
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch6_pad64_batch6_pad1": {
+        "errors": {
+          "typed_prob": 0.0002205967903137207
+        },
+        "agreed": 6,
+        "count": 6
+      }
+    },
+    "causal/api/box": {
+      "batch1_pad64_batch1_pad1": {
+        "errors": {
+          "presence_logit": 0.034337520599365234,
+          "presence_prob": 0.001815248280763626,
+          "box_pred": 0.003426074981689453,
+          "iou_logit": 0.03141357749700546,
+          "iou_prob": 0.007849663496017456
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad64_batch2_pad64": {
+        "errors": {
+          "presence_logit": 0.05816769599914551,
+          "presence_prob": 0.003107905387878418,
+          "box_pred": 0.010213971138000488,
+          "iou_logit": 0.08909168839454651,
+          "iou_prob": 0.022240817546844482
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad64_batch6_pad64": {
+        "errors": {
+          "presence_logit": 0.06407022476196289,
+          "presence_prob": 0.001791391521692276,
+          "box_pred": 0.012664794921875,
+          "iou_logit": 0.047969818115234375,
+          "iou_prob": 0.00886063277721405
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad64_batch6_pad1": {
+        "errors": {
+          "presence_logit": 0.08232307434082031,
+          "presence_prob": 0.0011866232380270958,
+          "box_pred": 0.009679555892944336,
+          "iou_logit": 0.060673415660858154,
+          "iou_prob": 0.014146149158477783
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad1_batch2_pad64": {
+        "errors": {
+          "presence_logit": 0.050295352935791016,
+          "presence_prob": 0.0012926571071147919,
+          "box_pred": 0.008247971534729004,
+          "iou_logit": 0.057678110897541046,
+          "iou_prob": 0.014391154050827026
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad1_batch6_pad64": {
+        "errors": {
+          "presence_logit": 0.0503082275390625,
+          "presence_prob": 0.000726618804037571,
+          "box_pred": 0.012400925159454346,
+          "iou_logit": 0.0369185209274292,
+          "iou_prob": 0.008581399917602539
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad1_batch6_pad1": {
+        "errors": {
+          "presence_logit": 0.06856107711791992,
+          "presence_prob": 0.0009815972298383713,
+          "box_pred": 0.009285330772399902,
+          "iou_logit": 0.06057864427566528,
+          "iou_prob": 0.014124184846878052
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch2_pad64_batch6_pad64": {
+        "errors": {
+          "presence_logit": 0.03872060775756836,
+          "presence_prob": 0.001316513866186142,
+          "box_pred": 0.011838555335998535,
+          "iou_logit": 0.08212536573410034,
+          "iou_prob": 0.02049967646598816
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch2_pad64_batch6_pad1": {
+        "errors": {
+          "presence_logit": 0.05697345733642578,
+          "presence_prob": 0.0021727420389652252,
+          "box_pred": 0.00792384147644043,
+          "iou_logit": 0.0814439058303833,
+          "iou_prob": 0.02032935619354248
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch6_pad64_batch6_pad1": {
+        "errors": {
+          "presence_logit": 0.03415346145629883,
+          "presence_prob": 0.0008562281727790833,
+          "box_pred": 0.005104780197143555,
+          "iou_logit": 0.023660123348236084,
+          "iou_prob": 0.005542784929275513
+        },
+        "agreed": 6,
+        "count": 6
+      }
+    },
+    "causal/image/qfirst": {
+      "batch1_pad64_batch1_pad1": {
+        "errors": {
+          "presence_logit": 0.03313326835632324,
+          "presence_prob": 0.0033692941069602966,
+          "box_pred": 0.005196928977966309,
+          "iou_logit": 0.013920783996582031,
+          "iou_prob": 0.0020822137594223022
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad64_batch2_pad64": {
+        "errors": {
+          "presence_logit": 0.08336365222930908,
+          "presence_prob": 0.008986376225948334,
+          "box_pred": 0.011413037776947021,
+          "iou_logit": 0.022383689880371094,
+          "iou_prob": 0.0021960660815238953
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad64_batch6_pad64": {
+        "errors": {
+          "presence_logit": 0.13961195945739746,
+          "presence_prob": 0.013125963509082794,
+          "box_pred": 0.013847112655639648,
+          "iou_logit": 0.024733304977416992,
+          "iou_prob": 0.002501554787158966
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad64_batch6_pad1": {
+        "errors": {
+          "presence_logit": 0.11518073081970215,
+          "presence_prob": 0.010723687708377838,
+          "box_pred": 0.013434827327728271,
+          "iou_logit": 0.021564245223999023,
+          "iou_prob": 0.002636060118675232
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad1_batch2_pad64": {
+        "errors": {
+          "presence_logit": 0.09380090236663818,
+          "presence_prob": 0.010072015225887299,
+          "box_pred": 0.011726737022399902,
+          "iou_logit": 0.02472400665283203,
+          "iou_prob": 0.0024806633591651917
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad1_batch6_pad64": {
+        "errors": {
+          "presence_logit": 0.17065787315368652,
+          "presence_prob": 0.01585182547569275,
+          "box_pred": 0.011668205261230469,
+          "iou_logit": 0.014722347259521484,
+          "iou_prob": 0.0025418847799301147
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad1_batch6_pad1": {
+        "errors": {
+          "presence_logit": 0.1462266445159912,
+          "presence_prob": 0.013449549674987793,
+          "box_pred": 0.014907300472259521,
+          "iou_logit": 0.025290250778198242,
+          "iou_prob": 0.004718273878097534
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch2_pad64_batch6_pad64": {
+        "errors": {
+          "presence_logit": 0.14804649353027344,
+          "presence_prob": 0.013873279094696045,
+          "box_pred": 0.012245774269104004,
+          "iou_logit": 0.015471696853637695,
+          "iou_prob": 0.0015578940510749817
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch2_pad64_batch6_pad1": {
+        "errors": {
+          "presence_logit": 0.12361526489257812,
+          "presence_prob": 0.011471003293991089,
+          "box_pred": 0.01480114459991455,
+          "iou_logit": 0.013120532035827637,
+          "iou_prob": 0.0024553388357162476
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch6_pad64_batch6_pad1": {
+        "errors": {
+          "presence_logit": 0.026460886001586914,
+          "presence_prob": 0.0041453540325164795,
+          "box_pred": 0.0050858259201049805,
+          "iou_logit": 0.011625528335571289,
+          "iou_prob": 0.0021763890981674194
+        },
+        "agreed": 6,
+        "count": 6
+      }
+    },
+    "causal/clip/qfirst": {
+      "batch1_pad64_batch1_pad1": {
+        "errors": {
+          "typed_prob": 0.001633286476135254
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad64_batch2_pad64": {
+        "errors": {
+          "typed_prob": 0.010197103023529053
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad64_batch6_pad64": {
+        "errors": {
+          "typed_prob": 0.005885004997253418
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad64_batch6_pad1": {
+        "errors": {
+          "typed_prob": 0.00691986083984375
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad1_batch2_pad64": {
+        "errors": {
+          "typed_prob": 0.01167655736207962
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad1_batch6_pad64": {
+        "errors": {
+          "typed_prob": 0.007364436984062195
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad1_batch6_pad1": {
+        "errors": {
+          "typed_prob": 0.00839928537607193
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch2_pad64_batch6_pad64": {
+        "errors": {
+          "typed_prob": 0.0043121203780174255
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch2_pad64_batch6_pad1": {
+        "errors": {
+          "typed_prob": 0.0032772719860076904
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch6_pad64_batch6_pad1": {
+        "errors": {
+          "typed_prob": 0.0011792778968811035
+        },
+        "agreed": 6,
+        "count": 6
+      }
+    },
+    "causal/clip/short": {
+      "batch1_pad64_batch1_pad1": {
+        "errors": {
+          "typed_prob": 0.0010303258895874023
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad64_batch2_pad64": {
+        "errors": {
+          "typed_prob": 0.000864008441567421
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad64_batch6_pad64": {
+        "errors": {
+          "typed_prob": 0.0010495781898498535
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad64_batch6_pad1": {
+        "errors": {
+          "typed_prob": 0.0017800386995077133
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad1_batch2_pad64": {
+        "errors": {
+          "typed_prob": 0.0009443759918212891
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad1_batch6_pad64": {
+        "errors": {
+          "typed_prob": 0.0016573742032051086
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad1_batch6_pad1": {
+        "errors": {
+          "typed_prob": 0.0010845661163330078
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch2_pad64_batch6_pad64": {
+        "errors": {
+          "typed_prob": 0.0019135475158691406
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch2_pad64_batch6_pad1": {
+        "errors": {
+          "typed_prob": 0.001203775405883789
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch6_pad64_batch6_pad1": {
+        "errors": {
+          "typed_prob": 0.0008894205093383789
+        },
+        "agreed": 6,
+        "count": 6
+      }
+    },
+    "block_bidir/image/box": {
+      "batch1_pad64_batch1_pad1": {
+        "errors": {
+          "presence_logit": 0.04993033409118652,
+          "presence_prob": 0.0015400238335132599,
+          "box_pred": 0.0030333995819091797,
+          "iou_logit": 0.015061378479003906,
+          "iou_prob": 0.0030833184719085693
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad64_batch2_pad64": {
+        "errors": {
+          "presence_logit": 0.051750898361206055,
+          "presence_prob": 0.0012704916298389435,
+          "box_pred": 0.006339848041534424,
+          "iou_logit": 0.030109882354736328,
+          "iou_prob": 0.006418853998184204
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad64_batch6_pad64": {
+        "errors": {
+          "presence_logit": 0.04974174499511719,
+          "presence_prob": 0.001105431467294693,
+          "box_pred": 0.06985962390899658,
+          "iou_logit": 0.7814650535583496,
+          "iou_prob": 0.14531750977039337
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad64_batch6_pad1": {
+        "errors": {
+          "presence_logit": 0.04757547378540039,
+          "presence_prob": 0.0011656545102596283,
+          "box_pred": 0.07136095315217972,
+          "iou_logit": 0.8053332567214966,
+          "iou_prob": 0.14885127544403076
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad1_batch2_pad64": {
+        "errors": {
+          "presence_logit": 0.07191872596740723,
+          "presence_prob": 0.0017489399760961533,
+          "box_pred": 0.009373247623443604,
+          "iou_logit": 0.03013908863067627,
+          "iou_prob": 0.00665012001991272
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad1_batch6_pad64": {
+        "errors": {
+          "presence_logit": 0.060296058654785156,
+          "presence_prob": 0.002469688653945923,
+          "box_pred": 0.06973446905612946,
+          "iou_logit": 0.7703993320465088,
+          "iou_prob": 0.14288388192653656
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad1_batch6_pad1": {
+        "errors": {
+          "presence_logit": 0.06774330139160156,
+          "presence_prob": 0.002064734697341919,
+          "box_pred": 0.07123579829931259,
+          "iou_logit": 0.7942675352096558,
+          "iou_prob": 0.14641764760017395
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch2_pad64_batch6_pad64": {
+        "errors": {
+          "presence_logit": 0.029811382293701172,
+          "presence_prob": 0.0012814663350582123,
+          "box_pred": 0.0698603093624115,
+          "iou_logit": 0.8005384206771851,
+          "iou_prob": 0.14953400194644928
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch2_pad64_batch6_pad1": {
+        "errors": {
+          "presence_logit": 0.02233266830444336,
+          "presence_prob": 0.0008765123784542084,
+          "box_pred": 0.07136163860559464,
+          "iou_logit": 0.824406623840332,
+          "iou_prob": 0.15306776762008667
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch6_pad64_batch6_pad1": {
+        "errors": {
+          "presence_logit": 0.030370712280273438,
+          "presence_prob": 0.0007593389600515366,
+          "box_pred": 0.0019778311252593994,
+          "iou_logit": 0.023868203163146973,
+          "iou_prob": 0.004437446594238281
+        },
+        "agreed": 6,
+        "count": 6
+      }
+    },
+    "block_bidir/image/noul": {
+      "batch1_pad64_batch1_pad1": {
+        "errors": {
+          "typed_prob": 0.0019453838467597961
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad64_batch2_pad64": {
+        "errors": {
+          "typed_prob": 0.00303494930267334
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad64_batch6_pad64": {
+        "errors": {
+          "typed_prob": 0.0028954744338989258
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad64_batch6_pad1": {
+        "errors": {
+          "typed_prob": 0.0035179853439331055
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad1_batch2_pad64": {
+        "errors": {
+          "typed_prob": 0.0047913119196891785
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad1_batch6_pad64": {
+        "errors": {
+          "typed_prob": 0.003677971661090851
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad1_batch6_pad1": {
+        "errors": {
+          "typed_prob": 0.00394892692565918
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch2_pad64_batch6_pad64": {
+        "errors": {
+          "typed_prob": 0.005930408835411072
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch2_pad64_batch6_pad1": {
+        "errors": {
+          "typed_prob": 0.0065094828605651855
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch6_pad64_batch6_pad1": {
+        "errors": {
+          "typed_prob": 0.0035473108291625977
+        },
+        "agreed": 6,
+        "count": 6
+      }
+    },
+    "block_bidir/image/choice": {
+      "batch1_pad64_batch1_pad1": {
+        "errors": {
+          "typed_prob": 0.00036144256591796875
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad64_batch2_pad64": {
+        "errors": {
+          "typed_prob": 0.0005034208297729492
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad64_batch6_pad64": {
+        "errors": {
+          "typed_prob": 0.0007472038269042969
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad64_batch6_pad1": {
+        "errors": {
+          "typed_prob": 0.0005112886428833008
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad1_batch2_pad64": {
+        "errors": {
+          "typed_prob": 0.00031310319900512695
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad1_batch6_pad64": {
+        "errors": {
+          "typed_prob": 0.0004743337631225586
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad1_batch6_pad1": {
+        "errors": {
+          "typed_prob": 0.0002384185791015625
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch2_pad64_batch6_pad64": {
+        "errors": {
+          "typed_prob": 0.0005101561546325684
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch2_pad64_batch6_pad1": {
+        "errors": {
+          "typed_prob": 0.0005192160606384277
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch6_pad64_batch6_pad1": {
+        "errors": {
+          "typed_prob": 0.0002486109733581543
+        },
+        "agreed": 6,
+        "count": 6
+      }
+    },
+    "block_bidir/mixed/box": {
+      "batch1_pad64_batch1_pad1": {
+        "errors": {
+          "presence_logit": 0.007669568061828613,
+          "presence_prob": 0.0014194250106811523,
+          "box_pred": 0.0024329423904418945,
+          "iou_logit": 0.009737968444824219,
+          "iou_prob": 0.0018664002418518066
+        },
+        "agreed": 3,
+        "count": 3
+      },
+      "batch1_pad64_batch2_pad64": {
+        "errors": {
+          "presence_logit": 0.025182485580444336,
+          "presence_prob": 0.002687424421310425,
+          "box_pred": 0.0015973448753356934,
+          "iou_logit": 0.016300320625305176,
+          "iou_prob": 0.0031437575817108154
+        },
+        "agreed": 3,
+        "count": 3
+      },
+      "batch1_pad64_batch3_pad64": {
+        "errors": {
+          "presence_logit": 0.017951607704162598,
+          "presence_prob": 0.00188465416431427,
+          "box_pred": 0.0025246739387512207,
+          "iou_logit": 0.011666417121887207,
+          "iou_prob": 0.0019177347421646118
+        },
+        "agreed": 3,
+        "count": 3
+      },
+      "batch1_pad64_batch3_pad1": {
+        "errors": {
+          "presence_logit": 0.013493895530700684,
+          "presence_prob": 0.0014190673828125,
+          "box_pred": 0.0019248723983764648,
+          "iou_logit": 0.015154719352722168,
+          "iou_prob": 0.0029220283031463623
+        },
+        "agreed": 3,
+        "count": 3
+      },
+      "batch1_pad1_batch2_pad64": {
+        "errors": {
+          "presence_logit": 0.03285205364227295,
+          "presence_prob": 0.0034957602620124817,
+          "box_pred": 0.0024329423904418945,
+          "iou_logit": 0.026038289070129395,
+          "iou_prob": 0.005010157823562622
+        },
+        "agreed": 3,
+        "count": 3
+      },
+      "batch1_pad1_batch3_pad64": {
+        "errors": {
+          "presence_logit": 0.010282039642333984,
+          "presence_prob": 0.0015850365161895752,
+          "box_pred": 0.00334322452545166,
+          "iou_logit": 0.008442401885986328,
+          "iou_prob": 0.0016175806522369385
+        },
+        "agreed": 3,
+        "count": 3
+      },
+      "batch1_pad1_batch3_pad1": {
+        "errors": {
+          "presence_logit": 0.007398664951324463,
+          "presence_prob": 0.0014657676219940186,
+          "box_pred": 0.0027434229850769043,
+          "iou_logit": 0.024892687797546387,
+          "iou_prob": 0.004788428544998169
+        },
+        "agreed": 3,
+        "count": 3
+      },
+      "batch2_pad64_batch3_pad64": {
+        "errors": {
+          "presence_logit": 0.043134093284606934,
+          "presence_prob": 0.004572078585624695,
+          "box_pred": 0.0025246739387512207,
+          "iou_logit": 0.017595887184143066,
+          "iou_prob": 0.0033925771713256836
+        },
+        "agreed": 3,
+        "count": 3
+      },
+      "batch2_pad64_batch3_pad1": {
+        "errors": {
+          "presence_logit": 0.03867638111114502,
+          "presence_prob": 0.004106491804122925,
+          "box_pred": 0.0019248723983764648,
+          "iou_logit": 0.00938880443572998,
+          "iou_prob": 0.001544356346130371
+        },
+        "agreed": 3,
+        "count": 3
+      },
+      "batch3_pad64_batch3_pad1": {
+        "errors": {
+          "presence_logit": 0.004457712173461914,
+          "presence_prob": 0.00046558678150177,
+          "box_pred": 0.0009570121765136719,
+          "iou_logit": 0.01645028591156006,
+          "iou_prob": 0.0031708478927612305
+        },
+        "agreed": 3,
+        "count": 3
+      }
+    },
+    "block_bidir/mixed/noul": {
+      "batch1_pad64_batch1_pad1": {
+        "errors": {
+          "typed_prob": 0.0014386847615242004
+        },
+        "agreed": 3,
+        "count": 3
+      },
+      "batch1_pad64_batch2_pad64": {
+        "errors": {
+          "typed_prob": 0.0029698610305786133
+        },
+        "agreed": 3,
+        "count": 3
+      },
+      "batch1_pad64_batch3_pad64": {
+        "errors": {
+          "typed_prob": 0.0017787367105484009
+        },
+        "agreed": 3,
+        "count": 3
+      },
+      "batch1_pad64_batch3_pad1": {
+        "errors": {
+          "typed_prob": 0.0023766160011291504
+        },
+        "agreed": 3,
+        "count": 3
+      },
+      "batch1_pad1_batch2_pad64": {
+        "errors": {
+          "typed_prob": 0.0015312433242797852
+        },
+        "agreed": 3,
+        "count": 3
+      },
+      "batch1_pad1_batch3_pad64": {
+        "errors": {
+          "typed_prob": 0.0025832056999206543
+        },
+        "agreed": 3,
+        "count": 3
+      },
+      "batch1_pad1_batch3_pad1": {
+        "errors": {
+          "typed_prob": 0.0014395713806152344
+        },
+        "agreed": 3,
+        "count": 3
+      },
+      "batch2_pad64_batch3_pad64": {
+        "errors": {
+          "typed_prob": 0.002242147922515869
+        },
+        "agreed": 3,
+        "count": 3
+      },
+      "batch2_pad64_batch3_pad1": {
+        "errors": {
+          "typed_prob": 0.0023766160011291504
+        },
+        "agreed": 3,
+        "count": 3
+      },
+      "batch3_pad64_batch3_pad1": {
+        "errors": {
+          "typed_prob": 0.0016489028930664062
+        },
+        "agreed": 3,
+        "count": 3
+      }
+    },
+    "block_bidir/mixed/choice": {
+      "batch1_pad64_batch1_pad1": {
+        "errors": {
+          "typed_prob": 0.00023156404495239258
+        },
+        "agreed": 3,
+        "count": 3
+      },
+      "batch1_pad64_batch2_pad64": {
+        "errors": {
+          "typed_prob": 0.00018471479415893555
+        },
+        "agreed": 3,
+        "count": 3
+      },
+      "batch1_pad64_batch3_pad64": {
+        "errors": {
+          "typed_prob": 0.0004901885986328125
+        },
+        "agreed": 3,
+        "count": 3
+      },
+      "batch1_pad64_batch3_pad1": {
+        "errors": {
+          "typed_prob": 0.0002956390380859375
+        },
+        "agreed": 3,
+        "count": 3
+      },
+      "batch1_pad1_batch2_pad64": {
+        "errors": {
+          "typed_prob": 0.00034242868423461914
+        },
+        "agreed": 3,
+        "count": 3
+      },
+      "batch1_pad1_batch3_pad64": {
+        "errors": {
+          "typed_prob": 0.0002632737159729004
+        },
+        "agreed": 3,
+        "count": 3
+      },
+      "batch1_pad1_batch3_pad1": {
+        "errors": {
+          "typed_prob": 0.00027686357498168945
+        },
+        "agreed": 3,
+        "count": 3
+      },
+      "batch2_pad64_batch3_pad64": {
+        "errors": {
+          "typed_prob": 0.0006010532379150391
+        },
+        "agreed": 3,
+        "count": 3
+      },
+      "batch2_pad64_batch3_pad1": {
+        "errors": {
+          "typed_prob": 0.0002956390380859375
+        },
+        "agreed": 3,
+        "count": 3
+      },
+      "batch3_pad64_batch3_pad1": {
+        "errors": {
+          "typed_prob": 0.0004354715347290039
+        },
+        "agreed": 3,
+        "count": 3
+      }
+    },
+    "block_bidir/clip/noul": {
+      "batch1_pad64_batch1_pad1": {
+        "errors": {
+          "typed_prob": 0.0021880269050598145
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad64_batch2_pad64": {
+        "errors": {
+          "typed_prob": 0.0030622482299804688
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad64_batch6_pad64": {
+        "errors": {
+          "typed_prob": 0.002764105796813965
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad64_batch6_pad1": {
+        "errors": {
+          "typed_prob": 0.0034095123410224915
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad1_batch2_pad64": {
+        "errors": {
+          "typed_prob": 0.0030456185340881348
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad1_batch6_pad64": {
+        "errors": {
+          "typed_prob": 0.004653170704841614
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad1_batch6_pad1": {
+        "errors": {
+          "typed_prob": 0.005121707916259766
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch2_pad64_batch6_pad64": {
+        "errors": {
+          "typed_prob": 0.004092678427696228
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch2_pad64_batch6_pad1": {
+        "errors": {
+          "typed_prob": 0.005279958248138428
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch6_pad64_batch6_pad1": {
+        "errors": {
+          "typed_prob": 0.0015432462096214294
+        },
+        "agreed": 6,
+        "count": 6
+      }
+    },
+    "block_bidir/clip/choice": {
+      "batch1_pad64_batch1_pad1": {
+        "errors": {
+          "typed_prob": 0.0001602768898010254
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad64_batch2_pad64": {
+        "errors": {
+          "typed_prob": 0.0003700852394104004
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad64_batch6_pad64": {
+        "errors": {
+          "typed_prob": 0.0002092123031616211
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad64_batch6_pad1": {
+        "errors": {
+          "typed_prob": 0.0002716183662414551
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad1_batch2_pad64": {
+        "errors": {
+          "typed_prob": 0.0003458857536315918
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad1_batch6_pad64": {
+        "errors": {
+          "typed_prob": 0.00019872188568115234
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad1_batch6_pad1": {
+        "errors": {
+          "typed_prob": 0.00019729137420654297
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch2_pad64_batch6_pad64": {
+        "errors": {
+          "typed_prob": 0.0003669857978820801
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch2_pad64_batch6_pad1": {
+        "errors": {
+          "typed_prob": 0.00037229061126708984
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch6_pad64_batch6_pad1": {
+        "errors": {
+          "typed_prob": 0.00023859739303588867
+        },
+        "agreed": 6,
+        "count": 6
+      }
+    },
+    "block_bidir/api/box": {
+      "batch1_pad64_batch1_pad1": {
+        "errors": {
+          "presence_logit": 0.012029170989990234,
+          "presence_prob": 0.0007729604840278625,
+          "box_pred": 0.16573655605316162,
+          "iou_logit": 0.9049965739250183,
+          "iou_prob": 0.19976775348186493
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad64_batch2_pad64": {
+        "errors": {
+          "presence_logit": 0.051817893981933594,
+          "presence_prob": 0.0006497278809547424,
+          "box_pred": 0.00859057903289795,
+          "iou_logit": 0.09735395014286041,
+          "iou_prob": 0.02431279420852661
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad64_batch6_pad64": {
+        "errors": {
+          "presence_logit": 0.0291900634765625,
+          "presence_prob": 0.0011544153094291687,
+          "box_pred": 0.010061919689178467,
+          "iou_logit": 0.037821412086486816,
+          "iou_prob": 0.008018523454666138
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad64_batch6_pad1": {
+        "errors": {
+          "presence_logit": 0.03137493133544922,
+          "presence_prob": 0.00047940947115421295,
+          "box_pred": 0.008794009685516357,
+          "iou_logit": 0.05433374643325806,
+          "iou_prob": 0.012591391801834106
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad1_batch2_pad64": {
+        "errors": {
+          "presence_logit": 0.05395364761352539,
+          "presence_prob": 0.001422688364982605,
+          "box_pred": 0.16688835620880127,
+          "iou_logit": 0.9209500551223755,
+          "iou_prob": 0.20370911061763763
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad1_batch6_pad64": {
+        "errors": {
+          "presence_logit": 0.0385744571685791,
+          "presence_prob": 0.0019273757934570312,
+          "box_pred": 0.16868546605110168,
+          "iou_logit": 0.9199520945549011,
+          "iou_prob": 0.2034623771905899
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad1_batch6_pad1": {
+        "errors": {
+          "presence_logit": 0.034024715423583984,
+          "presence_prob": 0.0012452080845832825,
+          "box_pred": 0.16944748163223267,
+          "iou_logit": 0.9112429618835449,
+          "iou_prob": 0.20131011307239532
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch2_pad64_batch6_pad64": {
+        "errors": {
+          "presence_logit": 0.043186187744140625,
+          "presence_prob": 0.0008535664528608322,
+          "box_pred": 0.0099107027053833,
+          "iou_logit": 0.08189773559570312,
+          "iou_prob": 0.020449042320251465
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch2_pad64_batch6_pad1": {
+        "errors": {
+          "presence_logit": 0.03863644599914551,
+          "presence_prob": 0.0007652994245290756,
+          "box_pred": 0.009308815002441406,
+          "iou_logit": 0.07327565550804138,
+          "iou_prob": 0.01829400658607483
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch6_pad64_batch6_pad1": {
+        "errors": {
+          "presence_logit": 0.022869110107421875,
+          "presence_prob": 0.0006821677088737488,
+          "box_pred": 0.004585087299346924,
+          "iou_logit": 0.01964092254638672,
+          "iou_prob": 0.004572868347167969
+        },
+        "agreed": 6,
+        "count": 6
+      }
+    },
+    "block_bidir/image/qfirst": {
+      "batch1_pad64_batch1_pad1": {
+        "errors": {
+          "presence_logit": 0.01800060272216797,
+          "presence_prob": 0.0028221309185028076,
+          "box_pred": 0.19010204076766968,
+          "iou_logit": 0.5088871717453003,
+          "iou_prob": 0.07551230490207672
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad64_batch2_pad64": {
+        "errors": {
+          "presence_logit": 0.1029123067855835,
+          "presence_prob": 0.011046968400478363,
+          "box_pred": 0.19849345088005066,
+          "iou_logit": 0.5068399906158447,
+          "iou_prob": 0.07525649666786194
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad64_batch6_pad64": {
+        "errors": {
+          "presence_logit": 0.13855624198913574,
+          "presence_prob": 0.013791278004646301,
+          "box_pred": 0.017495065927505493,
+          "iou_logit": 0.02631664276123047,
+          "iou_prob": 0.0034289509057998657
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad64_batch6_pad1": {
+        "errors": {
+          "presence_logit": 0.10870838165283203,
+          "presence_prob": 0.009807810187339783,
+          "box_pred": 0.012244820594787598,
+          "iou_logit": 0.02674126625061035,
+          "iou_prob": 0.003750249743461609
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad1_batch2_pad64": {
+        "errors": {
+          "presence_logit": 0.11512124538421631,
+          "presence_prob": 0.012301124632358551,
+          "box_pred": 0.01414838433265686,
+          "iou_logit": 0.027920246124267578,
+          "iou_prob": 0.0027708709239959717
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad1_batch6_pad64": {
+        "errors": {
+          "presence_logit": 0.1565568447113037,
+          "presence_prob": 0.014195166528224945,
+          "box_pred": 0.2040809988975525,
+          "iou_logit": 0.52864670753479,
+          "iou_prob": 0.07894125580787659
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad1_batch6_pad1": {
+        "errors": {
+          "presence_logit": 0.126708984375,
+          "presence_prob": 0.011350743472576141,
+          "box_pred": 0.2016773819923401,
+          "iou_logit": 0.5304871797561646,
+          "iou_prob": 0.07926255464553833
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch2_pad64_batch6_pad64": {
+        "errors": {
+          "presence_logit": 0.1313326358795166,
+          "presence_prob": 0.013748735189437866,
+          "box_pred": 0.21247240900993347,
+          "iou_logit": 0.5265995264053345,
+          "iou_prob": 0.0786854475736618
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch2_pad64_batch6_pad1": {
+        "errors": {
+          "presence_logit": 0.12215077877044678,
+          "presence_prob": 0.013017900288105011,
+          "box_pred": 0.21006879210472107,
+          "iou_logit": 0.528439998626709,
+          "iou_prob": 0.07900674641132355
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch6_pad64_batch6_pad1": {
+        "errors": {
+          "presence_logit": 0.04256916046142578,
+          "presence_prob": 0.006469622254371643,
+          "box_pred": 0.009513527154922485,
+          "iou_logit": 0.007876157760620117,
+          "iou_prob": 0.0007549896836280823
+        },
+        "agreed": 6,
+        "count": 6
+      }
+    },
+    "block_bidir/clip/qfirst": {
+      "batch1_pad64_batch1_pad1": {
+        "errors": {
+          "typed_prob": 0.001402139663696289
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad64_batch2_pad64": {
+        "errors": {
+          "typed_prob": 0.0025202184915542603
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad64_batch6_pad64": {
+        "errors": {
+          "typed_prob": 0.002742372453212738
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad64_batch6_pad1": {
+        "errors": {
+          "typed_prob": 0.0018791556358337402
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad1_batch2_pad64": {
+        "errors": {
+          "typed_prob": 0.0020649582147598267
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad1_batch6_pad64": {
+        "errors": {
+          "typed_prob": 0.0023312196135520935
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad1_batch6_pad1": {
+        "errors": {
+          "typed_prob": 0.001722872257232666
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch2_pad64_batch6_pad64": {
+        "errors": {
+          "typed_prob": 0.0031759366393089294
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch2_pad64_batch6_pad1": {
+        "errors": {
+          "typed_prob": 0.0025675445795059204
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch6_pad64_batch6_pad1": {
+        "errors": {
+          "typed_prob": 0.0011476874351501465
+        },
+        "agreed": 6,
+        "count": 6
+      }
+    },
+    "block_bidir/clip/short": {
+      "batch1_pad64_batch1_pad1": {
+        "errors": {
+          "typed_prob": 0.0010815262794494629
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad64_batch2_pad64": {
+        "errors": {
+          "typed_prob": 0.0015921592712402344
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad64_batch6_pad64": {
+        "errors": {
+          "typed_prob": 0.0030469894409179688
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad64_batch6_pad1": {
+        "errors": {
+          "typed_prob": 0.0028336048126220703
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad1_batch2_pad64": {
+        "errors": {
+          "typed_prob": 0.0014814063906669617
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad1_batch6_pad64": {
+        "errors": {
+          "typed_prob": 0.0028165020048618317
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch1_pad1_batch6_pad1": {
+        "errors": {
+          "typed_prob": 0.002603122964501381
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch2_pad64_batch6_pad64": {
+        "errors": {
+          "typed_prob": 0.001531258225440979
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch2_pad64_batch6_pad1": {
+        "errors": {
+          "typed_prob": 0.0015593767166137695
+        },
+        "agreed": 6,
+        "count": 6
+      },
+      "batch6_pad64_batch6_pad1": {
+        "errors": {
+          "typed_prob": 0.0005137920379638672
+        },
+        "agreed": 6,
+        "count": 6
+      }
+    }
+  }
+}

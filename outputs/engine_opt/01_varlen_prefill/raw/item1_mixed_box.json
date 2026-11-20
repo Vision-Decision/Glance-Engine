@@ -1,0 +1,102 @@
+{
+ "causal": {
+  "reference": {
+   "relative_by_output": {
+    "presence_logit": 0.010920369997620583,
+    "iou_logit": 0.01415236759930849,
+    "box_pred": 0.0029271207749843597
+   },
+   "max_dP": 0.0033770501613616943
+  },
+  "separate": {
+   "relative_by_output": {
+    "presence_logit": 0.028642484918236732,
+    "iou_logit": 0.01862144283950329,
+    "box_pred": 0.005022529512643814
+   },
+   "max_dP": 0.00457422062754631
+  },
+  "legacy": {
+   "relative_by_output": {
+    "presence_logit": 0.0024787168949842453,
+    "iou_logit": 0.009021556936204433,
+    "box_pred": 0.001616534311324358
+   },
+   "max_dP": 0.0006226152181625366
+  },
+  "separate_fixed": {
+   "relative_by_output": {
+    "presence_logit": 0.001609169994480908,
+    "iou_logit": 0.004596154671162367,
+    "box_pred": 0.0018544381018728018
+   },
+   "max_dP": 0.00044880807399749756
+  },
+  "packed_fixed": {
+   "relative_by_output": {
+    "presence_logit": 0.008960857056081295,
+    "iou_logit": 0.007433952763676643,
+    "box_pred": 0.001744976150803268
+   },
+   "max_dP": 0.0030011534690856934
+  },
+  "packed_rerun_vision": {
+   "relative_by_output": {
+    "presence_logit": 0.03230947628617287,
+    "iou_logit": 0.01908913627266884,
+    "box_pred": 0.006139623466879129
+   },
+   "max_dP": 0.007736533880233765
+  }
+ },
+ "block_bidir": {
+  "reference": {
+   "relative_by_output": {
+    "presence_logit": 0.009341358207166195,
+    "iou_logit": 0.011979591101408005,
+    "box_pred": 0.003505922155454755
+   },
+   "max_dP": 0.0036946535110473633
+  },
+  "separate": {
+   "relative_by_output": {
+    "presence_logit": 0.03714891895651817,
+    "iou_logit": 0.025104518979787827,
+    "box_pred": 0.0043923151679337025
+   },
+   "max_dP": 0.007918931543827057
+  },
+  "legacy": {
+   "relative_by_output": {
+    "presence_logit": 0.001995162107050419,
+    "iou_logit": 0.005665674339979887,
+    "box_pred": 0.0010191615438088775
+   },
+   "max_dP": 0.0004213005304336548
+  },
+  "separate_fixed": {
+   "relative_by_output": {
+    "presence_logit": 0.01975843869149685,
+    "iou_logit": 0.01314191147685051,
+    "box_pred": 0.0014003096148371696
+   },
+   "max_dP": 0.007668435573577881
+  },
+  "packed_fixed": {
+   "relative_by_output": {
+    "presence_logit": 0.012966719456017017,
+    "iou_logit": 0.018881142139434814,
+    "box_pred": 0.0009069772786460817
+   },
+   "max_dP": 0.005136013031005859
+  },
+  "packed_rerun_vision": {
+   "relative_by_output": {
+    "presence_logit": 0.03452102094888687,
+    "iou_logit": 0.029407115653157234,
+    "box_pred": 0.006506358273327351
+   },
+   "max_dP": 0.007919549942016602
+  }
+ }
+}

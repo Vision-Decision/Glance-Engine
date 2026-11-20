@@ -1,0 +1,99 @@
+{
+ "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "torch": "2.14.1+cu130",
+ "ckpt": "/content/ckpt/v1/ckpt_final.pt",
+ "peak": {
+  "bf16_tflops": 437.0044402678908,
+  "fp8_tflops": 836.1567764617698
+ },
+ "profile": {
+  "N": 128,
+  "Tv": 128,
+  "timings": {
+   "prep_ms": 92.05993600153306,
+   "vision_ms": 264.03717100038193,
+   "lm_ms": 2224.0850679991127,
+   "total_ms": 2579.2196549991786,
+   "wall_ms": 2586.14879400011,
+   "images_per_s": 49.494445291377374,
+   "chunks": 1
+  },
+  "profiled_wall_ms": 2603.868919000888,
+  "gpu_kernel_ms": 2739.0292029999987,
+  "kernel_ms_by_family": {
+   "gemm": 1090.7418260000027,
+   "attention": 0.0,
+   "gdn_triton": 599.6694400000023,
+   "other": 1048.6179369999936
+  },
+  "idle_or_overhead_ms": -135.16028399911056,
+  "top_kernels": [
+   {
+    "ms": 858.9,
+    "name": "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8"
+   },
+   {
+    "ms": 208.39,
+    "name": "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_128x256_32x3_tn_align8"
+   },
+   {
+    "ms": 199.6,
+    "name": "ChunkGatedDeltaRuleFunction"
+   },
+   {
+    "ms": 165.98,
+    "name": "void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native:"
+   },
+   {
+    "ms": 89.38,
+    "name": "chunk_gated_delta_rule_fwd_kernel_h_blockdim64"
+   },
+   {
+    "ms": 81.98,
+    "name": "void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native:"
+   },
+   {
+    "ms": 67.15,
+    "name": "triton_poi_fused_mul_silu_split_0"
+   },
+   {
+    "ms": 61.78,
+    "name": "void at::native::vectorized_elementwise_kernel<4, at::native::bfloat16_copy_kernel_cuda(at"
+   },
+   {
+    "ms": 49.02,
+    "name": "chunk_fwd_kernel_o"
+   },
+   {
+    "ms": 47.83,
+    "name": "void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::Tenso"
+   },
+   {
+    "ms": 44.91,
+    "name": "triton_poi_fused_mul_silu_split_0"
+   },
+   {
+    "ms": 44.91,
+    "name": "Torch-Compiled Region: 4/0"
+   },
+   {
+    "ms": 44.91,
+    "name": "## Call CompiledFxGraph f7cyzrta2wb2s3ql3pe2byzcm6hzyuhc2ocku7ra6rwc3opqz2iu ##"
+   },
+   {
+    "ms": 42.13,
+    "name": "triton_poi_fused__to_copy_add_mul_select_slice_unsqueeze_0"
+   },
+   {
+    "ms": 39.31,
+    "name": "void at::native::unrolled_elementwise_kernel<at::native::BinaryFunctor<float, float, float"
+   }
+  ],
+  "lm_params": 6048623616,
+  "vit_params": 333514240,
+  "lm_tokens": 20224,
+  "vit_patches": 65536,
+  "flops_floor_ms_bf16": 659.8768339938904,
+  "flops_floor_ms_fp8_lm": 392.62621176160906
+ }
+}

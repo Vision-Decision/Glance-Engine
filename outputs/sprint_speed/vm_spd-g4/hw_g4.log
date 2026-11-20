@@ -1,0 +1,14 @@
+{
+ "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "torch": "2.14.1+cu130",
+ "bw_gbs": 1461.1459684068836,
+ "gemm_bf16_T32_tflops": 79.66557266732332,
+ "gemm_fp8_T32_tflops": 81.91999875810413,
+ "gemm_bf16_T256_tflops": 277.2482501241111,
+ "gemm_fp8_T256_tflops": 473.36807039505345,
+ "gemm_bf16_T1024_tflops": 305.5928297092438,
+ "gemm_fp8_T1024_tflops": 530.8592187274495,
+ "gemm_bf16_T4096_tflops": 343.4278892908728,
+ "gemm_fp8_T4096_tflops": 662.7017543690597,
+ "weight_read_ms_bf16": 5.748912279557317
+}

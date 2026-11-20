@@ -1,0 +1,23 @@
+Thu Nov 19 12:07:02 PM UTC 2026
+name, driver_version, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 580.82.07, 0 MiB
+GPU compute process list empty
+411d36724e64943c71b338751ab1fd43aa41cce0ec46b960937ddaf614770fb1  speed/lm_prefill.py
+3cafe0a9e63b6015c2ab085b7fb1430e04e38c4a674f33854987984e9d1566d7  speed/engine.py
+1f9d0b846c8546514ad65fcf48dc37770a9ca8c50661bc4888fee9663fb2c3b0  scan/varlen.py
+3d3632ee9720f7a73075a2cb22456a49fdb15b6643cd55386cbd2a04c3569201  scan/engine.py
+python -m scan.profile_lm --stage profile_production --ckpt /content/ckpt/v1/ckpt_final.pt --out /content/out/scan/item3_profile_production.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 17155.83it/s]
+USDT:2026-11-19 12:07:11 142275:142275 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 12:07:11 142275:142275 SyncActivityProfilerHandler.cpp:46] profiler_stop
+32 4672 105.22134399414062
+USDT:2026-11-19 12:07:13 142275:142275 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 12:07:13 142275:142275 SyncActivityProfilerHandler.cpp:46] profiler_stop
+64 9344 212.4442901611328
+USDT:2026-11-19 12:07:17 142275:142275 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 12:07:17 142275:142275 SyncActivityProfilerHandler.cpp:46] profiler_stop
+128 18688 426.75311279296875
+USDT:2026-11-19 12:07:24 142275:142275 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 12:07:25 142275:142275 SyncActivityProfilerHandler.cpp:46] profiler_stop
+256 37376 853.435546875
+profile_production exit=0

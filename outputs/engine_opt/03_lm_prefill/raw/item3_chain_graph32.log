@@ -1,0 +1,6 @@
+graphs32 exit=0
+pushed /content/out/scan/item3_graphs32.json -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item3_graphs32.log -> Vision-Decision/collection-scan-results
+production exit=0
+pushed /content/out/scan/item3_production.json -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item3_production.log -> Vision-Decision/collection-scan-results

@@ -1,0 +1,22 @@
+Thu Nov 19 06:10:22 PM UTC 2026
+name, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 0 MiB
+GPU compute process list empty
+04bf1e9bd75d2797b40d7a0d105e8474d119247bc34e5f1e1383ea7bf1096f8d  scan/engine.py
+75c9a166966f06ceb2e586dd97b019aafe068306b0cc094ee497a3fce0016904  scan/bench_bank_memory.py
+python -m scan.bench_bank_tier --out /content/out/scan/item8_stream_tier.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 16225.94it/s]
+[transformers] Qwen3VL video processing does not apply the per-frame pixel cap the reference implementation (qwen-vl-utils) applies, so some videos cost far more tokens than they would there. In v5.22 the capped behavior will become the default and `cap_pixels_per_frame` will be removed. Pass `cap_pixels_per_frame=True` to adopt the reference behavior now, or `False` to keep the current behavior and silence this warning.
+pinned 256
+pinned 512
+pinned 768
+pinned 1024
+pinned 1280
+pinned 1536
+pinned 1792
+64 {'bytes': 3687258256, 'ms': [118.47054900135845, 118.48452900449047, 118.53253899607807, 118.59699900378473, 118.61361900082557], 'copy_ms': [64.8726200015517, 64.86163900262909, 64.86283899721457], 'exact': {'presence_logit': True, 'box_pred': True, 'iou_logit': True, 'typed_logits': True, 'center_idx': True}, 'staging_bytes': 3687258256}
+256 {'bytes': 14749033024, 'ms': [313.3243370029959, 313.41044700093335, 313.34061799861956, 313.1569670003955, 313.1626869944739], 'copy_ms': [259.25310800084844, 259.28611700510373, 259.28137799928663], 'exact': {'presence_logit': True, 'box_pred': True, 'iou_logit': True, 'typed_logits': True, 'center_idx': True}, 'staging_bytes': 7374516512}
+1024 {'bytes': 58996132096, 'ms': [1092.8918610006804, 1091.4866000020993, 1092.480250998051], 'copy_ms': [1038.150329994096, 1038.4184110007482, 1038.3462609970593], 'exact': {'presence_logit': True, 'box_pred': True, 'iou_logit': True, 'typed_logits': True, 'center_idx': True}, 'staging_bytes': 7374516512}
+1920 {'bytes': 110617747680, 'ms': [2001.8176730009145, 2002.8966430036235, 2001.4859219954815], 'copy_ms': [1947.0778729955782, 1948.5500029986724, 1946.9264530052897], 'exact': {'presence_logit': True, 'box_pred': True, 'iou_logit': True, 'typed_logits': True, 'center_idx': True}, 'staging_bytes': 7374516512}
+10000 {'bytes': 576134402800, 'ms': [10408.576478999748, 10421.399428996665, 10413.414069000282], 'copy_ms': [10126.244891995157, 10127.088741006446, 10133.698031997483], 'exact': {'presence_logit': True, 'box_pred': True, 'iou_logit': True, 'typed_logits': True, 'center_idx': True}, 'staging_bytes': 4609373120}
+tier exit=0

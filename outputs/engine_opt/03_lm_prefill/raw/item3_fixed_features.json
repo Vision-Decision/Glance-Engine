@@ -1,0 +1,87 @@
+{
+ "cublas": "13.1.1.3",
+ "torch": "2.14.1+cu130",
+ "cuda": "13.0",
+ "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "capability": [
+  12,
+  0
+ ],
+ "triton": "3.8.0",
+ "tf32": false,
+ "bf16_reduced_precision": true,
+ "results": [
+  {
+   "n": 32,
+   "tokens": 4352,
+   "kind": "box",
+   "p_absdiff_max": 0.00019107386469841003,
+   "p_absdiff_mean": 1.7669512089923956e-05,
+   "decision_agree": 1.0,
+   "box_absdiff_max": 0.08132600784301758,
+   "box_absdiff_mean": 0.0020931116305291653,
+   "piou_absdiff_max": 0.08276224136352539
+  },
+  {
+   "n": 32,
+   "tokens": 4672,
+   "kind": "noul",
+   "prob_absdiff_max": 0.0036908090114593506,
+   "decision_agree": 1.0
+  },
+  {
+   "n": 64,
+   "tokens": 8704,
+   "kind": "box",
+   "p_absdiff_max": 0.0007176324725151062,
+   "p_absdiff_mean": 3.0161148970364593e-05,
+   "decision_agree": 1.0,
+   "box_absdiff_max": 0.324565052986145,
+   "box_absdiff_mean": 0.005055902525782585,
+   "piou_absdiff_max": 0.14883705973625183
+  },
+  {
+   "n": 64,
+   "tokens": 9344,
+   "kind": "noul",
+   "prob_absdiff_max": 0.004431217908859253,
+   "decision_agree": 1.0
+  },
+  {
+   "n": 128,
+   "tokens": 17408,
+   "kind": "box",
+   "p_absdiff_max": 0.0022015050053596497,
+   "p_absdiff_mean": 4.696450923802331e-05,
+   "decision_agree": 1.0,
+   "box_absdiff_max": 0.3259182870388031,
+   "box_absdiff_mean": 0.0024682991206645966,
+   "piou_absdiff_max": 0.15079855918884277
+  },
+  {
+   "n": 128,
+   "tokens": 18688,
+   "kind": "noul",
+   "prob_absdiff_max": 0.010909318923950195,
+   "decision_agree": 1.0
+  },
+  {
+   "n": 256,
+   "tokens": 34816,
+   "kind": "box",
+   "p_absdiff_max": 0.009232103824615479,
+   "p_absdiff_mean": 0.00012973806587979198,
+   "decision_agree": 1.0,
+   "box_absdiff_max": 0.1729479432106018,
+   "box_absdiff_mean": 0.0021373166237026453,
+   "piou_absdiff_max": 0.12816709280014038
+  },
+  {
+   "n": 256,
+   "tokens": 37376,
+   "kind": "noul",
+   "prob_absdiff_max": 0.010909318923950195,
+   "decision_agree": 1.0
+  }
+ ]
+}

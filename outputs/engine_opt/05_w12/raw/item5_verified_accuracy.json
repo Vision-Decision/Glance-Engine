@@ -1,0 +1,98 @@
+{
+ "eng_fused": {
+  "cold": {
+   "n": 930,
+   "presence_absdiff_max": 0.0,
+   "presence_absdiff_mean": 0.0,
+   "piou_absdiff_max": 0.0,
+   "box_px_maxdiff_max": 0.0,
+   "box_px_maxdiff_mean": 0.0,
+   "box_iou_vs_ref_min": 1.0,
+   "box_iou_vs_ref_mean": 1.0,
+   "typed_prob_absdiff_max": 0.0,
+   "decision_agreement": 1.0,
+   "acc50": 0.94,
+   "acc50_ref": 0.94
+  },
+  "followup": {
+   "n": 2460,
+   "agreed": 2460,
+   "presence_abs": 0.0,
+   "iou_abs": 0.0,
+   "box_abs": 0.0,
+   "typed_abs": 0.0
+  },
+  "gref_presence": {
+   "auroc": 0.9696989847940772,
+   "positive": 146,
+   "negative": 309,
+   "agreed": 455,
+   "max_abs": 0.0
+  },
+  "n_box_gt": 450
+ },
+ "eng_w12": {
+  "cold": {
+   "n": 930,
+   "presence_absdiff_max": 0.0,
+   "presence_absdiff_mean": 0.0,
+   "piou_absdiff_max": 0.0,
+   "box_px_maxdiff_max": 0.0,
+   "box_px_maxdiff_mean": 0.0,
+   "box_iou_vs_ref_min": 1.0,
+   "box_iou_vs_ref_mean": 1.0,
+   "typed_prob_absdiff_max": 0.0,
+   "decision_agreement": 1.0,
+   "acc50": 0.94,
+   "acc50_ref": 0.94
+  },
+  "followup": {
+   "n": 2460,
+   "agreed": 2460,
+   "presence_abs": 0.00021255016326904297,
+   "iou_abs": 0.0036721229553222656,
+   "box_abs": 0.001209855079650879,
+   "typed_abs": 0.006323516368865967
+  },
+  "gref_presence": {
+   "auroc": 0.9696768187258944,
+   "positive": 146,
+   "negative": 309,
+   "agreed": 455,
+   "max_abs": 0.008908182382583618
+  },
+  "n_box_gt": 450
+ },
+ "eng_fp8": {
+  "cold": {
+   "n": 930,
+   "presence_absdiff_max": 0.08095496892929077,
+   "presence_absdiff_mean": 0.0021146563192208606,
+   "piou_absdiff_max": 0.10747522115707397,
+   "box_px_maxdiff_max": 49.814849853515625,
+   "box_px_maxdiff_mean": 4.344226917885898,
+   "box_iou_vs_ref_min": 0.6700420676379617,
+   "box_iou_vs_ref_mean": 0.9583783043234163,
+   "typed_prob_absdiff_max": 0.09989327192306519,
+   "decision_agreement": 0.9956989247311828,
+   "acc50": 0.9355555555555556,
+   "acc50_ref": 0.94
+  },
+  "followup": {
+   "n": 2460,
+   "agreed": 2444,
+   "presence_abs": 0.04321110248565674,
+   "iou_abs": 0.08856034278869629,
+   "box_abs": 0.05118376016616821,
+   "typed_abs": 0.10945066809654236
+  },
+  "gref_presence": {
+   "auroc": 0.9689896706122268,
+   "positive": 146,
+   "negative": 309,
+   "agreed": 452,
+   "max_abs": 0.11919963359832764
+  },
+  "n_box_gt": 450
+ }
+}

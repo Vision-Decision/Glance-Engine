@@ -1,0 +1,232 @@
+{
+ "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "torch": "2.14.1+cu130",
+ "ckpt": "/content/ckpt/v1/ckpt_final.pt",
+ "args": {
+  "ckpt": "/content/ckpt/v1/ckpt_final.pt",
+  "prep": "data/prep/eval_refcoco_val.jsonl",
+  "gprep": "data/prep/eval_grefcoco_val.jsonl",
+  "image_root": "/content/data/coco/train2014",
+  "parts": "fresh",
+  "Ns": [
+   1,
+   8,
+   16,
+   32,
+   64,
+   128,
+   256
+  ],
+  "Ns_fresh": [
+   32,
+   64,
+   128,
+   256
+  ],
+  "Tvs": [
+   128,
+   256
+  ],
+  "max_fresh_tokens": 16384,
+  "fresh_impl": "varlen",
+  "fresh_kind": "yesno",
+  "fresh_chunked": 1,
+  "n_equiv": 24,
+  "clip_cfgs": "4x96,4x48,2x96",
+  "clip_fresh": 1,
+  "cached_tvs": "640,256,64",
+  "short": 0,
+  "fp8": 0,
+  "n_acc": 60,
+  "n_calls": 10,
+  "out": "/content/out/scan/item1_after.json"
+ },
+ "n_merged": 200,
+ "fresh": {
+  "Tv128_N32": {
+   "prep_ms": 22.686179999709566,
+   "vision_ms": 60.07007499965766,
+   "lm_ms": 137.36981899955936,
+   "total_ms": 220.71680850012854,
+   "total_ms_p90": 228.47778590003145,
+   "tokens": 4096,
+   "chunks": 1,
+   "chunks_per_call": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "images_per_s": 144.98216160995898,
+   "readout": "yesno"
+  },
+  "Tv128_N64": {
+   "prep_ms": 42.313324499446026,
+   "vision_ms": 128.21852949991808,
+   "lm_ms": 289.81301849989904,
+   "total_ms": 460.580841999672,
+   "total_ms_p90": 471.18216789949656,
+   "tokens": 8192,
+   "chunks": 1,
+   "chunks_per_call": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "images_per_s": 138.95497633409073,
+   "readout": "yesno"
+  },
+  "Tv128_N128": {
+   "prep_ms": 80.97371999929237,
+   "vision_ms": 263.9772335000998,
+   "lm_ms": 586.2720670002091,
+   "total_ms": 931.0787295003138,
+   "total_ms_p90": 944.897024900456,
+   "tokens": 16384,
+   "chunks": 1,
+   "chunks_per_call": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "images_per_s": 137.47494808381492,
+   "readout": "yesno"
+  },
+  "Tv128_N256": {
+   "prep_ms": 164.72379449896835,
+   "vision_ms": 529.0482569998858,
+   "lm_ms": 1175.9412719998181,
+   "total_ms": 1874.41044399975,
+   "total_ms_p90": 1901.4897018994816,
+   "tokens": 32768,
+   "chunks": 2,
+   "chunks_per_call": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "images_per_s": 136.57627699391657,
+   "readout": "yesno"
+  },
+  "Tv256_N32": {
+   "prep_ms": 31.52427000031821,
+   "vision_ms": 145.62266400025692,
+   "lm_ms": 283.4038129999499,
+   "total_ms": 460.5750474997876,
+   "total_ms_p90": 463.66766800010737,
+   "tokens": 8192,
+   "chunks": 1,
+   "chunks_per_call": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "images_per_s": 69.47836226411019,
+   "readout": "yesno"
+  },
+  "Tv256_N64": {
+   "prep_ms": 61.072384499766486,
+   "vision_ms": 293.40861800028506,
+   "lm_ms": 569.6137519998956,
+   "total_ms": 924.0341049999188,
+   "total_ms_p90": 931.9014160001643,
+   "tokens": 16384,
+   "chunks": 1,
+   "chunks_per_call": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "images_per_s": 69.26151280964422,
+   "readout": "yesno"
+  },
+  "Tv256_N128": {
+   "prep_ms": 121.61796950022108,
+   "vision_ms": 587.0611430000281,
+   "lm_ms": 1136.8563190003442,
+   "total_ms": 1845.2888990000247,
+   "total_ms_p90": 1860.5874629998652,
+   "tokens": 32768,
+   "chunks": 2,
+   "chunks_per_call": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "images_per_s": 69.36583213033153,
+   "readout": "yesno"
+  },
+  "Tv256_N256": {
+   "prep_ms": 243.0956930006687,
+   "vision_ms": 1174.7401765005634,
+   "lm_ms": 2274.62716700029,
+   "total_ms": 3693.6763129997416,
+   "total_ms_p90": 3726.1569640001653,
+   "tokens": 65536,
+   "chunks": 4,
+   "chunks_per_call": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ],
+   "images_per_s": 69.30764320062875,
+   "readout": "yesno"
+  }
+ },
+ "peak_mem_gb": 12.876519203186035
+}

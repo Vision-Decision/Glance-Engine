@@ -1,0 +1,3 @@
+binary_control exit=0
+pushed /content/out/scan/item7_binary_binary_control.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item7_binary_binary_control.json -> Vision-Decision/collection-scan-results

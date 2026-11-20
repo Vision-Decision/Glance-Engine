@@ -1,0 +1,8 @@
+Thu Nov 19 07:12:27 PM UTC 2026
+name, driver_version, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 580.82.07, 0 MiB
+GPU compute process list empty
+GLANCE_BOX_REDUCTION=tiled
+python -m scan.bench_box_readout --out /content/out/scan/item9_tiled_micro.json 
+{"controls": {"fixed": {"max_score": 3.823617570342108e-07, "different_scores": 189, "different_centers": 0}, "tiled": {"max_score": 0.0, "different_scores": 0, "different_centers": 0}}, "fp64_gemm": {"n": 4096, "ms": 86.73494338989258, "tflops": 1.5845857286628042}, "workloads": {"followup_1": {"legacy_ms": 0.047199999913573265, "eager_fp64_ms": 0.04444799944758415, "fixed_ms": 0.029103999957442284, "dots": 640, "width": 512, "key_bytes": 1310720}, "image_32": {"legacy_ms": 0.05899200029671192, "eager_fp64_ms": 0.1839200034737587, "fixed_ms": 0.0814720019698143, "dots": 20480, "width": 512, "key_bytes": 1310720}, "cached_256": {"legacy_ms": 0.238864004611969, "eager_fp64_ms": 2.0971039533615112, "fixed_ms": 0.4911839962005615, "dots": 163840, "width": 512, "key_bytes": 335544320}, "fresh_128": {"legacy_ms": 0.044943999499082565, "eager_fp64_ms": 0.12721599638462067, "fixed_ms": 0.06099199876189232, "dots": 14976, "width": 512, "key_bytes": 30670848}}}
+micro exit=0

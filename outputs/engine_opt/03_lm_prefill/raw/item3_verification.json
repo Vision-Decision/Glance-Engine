@@ -1,0 +1,103 @@
+{
+  "cpu_local": "PASS",
+  "real": "234/234",
+  "real_release": "234/234",
+  "accel_real_release": "234/234",
+  "diag_vs_shipped_bf16": {
+    "eng_plain": 930,
+    "eng_taps": 930,
+    "eng_fv": 930,
+    "eng_full": 930,
+    "eng_fused": 930
+  },
+  "accel_diag_vs_shipped_bf16": {
+    "eng_plain": 930,
+    "eng_taps": 930,
+    "eng_fv": 930,
+    "eng_full": 930,
+    "eng_fused": 930
+  },
+  "equiv": {
+    "agreed": 480,
+    "compared": 480,
+    "max_diff": {
+      "p_absdiff_max": 0.02483704686164856,
+      "piou_absdiff_max": 0.08477857708930969,
+      "box_absdiff_max": 0.1552017331123352,
+      "prob_absdiff_max": 0.02308708429336548
+    }
+  },
+  "fixed_features": {
+    "agreed": 960,
+    "compared": 960,
+    "max_diff": {
+      "p_absdiff_max": 0.009232103824615479,
+      "piou_absdiff_max": 0.15079855918884277,
+      "box_absdiff_max": 0.3259182870388031,
+      "prob_absdiff_max": 0.010909318923950195
+    }
+  },
+  "video_equiv": {
+    "agreed": 384,
+    "compared": 384,
+    "max_diff": {
+      "p_absdiff_max": 0.017153918743133545,
+      "piou_absdiff_max": 0.09298181533813477,
+      "box_absdiff_max": 0.0724717378616333
+    }
+  },
+  "graphs32": {
+    "agreed": 112,
+    "compared": 112,
+    "max_diff": {
+      "prob_absdiff_max": 0.0003064563497900963
+    }
+  },
+  "graphs_limits": {
+    "agreed": 5,
+    "compared": 5,
+    "max_diff": {
+      "prob_absdiff_max": 0.0
+    }
+  },
+  "accel_equiv": {
+    "agreed": 480,
+    "compared": 480,
+    "max_diff": {
+      "p_absdiff_max": 0.02483704686164856,
+      "piou_absdiff_max": 0.08477857708930969,
+      "box_absdiff_max": 0.1552017331123352,
+      "prob_absdiff_max": 0.02313387393951416
+    }
+  },
+  "accel_fixed_features": {
+    "agreed": 960,
+    "compared": 960,
+    "max_diff": {
+      "p_absdiff_max": 0.014920830726623535,
+      "piou_absdiff_max": 0.1464325189590454,
+      "box_absdiff_max": 0.3228808343410492,
+      "prob_absdiff_max": 0.0065679848194122314
+    }
+  },
+  "accel_video_equiv": {
+    "agreed": 384,
+    "compared": 384,
+    "max_diff": {
+      "p_absdiff_max": 0.012466669082641602,
+      "piou_absdiff_max": 0.094082772731781,
+      "box_absdiff_max": 0.07092416286468506
+    }
+  },
+  "profiled_kernel_shape_groups": {
+    "before": 660,
+    "production": 432,
+    "flashqla": 420
+  },
+  "dram_launch_configurations": {
+    "flashqla": 299,
+    "before": 423,
+    "final": 311,
+    "production": 311
+  }
+}

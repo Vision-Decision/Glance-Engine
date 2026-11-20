@@ -1,0 +1,73 @@
+Thu Nov 19 12:51:35 PM UTC 2026
+name, driver_version, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 580.82.07, 0 MiB
+GPU compute process list empty
+d661f98771293200b1e8337ef52bf317a86fa18586b244c128d9cd743a348fc5  speed/engine.py
+76f890c2c715046a1b17cb34a32fd628ffe5151a0136a1cd518fce03e7788822  scan/engine.py
+b1a08f30edf4b99755cc8721e2d52b313901c0a5e882daec904e20e624d1c641  speed/gdn_branch.py
+GLANCE_BRANCH_MODE=reference
+python -m scan.profile_branch --stage profile --ckpt /content/ckpt/v1/ckpt_final.pt --out /content/out/scan/item4_reference_profile.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 17370.85it/s]
+USDT:2026-11-19 12:51:54 163422:163422 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 12:51:54 163422:163422 SyncActivityProfilerHandler.cpp:46] profiler_stop
+640_64_box {'gemm': 18.182786999999998, 'gdn(fla)': 5.760626000000012, 'copy/cat': 5.152236999999997, 'elementwise/other': 3.64730599999997, 'reduce/norm': 0.3915270000000003, 'memcpy': 0.15065799999999446, 'index': 0.11942799999999626, 'softmax': 0.001184000000001106}
+USDT:2026-11-19 12:51:54 163422:163422 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 12:51:54 163422:163422 SyncActivityProfilerHandler.cpp:46] profiler_stop
+640_64_noul {'gemm': 32.151075000000006, 'copy/cat': 10.913342999999916, 'gdn(fla)': 10.354691000000017, 'elementwise/other': 8.864645000000037, 'reduce/norm': 0.941088999999986, 'memcpy': 0.8399070000000145, 'index': 0.20835600000002227, 'softmax': 0.0011520000000018627}
+USDT:2026-11-19 12:51:55 163422:163422 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 12:51:56 163422:163422 SyncActivityProfilerHandler.cpp:46] profiler_stop
+640_256_box {'gemm': 59.02507300000001, 'copy/cat': 27.54299700000002, 'elementwise/other': 22.298616999999854, 'gdn(fla)': 20.71887700000002, 'reduce/norm': 3.2926549999999666, 'memcpy': 1.895396000000057, 'index': 0.35600099999998336, 'softmax': 0.0011520000000018627}
+USDT:2026-11-19 12:51:57 163422:163422 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 12:51:57 163422:163422 SyncActivityProfilerHandler.cpp:46] profiler_stop
+640_256_noul {'gemm': 119.79186199999967, 'copy/cat': 66.71574800000025, 'elementwise/other': 59.290394999999904, 'gdn(fla)': 38.60252799999997, 'reduce/norm': 7.726396999999973, 'memcpy': 4.078539000000029, 'index': 1.2969930000002146, 'softmax': 0.0011520000000018627}
+USDT:2026-11-19 12:52:03 163422:163422 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 12:52:03 163422:163422 SyncActivityProfilerHandler.cpp:46] profiler_stop
+256_64_box {'gemm': 17.285656000000007, 'gdn(fla)': 5.782096000000006, 'copy/cat': 5.017146999999953, 'elementwise/other': 3.2252830000000174, 'reduce/norm': 0.3244180000000057, 'index': 0.11900900000000249, 'memcpy': 0.06684899999998273, 'softmax': 0.0011849999999976716}
+USDT:2026-11-19 12:52:04 163422:163422 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 12:52:04 163422:163422 SyncActivityProfilerHandler.cpp:46] profiler_stop
+256_256_box {'gemm': 55.698944000000026, 'copy/cat': 25.158332000000122, 'gdn(fla)': 20.70469300000001, 'elementwise/other': 16.018589000000002, 'reduce/norm': 1.0430079999999584, 'memcpy': 0.46141300000001734, 'index': 0.37622599999997564, 'softmax': 0.001184000000008382}
+USDT:2026-11-19 12:52:07 163422:163422 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 12:52:07 163422:163422 SyncActivityProfilerHandler.cpp:46] profiler_stop
+64_64_box {'gemm': 16.89024100000002, 'gdn(fla)': 5.790008000000004, 'copy/cat': 4.959805000000024, 'elementwise/other': 3.0308650000000688, 'reduce/norm': 0.29885000000000544, 'index': 0.11746900000000132, 'memcpy': 0.036670000000001333, 'softmax': 0.0011520000000018627}
+USDT:2026-11-19 12:52:08 163422:163422 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 12:52:08 163422:163422 SyncActivityProfilerHandler.cpp:46] profiler_stop
+64_256_box {'gemm': 53.704253000000044, 'copy/cat': 24.841265999999838, 'gdn(fla)': 20.728502000000002, 'elementwise/other': 14.844015000000057, 'reduce/norm': 0.9393339999999718, 'index': 0.3554889999999375, 'memcpy': 0.07727399999998134, 'softmax': 0.00118399999999383}
+[transformers] Qwen3VL video processing does not apply the per-frame pixel cap the reference implementation (qwen-vl-utils) applies, so some videos cost far more tokens than they would there. In v5.22 the capped behavior will become the default and `cap_pixels_per_frame` will be removed. Pass `cap_pixels_per_frame=True` to adopt the reference behavior now, or `False` to keep the current behavior and silence this warning.
+USDT:2026-11-19 12:52:13 163422:163422 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 12:52:13 163422:163422 SyncActivityProfilerHandler.cpp:46] profiler_stop
+clip_64_noul {'gemm': 31.016126999999983, 'gdn(fla)': 10.347597000000016, 'copy/cat': 10.124896000000026, 'elementwise/other': 6.382300000000082, 'reduce/norm': 0.6346860000000469, 'index': 0.20207800000002743, 'memcpy': 0.0944979999999846, 'softmax': 0.0011519999999945866}
+USDT:2026-11-19 12:52:15 163422:163422 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 12:52:15 163422:163422 SyncActivityProfilerHandler.cpp:46] profiler_stop
+clip_256_noul {'gemm': 115.43235900000009, 'copy/cat': 62.478182000000224, 'elementwise/other': 47.46270299999984, 'gdn(fla)': 38.61679099999999, 'reduce/norm': 4.421753000000041, 'index': 1.2841350000000307, 'memcpy': 1.1504660000000642, 'softmax': 0.0011520000000018627}
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 16560.53it/s]
+USDT:2026-11-19 12:52:19 163422:163422 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 12:52:19 163422:163422 SyncActivityProfilerHandler.cpp:46] profiler_stop
+single_1_box {'gemm': 25.931923000000015, 'copy/cat': 4.382091999999976, 'elementwise/other': 2.5866679999999596, 'gdn(fla)': 1.8448359999999717, 'memcpy': 0.6443580000000066, 'reduce/norm': 0.5646059999999913, 'index': 0.4184960000000085, 'softmax': 0.0011200000000026193}
+USDT:2026-11-19 12:52:20 163422:163422 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 12:52:20 163422:163422 SyncActivityProfilerHandler.cpp:46] profiler_stop
+followup_1_box {'gemm': 6.244702000000017, 'copy/cat': 0.9934729999999996, 'elementwise/other': 0.8270299999999837, 'gdn(fla)': 0.4587309999999924, 'index': 0.4320319999999975, 'memcpy': 0.18463500000000294, 'reduce/norm': 0.08425500000000191, 'softmax': 0.0011509999999998399}
+USDT:2026-11-19 12:52:20 163422:163422 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 12:52:20 163422:163422 SyncActivityProfilerHandler.cpp:46] profiler_stop
+single_8_box {'gemm': 27.685223000000075, 'copy/cat': 5.289465999999981, 'elementwise/other': 2.8669739999999906, 'gdn(fla)': 2.322081000000062, 'memcpy': 0.6365180000000181, 'reduce/norm': 0.586596999999994, 'index': 0.5489310000000006, 'softmax': 0.0011199999999953435}
+USDT:2026-11-19 12:52:20 163422:163422 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 12:52:20 163422:163422 SyncActivityProfilerHandler.cpp:46] profiler_stop
+followup_8_box {'gemm': 7.601871999999989, 'copy/cat': 1.8972600000000075, 'elementwise/other': 1.1933850000000201, 'gdn(fla)': 0.9405500000000003, 'index': 0.3375719999999989, 'memcpy': 0.1858879999999997, 'reduce/norm': 0.1044179999999924, 'softmax': 0.0011520000000000436}
+USDT:2026-11-19 12:52:21 163422:163422 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 12:52:21 163422:163422 SyncActivityProfilerHandler.cpp:46] profiler_stop
+single_8_mixed {'gemm': 32.56902700000002, 'copy/cat': 7.38666599999998, 'elementwise/other': 3.5517420000000164, 'gdn(fla)': 3.0348690000000014, 'memcpy': 0.6505940000000041, 'reduce/norm': 0.6330219999999898, 'index': 0.5663710000000212, 'softmax': 0.0011520000000018627}
+USDT:2026-11-19 12:52:21 163422:163422 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 12:52:21 163422:163422 SyncActivityProfilerHandler.cpp:46] profiler_stop
+followup_8_mixed {'gemm': 10.993937000000017, 'copy/cat': 3.8328860000000096, 'elementwise/other': 1.7947099999999991, 'gdn(fla)': 1.6294529999999914, 'index': 0.36012800000000555, 'memcpy': 0.19113299999999162, 'reduce/norm': 0.15872099999999503, 'softmax': 0.0011520000000018627}
+USDT:2026-11-19 12:52:22 163422:163422 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 12:52:22 163422:163422 SyncActivityProfilerHandler.cpp:46] profiler_stop
+single_32_box {'gemm': 33.357931, 'copy/cat': 8.804718000000031, 'gdn(fla)': 6.027910999999985, 'elementwise/other': 4.538454000000039, 'index': 1.5566440000000148, 'reduce/norm': 0.7201680000000042, 'memcpy': 0.6448350000000029, 'softmax': 0.0011849999999976716}
+USDT:2026-11-19 12:52:22 163422:163422 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 12:52:22 163422:163422 SyncActivityProfilerHandler.cpp:46] profiler_stop
+followup_32_box {'gemm': 13.764634999999988, 'copy/cat': 5.160824000000021, 'gdn(fla)': 4.628491000000003, 'elementwise/other': 2.82603099999999, 'index': 1.2281700000000082, 'memcpy': 0.20694399999999627, 'reduce/norm': 0.19305400000000092, 'softmax': 0.0011519999999982248}
+USDT:2026-11-19 12:52:23 163422:163422 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 12:52:23 163422:163422 SyncActivityProfilerHandler.cpp:46] profiler_stop
+single_32_mixed {'gemm': 53.32925800000003, 'copy/cat': 17.57902999999995, 'gdn(fla)': 10.598999000000049, 'elementwise/other': 9.078869000000077, 'index': 1.792490000000011, 'reduce/norm': 0.9353659999999876, 'memcpy': 0.6472020000000023, 'softmax': 0.0011520000000018627}
+USDT:2026-11-19 12:52:23 163422:163422 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 12:52:24 163422:163422 SyncActivityProfilerHandler.cpp:46] profiler_stop
+followup_32_mixed {'gemm': 29.713263999999988, 'copy/cat': 13.314861000000002, 'gdn(fla)': 9.268050000000077, 'elementwise/other': 6.844926999999978, 'index': 1.3402959999999824, 'reduce/norm': 0.4326080000000366, 'memcpy': 0.20716699999998664, 'softmax': 0.0011530000000057044}
+reference_profile exit=0

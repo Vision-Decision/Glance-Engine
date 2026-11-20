@@ -1,0 +1,12 @@
+accel_ncu_production_128 exit=0
+pushed /content/out/scan/item3_accel_ncu_production_128.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item3_accel_ncu_production_128.csv -> Vision-Decision/collection-scan-results
+accel_ncu_production_32 exit=0
+pushed /content/out/scan/item3_accel_ncu_production_32.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item3_accel_ncu_production_32.csv -> Vision-Decision/collection-scan-results
+accel_ncu_production_64 exit=0
+pushed /content/out/scan/item3_accel_ncu_production_64.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item3_accel_ncu_production_64.csv -> Vision-Decision/collection-scan-results
+accel_ncu_production_256 exit=0
+pushed /content/out/scan/item3_accel_ncu_production_256.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item3_accel_ncu_production_256.csv -> Vision-Decision/collection-scan-results

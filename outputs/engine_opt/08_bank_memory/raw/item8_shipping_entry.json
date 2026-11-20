@@ -1,0 +1,54 @@
+{
+  "default": {
+    "format": "state_packed",
+    "chunks": 5,
+    "exact": [
+      true,
+      true,
+      true
+    ],
+    "keys": [
+      "typed_logits"
+    ],
+    "bytes": 600325733
+  },
+  "compact": {
+    "format": "compact",
+    "chunks": 5,
+    "exact": [
+      true,
+      true,
+      true
+    ],
+    "keys": [
+      "typed_logits"
+    ],
+    "bytes": 648312752
+  },
+  "state_packed": {
+    "format": "state_packed",
+    "chunks": 5,
+    "exact": [
+      true,
+      true,
+      true
+    ],
+    "keys": [
+      "typed_logits"
+    ],
+    "bytes": 600325733
+  },
+  "state_fp8": {
+    "format": "state_fp8",
+    "chunks": 5,
+    "exact": [
+      true,
+      true,
+      true
+    ],
+    "keys": [
+      "typed_logits"
+    ],
+    "bytes": 312113072
+  }
+}

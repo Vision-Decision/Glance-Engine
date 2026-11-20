@@ -1,0 +1,10 @@
+Thu Nov 19 07:33:54 PM UTC 2026
+name, driver_version, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 580.82.07, 0 MiB
+GPU compute process list empty
+GLANCE_BOX_REDUCTION=blocks
+python -m scan.bench_scan --parts fresh --Tvs 128 --Ns_fresh 128 --n_calls 10 --fresh_kind yesno --fresh_chunked 1 --ckpt /content/ckpt/v1/ckpt_final.pt --out /content/out/scan/item9_release_fresh.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 16692.35it/s]
+fresh 128 128 {"prep_ms": 8.48, "vision_ms": 168.58, "lm_ms": 404.52, "total_ms": 581.47, "total_ms_p90": 593.59, "tokens": 16384, "chunks": 1, "chunks_per_call": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1], "images_per_s": 220.13, "readout": "yesno"}
+BENCH_DONE
+fresh exit=0

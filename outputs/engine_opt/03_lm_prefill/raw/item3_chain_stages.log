@@ -1,0 +1,6 @@
+stages_before exit=0
+pushed /content/out/scan/item3_stages_before.json -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item3_stages_before.log -> Vision-Decision/collection-scan-results
+stages_final exit=0
+pushed /content/out/scan/item3_stages_final.json -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item3_stages_final.log -> Vision-Decision/collection-scan-results

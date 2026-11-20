@@ -1,0 +1,65 @@
+Thu Nov 19 02:27:21 PM UTC 2026
+name, driver_version, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 580.82.07, 0 MiB
+GPU compute process list empty
+112c8141744dfc626a75c49707b253cf50d475ffae084d43bc4dd32ed5c68a2b  speed/engine.py
+264dc486606b4e239e9a2aaedc59cd302bc4d38649dc0ae7c5919f4758a09dd8  speed/bench_glance.py
+2411def1e9d7f4b19b0701beb0bb132d6da4441151ccf76f39319ce9a1d0189d  speed/bench_w12.py
+6df0e68afed540b705d9382d07ab698ddced824e03388baf90211e5c65db8422  speed/test_w12.py
+25023c4ce1df39e817adcdb264396eae33253f10e9b6f00d7aa6a8ca875fc317  speed/w12.py
+13b072b822abf9cbdb664032e57387422215e8d72d0e34446becf1206d1b052d  speed/specpilot/w12.cu
+783ab0eca111f8631b32ec7b1ddc786aa12cd120cf19cf72f9fec56a96689d3a  scan/engine.py
+bbd6ba5baf19263dfca5255ef2a4ca23a6abdaab5ed1937b6d15ef64ee83b172  scan/bench_scan.py
+python -m speed.bench_w12 --stage stages --ckpt /content/ckpt/v1/ckpt_final.pt --out /content/out/scan/item5_verified_stages.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 19609.31it/s]
+bf16_followup_box_N1 {'m': 64, 'dense_ms': 6.166687961667776, 'w12_ms': 0, 'n_w12': 0, 'weights_w12': 0}
+bf16_followup_box_N8 {'m': 128, 'dense_ms': 6.753472017124295, 'w12_ms': 0, 'n_w12': 0, 'weights_w12': 0}
+bf16_followup_mixed_N8 {'m': 320, 'dense_ms': 9.810495924204588, 'w12_ms': 0, 'n_w12': 0, 'weights_w12': 0}
+bf16_followup_box_N32 {'m': 448, 'dense_ms': 12.488864045590162, 'w12_ms': 0, 'n_w12': 0, 'weights_w12': 0}
+bf16_followup_mixed_N32 {'m': 1280, 'dense_ms': 25.99958398193121, 'w12_ms': 0, 'n_w12': 0, 'weights_w12': 0}
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 16270.86it/s]
+bf16_Tv640_N1_box {'m': 64, 'dense_ms': 6.126815963536501, 'w12_ms': 0, 'n_w12': 0, 'weights_w12': 0}
+bf16_Tv640_N1_noul {'m': 64, 'dense_ms': 6.128703961148858, 'w12_ms': 0, 'n_w12': 0, 'weights_w12': 0}
+bf16_Tv640_N8_box {'m': 128, 'dense_ms': 6.730239976197481, 'w12_ms': 0, 'n_w12': 0, 'weights_w12': 0}
+bf16_Tv640_N8_noul {'m': 192, 'dense_ms': 7.175776019692421, 'w12_ms': 0, 'n_w12': 0, 'weights_w12': 0}
+bf16_Tv640_N32_box {'m': 384, 'dense_ms': 9.957440011203289, 'w12_ms': 0, 'n_w12': 0, 'weights_w12': 0}
+bf16_Tv640_N32_noul {'m': 768, 'dense_ms': 16.91161610931158, 'w12_ms': 0, 'n_w12': 0, 'weights_w12': 0}
+bf16_Tv640_N64_box {'m': 704, 'dense_ms': 16.720224037766457, 'w12_ms': 0, 'n_w12': 0, 'weights_w12': 0}
+bf16_Tv640_N64_noul {'m': 1536, 'dense_ms': 30.408960223197937, 'w12_ms': 0, 'n_w12': 0, 'weights_w12': 0}
+bf16_Tv640_N256_box {'m': 2816, 'dense_ms': 52.62527996301651, 'w12_ms': 0, 'n_w12': 0, 'weights_w12': 0}
+bf16_Tv640_N256_noul {'m': 6144, 'dense_ms': 112.17270395159721, 'w12_ms': 0, 'n_w12': 0, 'weights_w12': 0}
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 16570.49it/s]
+compact_bf16_followup_box_N1 {'m': 16, 'dense_ms': 5.859744034707546, 'w12_ms': 0, 'n_w12': 0, 'weights_w12': 0}
+compact_bf16_followup_box_N8 {'m': 128, 'dense_ms': 6.762239996343851, 'w12_ms': 0, 'n_w12': 0, 'weights_w12': 0}
+compact_bf16_followup_mixed_N8 {'m': 320, 'dense_ms': 9.825023928657174, 'w12_ms': 0, 'n_w12': 0, 'weights_w12': 0}
+compact_bf16_followup_box_N32 {'m': 448, 'dense_ms': 12.491200014948845, 'w12_ms': 0, 'n_w12': 0, 'weights_w12': 0}
+compact_bf16_followup_mixed_N32 {'m': 1280, 'dense_ms': 26.008000038564205, 'w12_ms': 0, 'n_w12': 0, 'weights_w12': 0}
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 16054.14it/s]
+compact_bf16_Tv640_N1_box {'m': 16, 'dense_ms': 5.802816025912762, 'w12_ms': 0, 'n_w12': 0, 'weights_w12': 0}
+compact_bf16_Tv640_N1_noul {'m': 32, 'dense_ms': 6.143904071301222, 'w12_ms': 0, 'n_w12': 0, 'weights_w12': 0}
+compact_bf16_Tv640_N8_box {'m': 96, 'dense_ms': 6.5974720027297735, 'w12_ms': 0, 'n_w12': 0, 'weights_w12': 0}
+compact_bf16_Tv640_N8_noul {'m': 192, 'dense_ms': 7.171616019681096, 'w12_ms': 0, 'n_w12': 0, 'weights_w12': 0}
+compact_bf16_Tv640_N32_box {'m': 384, 'dense_ms': 9.960127990692854, 'w12_ms': 0, 'n_w12': 0, 'weights_w12': 0}
+compact_bf16_Tv640_N32_noul {'m': 768, 'dense_ms': 16.90723216533661, 'w12_ms': 0, 'n_w12': 0, 'weights_w12': 0}
+compact_bf16_Tv640_N64_box {'m': 704, 'dense_ms': 16.72054409608245, 'w12_ms': 0, 'n_w12': 0, 'weights_w12': 0}
+compact_bf16_Tv640_N64_noul {'m': 1536, 'dense_ms': 30.45200013369322, 'w12_ms': 0, 'n_w12': 0, 'weights_w12': 0}
+compact_bf16_Tv640_N256_box {'m': 2816, 'dense_ms': 52.67001596093178, 'w12_ms': 0, 'n_w12': 0, 'weights_w12': 0}
+compact_bf16_Tv640_N256_noul {'m': 6144, 'dense_ms': 112.50377666950226, 'w12_ms': 0, 'n_w12': 0, 'weights_w12': 0}
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 16798.13it/s]
+w12_followup_box_N1 {'m': 16, 'dense_ms': 4.748255986720324, 'w12_ms': 4.748255986720324, 'n_w12': 128, 'weights_w12': 3569090560}
+w12_followup_box_N8 {'m': 128, 'dense_ms': 6.5296320505440235, 'w12_ms': 2.4605120345950127, 'n_w12': 32, 'weights_w12': 1509949440}
+w12_followup_mixed_N8 {'m': 320, 'dense_ms': 9.816319961100817, 'w12_ms': 0, 'n_w12': 0, 'weights_w12': 0}
+w12_followup_box_N32 {'m': 448, 'dense_ms': 12.491743952035904, 'w12_ms': 0, 'n_w12': 0, 'weights_w12': 0}
+w12_followup_mixed_N32 {'m': 1280, 'dense_ms': 26.021055936813354, 'w12_ms': 0, 'n_w12': 0, 'weights_w12': 0}
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 16728.07it/s]
+w12_Tv640_N1_box {'m': 16, 'dense_ms': 4.513215988874435, 'w12_ms': 4.513215988874435, 'n_w12': 128, 'weights_w12': 3569090560}
+w12_Tv640_N1_noul {'m': 32, 'dense_ms': 4.846272014081478, 'w12_ms': 4.0967680141329765, 'n_w12': 96, 'weights_w12': 3233546240}
+w12_Tv640_N8_box {'m': 96, 'dense_ms': 5.429152030497789, 'w12_ms': 3.236320022493601, 'n_w12': 64, 'weights_w12': 2478571520}
+w12_Tv640_N8_noul {'m': 192, 'dense_ms': 7.167616028338671, 'w12_ms': 0, 'n_w12': 0, 'weights_w12': 0}
+w12_Tv640_N32_box {'m': 384, 'dense_ms': 9.954975992441177, 'w12_ms': 0, 'n_w12': 0, 'weights_w12': 0}
+w12_Tv640_N32_noul {'m': 768, 'dense_ms': 16.910656161606312, 'w12_ms': 0, 'n_w12': 0, 'weights_w12': 0}
+w12_Tv640_N64_box {'m': 704, 'dense_ms': 16.72028809785843, 'w12_ms': 0, 'n_w12': 0, 'weights_w12': 0}
+w12_Tv640_N64_noul {'m': 1536, 'dense_ms': 30.465344168245792, 'w12_ms': 0, 'n_w12': 0, 'weights_w12': 0}
+w12_Tv640_N256_box {'m': 2816, 'dense_ms': 52.69984020292759, 'w12_ms': 0, 'n_w12': 0, 'weights_w12': 0}
+w12_Tv640_N256_noul {'m': 6144, 'dense_ms': 112.59740841388702, 'w12_ms': 0, 'n_w12': 0, 'weights_w12': 0}
+verified_stages exit=0

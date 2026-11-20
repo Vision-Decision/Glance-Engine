@@ -1,0 +1,9 @@
+replay exit=0
+pushed /content/out/scan/item9_strict_replay.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item9_strict_replay.json -> Vision-Decision/collection-scan-results
+margins exit=0
+pushed /content/out/scan/item9_legacy_traced_margins.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item9_legacy_traced_margins.json -> Vision-Decision/collection-scan-results
+margins exit=0
+pushed /content/out/scan/item9_blocks_traced_margins.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item9_blocks_traced_margins.json -> Vision-Decision/collection-scan-results

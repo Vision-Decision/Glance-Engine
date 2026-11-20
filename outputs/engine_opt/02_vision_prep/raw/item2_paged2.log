@@ -1,0 +1,59 @@
+Thu Nov 19 10:30:24 AM UTC 2026
+name, driver_version, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 580.82.07, 0 MiB
+GPU compute process list empty
+python -m scan.vision_dispatch --attention-only --ckpt /content/ckpt/v1/ckpt_final.pt --out /content/out/scan/item2_paged2.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 16605.60it/s]
+USDT:2026-11-19 10:30:31 96657:96657 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 10:30:31 96657:96657 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-19 10:30:31 96657:96657 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 10:30:31 96657:96657 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-19 10:30:31 96657:96657 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 10:30:31 96657:96657 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-19 10:30:31 96657:96657 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 10:30:31 96657:96657 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-19 10:30:31 96657:96657 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 10:30:31 96657:96657 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-19 10:30:31 96657:96657 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 10:30:31 96657:96657 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-19 10:30:31 96657:96657 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 10:30:31 96657:96657 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-19 10:30:31 96657:96657 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 10:30:31 96657:96657 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-19 10:30:31 96657:96657 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 10:30:31 96657:96657 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-19 10:30:31 96657:96657 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 10:30:31 96657:96657 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-19 10:30:31 96657:96657 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 10:30:31 96657:96657 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-19 10:30:31 96657:96657 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 10:30:31 96657:96657 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-19 10:30:31 96657:96657 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 10:30:31 96657:96657 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-19 10:30:31 96657:96657 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 10:30:31 96657:96657 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-19 10:30:31 96657:96657 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 10:30:31 96657:96657 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-19 10:30:31 96657:96657 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 10:30:31 96657:96657 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-19 10:30:31 96657:96657 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 10:30:31 96657:96657 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-19 10:30:31 96657:96657 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 10:30:31 96657:96657 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-19 10:30:31 96657:96657 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 10:30:31 96657:96657 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-19 10:30:32 96657:96657 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 10:30:32 96657:96657 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-19 10:30:32 96657:96657 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 10:30:32 96657:96657 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-19 10:30:32 96657:96657 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 10:30:32 96657:96657 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-19 10:30:32 96657:96657 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 10:30:32 96657:96657 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-19 10:30:32 96657:96657 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 10:30:32 96657:96657 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-19 10:30:32 96657:96657 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 10:30:32 96657:96657 SyncActivityProfilerHandler.cpp:46] profiler_stop
+USDT:2026-11-19 10:30:32 96657:96657 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 10:30:32 96657:96657 SyncActivityProfilerHandler.cpp:46] profiler_stop
+paged2 exit=0

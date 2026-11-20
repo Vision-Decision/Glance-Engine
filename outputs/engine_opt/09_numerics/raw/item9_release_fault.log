@@ -1,0 +1,306 @@
+Thu Nov 19 07:32:19 PM UTC 2026
+name, driver_version, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 580.82.07, 0 MiB
+GPU compute process list empty
+GLANCE_BOX_REDUCTION=blocks
+python -m scan.test_scan_equivalence --real --ckpt /content/ckpt/v1/ckpt_final.pt --inject fault 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 16801.48it/s]
+FAIL causal/varlen_mixed/box/reference/box_pred: 0.0242378 exceeds 0.00668645
+FAIL causal/varlen_mixed/box/reference/iou_prob: 0.0832073 exceeds 0.0133917
+FAIL causal/varlen_mixed/box/reference/same_center_iou: 0.0832073 exceeds 0.0486256
+FAIL causal/varlen_mixed/box/reference/patch_iou: 0.0832073 exceeds 0.0678363
+FAIL causal/varlen_mixed/box/separate/box_pred: 0.0175926 exceeds 0.00668645
+FAIL causal/varlen_mixed/box/separate/iou_prob: 0.0884596 exceeds 0.0133917
+FAIL causal/varlen_mixed/box/separate/same_center_iou: 0.0884596 exceeds 0.0486256
+FAIL causal/varlen_mixed/box/old/box_pred: 0.0198414 exceeds 0.00668645
+FAIL causal/varlen_mixed/box/old/iou_prob: 0.0858802 exceeds 0.0133917
+FAIL causal/varlen_mixed/box/old/same_center_iou: 0.0858802 exceeds 0.0486256
+FAIL causal/qfirst_fresh_vs_alone/same_center_box: 0.0924744 exceeds 0.0363202
+[transformers] `causal_conv1d_fn` is falling back to its reference PyTorch implementation because `causal_conv1d` is not installed. This is correct but much slower; install `causal_conv1d` for the optimized kernel.
+[transformers] Qwen3VL video processing does not apply the per-frame pixel cap the reference implementation (qwen-vl-utils) applies, so some videos cost far more tokens than they would there. In v5.22 the capped behavior will become the default and `cap_pixels_per_frame` will be removed. Pass `cap_pixels_per_frame=True` to adopt the reference behavior now, or `False` to keep the current behavior and silence this warning.
+FAIL block_bidir/box/fresh_vs_alone/same_center_box: 0.0439307 exceeds 0.0363202
+FAIL block_bidir/box/fresh_vs_alone/same_center_iou: 0.0547559 exceeds 0.0486256
+FAIL block_bidir/varlen_mixed/box/reference/box_pred: 0.0271027 exceeds 0.00668645
+FAIL block_bidir/varlen_mixed/box/reference/iou_prob: 0.0564955 exceeds 0.0133917
+FAIL block_bidir/varlen_mixed/box/reference/same_center_iou: 0.0564955 exceeds 0.0486256
+FAIL block_bidir/varlen_mixed/box/separate/box_pred: 0.0195065 exceeds 0.00668645
+FAIL block_bidir/varlen_mixed/box/separate/iou_prob: 0.058735 exceeds 0.0133917
+FAIL block_bidir/varlen_mixed/box/separate/same_center_iou: 0.058735 exceeds 0.0486256
+FAIL block_bidir/varlen_mixed/box/old/box_pred: 0.0227436 exceeds 0.00668645
+FAIL block_bidir/varlen_mixed/box/old/iou_prob: 0.0579734 exceeds 0.0133917
+FAIL block_bidir/varlen_mixed/box/old/same_center_iou: 0.0579734 exceeds 0.0486256
+FAIL block_bidir/qfirst_fresh_vs_alone/same_center_box: 0.0598152 exceeds 0.0363202
+Real-weight box-center comparisons: 57/66
+Real-weight decision comparisons: 234/234
+api example: {'any': False, 'argmax': 5, 'count_frames_naive': 0, 'none_conformal': True, 'top': [], 'count_frames': 0, 'count_events': 0} {'query': 35.47, 'total': 35.51}
+causal/box/cached_vs_alone/presence_logit     9.385e-02
+causal/box/cached_vs_alone/presence_prob      1.101e-03
+causal/box/cached_vs_alone/box_pred           2.018e-01
+causal/box/cached_vs_alone/iou_logit          1.761e-01
+causal/box/cached_vs_alone/iou_prob           2.538e-02
+causal/box/cached_vs_alone/same_center_box    6.857e-03
+causal/box/cached_vs_alone/same_center_iou    1.708e-03
+causal/box/cached_vs_alone/patch_box          4.129e-02
+causal/box/cached_vs_alone/patch_iou          2.755e-02
+causal/box/cached_vs_alone/center_regret      4.870e-01
+causal/box/cached_vs_alone/decision_agreement 1.000e+00
+causal/box/fresh_vs_alone/presence_logit      1.818e-01
+causal/box/fresh_vs_alone/presence_prob       3.273e-03
+causal/box/fresh_vs_alone/box_pred            1.179e-01
+causal/box/fresh_vs_alone/iou_logit           4.619e-01
+causal/box/fresh_vs_alone/iou_prob            8.198e-02
+causal/box/fresh_vs_alone/same_center_box     2.499e-02
+causal/box/fresh_vs_alone/same_center_iou     4.759e-02
+causal/box/fresh_vs_alone/patch_box           2.499e-02
+causal/box/fresh_vs_alone/patch_iou           4.759e-02
+causal/box/fresh_vs_alone/center_regret       2.374e-01
+causal/box/fresh_vs_alone/decision_agreement  1.000e+00
+causal/box/repeat                             0.000e+00
+causal/noul/cached_vs_alone/typed_prob        4.870e-03
+causal/noul/cached_vs_alone/decision_agreement 1.000e+00
+causal/noul/fresh_vs_alone/typed_prob         1.699e-02
+causal/noul/fresh_vs_alone/decision_agreement 1.000e+00
+causal/noul/repeat                            0.000e+00
+causal/choice/cached_vs_alone/typed_prob      4.094e-04
+causal/choice/cached_vs_alone/decision_agreement 1.000e+00
+causal/choice/fresh_vs_alone/typed_prob       1.859e-03
+causal/choice/fresh_vs_alone/decision_agreement 1.000e+00
+causal/choice/repeat                          0.000e+00
+causal/varlen_mixed/box/reference/presence_logit 4.481e-02
+causal/varlen_mixed/box/reference/presence_prob 7.000e-03
+causal/varlen_mixed/box/reference/box_pred    2.424e-02
+causal/varlen_mixed/box/reference/iou_logit   5.075e-01
+causal/varlen_mixed/box/reference/iou_prob    8.321e-02
+causal/varlen_mixed/box/reference/same_center_box 2.424e-02
+causal/varlen_mixed/box/reference/same_center_iou 8.321e-02
+causal/varlen_mixed/box/reference/patch_box   2.424e-02
+causal/varlen_mixed/box/reference/patch_iou   8.321e-02
+causal/varlen_mixed/box/reference/center_regret 0.000e+00
+causal/varlen_mixed/box/reference/decision_agreement 1.000e+00
+causal/varlen_mixed/box/separate/presence_logit 1.030e-01
+causal/varlen_mixed/box/separate/presence_prob 9.935e-03
+causal/varlen_mixed/box/separate/box_pred     1.759e-02
+causal/varlen_mixed/box/separate/iou_logit    5.352e-01
+causal/varlen_mixed/box/separate/iou_prob     8.846e-02
+causal/varlen_mixed/box/separate/same_center_box 1.759e-02
+causal/varlen_mixed/box/separate/same_center_iou 8.846e-02
+causal/varlen_mixed/box/separate/decision_agreement 1.000e+00
+causal/varlen_mixed/box/old/presence_logit    6.987e-02
+causal/varlen_mixed/box/old/presence_prob     1.100e-02
+causal/varlen_mixed/box/old/box_pred          1.984e-02
+causal/varlen_mixed/box/old/iou_logit         5.216e-01
+causal/varlen_mixed/box/old/iou_prob          8.588e-02
+causal/varlen_mixed/box/old/same_center_box   1.984e-02
+causal/varlen_mixed/box/old/same_center_iou   8.588e-02
+causal/varlen_mixed/box/old/decision_agreement 1.000e+00
+causal/varlen_mixed/box/chunked/presence_logit 5.904e-02
+causal/varlen_mixed/box/chunked/presence_prob 8.447e-03
+causal/varlen_mixed/box/chunked/box_pred      4.547e-03
+causal/varlen_mixed/box/chunked/iou_logit     1.074e-02
+causal/varlen_mixed/box/chunked/iou_prob      1.358e-03
+causal/varlen_mixed/box/chunked/same_center_box 4.547e-03
+causal/varlen_mixed/box/chunked/same_center_iou 1.358e-03
+causal/varlen_mixed/box/chunked/decision_agreement 1.000e+00
+causal/varlen_mixed/noul/reference/typed_prob 1.795e-02
+causal/varlen_mixed/noul/reference/decision_agreement 1.000e+00
+causal/varlen_mixed/noul/separate/typed_prob  1.780e-02
+causal/varlen_mixed/noul/separate/decision_agreement 1.000e+00
+causal/varlen_mixed/noul/old/typed_prob       1.831e-02
+causal/varlen_mixed/noul/old/decision_agreement 1.000e+00
+causal/varlen_mixed/noul/chunked/typed_prob   3.301e-03
+causal/varlen_mixed/noul/chunked/decision_agreement 1.000e+00
+causal/varlen_mixed/choice/reference/typed_prob 5.597e-03
+causal/varlen_mixed/choice/reference/decision_agreement 1.000e+00
+causal/varlen_mixed/choice/separate/typed_prob 5.712e-03
+causal/varlen_mixed/choice/separate/decision_agreement 1.000e+00
+causal/varlen_mixed/choice/old/typed_prob     5.270e-03
+causal/varlen_mixed/choice/old/decision_agreement 1.000e+00
+causal/varlen_mixed/choice/chunked/typed_prob 1.081e-03
+causal/varlen_mixed/choice/chunked/decision_agreement 1.000e+00
+causal/isolate_others_maxdiff                 0.000e+00
+causal/isolate_changed                        7.747e-01
+causal/qfirst_fresh_vs_alone/presence_logit   3.009e-01
+causal/qfirst_fresh_vs_alone/presence_prob    2.371e-02
+causal/qfirst_fresh_vs_alone/box_pred         2.180e-01
+causal/qfirst_fresh_vs_alone/iou_logit        6.560e-01
+causal/qfirst_fresh_vs_alone/iou_prob         8.428e-02
+causal/qfirst_fresh_vs_alone/same_center_box  9.247e-02
+causal/qfirst_fresh_vs_alone/same_center_iou  1.526e-02
+causal/qfirst_fresh_vs_alone/patch_box        9.247e-02
+causal/qfirst_fresh_vs_alone/patch_iou        1.526e-02
+causal/qfirst_fresh_vs_alone/center_regret    1.778e-01
+causal/qfirst_fresh_vs_alone/decision_agreement 1.000e+00
+causal/box/image0/cached_vs_hf_plain_forward/presence_logit 2.131e-02
+causal/box/image0/cached_vs_hf_plain_forward/presence_prob 2.085e-04
+causal/box/image0/cached_vs_hf_plain_forward/box_pred 1.442e-03
+causal/box/image0/cached_vs_hf_plain_forward/iou_logit 7.219e-03
+causal/box/image0/cached_vs_hf_plain_forward/iou_prob 1.435e-03
+causal/box/image0/cached_vs_hf_plain_forward/same_center_box 1.442e-03
+causal/box/image0/cached_vs_hf_plain_forward/same_center_iou 1.435e-03
+causal/box/image0/cached_vs_hf_plain_forward/center_regret 0.000e+00
+causal/box/image0/cached_vs_hf_plain_forward/decision_agreement 1.000e+00
+causal/box/image1/cached_vs_hf_plain_forward/presence_logit 5.082e-02
+causal/box/image1/cached_vs_hf_plain_forward/presence_prob 1.040e-03
+causal/box/image1/cached_vs_hf_plain_forward/box_pred 3.736e-03
+causal/box/image1/cached_vs_hf_plain_forward/iou_logit 2.535e-03
+causal/box/image1/cached_vs_hf_plain_forward/iou_prob 4.834e-04
+causal/box/image1/cached_vs_hf_plain_forward/same_center_box 3.736e-03
+causal/box/image1/cached_vs_hf_plain_forward/same_center_iou 4.834e-04
+causal/box/image1/cached_vs_hf_plain_forward/center_regret 0.000e+00
+causal/box/image1/cached_vs_hf_plain_forward/decision_agreement 1.000e+00
+causal/box/image2/cached_vs_hf_plain_forward/presence_logit 5.928e-02
+causal/box/image2/cached_vs_hf_plain_forward/presence_prob 4.411e-04
+causal/box/image2/cached_vs_hf_plain_forward/box_pred 1.834e-03
+causal/box/image2/cached_vs_hf_plain_forward/iou_logit 5.053e-03
+causal/box/image2/cached_vs_hf_plain_forward/iou_prob 1.037e-03
+causal/box/image2/cached_vs_hf_plain_forward/same_center_box 1.834e-03
+causal/box/image2/cached_vs_hf_plain_forward/same_center_iou 1.037e-03
+causal/box/image2/cached_vs_hf_plain_forward/center_regret 0.000e+00
+causal/box/image2/cached_vs_hf_plain_forward/decision_agreement 1.000e+00
+causal/box/image3/cached_vs_hf_plain_forward/presence_logit 2.493e-02
+causal/box/image3/cached_vs_hf_plain_forward/presence_prob 3.394e-04
+causal/box/image3/cached_vs_hf_plain_forward/box_pred 4.677e-03
+causal/box/image3/cached_vs_hf_plain_forward/iou_logit 2.302e-02
+causal/box/image3/cached_vs_hf_plain_forward/iou_prob 4.704e-03
+causal/box/image3/cached_vs_hf_plain_forward/same_center_box 4.677e-03
+causal/box/image3/cached_vs_hf_plain_forward/same_center_iou 4.704e-03
+causal/box/image3/cached_vs_hf_plain_forward/center_regret 0.000e+00
+causal/box/image3/cached_vs_hf_plain_forward/decision_agreement 1.000e+00
+causal/box/image4/cached_vs_hf_plain_forward/presence_logit 3.614e-03
+causal/box/image4/cached_vs_hf_plain_forward/presence_prob 2.211e-05
+causal/box/image4/cached_vs_hf_plain_forward/box_pred 6.994e-03
+causal/box/image4/cached_vs_hf_plain_forward/iou_logit 1.521e-03
+causal/box/image4/cached_vs_hf_plain_forward/iou_prob 2.541e-04
+causal/box/image4/cached_vs_hf_plain_forward/same_center_box 6.994e-03
+causal/box/image4/cached_vs_hf_plain_forward/same_center_iou 2.541e-04
+causal/box/image4/cached_vs_hf_plain_forward/center_regret 0.000e+00
+causal/box/image4/cached_vs_hf_plain_forward/decision_agreement 1.000e+00
+causal/box/image5/cached_vs_hf_plain_forward/presence_logit 7.669e-02
+causal/box/image5/cached_vs_hf_plain_forward/presence_prob 7.891e-04
+causal/box/image5/cached_vs_hf_plain_forward/box_pred 2.011e-01
+causal/box/image5/cached_vs_hf_plain_forward/iou_logit 1.728e-01
+causal/box/image5/cached_vs_hf_plain_forward/iou_prob 2.489e-02
+causal/box/image5/cached_vs_hf_plain_forward/center_regret 4.969e-01
+causal/box/image5/cached_vs_hf_plain_forward/decision_agreement 1.000e+00
+causal/clip/noul/cached_vs_alone/typed_prob   4.024e-03
+causal/clip/noul/cached_vs_alone/decision_agreement 1.000e+00
+causal/clip/noul/fresh_vs_alone/typed_prob    2.121e-02
+causal/clip/noul/fresh_vs_alone/decision_agreement 1.000e+00
+causal/clip/choice/cached_vs_alone/typed_prob 3.356e-04
+causal/clip/choice/cached_vs_alone/decision_agreement 1.000e+00
+causal/clip/choice/fresh_vs_alone/typed_prob  1.840e-03
+causal/clip/choice/fresh_vs_alone/decision_agreement 1.000e+00
+causal/clip/qfirst_fresh_vs_alone/typed_prob  8.848e-03
+causal/clip/qfirst_fresh_vs_alone/decision_agreement 1.000e+00
+block_bidir/box/cached_vs_alone/presence_logit 6.678e-02
+block_bidir/box/cached_vs_alone/presence_prob 1.645e-03
+block_bidir/box/cached_vs_alone/box_pred      6.910e-02
+block_bidir/box/cached_vs_alone/iou_logit     7.728e-01
+block_bidir/box/cached_vs_alone/iou_prob      1.440e-01
+block_bidir/box/cached_vs_alone/same_center_box 5.746e-03
+block_bidir/box/cached_vs_alone/same_center_iou 5.179e-03
+block_bidir/box/cached_vs_alone/patch_box     4.010e-02
+block_bidir/box/cached_vs_alone/patch_iou     2.909e-02
+block_bidir/box/cached_vs_alone/center_regret 3.939e-01
+block_bidir/box/cached_vs_alone/decision_agreement 1.000e+00
+block_bidir/box/fresh_vs_alone/presence_logit 2.713e-01
+block_bidir/box/fresh_vs_alone/presence_prob  1.140e-02
+block_bidir/box/fresh_vs_alone/box_pred       1.219e-01
+block_bidir/box/fresh_vs_alone/iou_logit      8.429e-01
+block_bidir/box/fresh_vs_alone/iou_prob       1.543e-01
+block_bidir/box/fresh_vs_alone/same_center_box 4.393e-02
+block_bidir/box/fresh_vs_alone/same_center_iou 5.476e-02
+block_bidir/box/fresh_vs_alone/patch_box      4.512e-02
+block_bidir/box/fresh_vs_alone/patch_iou      5.476e-02
+block_bidir/box/fresh_vs_alone/center_regret  3.939e-01
+block_bidir/box/fresh_vs_alone/decision_agreement 1.000e+00
+block_bidir/box/repeat                        0.000e+00
+block_bidir/noul/cached_vs_alone/typed_prob   3.686e-03
+block_bidir/noul/cached_vs_alone/decision_agreement 1.000e+00
+block_bidir/noul/fresh_vs_alone/typed_prob    1.631e-02
+block_bidir/noul/fresh_vs_alone/decision_agreement 1.000e+00
+block_bidir/noul/repeat                       0.000e+00
+block_bidir/choice/cached_vs_alone/typed_prob 2.038e-04
+block_bidir/choice/cached_vs_alone/decision_agreement 1.000e+00
+block_bidir/choice/fresh_vs_alone/typed_prob  1.742e-03
+block_bidir/choice/fresh_vs_alone/decision_agreement 1.000e+00
+block_bidir/choice/repeat                     0.000e+00
+block_bidir/varlen_mixed/box/reference/presence_logit 4.842e-02
+block_bidir/varlen_mixed/box/reference/presence_prob 9.682e-03
+block_bidir/varlen_mixed/box/reference/box_pred 2.710e-02
+block_bidir/varlen_mixed/box/reference/iou_logit 3.191e-01
+block_bidir/varlen_mixed/box/reference/iou_prob 5.650e-02
+block_bidir/varlen_mixed/box/reference/same_center_box 2.710e-02
+block_bidir/varlen_mixed/box/reference/same_center_iou 5.650e-02
+block_bidir/varlen_mixed/box/reference/patch_box 2.710e-02
+block_bidir/varlen_mixed/box/reference/patch_iou 5.650e-02
+block_bidir/varlen_mixed/box/reference/center_regret 0.000e+00
+block_bidir/varlen_mixed/box/reference/decision_agreement 1.000e+00
+block_bidir/varlen_mixed/box/separate/presence_logit 7.504e-02
+block_bidir/varlen_mixed/box/separate/presence_prob 1.160e-02
+block_bidir/varlen_mixed/box/separate/box_pred 1.951e-02
+block_bidir/varlen_mixed/box/separate/iou_logit 3.308e-01
+block_bidir/varlen_mixed/box/separate/iou_prob 5.874e-02
+block_bidir/varlen_mixed/box/separate/same_center_box 1.951e-02
+block_bidir/varlen_mixed/box/separate/same_center_iou 5.874e-02
+block_bidir/varlen_mixed/box/separate/decision_agreement 1.000e+00
+block_bidir/varlen_mixed/box/old/presence_logit 2.860e-02
+block_bidir/varlen_mixed/box/old/presence_prob 5.745e-03
+block_bidir/varlen_mixed/box/old/box_pred     2.274e-02
+block_bidir/varlen_mixed/box/old/iou_logit    3.268e-01
+block_bidir/varlen_mixed/box/old/iou_prob     5.797e-02
+block_bidir/varlen_mixed/box/old/same_center_box 2.274e-02
+block_bidir/varlen_mixed/box/old/same_center_iou 5.797e-02
+block_bidir/varlen_mixed/box/old/decision_agreement 1.000e+00
+block_bidir/varlen_mixed/box/chunked/presence_logit 4.908e-02
+block_bidir/varlen_mixed/box/chunked/presence_prob 6.082e-03
+block_bidir/varlen_mixed/box/chunked/box_pred 4.735e-03
+block_bidir/varlen_mixed/box/chunked/iou_logit 1.905e-02
+block_bidir/varlen_mixed/box/chunked/iou_prob 2.864e-03
+block_bidir/varlen_mixed/box/chunked/same_center_box 4.735e-03
+block_bidir/varlen_mixed/box/chunked/same_center_iou 2.864e-03
+block_bidir/varlen_mixed/box/chunked/decision_agreement 1.000e+00
+block_bidir/varlen_mixed/noul/reference/typed_prob 1.674e-02
+block_bidir/varlen_mixed/noul/reference/decision_agreement 1.000e+00
+block_bidir/varlen_mixed/noul/separate/typed_prob 1.983e-02
+block_bidir/varlen_mixed/noul/separate/decision_agreement 1.000e+00
+block_bidir/varlen_mixed/noul/old/typed_prob  1.605e-02
+block_bidir/varlen_mixed/noul/old/decision_agreement 1.000e+00
+block_bidir/varlen_mixed/noul/chunked/typed_prob 4.986e-04
+block_bidir/varlen_mixed/noul/chunked/decision_agreement 1.000e+00
+block_bidir/varlen_mixed/choice/reference/typed_prob 5.196e-03
+block_bidir/varlen_mixed/choice/reference/decision_agreement 1.000e+00
+block_bidir/varlen_mixed/choice/separate/typed_prob 5.173e-03
+block_bidir/varlen_mixed/choice/separate/decision_agreement 1.000e+00
+block_bidir/varlen_mixed/choice/old/typed_prob 4.865e-03
+block_bidir/varlen_mixed/choice/old/decision_agreement 1.000e+00
+block_bidir/varlen_mixed/choice/chunked/typed_prob 2.437e-04
+block_bidir/varlen_mixed/choice/chunked/decision_agreement 1.000e+00
+block_bidir/isolate_others_maxdiff            0.000e+00
+block_bidir/isolate_changed                   6.302e-01
+block_bidir/qfirst_fresh_vs_alone/presence_logit 2.464e-01
+block_bidir/qfirst_fresh_vs_alone/presence_prob 1.953e-02
+block_bidir/qfirst_fresh_vs_alone/box_pred    2.541e-01
+block_bidir/qfirst_fresh_vs_alone/iou_logit   6.269e-01
+block_bidir/qfirst_fresh_vs_alone/iou_prob    7.852e-02
+block_bidir/qfirst_fresh_vs_alone/same_center_box 5.982e-02
+block_bidir/qfirst_fresh_vs_alone/same_center_iou 8.879e-03
+block_bidir/qfirst_fresh_vs_alone/patch_box   6.332e-02
+block_bidir/qfirst_fresh_vs_alone/patch_iou   8.879e-03
+block_bidir/qfirst_fresh_vs_alone/center_regret 2.128e-01
+block_bidir/qfirst_fresh_vs_alone/decision_agreement 1.000e+00
+block_bidir/clip/noul/cached_vs_alone/typed_prob 3.041e-03
+block_bidir/clip/noul/cached_vs_alone/decision_agreement 1.000e+00
+block_bidir/clip/noul/fresh_vs_alone/typed_prob 1.603e-02
+block_bidir/clip/noul/fresh_vs_alone/decision_agreement 1.000e+00
+block_bidir/clip/choice/cached_vs_alone/typed_prob 2.049e-04
+block_bidir/clip/choice/cached_vs_alone/decision_agreement 1.000e+00
+block_bidir/clip/choice/fresh_vs_alone/typed_prob 2.235e-03
+block_bidir/clip/choice/fresh_vs_alone/decision_agreement 1.000e+00
+block_bidir/clip/qfirst_fresh_vs_alone/typed_prob 6.019e-03
+block_bidir/clip/qfirst_fresh_vs_alone/decision_agreement 1.000e+00
+api/cached_vs_fresh_p                         7.600e-03
+api/clips_short_cached_vs_fresh               1.880e-02
+N=6 images, bank Lp ok
+SCAN_EQUIVALENCE_FAIL
+fault exit=1

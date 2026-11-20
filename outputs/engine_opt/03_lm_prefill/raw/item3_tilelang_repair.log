@@ -1,0 +1,40 @@
+Collecting z3-solver==4.15.4.0
+  Downloading z3_solver-4.15.4.0-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (602 bytes)
+Collecting apache-tvm-ffi<0.1.13,>=0.1.11
+  Downloading apache_tvm_ffi-0.1.12-cp312-abi3-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (6.2 kB)
+Collecting torch-c-dlpack-ext
+  Downloading torch_c_dlpack_ext-0.1.5-cp313-cp313-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (14 kB)
+Downloading z3_solver-4.15.4.0-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (29.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 29.3/29.3 MB 239.5 MB/s  0:00:00
+Downloading apache_tvm_ffi-0.1.12-cp312-abi3-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (2.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.7/2.7 MB 216.6 MB/s  0:00:00
+Downloading torch_c_dlpack_ext-0.1.5-cp313-cp313-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (755 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 755.0/755.0 kB 63.6 MB/s  0:00:00
+Installing collected packages: z3-solver, torch-c-dlpack-ext, apache-tvm-ffi
+
+Successfully installed apache-tvm-ffi-0.1.12 torch-c-dlpack-ext-0.1.5 z3-solver-4.15.4.0
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    import flash_qla,tilelang; print(tilelang.__version__)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/item3-extras/flash_qla/__init__.py", line 6, in <module>
+    from flash_qla.ops.gated_delta_rule.chunk import (
+    ...<3 lines>...
+    )
+  File "/content/item3-extras/flash_qla/ops/__init__.py", line 4, in <module>
+    from .gated_delta_rule import chunk_gated_delta_rule
+  File "/content/item3-extras/flash_qla/ops/gated_delta_rule/__init__.py", line 4, in <module>
+    from flash_qla.ops.gated_delta_rule.chunk import (
+    ...<3 lines>...
+    )
+  File "/content/item3-extras/flash_qla/ops/gated_delta_rule/chunk/__init__.py", line 14, in <module>
+    if tilelang.contrib.nvcc.get_target_compute_version() == "9.0":
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "python/tvm_ffi/cython/function.pxi", line 968, in tvm_ffi.core.Function.__call__
+  File "<unknown>", line 0, in TVMFFIPyCallback(void*, TVMFFIAny const*, int, TVMFFIAny*)
+  File "<unknown>", line 0, in TVMFFIPyCallManager::ForwardPyErrorToFFI()
+  File "<unknown>", line 0, in TVMFFICyErrorSetRaisedFromPyError(_object*)
+  File "/content/item3-extras/tilelang/contrib/nvcc.py", line 493, in get_target_compute_version
+    raise ValueError(
+    
+ValueError: No CUDA architecture was specified or GPU detected. Specify it with a target config such as {'kind': 'cuda', 'arch': 'sm_90'}.

@@ -1,0 +1,53 @@
+features exit=0
+pushed /content/out/scan/item7_final_features.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item7_final_features.json -> Vision-Decision/collection-scan-results
+video_checks exit=0
+pushed /content/out/scan/item7_final_video_checks.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item7_final_video_checks.json -> Vision-Decision/collection-scan-results
+fresh exit=0
+pushed /content/out/scan/item7_final_fresh.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item7_final_fresh.json -> Vision-Decision/collection-scan-results
+video exit=0
+pushed /content/out/scan/item7_final_video.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item7_final_video.json -> Vision-Decision/collection-scan-results
+singleton exit=0
+pushed /content/out/scan/item7_final_singleton.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item7_final_singleton.json -> Vision-Decision/collection-scan-results
+interleaving exit=0
+pushed /content/out/scan/item7_final_interleaving.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item7_final_interleaving.json -> Vision-Decision/collection-scan-results
+scheduled exit=0
+pushed /content/out/scan/item7_final_scheduled.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item7_final_scheduled.json -> Vision-Decision/collection-scan-results
+real exit=0
+pushed /content/out/scan/item7_final_real.log -> Vision-Decision/collection-scan-results
+equiv exit=0
+pushed /content/out/scan/item7_final_equiv.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item7_final_equiv.json -> Vision-Decision/collection-scan-results
+diag exit=0
+pushed /content/out/scan/item7_final_diag.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item7_final_diag.json -> Vision-Decision/collection-scan-results
+kernels exit=0
+pushed /content/out/scan/item7_final_kernels.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item7_final_kernels.json -> Vision-Decision/collection-scan-results
+fresh_vllm exit=0
+pushed /content/out/scan/item7_final_fresh_vllm.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item7_final_fresh_vllm.json -> Vision-Decision/collection-scan-results
+fresh_sglang exit=0
+pushed /content/out/scan/item7_final_fresh_sglang.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item7_final_fresh_sglang.json -> Vision-Decision/collection-scan-results
+video_tuned exit=0
+pushed /content/out/scan/item7_final_video_tuned.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item7_final_video_tuned.json -> Vision-Decision/collection-scan-results
+video_vllm exit=0
+pushed /content/out/scan/item7_final_video_vllm.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item7_final_video_vllm.json -> Vision-Decision/collection-scan-results
+video_sglang exit=0
+pushed /content/out/scan/item7_final_video_sglang.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item7_final_video_sglang.json -> Vision-Decision/collection-scan-results
+scheduler_vllm exit=0
+pushed /content/out/scan/item7_final_scheduler_vllm.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item7_final_scheduler_vllm.json -> Vision-Decision/collection-scan-results
+scheduler_sglang exit=0
+pushed /content/out/scan/item7_final_scheduler_sglang.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item7_final_scheduler_sglang.json -> Vision-Decision/collection-scan-results

@@ -1,0 +1,9 @@
+before exit=0
+pushed /content/out/scan/item2_before.json -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item2_before.log -> Vision-Decision/collection-scan-results
+profile_before exit=0
+pushed /content/out/scan/item2_profile_before.json -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item2_profile_before.log -> Vision-Decision/collection-scan-results
+tune exit=0
+pushed /content/out/scan/item2_tune.json -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item2_tune.log -> Vision-Decision/collection-scan-results

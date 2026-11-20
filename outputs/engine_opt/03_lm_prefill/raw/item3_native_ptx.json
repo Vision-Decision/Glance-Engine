@@ -1,0 +1,149 @@
+[
+ {
+  "target": ".target sm_120a",
+  "descriptor_shapes": [
+   "128x32xbf16",
+   "128x32xbf16",
+   "128x128xbf16"
+  ],
+  "architecture": {
+   "backend": "cuda",
+   "arch": 120,
+   "warp_size": 32
+  },
+  "warps": 8,
+  "stages": 3,
+  "shared_bytes": 49184,
+  "instructions": {
+   "cp.async.bulk.tensor.2d.shared": 9,
+   "mma.sync.aligned.m16n8k16.row.col.f32.bf16.bf16.f32": 64,
+   "cp.async.bulk.tensor.2d.global.shared": 1
+  }
+ },
+ {
+  "target": ".target sm_120a",
+  "descriptor_shapes": [
+   "128x64xbf16",
+   "128x64xbf16",
+   "128x128xbf16"
+  ],
+  "architecture": {
+   "backend": "cuda",
+   "arch": 120,
+   "warp_size": 32
+  },
+  "warps": 8,
+  "stages": 2,
+  "shared_bytes": 49176,
+  "instructions": {
+   "cp.async.bulk.tensor.2d.shared": 6,
+   "mma.sync.aligned.m16n8k16.row.col.f32.bf16.bf16.f32": 128,
+   "cp.async.bulk.tensor.2d.global.shared": 1
+  }
+ },
+ {
+  "target": ".target sm_120a",
+  "descriptor_shapes": [
+   "128x64xbf16",
+   "128x64xbf16",
+   "128x128xbf16"
+  ],
+  "architecture": {
+   "backend": "cuda",
+   "arch": 120,
+   "warp_size": 32
+  },
+  "warps": 8,
+  "stages": 3,
+  "shared_bytes": 98336,
+  "instructions": {
+   "cp.async.bulk.tensor.2d.shared": 9,
+   "mma.sync.aligned.m16n8k16.row.col.f32.bf16.bf16.f32": 128,
+   "cp.async.bulk.tensor.2d.global.shared": 1
+  }
+ },
+ {
+  "target": ".target sm_120a",
+  "descriptor_shapes": [
+   "128x64xbf16",
+   "64x64xbf16",
+   "128x64xbf16"
+  ],
+  "architecture": {
+   "backend": "cuda",
+   "arch": 120,
+   "warp_size": 32
+  },
+  "warps": 4,
+  "stages": 2,
+  "shared_bytes": 32792,
+  "instructions": {
+   "cp.async.bulk.tensor.2d.shared": 6,
+   "mma.sync.aligned.m16n8k16.row.col.f32.bf16.bf16.f32": 128,
+   "cp.async.bulk.tensor.2d.global.shared": 1
+  }
+ },
+ {
+  "target": ".target sm_120a",
+  "descriptor_shapes": [
+   "128x32xbf16",
+   "64x32xbf16",
+   "128x64xbf16"
+  ],
+  "architecture": {
+   "backend": "cuda",
+   "arch": 120,
+   "warp_size": 32
+  },
+  "warps": 4,
+  "stages": 3,
+  "shared_bytes": 32800,
+  "instructions": {
+   "cp.async.bulk.tensor.2d.shared": 9,
+   "mma.sync.aligned.m16n8k16.row.col.f32.bf16.bf16.f32": 64,
+   "cp.async.bulk.tensor.2d.global.shared": 1
+  }
+ },
+ {
+  "target": ".target sm_120a",
+  "descriptor_shapes": [
+   "64x64xbf16",
+   "128x64xbf16",
+   "64x128xbf16"
+  ],
+  "architecture": {
+   "backend": "cuda",
+   "arch": 120,
+   "warp_size": 32
+  },
+  "warps": 4,
+  "stages": 2,
+  "shared_bytes": 40984,
+  "instructions": {
+   "cp.async.bulk.tensor.2d.shared": 6,
+   "mma.sync.aligned.m16n8k16.row.col.f32.bf16.bf16.f32": 128,
+   "cp.async.bulk.tensor.2d.global.shared": 1
+  }
+ },
+ {
+  "target": ".target sm_120a",
+  "descriptor_shapes": [
+   "128x32xbf16",
+   "64x32xbf16",
+   "128x64xbf16"
+  ],
+  "architecture": {
+   "backend": "cuda",
+   "arch": 120,
+   "warp_size": 32
+  },
+  "warps": 4,
+  "stages": 3,
+  "shared_bytes": 32800,
+  "instructions": {
+   "cp.async.bulk.tensor.2d.shared": 9,
+   "mma.sync.aligned.m16n8k16.row.col.f32.bf16.bf16.f32": 64,
+   "cp.async.bulk.tensor.2d.global.shared": 1
+  }
+ }
+]

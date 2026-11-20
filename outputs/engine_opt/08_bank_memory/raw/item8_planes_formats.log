@@ -1,0 +1,30 @@
+Thu Nov 19 06:14:56 PM UTC 2026
+name, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 0 MiB
+GPU compute process list empty
+8d89e7d355d06df0ae9eb7b8e8bc8f454d61d23dd4affc27809f1ee54650c372  scan/engine.py
+bf0d851a393a539ddabc67871cf3aa846d93c74240b613f66fdfe47e70435cce  scan/bench_bank_memory.py
+461e390ffe56783ca996c6998f508fecb9cb35211f8efc3a053124e6c40bf8d3  scan/bench_bank_precision.py
+861cd9caac831ec807242058e95edf9f64953bf2616650ae4f7cdf45c0a22b0a  scan/bench_bank_tier.py
+dc095e1f3b72ae82f3e9b3d52dddf1f751b984612ca205037da8d8aa25b45cde  scan/bank_codec.py
+afc6ffa6ed928c4654de922acaae7c54ec099fcac8d9bcaa3327a3d64369a00b  scan/bank_kernels.py
+03c9775128922536c2a757f5dd2e1b55106f9334f3fbab57064c86458a2e75c5  scan/bank.py
+4d7ea94e9db7225ffc5976884587f93f8e0b3ba3cb3a6716788a500c8e93452e  scan/host_bank.py
+3aacc206f295a3ff2f6419327511f94c19e6efea2a3bb974de0d884621c77adf  speed/gdn_branch.py
+python -m scan.bench_bank_memory --stage formats --out /content/out/scan/item8_planes_formats.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 17313.03it/s]
+[transformers] Qwen3VL video processing does not apply the per-frame pixel cap the reference implementation (qwen-vl-utils) applies, so some videos cost far more tokens than they would there. In v5.22 the capped behavior will become the default and `cap_pixels_per_frame` will be removed. Pass `cap_pixels_per_frame=True` to adopt the reference behavior now, or `False` to keep the current behavior and silence this warning.
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/content/dv/scan/bench_bank_memory.py", line 172, in <module>
+    main()
+    ~~~~^^
+  File "/content/dv/scan/bench_bank_memory.py", line 167, in main
+    {"accounting": accounting, "probe": probe, "breakeven": breakeven, "formats": formats}[a.stage](bench.to_engine(), a, {})
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/dv/scan/bench_bank_memory.py", line 125, in formats
+    assert equal
+           ^^^^^
+AssertionError
+formats exit=1

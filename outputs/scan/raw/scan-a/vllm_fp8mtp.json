@@ -1,0 +1,108 @@
+{
+ "backend": "vllm",
+ "version": "0.34.0",
+ "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "engine_args": {
+  "model": "Qwen/Qwen3.5-4B",
+  "enable_prefix_caching": "True",
+  "max_model_len": "4096",
+  "limit_mm_per_prompt": "{'image': 1, 'video': 1}",
+  "gpu_memory_utilization": "0.85",
+  "seed": "0",
+  "max_num_seqs": "256",
+  "max_num_batched_tokens": "16384",
+  "async_scheduling": "True",
+  "mm_processor_kwargs": "{'max_pixels': 4194304, 'min_pixels': 16384}",
+  "quantization": "fp8",
+  "speculative_config": "{'method': 'mtp', 'num_speculative_tokens': 2}"
+ },
+ "args": {
+  "prep": "data/prep/eval_refcoco_val.jsonl",
+  "image_root": "/content/data/coco/train2014",
+  "parts": "clips,cached",
+  "kinds": "yesno,box",
+  "Ns": "8,64,256",
+  "Ns_fresh": "1,2,4,8,16,32,64",
+  "Tvs": "64,128,256,640",
+  "max_fresh_tokens": 16384,
+  "n_calls": 12,
+  "max_num_seqs": 256,
+  "max_batched": 16384,
+  "gpu_mem": 0.85,
+  "quant": "fp8",
+  "spec": "mtp",
+  "out": "/content/out/scan/vllm_fp8mtp.json"
+ },
+ "modes": {
+  "cached_Tv640_N8_yesno": {
+   "total_ms": 31.160190000264265,
+   "total_ms_p90": 31.436494900117395,
+   "n_calls": 12,
+   "cached_prompt_tokens_mean": 576.0,
+   "prompt_tokens_mean": 648.4583333333334
+  },
+  "cached_Tv640_N8_box": {
+   "total_ms": 98.55488950006475,
+   "total_ms_p90": 109.86372010002015,
+   "n_calls": 12,
+   "cached_prompt_tokens_mean": 576.0,
+   "prompt_tokens_mean": 693.5416666666666
+  },
+  "cached_Tv640_N64_yesno": {
+   "total_ms": 582.8040135002084,
+   "total_ms_p90": 584.772843999599,
+   "n_calls": 12,
+   "cached_prompt_tokens_mean": 567.0,
+   "prompt_tokens_mean": 645.1770833333334
+  },
+  "cached_Tv640_N64_box": {
+   "total_ms": 720.6721180000386,
+   "total_ms_p90": 744.8868959002539,
+   "n_calls": 12,
+   "cached_prompt_tokens_mean": 567.0,
+   "prompt_tokens_mean": 690.2604166666666
+  },
+  "cached_Tv640_N256_yesno": {
+   "total_ms": 2292.2918620001838,
+   "total_ms_p90": 2297.208524000598,
+   "n_calls": 12,
+   "cached_prompt_tokens_mean": 569.25,
+   "prompt_tokens_mean": 648.1536458333334
+  },
+  "cached_Tv640_N256_box": {
+   "total_ms": 2672.1791659997507,
+   "total_ms_p90": 2838.8767280003776,
+   "n_calls": 12,
+   "cached_prompt_tokens_mean": 569.25,
+   "prompt_tokens_mean": 693.2369791666666
+  },
+  "cached_Tv256_N8_yesno": {
+   "total_ms": 50.425069499851816,
+   "total_ms_p90": 50.609750100193196,
+   "n_calls": 12,
+   "cached_prompt_tokens_mean": 0.0,
+   "prompt_tokens_mean": 280.5833333333333
+  },
+  "cached_Tv256_N8_box": {
+   "total_ms": 115.8276194996688,
+   "total_ms_p90": 125.05043189948992,
+   "n_calls": 12,
+   "cached_prompt_tokens_mean": 0.0,
+   "prompt_tokens_mean": 325.6666666666667
+  },
+  "cached_Tv256_N64_yesno": {
+   "total_ms": 307.88372850020096,
+   "total_ms_p90": 313.1607380998503,
+   "n_calls": 12,
+   "cached_prompt_tokens_mean": 0.0,
+   "prompt_tokens_mean": 280.5833333333333
+  },
+  "cached_Tv256_N64_box": {
+   "total_ms": 479.3609574999209,
+   "total_ms_p90": 515.4920841000603,
+   "n_calls": 12,
+   "cached_prompt_tokens_mean": 0.0,
+   "prompt_tokens_mean": 325.6666666666667
+  }
+ }
+}

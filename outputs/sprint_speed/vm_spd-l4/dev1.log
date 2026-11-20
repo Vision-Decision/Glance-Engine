@@ -1,0 +1,48 @@
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights:  73%|███████▎  | 530/723 [00:00<00:00, 5285.00it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 6359.15it/s]
+equiv ref_lora {"vs_ref_lora": {"presence_absdiff_max": 0.0, "presence_absdiff_mean": 0.0, "piou_absdiff_max": 0.0, "box_px_maxdiff_max": 0.0, "box_px_maxdiff_mean": 0.0, "box_iou_vs_ref_min": 1.0, "box_iou_vs_ref_mean": 1.0, "typed_prob_absdiff_max": 0.0, "decision_agreement": 1.0, "acc50": 0.918918918918919, "acc50_ref": 0.918918918918919}, "vs_ref_merged": null}
+ref_lora  bs1_box_N1 {"prep_ms_median": 6.18, "model_ms_median": 309.34, "model_ms_p90": 312.07, "total_ms_median": 315.57, "total_ms_p90": 318.31, "q_per_s": 3.17, "n_calls": 10, "questions_per_call": 1}
+ref_lora  bs1_box_N2 {"prep_ms_median": 6.22, "model_ms_median": 310.57, "model_ms_p90": 313.48, "total_ms_median": 316.83, "total_ms_p90": 319.88, "q_per_s": 6.33, "n_calls": 10, "questions_per_call": 2}
+ref_lora  bs1_box_N4 {"prep_ms_median": 6.83, "model_ms_median": 317.47, "model_ms_p90": 320.15, "total_ms_median": 324.31, "total_ms_p90": 327.08, "q_per_s": 12.37, "n_calls": 10, "questions_per_call": 4}
+ref_lora  bs1_box_N8 {"prep_ms_median": 7.04, "model_ms_median": 320.89, "model_ms_p90": 329.41, "total_ms_median": 327.98, "total_ms_p90": 337.16, "q_per_s": 24.38, "n_calls": 10, "questions_per_call": 8}
+ref_lora  bs1_box_N16 {"prep_ms_median": 8.28, "model_ms_median": 354.03, "model_ms_p90": 389.53, "total_ms_median": 362.28, "total_ms_p90": 397.95, "q_per_s": 43.6, "n_calls": 10, "questions_per_call": 16}
+ref_lora  bs1_box_N32 {"prep_ms_median": 11.28, "model_ms_median": 435.53, "model_ms_p90": 552.09, "total_ms_median": 446.85, "total_ms_p90": 563.47, "q_per_s": 67.19, "n_calls": 10, "questions_per_call": 32}
+ref_lora  bs1_box_N64 {"prep_ms_median": 15.24, "model_ms_median": 603.21, "model_ms_p90": 858.91, "total_ms_median": 618.4, "total_ms_p90": 874.27, "q_per_s": 93.05, "n_calls": 10, "questions_per_call": 64}
+equiv ref_merged {"vs_ref_lora": {"presence_absdiff_max": 0.00507509708404541, "presence_absdiff_mean": 0.0002915848918417667, "piou_absdiff_max": 0.013351619243621826, "box_px_maxdiff_max": 37.05858135223389, "box_px_maxdiff_mean": 3.190769063665512, "box_iou_vs_ref_min": 0.8033786032580332, "box_iou_vs_ref_mean": 0.969450127812692, "typed_prob_absdiff_max": 0.010537981986999512, "decision_agreement": 1.0, "acc50": 0.918918918918919, "acc50_ref": 0.918918918918919}, "vs_ref_merged": {"presence_absdiff_max": 0.0, "presence_absdiff_mean": 0.0, "piou_absdiff_max": 0.0, "box_px_maxdiff_max": 0.0, "box_px_maxdiff_mean": 0.0, "box_iou_vs_ref_min": 1.0, "box_iou_vs_ref_mean": 1.0, "typed_prob_absdiff_max": 0.0, "decision_agreement": 1.0, "acc50": 0.918918918918919, "acc50_ref": 0.918918918918919}}
+ref_merged  bs1_box_N1 {"prep_ms_median": 6.04, "model_ms_median": 255.01, "model_ms_p90": 274.38, "total_ms_median": 261.05, "total_ms_p90": 280.49, "q_per_s": 3.75, "n_calls": 10, "questions_per_call": 1}
+ref_merged  bs1_box_N2 {"prep_ms_median": 6.36, "model_ms_median": 260.7, "model_ms_p90": 279.07, "total_ms_median": 267.14, "total_ms_p90": 285.4, "q_per_s": 7.39, "n_calls": 10, "questions_per_call": 2}
+ref_merged  bs1_box_N4 {"prep_ms_median": 6.6, "model_ms_median": 263.25, "model_ms_p90": 282.29, "total_ms_median": 269.84, "total_ms_p90": 289.17, "q_per_s": 14.52, "n_calls": 10, "questions_per_call": 4}
+ref_merged  bs1_box_N8 {"prep_ms_median": 7.22, "model_ms_median": 287.62, "model_ms_p90": 293.95, "total_ms_median": 294.87, "total_ms_p90": 301.12, "q_per_s": 27.61, "n_calls": 10, "questions_per_call": 8}
+ref_merged  bs1_box_N16 {"prep_ms_median": 8.39, "model_ms_median": 324.42, "model_ms_p90": 359.24, "total_ms_median": 332.84, "total_ms_p90": 367.62, "q_per_s": 47.6, "n_calls": 10, "questions_per_call": 16}
+ref_merged  bs1_box_N32 {"prep_ms_median": 10.71, "model_ms_median": 400.08, "model_ms_p90": 480.57, "total_ms_median": 410.89, "total_ms_p90": 491.25, "q_per_s": 74.82, "n_calls": 10, "questions_per_call": 32}
+ref_merged  bs1_box_N64 {"prep_ms_median": 15.31, "model_ms_median": 546.49, "model_ms_p90": 731.81, "total_ms_median": 561.75, "total_ms_p90": 747.05, "q_per_s": 105.29, "n_calls": 10, "questions_per_call": 64}
+equiv eng_eager {"vs_ref_lora": {"presence_absdiff_max": 0.006840825080871582, "presence_absdiff_mean": 0.0005279690661328904, "piou_absdiff_max": 0.00920194387435913, "box_px_maxdiff_max": 18.309173583984375, "box_px_maxdiff_mean": 2.0478786001814173, "box_iou_vs_ref_min": 0.8120381607600119, "box_iou_vs_ref_mean": 0.9788518943783138, "typed_prob_absdiff_max": 0.01244884729385376, "decision_agreement": 1.0, "acc50": 0.918918918918919, "acc50_ref": 0.918918918918919}, "vs_ref_merged": {"presence_absdiff_max": 0.00597226619720459, "presence_absdiff_mean": 0.00038379708186109013, "piou_absdiff_max": 0.01506274938583374, "box_px_maxdiff_max": 36.736144065856934, "box_px_maxdiff_mean": 3.0322376616457674, "box_iou_vs_ref_min": 0.8037319406843397, "box_iou_vs_ref_mean": 0.9722459902364142, "typed_prob_absdiff_max": 0.007818400859832764, "decision_agreement": 1.0, "acc50": 0.918918918918919, "acc50_ref": 0.918918918918919}}
+eng_eager  bs1_box_N1 {"prep_ms_median": 6.32, "vision_ms_median": 70.97, "lm_ms_median": 167.09, "model_ms_median": 238.23, "model_ms_p90": 247.43, "total_ms_median": 244.55, "total_ms_p90": 253.81, "q_per_s": 4.09, "n_calls": 10, "questions_per_call": 1}
+eng_eager  bs1_box_N2 {"prep_ms_median": 6.57, "vision_ms_median": 70.86, "lm_ms_median": 170.72, "model_ms_median": 238.67, "model_ms_p90": 247.15, "total_ms_median": 245.19, "total_ms_p90": 253.81, "q_per_s": 8.11, "n_calls": 10, "questions_per_call": 2}
+eng_eager  bs1_box_N4 {"prep_ms_median": 6.82, "vision_ms_median": 70.6, "lm_ms_median": 177.06, "model_ms_median": 247.49, "model_ms_p90": 251.43, "total_ms_median": 254.51, "total_ms_p90": 258.36, "q_per_s": 15.81, "n_calls": 10, "questions_per_call": 4}
+eng_eager  bs1_box_N8 {"prep_ms_median": 7.46, "vision_ms_median": 71.25, "lm_ms_median": 195.07, "model_ms_median": 266.13, "model_ms_p90": 279.17, "total_ms_median": 273.51, "total_ms_p90": 286.83, "q_per_s": 29.53, "n_calls": 10, "questions_per_call": 8}
+eng_eager  bs1_box_N16 {"prep_ms_median": 8.81, "vision_ms_median": 70.59, "lm_ms_median": 233.93, "model_ms_median": 305.12, "model_ms_p90": 341.18, "total_ms_median": 314.15, "total_ms_p90": 349.75, "q_per_s": 50.5, "n_calls": 10, "questions_per_call": 16}
+eng_eager  bs1_box_N32 {"prep_ms_median": 10.92, "vision_ms_median": 69.57, "lm_ms_median": 311.54, "model_ms_median": 382.31, "model_ms_p90": 507.56, "total_ms_median": 393.2, "total_ms_p90": 518.77, "q_per_s": 77.14, "n_calls": 10, "questions_per_call": 32}
+eng_eager  bs1_box_N64 {"prep_ms_median": 14.56, "vision_ms_median": 68.4, "lm_ms_median": 485.16, "model_ms_median": 550.51, "model_ms_p90": 727.42, "total_ms_median": 564.96, "total_ms_p90": 742.33, "q_per_s": 105.25, "n_calls": 10, "questions_per_call": 64}
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/content/dv/speed/bench_glance.py", line 313, in <module>
+    main()
+    ~~~~^^
+  File "/content/dv/speed/bench_glance.py", line 285, in main
+    rows = equiv_outputs(R, imgs, a.n_equiv)
+  File "/content/dv/speed/bench_glance.py", line 220, in equiv_outputs
+    out, _ = R.call([im["img"]], [qs], Nv=640)
+             ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "/content/dv/speed/bench_glance.py", line 104, in call
+    res, cache, vis = self.eng.run(E, host)
+                      ~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "/content/dv/speed/engine.py", line 361, in run
+    S[k].copy_(v)
+    ~~~~~~~~~~^^^
+RuntimeError: The size of tensor a (620) must match the size of tensor b (600) at non-singleton dimension 0
+exit 1

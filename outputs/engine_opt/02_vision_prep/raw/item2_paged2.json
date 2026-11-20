@@ -1,0 +1,478 @@
+{
+ "128": {
+  "rotary_exact": true,
+  "q_strides": [
+   [
+    1024,
+    64,
+    1
+   ],
+   [
+    1024,
+    64,
+    1
+   ]
+  ],
+  "single_kernels": {
+   "void pytorch_flash::flash_fwd_splitkv_kernel<Flash_fwd_kernel_traits<64, 64, 256, 4, false, false, cutlass::bfloat16_t, Flash_kernel_traits<64, 64, 256, 4, cutlass::bfloat16_t> >, false, false, false, false, true, false, true, false>(pytorch_flash::Flash_fwd_params)": 0.010367999999999995,
+   "void pytorch_flash::flash_fwd_splitkv_combine_kernel<Flash_fwd_kernel_traits<64, 64, 256, 4, false, false, cutlass::bfloat16_t, Flash_kernel_traits<64, 64, 256, 4, cutlass::bfloat16_t> >, 8, 1, true>(pytorch_flash::Flash_fwd_params)": 0.0033290000000000077
+  },
+  "single_loop_ms": 0.23852799832820892,
+  "varlen_signature": "(query: torch.Tensor, key: torch.Tensor, value: torch.Tensor, cu_seq_q: torch.Tensor, cu_seq_k: torch.Tensor | None, max_q: int, max_k: int, *, return_aux: torch.nn.attention.varlen.AuxRequest | None = None, scale: float | None = None, window_size: tuple[int, int] = (-1, -1), enable_gqa: bool = False, seqused_k: torch.Tensor | None = None, block_table: torch.Tensor | None = None, num_splits: int | None = None) -> torch.Tensor | tuple[torch.Tensor, torch.Tensor]",
+  "FLASH_ATTENTION": {
+   "error": {
+    "max_abs": 0.015625,
+    "mean_abs": 9.811944437387865e-06,
+    "relative_max": 0.004032257944345474,
+    "equal": false
+   },
+   "ms": 0.046112000942230225,
+   "kernels": {
+    "void pytorch_flash::flash_fwd_kernel<Flash_fwd_kernel_traits<64, 128, 128, 4, false, false, cutlass::bfloat16_t, Flash_kernel_traits<64, 128, 128, 4, cutlass::bfloat16_t> >, false, false, false, false, false, true, false, false>(pytorch_flash::Flash_fwd_params)": 0.030273000000000026
+   }
+  },
+  "CUDNN_ATTENTION": {
+   "error": {
+    "max_abs": 0.015625,
+    "mean_abs": 9.169545592158101e-06,
+    "relative_max": 0.004032257944345474,
+    "equal": false
+   },
+   "ms": 0.05951999872922897,
+   "kernels": {
+    "cudnn_generated_fort_native_sdpa_sm80_flash_fprop_wmma_f16_knob_1_128x64x64_4x1x1_cga1x1x1_kernel0_0": 0.04185399999999999
+   }
+  },
+  "EFFICIENT_ATTENTION": {
+   "error": {
+    "max_abs": 0.015625,
+    "mean_abs": 9.17755733098602e-06,
+    "relative_max": 0.004032257944345474,
+    "equal": false
+   },
+   "ms": 0.08736000210046768,
+   "kernels": {
+    "fmha_cutlassF_bf16_aligned_64x64_rf_sm80(PyTorchMemEffAttention::AttentionKernel<cutlass::bfloat16_t, cutlass::arch::Sm80, true, 64, 64, 64, true, true>::Params)": 0.065024,
+    "void at::native::vectorized_elementwise_kernel<2, at::native::FillFunctor<long>, std::array<char*, 1ul>, false>(int, at::native::FillFunctor<long>, std::array<char*, 1ul>)": 0.001759999999999991
+   }
+  },
+  "varlen_1": {
+   "error": {
+    "max_abs": 0.015625,
+    "mean_abs": 9.811944437387865e-06,
+    "relative_max": 0.004032257944345474,
+    "equal": false
+   },
+   "ms": 0.05769599974155426
+  },
+  "varlen_2": {
+   "error": {
+    "max_abs": 0.015625,
+    "mean_abs": 9.811944437387865e-06,
+    "relative_max": 0.004032257944345474,
+    "equal": false
+   },
+   "ms": 0.05711999908089638
+  },
+  "varlen_4": {
+   "error": {
+    "max_abs": 0.015625,
+    "mean_abs": 9.811944437387865e-06,
+    "relative_max": 0.004032257944345474,
+    "equal": false
+   },
+   "ms": 0.056063998490571976
+  },
+  "varlen_8": {
+   "error": {
+    "max_abs": 0.015625,
+    "mean_abs": 9.811944437387865e-06,
+    "relative_max": 0.004032257944345474,
+    "equal": false
+   },
+   "ms": 0.056352000683546066
+  },
+  "varlen_16": {
+   "error": {
+    "max_abs": 0.015625,
+    "mean_abs": 9.811944437387865e-06,
+    "relative_max": 0.004032257944345474,
+    "equal": false
+   },
+   "ms": 0.05526399984955788
+  },
+  "paged_1": {
+   "error": {
+    "max_abs": 0.015625,
+    "mean_abs": 9.811944437387865e-06,
+    "relative_max": 0.004032257944345474,
+    "equal": false
+   },
+   "ms": 0.06095999851822853,
+   "kernels": {
+    "void pytorch_flash::flash_fwd_splitkv_kernel<Flash_fwd_kernel_traits<64, 64, 128, 4, false, false, cutlass::bfloat16_t, Flash_kernel_traits<64, 64, 128, 4, cutlass::bfloat16_t> >, false, false, false, false, true, false, false, false>(pytorch_flash::Flash_fwd_params)": 0.03462400000000002,
+    "void at::native::vectorized_elementwise_kernel<2, at::native::FillFunctor<unsigned long>, std::array<char*, 1ul>, false>(int, at::native::FillFunctor<unsigned long>, std::array<char*, 1ul>)": 0.0009599999999999795
+   }
+  },
+  "paged_2": {
+   "error": {
+    "max_abs": 5.546875,
+    "mean_abs": 0.0050847516395151615,
+    "relative_max": 1.4314515590667725,
+    "equal": false
+   },
+   "ms": 0.10553599894046783,
+   "kernels": {
+    "void pytorch_flash::flash_fwd_splitkv_kernel<Flash_fwd_kernel_traits<64, 64, 256, 4, false, false, cutlass::bfloat16_t, Flash_kernel_traits<64, 64, 256, 4, cutlass::bfloat16_t> >, false, false, false, false, true, false, true, false>(pytorch_flash::Flash_fwd_params)": 0.05612700000000001,
+    "void pytorch_flash::flash_fwd_splitkv_combine_kernel<Flash_fwd_kernel_traits<64, 64, 256, 4, false, false, cutlass::bfloat16_t, Flash_kernel_traits<64, 64, 256, 4, cutlass::bfloat16_t> >, 8, 1, true>(pytorch_flash::Flash_fwd_params)": 0.016512,
+    "void at::native::vectorized_elementwise_kernel<2, at::native::FillFunctor<unsigned long>, std::array<char*, 1ul>, false>(int, at::native::FillFunctor<unsigned long>, std::array<char*, 1ul>)": 0.0008639999999999759
+   }
+  },
+  "paged_3": {
+   "error": {
+    "max_abs": 5.546875,
+    "mean_abs": 0.0050847516395151615,
+    "relative_max": 1.4314515590667725,
+    "equal": false
+   },
+   "ms": 0.11235199868679047,
+   "kernels": {
+    "void pytorch_flash::flash_fwd_splitkv_kernel<Flash_fwd_kernel_traits<64, 64, 256, 4, false, false, cutlass::bfloat16_t, Flash_kernel_traits<64, 64, 256, 4, cutlass::bfloat16_t> >, false, false, false, false, true, false, true, false>(pytorch_flash::Flash_fwd_params)": 0.05994,
+    "void pytorch_flash::flash_fwd_splitkv_combine_kernel<Flash_fwd_kernel_traits<64, 64, 256, 4, false, false, cutlass::bfloat16_t, Flash_kernel_traits<64, 64, 256, 4, cutlass::bfloat16_t> >, 8, 2, true>(pytorch_flash::Flash_fwd_params)": 0.016992999999999994,
+    "void at::native::vectorized_elementwise_kernel<2, at::native::FillFunctor<unsigned long>, std::array<char*, 1ul>, false>(int, at::native::FillFunctor<unsigned long>, std::array<char*, 1ul>)": 0.0008639999999999759
+   }
+  },
+  "paged_4": {
+   "error": {
+    "max_abs": 5.546875,
+    "mean_abs": 0.0050847516395151615,
+    "relative_max": 1.4314515590667725,
+    "equal": false
+   },
+   "ms": 0.11247999966144562,
+   "kernels": {
+    "void pytorch_flash::flash_fwd_splitkv_kernel<Flash_fwd_kernel_traits<64, 64, 256, 4, false, false, cutlass::bfloat16_t, Flash_kernel_traits<64, 64, 256, 4, cutlass::bfloat16_t> >, false, false, false, false, true, false, true, false>(pytorch_flash::Flash_fwd_params)": 0.06406800000000004,
+    "void pytorch_flash::flash_fwd_splitkv_combine_kernel<Flash_fwd_kernel_traits<64, 64, 256, 4, false, false, cutlass::bfloat16_t, Flash_kernel_traits<64, 64, 256, 4, cutlass::bfloat16_t> >, 8, 2, true>(pytorch_flash::Flash_fwd_params)": 0.017922000000000025,
+    "void at::native::vectorized_elementwise_kernel<2, at::native::FillFunctor<unsigned long>, std::array<char*, 1ul>, false>(int, at::native::FillFunctor<unsigned long>, std::array<char*, 1ul>)": 0.0008640000000000327
+   }
+  },
+  "mixed": {
+   "lengths": [
+    468,
+    234,
+    468,
+    234,
+    468,
+    234,
+    468,
+    234
+   ],
+   "error": {
+    "max_abs": 0.0078125,
+    "mean_abs": 6.647631380474195e-06,
+    "relative_max": 0.002016128972172737,
+    "equal": false
+   },
+   "reference_ms": 0.22819200158119202,
+   "varlen_ms": 0.052319999784231186
+  },
+  "dense_1": {
+   "error": {
+    "max_abs": 0.015625,
+    "mean_abs": 9.811944437387865e-06,
+    "relative_max": 0.004032257944345474,
+    "equal": false
+   },
+   "ms": 0.04630399867892265,
+   "kernels": {
+    "void pytorch_flash::flash_fwd_kernel<Flash_fwd_kernel_traits<64, 128, 128, 4, false, false, cutlass::bfloat16_t, Flash_kernel_traits<64, 128, 128, 4, cutlass::bfloat16_t> >, false, false, false, false, false, true, false, false>(pytorch_flash::Flash_fwd_params)": 0.030144000000000004
+   }
+  },
+  "dense_2": {
+   "error": {
+    "max_abs": 0.015625,
+    "mean_abs": 9.811944437387865e-06,
+    "relative_max": 0.004032257944345474,
+    "equal": false
+   },
+   "ms": 0.0459199994802475,
+   "kernels": {
+    "void pytorch_flash::flash_fwd_kernel<Flash_fwd_kernel_traits<64, 128, 128, 4, false, false, cutlass::bfloat16_t, Flash_kernel_traits<64, 128, 128, 4, cutlass::bfloat16_t> >, false, false, false, false, false, true, false, false>(pytorch_flash::Flash_fwd_params)": 0.030176000000000015
+   }
+  },
+  "dense_3": {
+   "error": {
+    "max_abs": 0.015625,
+    "mean_abs": 9.811944437387865e-06,
+    "relative_max": 0.004032257944345474,
+    "equal": false
+   },
+   "ms": 0.04652800038456917,
+   "kernels": {
+    "void pytorch_flash::flash_fwd_kernel<Flash_fwd_kernel_traits<64, 128, 128, 4, false, false, cutlass::bfloat16_t, Flash_kernel_traits<64, 128, 128, 4, cutlass::bfloat16_t> >, false, false, false, false, false, true, false, false>(pytorch_flash::Flash_fwd_params)": 0.030208
+   }
+  },
+  "dense_4": {
+   "error": {
+    "max_abs": 0.015625,
+    "mean_abs": 9.811944437387865e-06,
+    "relative_max": 0.004032257944345474,
+    "equal": false
+   },
+   "ms": 0.047231998294591904,
+   "kernels": {
+    "void pytorch_flash::flash_fwd_kernel<Flash_fwd_kernel_traits<64, 128, 128, 4, false, false, cutlass::bfloat16_t, Flash_kernel_traits<64, 128, 128, 4, cutlass::bfloat16_t> >, false, false, false, false, false, true, false, false>(pytorch_flash::Flash_fwd_params)": 0.030336000000000012
+   }
+  },
+  "dense_8": {
+   "error": {
+    "max_abs": 0.015625,
+    "mean_abs": 9.811944437387865e-06,
+    "relative_max": 0.004032257944345474,
+    "equal": false
+   },
+   "ms": 0.04623999819159508,
+   "kernels": {
+    "void pytorch_flash::flash_fwd_kernel<Flash_fwd_kernel_traits<64, 128, 128, 4, false, false, cutlass::bfloat16_t, Flash_kernel_traits<64, 128, 128, 4, cutlass::bfloat16_t> >, false, false, false, false, false, true, false, false>(pytorch_flash::Flash_fwd_params)": 0.03030499999999995
+   }
+  }
+ },
+ "256": {
+  "rotary_exact": true,
+  "q_strides": [
+   [
+    1024,
+    64,
+    1
+   ],
+   [
+    1024,
+    64,
+    1
+   ]
+  ],
+  "single_kernels": {
+   "void pytorch_flash::flash_fwd_splitkv_kernel<Flash_fwd_kernel_traits<64, 64, 256, 4, false, false, cutlass::bfloat16_t, Flash_kernel_traits<64, 64, 256, 4, cutlass::bfloat16_t> >, false, false, false, false, true, false, true, false>(pytorch_flash::Flash_fwd_params)": 0.030689000000000022,
+   "void pytorch_flash::flash_fwd_splitkv_combine_kernel<Flash_fwd_kernel_traits<64, 64, 256, 4, false, false, cutlass::bfloat16_t, Flash_kernel_traits<64, 64, 256, 4, cutlass::bfloat16_t> >, 8, 2, true>(pytorch_flash::Flash_fwd_params)": 0.00675200000000001
+  },
+  "single_loop_ms": 0.36185601353645325,
+  "varlen_signature": "(query: torch.Tensor, key: torch.Tensor, value: torch.Tensor, cu_seq_q: torch.Tensor, cu_seq_k: torch.Tensor | None, max_q: int, max_k: int, *, return_aux: torch.nn.attention.varlen.AuxRequest | None = None, scale: float | None = None, window_size: tuple[int, int] = (-1, -1), enable_gqa: bool = False, seqused_k: torch.Tensor | None = None, block_table: torch.Tensor | None = None, num_splits: int | None = None) -> torch.Tensor | tuple[torch.Tensor, torch.Tensor]",
+  "FLASH_ATTENTION": {
+   "error": {
+    "max_abs": 0.0078125,
+    "mean_abs": 9.89158343145391e-06,
+    "relative_max": 0.0017857142956927419,
+    "equal": false
+   },
+   "ms": 0.12508800625801086,
+   "kernels": {
+    "void pytorch_flash::flash_fwd_kernel<Flash_fwd_kernel_traits<64, 128, 128, 4, false, false, cutlass::bfloat16_t, Flash_kernel_traits<64, 128, 128, 4, cutlass::bfloat16_t> >, false, false, false, false, false, true, false, false>(pytorch_flash::Flash_fwd_params)": 0.10976
+   }
+  },
+  "CUDNN_ATTENTION": {
+   "error": {
+    "max_abs": 0.015625,
+    "mean_abs": 9.016390322358347e-06,
+    "relative_max": 0.0035714285913854837,
+    "equal": false
+   },
+   "ms": 0.13478399813175201,
+   "kernels": {
+    "cudnn_generated_fort_native_sdpa_sm80_flash_fprop_wmma_f16_knob_1_128x64x64_4x1x1_cga1x1x1_kernel0_0": 0.1167389999999998
+   }
+  },
+  "EFFICIENT_ATTENTION": {
+   "error": {
+    "max_abs": 0.015625,
+    "mean_abs": 9.020547622640152e-06,
+    "relative_max": 0.0035714285913854837,
+    "equal": false
+   },
+   "ms": 0.24201600253582,
+   "kernels": {
+    "fmha_cutlassF_bf16_aligned_64x64_rf_sm80(PyTorchMemEffAttention::AttentionKernel<cutlass::bfloat16_t, cutlass::arch::Sm80, true, 64, 64, 64, true, true>::Params)": 0.21878400000000012,
+    "void at::native::vectorized_elementwise_kernel<2, at::native::FillFunctor<long>, std::array<char*, 1ul>, false>(int, at::native::FillFunctor<long>, std::array<char*, 1ul>)": 0.0017919999999999163
+   }
+  },
+  "varlen_1": {
+   "error": {
+    "max_abs": 0.0078125,
+    "mean_abs": 9.89158343145391e-06,
+    "relative_max": 0.0017857142956927419,
+    "equal": false
+   },
+   "ms": 0.13600000739097595
+  },
+  "varlen_2": {
+   "error": {
+    "max_abs": 0.0078125,
+    "mean_abs": 9.89158343145391e-06,
+    "relative_max": 0.0017857142956927419,
+    "equal": false
+   },
+   "ms": 0.13609600067138672
+  },
+  "varlen_4": {
+   "error": {
+    "max_abs": 0.0078125,
+    "mean_abs": 9.89158343145391e-06,
+    "relative_max": 0.0017857142956927419,
+    "equal": false
+   },
+   "ms": 0.13516800105571747
+  },
+  "varlen_8": {
+   "error": {
+    "max_abs": 0.0078125,
+    "mean_abs": 9.89158343145391e-06,
+    "relative_max": 0.0017857142956927419,
+    "equal": false
+   },
+   "ms": 0.13340799510478973
+  },
+  "varlen_16": {
+   "error": {
+    "max_abs": 0.0078125,
+    "mean_abs": 9.89158343145391e-06,
+    "relative_max": 0.0017857142956927419,
+    "equal": false
+   },
+   "ms": 0.135903999209404
+  },
+  "paged_1": {
+   "error": {
+    "max_abs": 0.0078125,
+    "mean_abs": 9.89158343145391e-06,
+    "relative_max": 0.0017857142956927419,
+    "equal": false
+   },
+   "ms": 0.14419199526309967,
+   "kernels": {
+    "void pytorch_flash::flash_fwd_splitkv_kernel<Flash_fwd_kernel_traits<64, 64, 128, 4, false, false, cutlass::bfloat16_t, Flash_kernel_traits<64, 64, 128, 4, cutlass::bfloat16_t> >, false, false, false, false, true, false, false, false>(pytorch_flash::Flash_fwd_params)": 0.12086300000000005,
+    "void at::native::vectorized_elementwise_kernel<2, at::native::FillFunctor<unsigned long>, std::array<char*, 1ul>, false>(int, at::native::FillFunctor<unsigned long>, std::array<char*, 1ul>)": 0.0009280000000001109
+   }
+  },
+  "paged_2": {
+   "error": {
+    "max_abs": 4.1953125,
+    "mean_abs": 0.004428149200975895,
+    "relative_max": 0.9589285850524902,
+    "equal": false
+   },
+   "ms": 0.24534399807453156,
+   "kernels": {
+    "void pytorch_flash::flash_fwd_splitkv_kernel<Flash_fwd_kernel_traits<64, 64, 256, 4, false, false, cutlass::bfloat16_t, Flash_kernel_traits<64, 64, 256, 4, cutlass::bfloat16_t> >, false, false, false, false, true, false, true, false>(pytorch_flash::Flash_fwd_params)": 0.17606799999999997,
+    "void pytorch_flash::flash_fwd_splitkv_combine_kernel<Flash_fwd_kernel_traits<64, 64, 256, 4, false, false, cutlass::bfloat16_t, Flash_kernel_traits<64, 64, 256, 4, cutlass::bfloat16_t> >, 8, 1, true>(pytorch_flash::Flash_fwd_params)": 0.032575999999999966,
+    "void at::native::vectorized_elementwise_kernel<2, at::native::FillFunctor<unsigned long>, std::array<char*, 1ul>, false>(int, at::native::FillFunctor<unsigned long>, std::array<char*, 1ul>)": 0.0008959999999999581
+   }
+  },
+  "paged_3": {
+   "error": {
+    "max_abs": 4.1953125,
+    "mean_abs": 0.004428149200975895,
+    "relative_max": 0.9589285850524902,
+    "equal": false
+   },
+   "ms": 0.2784639894962311,
+   "kernels": {
+    "void pytorch_flash::flash_fwd_splitkv_kernel<Flash_fwd_kernel_traits<64, 64, 256, 4, false, false, cutlass::bfloat16_t, Flash_kernel_traits<64, 64, 256, 4, cutlass::bfloat16_t> >, false, false, false, false, true, false, true, false>(pytorch_flash::Flash_fwd_params)": 0.200041,
+    "void pytorch_flash::flash_fwd_splitkv_combine_kernel<Flash_fwd_kernel_traits<64, 64, 256, 4, false, false, cutlass::bfloat16_t, Flash_kernel_traits<64, 64, 256, 4, cutlass::bfloat16_t> >, 8, 2, true>(pytorch_flash::Flash_fwd_params)": 0.04470600000000002,
+    "void at::native::vectorized_elementwise_kernel<2, at::native::FillFunctor<unsigned long>, std::array<char*, 1ul>, false>(int, at::native::FillFunctor<unsigned long>, std::array<char*, 1ul>)": 0.0008960000000000719
+   }
+  },
+  "paged_4": {
+   "error": {
+    "max_abs": 4.1953125,
+    "mean_abs": 0.004428636748343706,
+    "relative_max": 0.9589285850524902,
+    "equal": false
+   },
+   "ms": 0.34332799911499023,
+   "kernels": {
+    "void pytorch_flash::flash_fwd_splitkv_kernel<Flash_fwd_kernel_traits<64, 64, 256, 4, false, false, cutlass::bfloat16_t, Flash_kernel_traits<64, 64, 256, 4, cutlass::bfloat16_t> >, false, false, false, false, true, false, true, false>(pytorch_flash::Flash_fwd_params)": 0.22899699999999995,
+    "void pytorch_flash::flash_fwd_splitkv_combine_kernel<Flash_fwd_kernel_traits<64, 64, 256, 4, false, false, cutlass::bfloat16_t, Flash_kernel_traits<64, 64, 256, 4, cutlass::bfloat16_t> >, 8, 2, true>(pytorch_flash::Flash_fwd_params)": 0.08633699999999998,
+    "void at::native::vectorized_elementwise_kernel<2, at::native::FillFunctor<unsigned long>, std::array<char*, 1ul>, false>(int, at::native::FillFunctor<unsigned long>, std::array<char*, 1ul>)": 0.0014720000000000937
+   }
+  },
+  "mixed": {
+   "lengths": [
+    1008,
+    504,
+    1008,
+    504,
+    1008,
+    504,
+    1008,
+    504
+   ],
+   "error": {
+    "max_abs": 0.0078125,
+    "mean_abs": 8.661657375341747e-06,
+    "relative_max": 0.0017857142956927419,
+    "equal": false
+   },
+   "reference_ms": 0.2586880028247833,
+   "varlen_ms": 0.10147199779748917
+  },
+  "dense_1": {
+   "error": {
+    "max_abs": 0.0078125,
+    "mean_abs": 9.89158343145391e-06,
+    "relative_max": 0.0017857142956927419,
+    "equal": false
+   },
+   "ms": 0.12508800625801086,
+   "kernels": {
+    "void pytorch_flash::flash_fwd_kernel<Flash_fwd_kernel_traits<64, 128, 128, 4, false, false, cutlass::bfloat16_t, Flash_kernel_traits<64, 128, 128, 4, cutlass::bfloat16_t> >, false, false, false, false, false, true, false, false>(pytorch_flash::Flash_fwd_params)": 0.11002000000000003
+   }
+  },
+  "dense_2": {
+   "error": {
+    "max_abs": 0.0078125,
+    "mean_abs": 9.89158343145391e-06,
+    "relative_max": 0.0017857142956927419,
+    "equal": false
+   },
+   "ms": 0.1241919994354248,
+   "kernels": {
+    "void pytorch_flash::flash_fwd_kernel<Flash_fwd_kernel_traits<64, 128, 128, 4, false, false, cutlass::bfloat16_t, Flash_kernel_traits<64, 128, 128, 4, cutlass::bfloat16_t> >, false, false, false, false, false, true, false, false>(pytorch_flash::Flash_fwd_params)": 0.10972999999999991
+   }
+  },
+  "dense_3": {
+   "error": {
+    "max_abs": 0.0078125,
+    "mean_abs": 9.89158343145391e-06,
+    "relative_max": 0.0017857142956927419,
+    "equal": false
+   },
+   "ms": 0.12483199685811996,
+   "kernels": {
+    "void pytorch_flash::flash_fwd_kernel<Flash_fwd_kernel_traits<64, 128, 128, 4, false, false, cutlass::bfloat16_t, Flash_kernel_traits<64, 128, 128, 4, cutlass::bfloat16_t> >, false, false, false, false, false, true, false, false>(pytorch_flash::Flash_fwd_params)": 0.10957000000000006
+   }
+  },
+  "dense_4": {
+   "error": {
+    "max_abs": 0.0078125,
+    "mean_abs": 9.89158343145391e-06,
+    "relative_max": 0.0017857142956927419,
+    "equal": false
+   },
+   "ms": 0.12665599584579468,
+   "kernels": {
+    "void pytorch_flash::flash_fwd_kernel<Flash_fwd_kernel_traits<64, 128, 128, 4, false, false, cutlass::bfloat16_t, Flash_kernel_traits<64, 128, 128, 4, cutlass::bfloat16_t> >, false, false, false, false, false, true, false, false>(pytorch_flash::Flash_fwd_params)": 0.109697
+   }
+  },
+  "dense_8": {
+   "error": {
+    "max_abs": 0.0078125,
+    "mean_abs": 9.89158343145391e-06,
+    "relative_max": 0.0017857142956927419,
+    "equal": false
+   },
+   "ms": 0.12476799637079239,
+   "kernels": {
+    "void pytorch_flash::flash_fwd_kernel<Flash_fwd_kernel_traits<64, 128, 128, 4, false, false, cutlass::bfloat16_t, Flash_kernel_traits<64, 128, 128, 4, cutlass::bfloat16_t> >, false, false, false, false, false, true, false, false>(pytorch_flash::Flash_fwd_params)": 0.10998599999999999
+   }
+  }
+ }
+}

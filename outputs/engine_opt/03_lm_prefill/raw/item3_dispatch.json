@@ -1,0 +1,1302 @@
+{
+ "torch": "2.14.1+cu130",
+ "cuda": "13.0",
+ "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "capability": [
+  12,
+  0
+ ],
+ "triton": "3.8.0",
+ "tf32": false,
+ "bf16_reduced_precision": true,
+ "results": {
+  "4672/gdn_in": {
+   "shape": [
+    4672,
+    2560,
+    12352
+   ],
+   "strides": [
+    [
+     2560,
+     1
+    ],
+    [
+     2560,
+     1
+    ]
+   ],
+   "pointer_mod_256": [
+    0,
+    0,
+    0
+   ],
+   "candidates": {
+    "(64, 128, 64, 4, False)": {
+     "ms": 1.035040020942688,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    },
+    "(128, 128, 32, 4, False)": {
+     "ms": 0.861407995223999,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    },
+    "(128, 256, 64, 8, False)": {
+     "ms": 0.8793920278549194,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    }
+   },
+   "cublas": {
+    "ms": 0.8225280046463013,
+    "kernels": [
+     "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8::Params)"
+    ]
+   },
+   "cublaslt": {
+    "ms": 0.8225280046463013,
+    "kernels": [
+     "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8::Params)"
+    ]
+   }
+  },
+  "4672/gdn_out": {
+   "shape": [
+    4672,
+    4096,
+    2560
+   ],
+   "strides": [
+    [
+     4096,
+     1
+    ],
+    [
+     4096,
+     1
+    ]
+   ],
+   "pointer_mod_256": [
+    0,
+    0,
+    0
+   ],
+   "candidates": {
+    "(64, 128, 64, 4, False)": {
+     "ms": 0.3535360097885132,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    },
+    "(128, 128, 32, 4, False)": {
+     "ms": 0.2902719974517822,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    },
+    "(128, 256, 64, 8, False)": {
+     "ms": 0.2821120023727417,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    }
+   },
+   "cublas": {
+    "ms": 0.26822400093078613,
+    "kernels": [
+     "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8::Params)"
+    ]
+   },
+   "cublaslt": {
+    "ms": 0.26841598749160767,
+    "kernels": [
+     "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8::Params)"
+    ]
+   }
+  },
+  "4672/qkv": {
+   "shape": [
+    4672,
+    2560,
+    10240
+   ],
+   "strides": [
+    [
+     2560,
+     1
+    ],
+    [
+     2560,
+     1
+    ]
+   ],
+   "pointer_mod_256": [
+    0,
+    0,
+    0
+   ],
+   "candidates": {
+    "(64, 128, 64, 4, False)": {
+     "ms": 0.8631680011749268,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    },
+    "(128, 128, 32, 4, False)": {
+     "ms": 0.6938239932060242,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    },
+    "(128, 256, 64, 8, False)": {
+     "ms": 0.6936960220336914,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    }
+   },
+   "cublas": {
+    "ms": 0.6615039706230164,
+    "kernels": [
+     "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8::Params)"
+    ]
+   },
+   "cublaslt": {
+    "ms": 0.662015974521637,
+    "kernels": [
+     "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8::Params)"
+    ]
+   }
+  },
+  "4672/attn_out": {
+   "shape": [
+    4672,
+    4096,
+    2560
+   ],
+   "strides": [
+    [
+     4096,
+     1
+    ],
+    [
+     4096,
+     1
+    ]
+   ],
+   "pointer_mod_256": [
+    0,
+    0,
+    0
+   ],
+   "candidates": {
+    "(64, 128, 64, 4, False)": {
+     "ms": 0.3386240005493164,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    },
+    "(128, 128, 32, 4, False)": {
+     "ms": 0.2678079903125763,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    },
+    "(128, 256, 64, 8, False)": {
+     "ms": 0.266431987285614,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    }
+   },
+   "cublas": {
+    "ms": 0.2683199942111969,
+    "kernels": [
+     "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8::Params)"
+    ]
+   },
+   "cublaslt": {
+    "ms": 0.27001601457595825,
+    "kernels": [
+     "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8::Params)"
+    ]
+   }
+  },
+  "4672/gate_up": {
+   "shape": [
+    4672,
+    2560,
+    18432
+   ],
+   "strides": [
+    [
+     2560,
+     1
+    ],
+    [
+     2560,
+     1
+    ]
+   ],
+   "pointer_mod_256": [
+    0,
+    0,
+    0
+   ],
+   "candidates": {
+    "(64, 128, 64, 4, False)": {
+     "ms": 1.5043840408325195,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    },
+    "(64, 128, 64, 4, True)": {
+     "ms": 1.547808051109314,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    },
+    "(128, 128, 32, 4, False)": {
+     "ms": 1.263551950454712,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    },
+    "(128, 128, 32, 4, True)": {
+     "ms": 1.2557120323181152,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    },
+    "(128, 256, 64, 8, False)": {
+     "ms": 1.277184009552002,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    },
+    "(128, 256, 64, 8, True)": {
+     "ms": 1.282080054283142,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    }
+   },
+   "cublas": {
+    "ms": 1.1311039924621582,
+    "kernels": [
+     "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8::Params)"
+    ]
+   },
+   "cublaslt": {
+    "ms": 1.1316159963607788,
+    "kernels": [
+     "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8::Params)"
+    ]
+   },
+   "cublas_with_gate_ms": 1.3104959726333618
+  },
+  "4672/down": {
+   "shape": [
+    4672,
+    9216,
+    2560
+   ],
+   "strides": [
+    [
+     9216,
+     1
+    ],
+    [
+     9216,
+     1
+    ]
+   ],
+   "pointer_mod_256": [
+    0,
+    0,
+    0
+   ],
+   "candidates": {
+    "(64, 128, 64, 4, False)": {
+     "ms": 0.8085439801216125,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    },
+    "(128, 128, 32, 4, False)": {
+     "ms": 0.6303679943084717,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    },
+    "(128, 256, 64, 8, False)": {
+     "ms": 0.6036800146102905,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    }
+   },
+   "cublas": {
+    "ms": 0.5839359760284424,
+    "kernels": [
+     "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8::Params)"
+    ]
+   },
+   "cublaslt": {
+    "ms": 0.5841919779777527,
+    "kernels": [
+     "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8::Params)"
+    ]
+   }
+  },
+  "9344/gdn_in": {
+   "shape": [
+    9344,
+    2560,
+    12352
+   ],
+   "strides": [
+    [
+     2560,
+     1
+    ],
+    [
+     2560,
+     1
+    ]
+   ],
+   "pointer_mod_256": [
+    0,
+    0,
+    0
+   ],
+   "candidates": {
+    "(64, 128, 64, 4, False)": {
+     "ms": 1.992959976196289,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    },
+    "(128, 128, 32, 4, False)": {
+     "ms": 1.613759994506836,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    },
+    "(128, 256, 64, 8, False)": {
+     "ms": 1.6835839748382568,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    }
+   },
+   "cublas": {
+    "ms": 1.6086080074310303,
+    "kernels": [
+     "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8::Params)"
+    ]
+   },
+   "cublaslt": {
+    "ms": 1.5038080215454102,
+    "kernels": [
+     "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8::Params)"
+    ]
+   }
+  },
+  "9344/gdn_out": {
+   "shape": [
+    9344,
+    4096,
+    2560
+   ],
+   "strides": [
+    [
+     4096,
+     1
+    ],
+    [
+     4096,
+     1
+    ]
+   ],
+   "pointer_mod_256": [
+    0,
+    0,
+    0
+   ],
+   "candidates": {
+    "(64, 128, 64, 4, False)": {
+     "ms": 0.6909760236740112,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    },
+    "(128, 128, 32, 4, False)": {
+     "ms": 0.5595840215682983,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    },
+    "(128, 256, 64, 8, False)": {
+     "ms": 0.5469120144844055,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    }
+   },
+   "cublas": {
+    "ms": 0.48419201374053955,
+    "kernels": [
+     "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_128x256_32x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_128x256_32x3_tn_align8::Params)"
+    ]
+   },
+   "cublaslt": {
+    "ms": 0.4928640127182007,
+    "kernels": [
+     "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8::Params)"
+    ]
+   }
+  },
+  "9344/qkv": {
+   "shape": [
+    9344,
+    2560,
+    10240
+   ],
+   "strides": [
+    [
+     2560,
+     1
+    ],
+    [
+     2560,
+     1
+    ]
+   ],
+   "pointer_mod_256": [
+    0,
+    0,
+    0
+   ],
+   "candidates": {
+    "(64, 128, 64, 4, False)": {
+     "ms": 1.6591360569000244,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    },
+    "(128, 128, 32, 4, False)": {
+     "ms": 1.353600025177002,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    },
+    "(128, 256, 64, 8, False)": {
+     "ms": 1.357856035232544,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    }
+   },
+   "cublas": {
+    "ms": 1.306048035621643,
+    "kernels": [
+     "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8::Params)"
+    ]
+   },
+   "cublaslt": {
+    "ms": 1.2239359617233276,
+    "kernels": [
+     "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8::Params)"
+    ]
+   }
+  },
+  "9344/attn_out": {
+   "shape": [
+    9344,
+    4096,
+    2560
+   ],
+   "strides": [
+    [
+     4096,
+     1
+    ],
+    [
+     4096,
+     1
+    ]
+   ],
+   "pointer_mod_256": [
+    0,
+    0,
+    0
+   ],
+   "candidates": {
+    "(64, 128, 64, 4, False)": {
+     "ms": 0.632319986820221,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    },
+    "(128, 128, 32, 4, False)": {
+     "ms": 0.5268800258636475,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    },
+    "(128, 256, 64, 8, False)": {
+     "ms": 0.5145919919013977,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    }
+   },
+   "cublas": {
+    "ms": 0.48470398783683777,
+    "kernels": [
+     "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_128x256_32x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_128x256_32x3_tn_align8::Params)"
+    ]
+   },
+   "cublaslt": {
+    "ms": 0.49167999625205994,
+    "kernels": [
+     "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8::Params)"
+    ]
+   }
+  },
+  "9344/gate_up": {
+   "shape": [
+    9344,
+    2560,
+    18432
+   ],
+   "strides": [
+    [
+     2560,
+     1
+    ],
+    [
+     2560,
+     1
+    ]
+   ],
+   "pointer_mod_256": [
+    0,
+    0,
+    0
+   ],
+   "candidates": {
+    "(64, 128, 64, 4, False)": {
+     "ms": 2.901632070541382,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    },
+    "(64, 128, 64, 4, True)": {
+     "ms": 2.9794559478759766,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    },
+    "(128, 128, 32, 4, False)": {
+     "ms": 2.3735039234161377,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    },
+    "(128, 128, 32, 4, True)": {
+     "ms": 2.394335985183716,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    },
+    "(128, 256, 64, 8, False)": {
+     "ms": 2.360703945159912,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    },
+    "(128, 256, 64, 8, True)": {
+     "ms": 2.361920118331909,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    }
+   },
+   "cublas": {
+    "ms": 2.11244797706604,
+    "kernels": [
+     "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8::Params)"
+    ]
+   },
+   "cublaslt": {
+    "ms": 2.116544008255005,
+    "kernels": [
+     "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8::Params)"
+    ]
+   },
+   "cublas_with_gate_ms": 2.4899840354919434
+  },
+  "9344/down": {
+   "shape": [
+    9344,
+    9216,
+    2560
+   ],
+   "strides": [
+    [
+     9216,
+     1
+    ],
+    [
+     9216,
+     1
+    ]
+   ],
+   "pointer_mod_256": [
+    0,
+    0,
+    0
+   ],
+   "candidates": {
+    "(64, 128, 64, 4, False)": {
+     "ms": 1.5559040307998657,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    },
+    "(128, 128, 32, 4, False)": {
+     "ms": 1.2228800058364868,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    },
+    "(128, 256, 64, 8, False)": {
+     "ms": 1.1802879571914673,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    }
+   },
+   "cublas": {
+    "ms": 1.0695040225982666,
+    "kernels": [
+     "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8::Params)"
+    ]
+   },
+   "cublaslt": {
+    "ms": 1.0704959630966187,
+    "kernels": [
+     "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8::Params)"
+    ]
+   }
+  },
+  "18688/gdn_in": {
+   "shape": [
+    18688,
+    2560,
+    12352
+   ],
+   "strides": [
+    [
+     2560,
+     1
+    ],
+    [
+     2560,
+     1
+    ]
+   ],
+   "pointer_mod_256": [
+    0,
+    0,
+    0
+   ],
+   "candidates": {
+    "(64, 128, 64, 4, False)": {
+     "ms": 3.9254720211029053,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    },
+    "(128, 128, 32, 4, False)": {
+     "ms": 2.9605441093444824,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    },
+    "(128, 256, 64, 8, False)": {
+     "ms": 3.1159679889678955,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    }
+   },
+   "cublas": {
+    "ms": 2.894335985183716,
+    "kernels": [
+     "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_128x256_32x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_128x256_32x3_tn_align8::Params)"
+    ]
+   },
+   "cublaslt": {
+    "ms": 2.9381120204925537,
+    "kernels": [
+     "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8::Params)"
+    ]
+   }
+  },
+  "18688/gdn_out": {
+   "shape": [
+    18688,
+    4096,
+    2560
+   ],
+   "strides": [
+    [
+     4096,
+     1
+    ],
+    [
+     4096,
+     1
+    ]
+   ],
+   "pointer_mod_256": [
+    0,
+    0,
+    0
+   ],
+   "candidates": {
+    "(64, 128, 64, 4, False)": {
+     "ms": 1.3312959671020508,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    },
+    "(128, 128, 32, 4, False)": {
+     "ms": 1.096384048461914,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    },
+    "(128, 256, 64, 8, False)": {
+     "ms": 1.073855996131897,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    }
+   },
+   "cublas": {
+    "ms": 0.9722560048103333,
+    "kernels": [
+     "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8::Params)"
+    ]
+   },
+   "cublaslt": {
+    "ms": 0.9730240106582642,
+    "kernels": [
+     "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8::Params)"
+    ]
+   }
+  },
+  "18688/qkv": {
+   "shape": [
+    18688,
+    2560,
+    10240
+   ],
+   "strides": [
+    [
+     2560,
+     1
+    ],
+    [
+     2560,
+     1
+    ]
+   ],
+   "pointer_mod_256": [
+    0,
+    0,
+    0
+   ],
+   "candidates": {
+    "(64, 128, 64, 4, False)": {
+     "ms": 3.2482240200042725,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    },
+    "(128, 128, 32, 4, False)": {
+     "ms": 2.638335943222046,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    },
+    "(128, 256, 64, 8, False)": {
+     "ms": 2.6519999504089355,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    }
+   },
+   "cublas": {
+    "ms": 2.4302079677581787,
+    "kernels": [
+     "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8::Params)"
+    ]
+   },
+   "cublaslt": {
+    "ms": 2.4166080951690674,
+    "kernels": [
+     "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8::Params)"
+    ]
+   }
+  },
+  "18688/attn_out": {
+   "shape": [
+    18688,
+    4096,
+    2560
+   ],
+   "strides": [
+    [
+     4096,
+     1
+    ],
+    [
+     4096,
+     1
+    ]
+   ],
+   "pointer_mod_256": [
+    0,
+    0,
+    0
+   ],
+   "candidates": {
+    "(64, 128, 64, 4, False)": {
+     "ms": 1.215232014656067,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    },
+    "(128, 128, 32, 4, False)": {
+     "ms": 1.0264639854431152,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    },
+    "(128, 256, 64, 8, False)": {
+     "ms": 0.9999359846115112,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    }
+   },
+   "cublas": {
+    "ms": 1.0367679595947266,
+    "kernels": [
+     "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8::Params)"
+    ]
+   },
+   "cublaslt": {
+    "ms": 0.9730560183525085,
+    "kernels": [
+     "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8::Params)"
+    ]
+   }
+  },
+  "18688/gate_up": {
+   "shape": [
+    18688,
+    2560,
+    18432
+   ],
+   "strides": [
+    [
+     2560,
+     1
+    ],
+    [
+     2560,
+     1
+    ]
+   ],
+   "pointer_mod_256": [
+    0,
+    0,
+    0
+   ],
+   "candidates": {
+    "(64, 128, 64, 4, False)": {
+     "ms": 5.368031978607178,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    },
+    "(64, 128, 64, 4, True)": {
+     "ms": 5.369887828826904,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    },
+    "(128, 128, 32, 4, False)": {
+     "ms": 4.448383808135986,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    },
+    "(128, 128, 32, 4, True)": {
+     "ms": 4.706272125244141,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    },
+    "(128, 256, 64, 8, False)": {
+     "ms": 4.466400146484375,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    },
+    "(128, 256, 64, 8, True)": {
+     "ms": 4.378335952758789,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    }
+   },
+   "cublas": {
+    "ms": 4.255936145782471,
+    "kernels": [
+     "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8::Params)"
+    ]
+   },
+   "cublaslt": {
+    "ms": 4.3054399490356445,
+    "kernels": [
+     "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8::Params)"
+    ]
+   },
+   "cublas_with_gate_ms": 4.957759857177734
+  },
+  "18688/down": {
+   "shape": [
+    18688,
+    9216,
+    2560
+   ],
+   "strides": [
+    [
+     9216,
+     1
+    ],
+    [
+     9216,
+     1
+    ]
+   ],
+   "pointer_mod_256": [
+    0,
+    0,
+    0
+   ],
+   "candidates": {
+    "(64, 128, 64, 4, False)": {
+     "ms": 2.9542720317840576,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    },
+    "(128, 128, 32, 4, False)": {
+     "ms": 2.412992000579834,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    },
+    "(128, 256, 64, 8, False)": {
+     "ms": 2.3190720081329346,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    }
+   },
+   "cublas": {
+    "ms": 2.1158080101013184,
+    "kernels": [
+     "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8::Params)"
+    ]
+   },
+   "cublaslt": {
+    "ms": 2.116447925567627,
+    "kernels": [
+     "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8::Params)"
+    ]
+   }
+  },
+  "37376/gdn_in": {
+   "shape": [
+    37376,
+    2560,
+    12352
+   ],
+   "strides": [
+    [
+     2560,
+     1
+    ],
+    [
+     2560,
+     1
+    ]
+   ],
+   "pointer_mod_256": [
+    0,
+    0,
+    0
+   ],
+   "candidates": {
+    "(64, 128, 64, 4, False)": {
+     "ms": 7.126944065093994,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    },
+    "(128, 128, 32, 4, False)": {
+     "ms": 5.858431816101074,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    },
+    "(128, 256, 64, 8, False)": {
+     "ms": 5.962560176849365,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    }
+   },
+   "cublas": {
+    "ms": 5.82371187210083,
+    "kernels": [
+     "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8::Params)"
+    ]
+   },
+   "cublaslt": {
+    "ms": 5.828959941864014,
+    "kernels": [
+     "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8::Params)"
+    ]
+   }
+  },
+  "37376/gdn_out": {
+   "shape": [
+    37376,
+    4096,
+    2560
+   ],
+   "strides": [
+    [
+     4096,
+     1
+    ],
+    [
+     4096,
+     1
+    ]
+   ],
+   "pointer_mod_256": [
+    0,
+    0,
+    0
+   ],
+   "candidates": {
+    "(64, 128, 64, 4, False)": {
+     "ms": 2.519200086593628,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    },
+    "(128, 128, 32, 4, False)": {
+     "ms": 2.1598401069641113,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    },
+    "(128, 256, 64, 8, False)": {
+     "ms": 2.011904001235962,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    }
+   },
+   "cublas": {
+    "ms": 1.919551968574524,
+    "kernels": [
+     "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8::Params)"
+    ]
+   },
+   "cublaslt": {
+    "ms": 1.9221440553665161,
+    "kernels": [
+     "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8::Params)"
+    ]
+   }
+  },
+  "37376/qkv": {
+   "shape": [
+    37376,
+    2560,
+    10240
+   ],
+   "strides": [
+    [
+     2560,
+     1
+    ],
+    [
+     2560,
+     1
+    ]
+   ],
+   "pointer_mod_256": [
+    0,
+    0,
+    0
+   ],
+   "candidates": {
+    "(64, 128, 64, 4, False)": {
+     "ms": 6.120031833648682,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    },
+    "(128, 128, 32, 4, False)": {
+     "ms": 4.832767963409424,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    },
+    "(128, 256, 64, 8, False)": {
+     "ms": 4.838912010192871,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    }
+   },
+   "cublas": {
+    "ms": 4.7321600914001465,
+    "kernels": [
+     "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8::Params)"
+    ]
+   },
+   "cublaslt": {
+    "ms": 4.738272190093994,
+    "kernels": [
+     "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8::Params)"
+    ]
+   }
+  },
+  "37376/attn_out": {
+   "shape": [
+    37376,
+    4096,
+    2560
+   ],
+   "strides": [
+    [
+     4096,
+     1
+    ],
+    [
+     4096,
+     1
+    ]
+   ],
+   "pointer_mod_256": [
+    0,
+    0,
+    0
+   ],
+   "candidates": {
+    "(64, 128, 64, 4, False)": {
+     "ms": 2.3696000576019287,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    },
+    "(128, 128, 32, 4, False)": {
+     "ms": 2.016319990158081,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    },
+    "(128, 256, 64, 8, False)": {
+     "ms": 1.9605120420455933,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    }
+   },
+   "cublas": {
+    "ms": 1.918720006942749,
+    "kernels": [
+     "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8::Params)"
+    ]
+   },
+   "cublaslt": {
+    "ms": 1.9217920303344727,
+    "kernels": [
+     "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8::Params)"
+    ]
+   }
+  },
+  "37376/gate_up": {
+   "shape": [
+    37376,
+    2560,
+    18432
+   ],
+   "strides": [
+    [
+     2560,
+     1
+    ],
+    [
+     2560,
+     1
+    ]
+   ],
+   "pointer_mod_256": [
+    0,
+    0,
+    0
+   ],
+   "candidates": {
+    "(64, 128, 64, 4, False)": {
+     "ms": 10.567487716674805,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    },
+    "(64, 128, 64, 4, True)": {
+     "ms": 10.613632202148438,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    },
+    "(128, 128, 32, 4, False)": {
+     "ms": 8.881919860839844,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    },
+    "(128, 128, 32, 4, True)": {
+     "ms": 8.655712127685547,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    },
+    "(128, 256, 64, 8, False)": {
+     "ms": 8.629088401794434,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    },
+    "(128, 256, 64, 8, True)": {
+     "ms": 8.67961597442627,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    }
+   },
+   "cublas": {
+    "ms": 8.695232391357422,
+    "kernels": [
+     "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8::Params)"
+    ]
+   },
+   "cublaslt": {
+    "ms": 8.960479736328125,
+    "kernels": [
+     "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8::Params)"
+    ]
+   },
+   "cublas_with_gate_ms": 9.993375778198242
+  },
+  "37376/down": {
+   "shape": [
+    37376,
+    9216,
+    2560
+   ],
+   "strides": [
+    [
+     9216,
+     1
+    ],
+    [
+     9216,
+     1
+    ]
+   ],
+   "pointer_mod_256": [
+    0,
+    0,
+    0
+   ],
+   "candidates": {
+    "(64, 128, 64, 4, False)": {
+     "ms": 5.333951950073242,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    },
+    "(128, 128, 32, 4, False)": {
+     "ms": 4.445055961608887,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    },
+    "(128, 256, 64, 8, False)": {
+     "ms": 4.413248062133789,
+     "max_abs": 0.0,
+     "target": ".target sm_120a"
+    }
+   },
+   "cublas": {
+    "ms": 4.203711986541748,
+    "kernels": [
+     "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8::Params)"
+    ]
+   },
+   "cublaslt": {
+    "ms": 4.306975841522217,
+    "kernels": [
+     "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_128x256_32x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_128x256_32x3_tn_align8::Params)"
+    ]
+   }
+  }
+ }
+}

@@ -1,0 +1,24 @@
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights:  54%|█████▍    | 394/723 [00:00<00:00, 3922.53it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 5608.31it/s]
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/content/dv/speed/bench_glance.py", line 313, in <module>
+    main()
+    ~~~~^^
+  File "/content/dv/speed/bench_glance.py", line 285, in main
+    rows = equiv_outputs(R, imgs, a.n_equiv)
+  File "/content/dv/speed/bench_glance.py", line 220, in equiv_outputs
+    out, _ = R.call([im["img"]], [qs], Nv=640)
+             ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "/content/dv/speed/bench_glance.py", line 104, in call
+    res, cache, vis = self.eng.run(E, host)
+                      ~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "/content/dv/speed/engine.py", line 361, in run
+    S[k].copy_(v)
+    ~~~~~~~~~~^^^
+RuntimeError: The size of tensor a (620) must match the size of tensor b (600) at non-singleton dimension 0
+exit 1

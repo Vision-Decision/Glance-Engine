@@ -1,0 +1,9 @@
+Thu Nov 19 04:42:41 PM UTC 2026
+name, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 0 MiB
+GPU_IDLE
+python -m scan.profile_frames --stage mlp --ckpt /content/ckpt/v1/ckpt_final.pt --out /content/out/scan/item7_candidate_mlp.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 19188.06it/s]
+mlp 128
+mlp 256
+mlp exit=0

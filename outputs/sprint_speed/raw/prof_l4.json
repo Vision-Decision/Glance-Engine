@@ -1,0 +1,901 @@
+{
+ "gpu": "NVIDIA L4",
+ "modes": {
+  "ref_merged": {
+   "N1": {
+    "stages_ms": {
+     "prep": 5.954211999778636,
+     "model": 262.5925889997234,
+     "total": 268.49882000033176
+    },
+    "gpu_kernel_ms_by_category": {
+     "gemm": 153.164,
+     "elementwise/other": 28.18,
+     "copy/cat": 21.452,
+     "gdn(fla)": 11.39,
+     "conv": 6.094,
+     "memcpy": 3.373,
+     "reduce/norm": 2.938,
+     "index": 0.91,
+     "softmax": 0.002
+    },
+    "gpu_kernel_ms_total": 227.502,
+    "n_kernel_launches": 5748,
+    "top_kernels": [
+     [
+      47.59550700000007,
+      120,
+      "ampere_bf16_s1688gemm_bf16_128x128_ldg8_f2f_stages_32x1_tn"
+     ],
+     [
+      30.627744000000195,
+      64,
+      "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8"
+     ],
+     [
+      25.70448400000007,
+      168,
+      "void cutlass::Kernel2<cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_16x16_128x2_tn_align8"
+     ],
+     [
+      23.522570999999953,
+      97,
+      "ampere_bf16_s1688gemm_bf16_128x128_ldg8_relu_f2f_stages_32x1_tn"
+     ],
+     [
+      10.183768000000011,
+      24,
+      "void pytorch_flash::flash_fwd_kernel<Flash_fwd_kernel_traits<64, 128, 128, 4, false, false"
+     ],
+     [
+      8.576252999999998,
+      184,
+      "void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native:"
+     ],
+     [
+      8.482137000000074,
+      80,
+      "void cutlass::Kernel2<cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_16x16_128x1_tn_align8"
+     ],
+     [
+      7.423411000000018,
+      523,
+      "void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native:"
+     ],
+     [
+      6.0943640000000885,
+      48,
+      "void at::native::(anonymous namespace)::conv_depthwise2d_forward_kernel_generic<c10::BFloa"
+     ],
+     [
+      5.695141999999774,
+      48,
+      "ChunkGatedDeltaRuleFunction"
+     ],
+     [
+      4.08583500000034,
+      507,
+      "void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::Tenso"
+     ],
+     [
+      3.7834820000001055,
+      16,
+      "fmha_cutlassF_bf16_aligned_32x128_gmem_sm80(PyTorchMemEffAttention::AttentionKernel<cutlas"
+     ],
+     [
+      3.706682999999797,
+      177,
+      "void at::native::vectorized_elementwise_kernel<4, at::native::CUDAFunctor_add<c10::BFloat1"
+     ],
+     [
+      3.0526050000000033,
+      21,
+      "Memcpy HtoD (Pageable -> Device)"
+     ],
+     [
+      3.0231540000002752,
+      312,
+      "void at::native::vectorized_elementwise_kernel<4, at::native::bfloat16_copy_kernel_cuda(at"
+     ],
+     [
+      3.014783999999854,
+      80,
+      "void at::native::vectorized_elementwise_kernel<4, at::native::BinaryFunctor<c10::BFloat16,"
+     ],
+     [
+      2.9323170000000247,
+      24,
+      "void at::native::vectorized_elementwise_kernel<4, at::native::GeluCUDAKernelImpl(at::Tenso"
+     ],
+     [
+      2.6327709999999604,
+      64,
+      "void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl<at::native::direct"
+     ],
+     [
+      1.920605999999956,
+      48,
+      "chunk_gated_delta_rule_fwd_kernel_h_blockdim64"
+     ],
+     [
+      1.8668779999999752,
+      48,
+      "void at::native::(anonymous namespace)::CatArrayBatchedCopy<at::native::(anonymous namespa"
+     ],
+     [
+      1.7645799999999436,
+      210,
+      "void at::native::reduce_kernel<512, 1, at::native::ReduceOp<float, at::native::MeanOps<flo"
+     ],
+     [
+      1.5117120000000868,
+      48,
+      "chunk_fwd_kernel_o"
+     ],
+     [
+      1.4140510000000286,
+      51,
+      "void at::native::vectorized_elementwise_kernel<4, at::native::CUDAFunctor_add<float>, std:"
+     ],
+     [
+      1.3049600000003994,
+      210,
+      "void at::native::vectorized_elementwise_kernel<4, at::native::(anonymous namespace)::pow_t"
+     ],
+     [
+      1.1699189999999982,
+      1,
+      "sm80_xmma_fprop_implicit_gemm_indexed_bf16bf16_bf16f32_f32_nhwckrsc_nhwc_tilesize128x256x3"
+     ]
+    ]
+   },
+   "N8": {
+    "stages_ms": {
+     "prep": 7.2086220002347545,
+     "model": 301.68843499996,
+     "total": 308.89705700019476
+    },
+    "gpu_kernel_ms_by_category": {
+     "gemm": 173.32,
+     "elementwise/other": 34.486,
+     "copy/cat": 27.994,
+     "gdn(fla)": 20.337,
+     "conv": 9.24,
+     "reduce/norm": 3.57,
+     "memcpy": 3.432,
+     "index": 1.242,
+     "softmax": 0.002
+    },
+    "gpu_kernel_ms_total": 273.624,
+    "n_kernel_launches": 5963,
+    "top_kernels": [
+     [
+      81.13615199999988,
+      240,
+      "ampere_bf16_s1688gemm_bf16_128x128_ldg8_f2f_stages_32x1_tn"
+     ],
+     [
+      33.68883799999996,
+      64,
+      "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8"
+     ],
+     [
+      24.40330500000004,
+      97,
+      "ampere_bf16_s1688gemm_bf16_128x128_ldg8_relu_f2f_stages_32x1_tn"
+     ],
+     [
+      10.993044999999977,
+      24,
+      "void pytorch_flash::flash_fwd_kernel<Flash_fwd_kernel_traits<64, 128, 128, 4, false, false"
+     ],
+     [
+      10.69108900000027,
+      184,
+      "void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native:"
+     ],
+     [
+      10.168306000000085,
+      48,
+      "ChunkGatedDeltaRuleFunction"
+     ],
+     [
+      9.240466999999931,
+      48,
+      "void at::native::(anonymous namespace)::conv_depthwise2d_forward_kernel_generic<c10::BFloa"
+     ],
+     [
+      8.747577000000048,
+      32,
+      "ampere_bf16_s16816gemm_bf16_256x128_ldg8_f2f_stages_32x3_tn"
+     ],
+     [
+      8.726091999999936,
+      523,
+      "void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native:"
+     ],
+     [
+      5.649658999999927,
+      16,
+      "fmha_cutlassF_bf16_aligned_32x128_gmem_sm80(PyTorchMemEffAttention::AttentionKernel<cutlas"
+     ],
+     [
+      5.3232570000001305,
+      507,
+      "void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::Tenso"
+     ],
+     [
+      4.714557000000175,
+      48,
+      "ampere_bf16_s16816gemm_bf16_128x128_ldg8_f2f_stages_64x3_tn"
+     ],
+     [
+      4.641943000000203,
+      48,
+      "chunk_gated_delta_rule_fwd_kernel_h_blockdim64"
+     ],
+     [
+      4.603423999999821,
+      177,
+      "void at::native::vectorized_elementwise_kernel<4, at::native::CUDAFunctor_add<c10::BFloat1"
+     ],
+     [
+      3.634812999999878,
+      80,
+      "void at::native::vectorized_elementwise_kernel<4, at::native::BinaryFunctor<c10::BFloat16,"
+     ],
+     [
+      3.5309960000001137,
+      312,
+      "void at::native::vectorized_elementwise_kernel<4, at::native::bfloat16_copy_kernel_cuda(at"
+     ],
+     [
+      3.1034220000000023,
+      21,
+      "Memcpy HtoD (Pageable -> Device)"
+     ],
+     [
+      2.9585590000000193,
+      24,
+      "void at::native::vectorized_elementwise_kernel<4, at::native::GeluCUDAKernelImpl(at::Tenso"
+     ],
+     [
+      2.788769999999931,
+      64,
+      "void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl<at::native::direct"
+     ],
+     [
+      2.4034239999999407,
+      48,
+      "chunk_fwd_kernel_o"
+     ],
+     [
+      2.2781480000000447,
+      210,
+      "void at::native::reduce_kernel<512, 1, at::native::ReduceOp<float, at::native::MeanOps<flo"
+     ],
+     [
+      2.0393559999999997,
+      72,
+      "void at::native::(anonymous namespace)::CatArrayBatchedCopy<at::native::(anonymous namespa"
+     ],
+     [
+      1.9660119999996677,
+      210,
+      "void at::native::vectorized_elementwise_kernel<4, at::native::(anonymous namespace)::pow_t"
+     ],
+     [
+      1.9083500000000166,
+      48,
+      "void at::native::(anonymous namespace)::CatArrayBatchedCopy<at::native::(anonymous namespa"
+     ],
+     [
+      1.5070390000000007,
+      1,
+      "sm80_xmma_fprop_implicit_gemm_indexed_bf16bf16_bf16f32_f32_nhwckrsc_nhwc_tilesize128x256x3"
+     ]
+    ]
+   }
+  },
+  "eng_eager": {
+   "N1": {
+    "stages_ms": {
+     "prep": 6.4245909998135176,
+     "vision": 71.62806399992405,
+     "lm": 165.84599499992692,
+     "model": 236.85965699996814,
+     "total": 243.28424799978166
+    },
+    "gpu_kernel_ms_by_category": {
+     "gemm": 125.134,
+     "elementwise/other": 28.027,
+     "copy/cat": 22.419,
+     "gdn(fla)": 11.959,
+     "conv": 6.674,
+     "memcpy": 3.398,
+     "reduce/norm": 2.695,
+     "index": 1.012,
+     "softmax": 0.002
+    },
+    "gpu_kernel_ms_total": 201.32,
+    "n_kernel_launches": 4376,
+    "top_kernels": [
+     [
+      49.531066000000024,
+      120,
+      "ampere_bf16_s1688gemm_bf16_128x128_ldg8_f2f_stages_32x1_tn"
+     ],
+     [
+      32.131278999999964,
+      64,
+      "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8"
+     ],
+     [
+      24.498484000000015,
+      97,
+      "ampere_bf16_s1688gemm_bf16_128x128_ldg8_relu_f2f_stages_32x1_tn"
+     ],
+     [
+      11.064761000000006,
+      24,
+      "void pytorch_flash::flash_fwd_kernel<Flash_fwd_kernel_traits<64, 128, 128, 4, false, false"
+     ],
+     [
+      9.448210999999981,
+      184,
+      "void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native:"
+     ],
+     [
+      7.180337000000167,
+      337,
+      "void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native:"
+     ],
+     [
+      6.674201999999947,
+      48,
+      "void at::native::(anonymous namespace)::conv_depthwise2d_forward_kernel_generic<c10::BFloa"
+     ],
+     [
+      5.979449999999982,
+      48,
+      "ChunkGatedDeltaRuleFunction"
+     ],
+     [
+      4.1695659999999775,
+      16,
+      "fmha_cutlassF_bf16_aligned_32x128_gmem_sm80(PyTorchMemEffAttention::AttentionKernel<cutlas"
+     ],
+     [
+      3.717854000000443,
+      306,
+      "void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::Tenso"
+     ],
+     [
+      3.6770239999999648,
+      113,
+      "void at::native::vectorized_elementwise_kernel<4, at::native::CUDAFunctor_add<c10::BFloat1"
+     ],
+     [
+      3.072127000000015,
+      17,
+      "Memcpy HtoD (Pageable -> Device)"
+     ],
+     [
+      3.005185999999958,
+      48,
+      "void at::native::vectorized_elementwise_kernel<4, at::native::BinaryFunctor<c10::BFloat16,"
+     ],
+     [
+      2.976314999999575,
+      231,
+      "void at::native::vectorized_elementwise_kernel<4, at::native::bfloat16_copy_kernel_cuda(at"
+     ],
+     [
+      2.9410860000000394,
+      24,
+      "void at::native::vectorized_elementwise_kernel<4, at::native::GeluCUDAKernelImpl(at::Tenso"
+     ],
+     [
+      2.659422999999959,
+      56,
+      "void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl<at::native::direct"
+     ],
+     [
+      2.095007999999856,
+      48,
+      "chunk_gated_delta_rule_fwd_kernel_h_blockdim64"
+     ],
+     [
+      1.915994000000028,
+      48,
+      "void at::native::(anonymous namespace)::CatArrayBatchedCopy<at::native::(anonymous namespa"
+     ],
+     [
+      1.4574350000000087,
+      53,
+      "void at::native::vectorized_elementwise_kernel<4, at::native::CUDAFunctor_add<float>, std:"
+     ],
+     [
+      1.4529880000000266,
+      48,
+      "chunk_fwd_kernel_o"
+     ],
+     [
+      1.4375669999996754,
+      129,
+      "void at::native::vectorized_elementwise_kernel<4, at::native::(anonymous namespace)::pow_t"
+     ],
+     [
+      1.418688000000002,
+      1,
+      "sm80_xmma_fprop_implicit_gemm_indexed_bf16bf16_bf16f32_f32_nhwckrsc_nhwc_tilesize128x256x3"
+     ],
+     [
+      1.4138239999995859,
+      129,
+      "void at::native::reduce_kernel<512, 1, at::native::ReduceOp<float, at::native::MeanOps<flo"
+     ],
+     [
+      1.3416980000001495,
+      137,
+      "void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native:"
+     ],
+     [
+      1.138366999999984,
+      48,
+      "chunk_gated_delta_rule_fwd_kkt_solve_kernel"
+     ]
+    ]
+   },
+   "N8": {
+    "stages_ms": {
+     "prep": 7.653368999854138,
+     "vision": 72.34771499997805,
+     "lm": 211.19431499982966,
+     "model": 283.38003399994705,
+     "total": 291.0748119998061
+    },
+    "gpu_kernel_ms_by_category": {
+     "gemm": 168.639,
+     "elementwise/other": 35.912,
+     "copy/cat": 31.633,
+     "gdn(fla)": 22.35,
+     "conv": 10.582,
+     "reduce/norm": 3.515,
+     "memcpy": 3.42,
+     "index": 1.574,
+     "softmax": 0.003
+    },
+    "gpu_kernel_ms_total": 277.628,
+    "n_kernel_launches": 4310,
+    "top_kernels": [
+     [
+      73.00605999999966,
+      136,
+      "ampere_bf16_s1688gemm_bf16_128x128_ldg8_f2f_stages_32x1_tn"
+     ],
+     [
+      48.69743799999999,
+      64,
+      "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8"
+     ],
+     [
+      25.00814599999998,
+      97,
+      "ampere_bf16_s1688gemm_bf16_128x128_ldg8_relu_f2f_stages_32x1_tn"
+     ],
+     [
+      12.630423999999955,
+      184,
+      "void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native:"
+     ],
+     [
+      11.412692000000018,
+      24,
+      "void pytorch_flash::flash_fwd_kernel<Flash_fwd_kernel_traits<64, 128, 128, 4, false, false"
+     ],
+     [
+      11.174937000000412,
+      48,
+      "ChunkGatedDeltaRuleFunction"
+     ],
+     [
+      10.582039999999921,
+      48,
+      "void at::native::(anonymous namespace)::conv_depthwise2d_forward_kernel_generic<c10::BFloa"
+     ],
+     [
+      8.848271999999925,
+      337,
+      "void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native:"
+     ],
+     [
+      6.601721999999965,
+      16,
+      "fmha_cutlassF_bf16_aligned_32x128_gmem_sm80(PyTorchMemEffAttention::AttentionKernel<cutlas"
+     ],
+     [
+      5.149574999999981,
+      306,
+      "void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::Tenso"
+     ],
+     [
+      5.033244000000166,
+      48,
+      "chunk_gated_delta_rule_fwd_kernel_h_blockdim64"
+     ],
+     [
+      4.620445999999952,
+      48,
+      "void at::native::vectorized_elementwise_kernel<4, at::native::BinaryFunctor<c10::BFloat16,"
+     ],
+     [
+      4.023866000000151,
+      113,
+      "void at::native::vectorized_elementwise_kernel<4, at::native::CUDAFunctor_add<c10::BFloat1"
+     ],
+     [
+      3.6215620000003983,
+      231,
+      "void at::native::vectorized_elementwise_kernel<4, at::native::bfloat16_copy_kernel_cuda(at"
+     ],
+     [
+      3.089149999999958,
+      17,
+      "Memcpy HtoD (Pageable -> Device)"
+     ],
+     [
+      2.947775999999998,
+      24,
+      "void at::native::vectorized_elementwise_kernel<4, at::native::GeluCUDAKernelImpl(at::Tenso"
+     ],
+     [
+      2.9278379999999777,
+      56,
+      "void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl<at::native::direct"
+     ],
+     [
+      2.5762550000000046,
+      48,
+      "chunk_fwd_kernel_o"
+     ],
+     [
+      2.3757689999999565,
+      72,
+      "void at::native::(anonymous namespace)::CatArrayBatchedCopy<at::native::(anonymous namespa"
+     ],
+     [
+      2.18422899999989,
+      129,
+      "void at::native::reduce_kernel<512, 1, at::native::ReduceOp<float, at::native::MeanOps<flo"
+     ],
+     [
+      2.0642250000000932,
+      129,
+      "void at::native::vectorized_elementwise_kernel<4, at::native::(anonymous namespace)::pow_t"
+     ],
+     [
+      2.003994999999937,
+      56,
+      "void at::native::vectorized_elementwise_kernel<4, at::native::(anonymous namespace)::silu_"
+     ],
+     [
+      1.9329599999999336,
+      137,
+      "void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native:"
+     ],
+     [
+      1.9226199999999845,
+      48,
+      "void at::native::(anonymous namespace)::CatArrayBatchedCopy<at::native::(anonymous namespa"
+     ],
+     [
+      1.6610550000000004,
+      1,
+      "sm80_xmma_fprop_implicit_gemm_indexed_bf16bf16_bf16f32_f32_nhwckrsc_nhwc_tilesize128x256x3"
+     ]
+    ]
+   }
+  },
+  "eng_graph": {
+   "N1": {
+    "stages_ms": {
+     "prep": 6.800030999784212,
+     "vision": 72.48158699985652,
+     "lm": 163.41232499962643,
+     "model": 235.34934799999974,
+     "total": 242.11798599981194
+    },
+    "gpu_kernel_ms_by_category": {
+     "gemm": 145.493,
+     "elementwise/other": 29.996,
+     "copy/cat": 25.36,
+     "conv": 8.455,
+     "gdn(fla)": 7.353,
+     "memcpy": 3.465,
+     "reduce/norm": 2.888,
+     "index": 1.037,
+     "softmax": 0.003
+    },
+    "gpu_kernel_ms_total": 224.049,
+    "n_kernel_launches": 4343,
+    "top_kernels": [
+     [
+      59.743034999999914,
+      120,
+      "ampere_bf16_s1688gemm_bf16_128x128_ldg8_f2f_stages_32x1_tn"
+     ],
+     [
+      40.90195099999988,
+      64,
+      "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8"
+     ],
+     [
+      24.049649999999925,
+      97,
+      "ampere_bf16_s1688gemm_bf16_128x128_ldg8_relu_f2f_stages_32x1_tn"
+     ],
+     [
+      11.37788100000011,
+      184,
+      "void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native:"
+     ],
+     [
+      10.66469999999999,
+      24,
+      "void pytorch_flash::flash_fwd_kernel<Flash_fwd_kernel_traits<64, 128, 128, 4, false, false"
+     ],
+     [
+      8.454520000000048,
+      48,
+      "void at::native::(anonymous namespace)::conv_depthwise2d_forward_kernel_generic<c10::BFloa"
+     ],
+     [
+      7.91103799999987,
+      337,
+      "void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native:"
+     ],
+     [
+      5.449115999999922,
+      16,
+      "fmha_cutlassF_bf16_aligned_32x128_gmem_sm80(PyTorchMemEffAttention::AttentionKernel<cutlas"
+     ],
+     [
+      4.305343000000042,
+      306,
+      "void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::Tenso"
+     ],
+     [
+      3.9966709999999694,
+      113,
+      "void at::native::vectorized_elementwise_kernel<4, at::native::CUDAFunctor_add<c10::BFloat1"
+     ],
+     [
+      3.1793960000000623,
+      231,
+      "void at::native::vectorized_elementwise_kernel<4, at::native::bfloat16_copy_kernel_cuda(at"
+     ],
+     [
+      3.1171169999999746,
+      17,
+      "Memcpy HtoD (Pageable -> Device)"
+     ],
+     [
+      3.0300480000000536,
+      48,
+      "void at::native::vectorized_elementwise_kernel<4, at::native::BinaryFunctor<c10::BFloat16,"
+     ],
+     [
+      2.7540759999999573,
+      24,
+      "void at::native::vectorized_elementwise_kernel<4, at::native::GeluCUDAKernelImpl(at::Tenso"
+     ],
+     [
+      2.7455010000000803,
+      56,
+      "void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl<at::native::direct"
+     ],
+     [
+      2.574751000000018,
+      48,
+      "chunk_gated_delta_rule_fwd_kernel_h_blockdim64"
+     ],
+     [
+      1.9231980000000004,
+      1,
+      "sm80_xmma_fprop_implicit_gemm_indexed_bf16bf16_bf16f32_f32_nhwckrsc_nhwc_tilesize128x256x3"
+     ],
+     [
+      1.8334060000000354,
+      48,
+      "void at::native::(anonymous namespace)::CatArrayBatchedCopy<at::native::(anonymous namespa"
+     ],
+     [
+      1.7922569999999687,
+      48,
+      "chunk_fwd_kernel_o"
+     ],
+     [
+      1.666142999999778,
+      129,
+      "void at::native::vectorized_elementwise_kernel<4, at::native::(anonymous namespace)::pow_t"
+     ],
+     [
+      1.6086080000001093,
+      129,
+      "void at::native::reduce_kernel<512, 1, at::native::ReduceOp<float, at::native::MeanOps<flo"
+     ],
+     [
+      1.556923999999737,
+      137,
+      "void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native:"
+     ],
+     [
+      1.4151989999999641,
+      48,
+      "chunk_gated_delta_rule_fwd_kkt_solve_kernel"
+     ],
+     [
+      1.3581749999999302,
+      16,
+      "ampere_bf16_s16816gemm_bf16_128x128_ldg8_f2f_stages_64x3_tn"
+     ],
+     [
+      1.331199000000095,
+      24,
+      "void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native:"
+     ]
+    ]
+   },
+   "N8": {
+    "stages_ms": {
+     "prep": 6.676332000097318,
+     "vision": 72.55680700018274,
+     "lm": 210.50756500017087,
+     "model": 282.8522790000534,
+     "total": 289.41468800030634
+    },
+    "gpu_kernel_ms_by_category": {
+     "gemm": 173.364,
+     "elementwise/other": 35.393,
+     "copy/cat": 31.426,
+     "gdn(fla)": 11.385,
+     "conv": 10.995,
+     "memcpy": 3.442,
+     "reduce/norm": 3.39,
+     "index": 1.508,
+     "softmax": 0.003
+    },
+    "gpu_kernel_ms_total": 270.907,
+    "n_kernel_launches": 4277,
+    "top_kernels": [
+     [
+      75.55862699999982,
+      136,
+      "ampere_bf16_s1688gemm_bf16_128x128_ldg8_f2f_stages_32x1_tn"
+     ],
+     [
+      50.7050540000001,
+      64,
+      "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8"
+     ],
+     [
+      24.938703999999984,
+      97,
+      "ampere_bf16_s1688gemm_bf16_128x128_ldg8_relu_f2f_stages_32x1_tn"
+     ],
+     [
+      12.566771000000095,
+      184,
+      "void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native:"
+     ],
+     [
+      11.301750000000018,
+      24,
+      "void pytorch_flash::flash_fwd_kernel<Flash_fwd_kernel_traits<64, 128, 128, 4, false, false"
+     ],
+     [
+      10.99496900000007,
+      48,
+      "void at::native::(anonymous namespace)::conv_depthwise2d_forward_kernel_generic<c10::BFloa"
+     ],
+     [
+      8.62786300000007,
+      337,
+      "void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native:"
+     ],
+     [
+      6.8221379999999625,
+      16,
+      "fmha_cutlassF_bf16_aligned_32x128_gmem_sm80(PyTorchMemEffAttention::AttentionKernel<cutlas"
+     ],
+     [
+      5.183390999999916,
+      48,
+      "chunk_gated_delta_rule_fwd_kernel_h_blockdim64"
+     ],
+     [
+      5.096918999999929,
+      306,
+      "void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::Tenso"
+     ],
+     [
+      4.618431999999957,
+      48,
+      "void at::native::vectorized_elementwise_kernel<4, at::native::BinaryFunctor<c10::BFloat16,"
+     ],
+     [
+      4.387712999999843,
+      113,
+      "void at::native::vectorized_elementwise_kernel<4, at::native::CUDAFunctor_add<c10::BFloat1"
+     ],
+     [
+      3.5112920000002505,
+      231,
+      "void at::native::vectorized_elementwise_kernel<4, at::native::bfloat16_copy_kernel_cuda(at"
+     ],
+     [
+      3.0861430000000056,
+      17,
+      "Memcpy HtoD (Pageable -> Device)"
+     ],
+     [
+      2.9619479999999676,
+      56,
+      "void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl<at::native::direct"
+     ],
+     [
+      2.7667519999999786,
+      24,
+      "void at::native::vectorized_elementwise_kernel<4, at::native::GeluCUDAKernelImpl(at::Tenso"
+     ],
+     [
+      2.6373740000001127,
+      48,
+      "chunk_fwd_kernel_o"
+     ],
+     [
+      2.3830079999999727,
+      72,
+      "void at::native::(anonymous namespace)::CatArrayBatchedCopy<at::native::(anonymous namespa"
+     ],
+     [
+      2.0655309999998863,
+      129,
+      "void at::native::reduce_kernel<512, 1, at::native::ReduceOp<float, at::native::MeanOps<flo"
+     ],
+     [
+      2.0457919999997247,
+      129,
+      "void at::native::vectorized_elementwise_kernel<4, at::native::(anonymous namespace)::pow_t"
+     ],
+     [
+      2.0219810000000145,
+      56,
+      "void at::native::vectorized_elementwise_kernel<4, at::native::(anonymous namespace)::silu_"
+     ],
+     [
+      1.8956810000000115,
+      48,
+      "void at::native::(anonymous namespace)::CatArrayBatchedCopy<at::native::(anonymous namespa"
+     ],
+     [
+      1.8894060000002064,
+      137,
+      "void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native:"
+     ],
+     [
+      1.7612469999999993,
+      1,
+      "sm80_xmma_fprop_implicit_gemm_indexed_bf16bf16_bf16f32_f32_nhwckrsc_nhwc_tilesize128x256x3"
+     ],
+     [
+      1.6278720000000904,
+      48,
+      "chunk_gated_delta_rule_fwd_kkt_solve_kernel"
+     ]
+    ]
+   }
+  }
+ }
+}

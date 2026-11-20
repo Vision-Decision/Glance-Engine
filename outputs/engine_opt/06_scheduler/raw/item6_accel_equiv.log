@@ -1,0 +1,31 @@
+Thu Nov 19 03:42:13 PM UTC 2026
+name, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 0 MiB
+GPU_IDLE
+eee7fc038f02667760de513f8c45352fcbd84810e2d31fbc94c412905de04be6  speed/decision_worker.py
+bd82ba6c12c630c397f80db0f98f3cfafac46b9e42be1f2c9bdd6874a5949620  speed/scheduler.py
+08160daebc0f6f7c3f0704108ffc4c4c543691d58e81e3110adffb9bb250fcb8  speed/engine.py
+cf08cdd51a022fb0e864813ccbefda4da9dc60111f95cd01be782760f6037be0  scan/varlen.py
+env PYTHONPATH=/content/dv:/content/item3-qla-deps:/content/item3-extras LD_LIBRARY_PATH=/content/item3-qla-deps/z3/lib:/usr/lib64-nvidia FLA_FLASH_QLA=0 python -m speed.test_scheduler_gpu --out /content/out/scan/item6_accel_equiv.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 15913.95it/s]
+{"vs_isolated": {"counts": {"total": 254, "agreed": 254}, "max_abs": {"presence_prob": 0.011080265045166016, "iou_prob": 0.052960753440856934, "box_pred": 0.04254606366157532, "typed_prob": 0.0277099609375}, "outliers": [{"sample": [0, 6], "image": 0, "question": 2, "actual": {"probs": [0.008010013028979301, 0.5929197072982788, 0.11688344180583954, 0.2821868360042572]}, "expected": {"probs": [0.00839087925851345, 0.5652097463607788, 0.1240764781832695, 0.3023228347301483]}, "delta": {"typed_prob": 0.0277099609375}}]}, "vs_shipped": {"counts": {"total": 254, "agreed": 254}, "max_abs": {"presence_prob": 0.016610026359558105, "iou_prob": 0.08711063861846924, "box_pred": 0.04135173559188843, "typed_prob": 0.027079641819000244}, "outliers": [{"sample": [0, 6], "image": 0, "question": 2, "actual": {"probs": [0.008010013028979301, 0.5929197072982788, 0.11688344180583954, 0.2821868360042572]}, "expected": {"probs": [0.008110511116683483, 0.5658400654792786, 0.12243178486824036, 0.3036176562309265]}, "delta": {"typed_prob": 0.027079641819000244}}]}, "isolated_vs_shipped": {"counts": {"total": 127, "agreed": 127}, "max_abs": {"presence_prob": 0.012209713459014893, "iou_prob": 0.08819776773452759, "box_pred": 0.04749792814254761, "typed_prob": 0.0274275541305542}, "outliers": [{"sample": [7], "image": 1, "question": 1, "actual": {"probs": [0.20511725544929504, 0.7948827147483826]}, "expected": {"probs": [0.177689790725708, 0.8223102688789368]}, "delta": {"typed_prob": 0.0274275541305542}}]}, "limits": {"presence_prob": 0.031703651, "iou_prob": 0.407418222, "box_pred": 0.424944818, "typed_prob": 0.0233531148}, "metrics": {"queue_depth": 0, "queue_limit": 256, "requests": {"completed": 96}, "batch_sizes": {"1": 32, "8": 3, "10": 1, "9": 2, "5": 1, "7": 1}, "latency_ms_histogram": {"1000": 36, "250": 8, "500": 18, "100": 9, "50": 13, "2500": 12}}}
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/content/dv/speed/test_scheduler_gpu.py", line 127, in <module>
+    asyncio.run(check(p.parse_args()))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/asyncio/runners.py", line 196, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "/usr/lib/python3.13/asyncio/runners.py", line 119, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/usr/lib/python3.13/asyncio/base_events.py", line 726, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/content/dv/speed/test_scheduler_gpu.py", line 115, in check
+    assert all(not m["outliers"] for m in metrics.values()), "see per-request outliers in result JSON"
+           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: see per-request outliers in result JSON
+exit=1

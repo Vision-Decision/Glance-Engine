@@ -1,0 +1,47 @@
+Thu Nov 19 02:18:45 PM UTC 2026
+name, driver_version, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 580.82.07, 0 MiB
+GPU compute process list empty
+89d663134d478a41c2503023a6d9c553779d56be38f3da9c743f7dbd5d55e1f2  speed/engine.py
+1dddb90995b7b27a4f98c9f93b7b1ad7a441862faad435d5ba4ace39190e3843  speed/bench_glance.py
+0701539d4e33661a75b60abc32e6e01d8a1731b2665e0fb4d85608c64cbfcf9c  speed/bench_w12.py
+d49b76f48d4f34a4840410748556648b97ef4d4a28d391a7cb4738e0bf138816  speed/test_w12.py
+c24e269b8d95e237358f79a9174ce64e932b2b6299dd28608c88bdfc86df4c62  speed/w12.py
+13b072b822abf9cbdb664032e57387422215e8d72d0e34446becf1206d1b052d  speed/specpilot/w12.cu
+783ab0eca111f8631b32ec7b1ddc786aa12cd120cf19cf72f9fec56a96689d3a  scan/engine.py
+bbd6ba5baf19263dfca5255ef2a4ca23a6abdaab5ed1937b6d15ef64ee83b172  scan/bench_scan.py
+python -m speed.bench_w12 --stage stages --ckpt /content/ckpt/v1/ckpt_final.pt --out /content/out/scan/item5_release_stages.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 20810.05it/s]
+bf16_followup_box_N1 {'m': 64, 'dense_ms': 6.213407929986715, 'w12_ms': 0, 'n_w12': 0, 'weights_w12': 0}
+bf16_followup_box_N8 {'m': 128, 'dense_ms': 6.836640026420355, 'w12_ms': 0, 'n_w12': 0, 'weights_w12': 0}
+bf16_followup_mixed_N8 {'m': 320, 'dense_ms': 10.26367998868227, 'w12_ms': 0, 'n_w12': 0, 'weights_w12': 0}
+bf16_followup_box_N32 {'m': 448, 'dense_ms': 13.227871973067522, 'w12_ms': 0, 'n_w12': 0, 'weights_w12': 0}
+bf16_followup_mixed_N32 {'m': 1280, 'dense_ms': 25.95436790585518, 'w12_ms': 0, 'n_w12': 0, 'weights_w12': 0}
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 17218.37it/s]
+bf16_Tv640_N1_box {'m': 64, 'dense_ms': 6.149055946618319, 'w12_ms': 0, 'n_w12': 0, 'weights_w12': 0}
+bf16_Tv640_N1_noul {'m': 64, 'dense_ms': 6.14937593601644, 'w12_ms': 0, 'n_w12': 0, 'weights_w12': 0}
+bf16_Tv640_N8_box {'m': 128, 'dense_ms': 6.732383968308568, 'w12_ms': 0, 'n_w12': 0, 'weights_w12': 0}
+bf16_Tv640_N8_noul {'m': 192, 'dense_ms': 7.1715520191937685, 'w12_ms': 0, 'n_w12': 0, 'weights_w12': 0}
+bf16_Tv640_N32_box {'m': 384, 'dense_ms': 9.95398398861289, 'w12_ms': 0, 'n_w12': 0, 'weights_w12': 0}
+bf16_Tv640_N32_noul {'m': 768, 'dense_ms': 16.897120155394077, 'w12_ms': 0, 'n_w12': 0, 'weights_w12': 0}
+bf16_Tv640_N64_box {'m': 704, 'dense_ms': 16.710464105010033, 'w12_ms': 0, 'n_w12': 0, 'weights_w12': 0}
+bf16_Tv640_N64_noul {'m': 1536, 'dense_ms': 30.367616154253483, 'w12_ms': 0, 'n_w12': 0, 'weights_w12': 0}
+bf16_Tv640_N256_box {'m': 2816, 'dense_ms': 52.49136024713516, 'w12_ms': 0, 'n_w12': 0, 'weights_w12': 0}
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/content/dv/speed/bench_w12.py", line 352, in <module>
+    main()
+    ~~~~^^
+  File "/content/dv/speed/bench_w12.py", line 348, in main
+    {"encode": export, "micro": micro, "micro_direct": micro, "micro_epilogue": micro, "accuracy": accuracy, "counters": counters, "stages": stages}[args.stage](args)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "/content/dv/speed/bench_w12.py", line 332, in stages
+    sample(f"{mode}_Tv640_N{n}_{kind}", bench.net.lm, sub, partial(eng.query, sub, query))
+    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/dv/speed/bench_w12.py", line 294, in sample
+    raise RuntimeError(f"{name} captured {len(events)} linears")
+RuntimeError: bf16_Tv640_N256_noul captured 96 linears
+release_stages exit=1

@@ -1,0 +1,6 @@
+conv_control exit=0
+pushed /content/out/scan/item7_twod_conv_control.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item7_twod_conv_control.json -> Vision-Decision/collection-scan-results
+conv_binary exit=0
+pushed /content/out/scan/item7_twod_conv_binary.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item7_twod_conv_binary.json -> Vision-Decision/collection-scan-results

@@ -1,0 +1,7 @@
+real exit=0
+pushed /content/out/scan/item7_resume_real.log -> Vision-Decision/collection-scan-results
+equiv exit=0
+pushed /content/out/scan/item7_resume_equiv.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item7_resume_equiv.json -> Vision-Decision/collection-scan-results
+diag exit=1
+pushed /content/out/scan/item7_resume_diag.log -> Vision-Decision/collection-scan-results

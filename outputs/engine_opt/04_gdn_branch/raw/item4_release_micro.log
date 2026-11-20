@@ -1,0 +1,20 @@
+Thu Nov 19 01:03:38 PM UTC 2026
+name, driver_version, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 580.82.07, 0 MiB
+GPU compute process list empty
+5e5c04f41452517c926e640b23bcc880b728e50acf78ee189a09b810425ebcb4  speed/engine.py
+e1be1b00ca3082e11f2352d19f99840fbb5f202001d149eede24cbace9c838f9  scan/engine.py
+d9d6ec04104e891fbb9673d8070921e6fe97849aff08c7887ab24c551c2a2b04  speed/gdn_branch.py
+GLANCE_BRANCH_MODE=fused
+python -m scan.profile_branch --stage micro --ckpt /content/ckpt/v1/ckpt_final.pt --out /content/out/scan/item4_release_micro.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 17383.80it/s]
+0 1 13 {'reference_ms': 0.5943679809570312, 'wy_ms': 0.05750399827957153, 'recurrent_ms': 0.056352000683546066, 'post_norm_vs_fla': {'max_abs': 0.1875, 'max_bf16_ulp': 29540, 'within_one': 41400, 'exact': 26985, 'count': 53248}, 'core_vs_fp32': {'max_abs': 0.00030174851417541504, 'max_bf16_ulp': 16, 'within_one': 53245, 'exact': 53174, 'count': 53248}}
+0 8 23 {'reference_ms': 0.6208320260047913, 'wy_ms': 0.07254400104284286, 'recurrent_ms': 0.25763198733329773, 'post_norm_vs_fla': {'max_abs': 0.9375, 'max_bf16_ulp': 31920, 'within_one': 579027, 'exact': 372655, 'count': 753664}, 'core_vs_fp32': {'max_abs': 0.00044032931327819824, 'max_bf16_ulp': 110, 'within_one': 753569, 'exact': 752233, 'count': 753664}}
+0 32 64 {'reference_ms': 0.875328004360199, 'wy_ms': 1.376255989074707, 'recurrent_ms': 2.7033278942108154, 'post_norm_vs_fla': {'max_abs': 0.5, 'max_bf16_ulp': 31462, 'within_one': 6272974, 'exact': 3959028, 'count': 8388608}}
+0 64 13 {'reference_ms': 0.4132480025291443, 'wy_ms': 0.147039994597435, 'recurrent_ms': 0.41673600673675537, 'post_norm_vs_fla': {'max_abs': 0.0078125, 'max_bf16_ulp': 26260, 'within_one': 3406755, 'exact': 3403681, 'count': 3407872}}
+0 256 25 {'reference_ms': 3.4280319213867188, 'wy_ms': 1.1953279972076416, 'recurrent_ms': 3.028575897216797, 'post_norm_vs_fla': {'max_abs': 0.0625, 'max_bf16_ulp': 26716, 'within_one': 26201804, 'exact': 26169403, 'count': 26214400}}
+14 1 13 {'reference_ms': 0.5917760133743286, 'wy_ms': 0.053888000547885895, 'recurrent_ms': 0.0530879981815815, 'post_norm_vs_fla': {'max_abs': 0.03125, 'max_bf16_ulp': 28854, 'within_one': 39178, 'exact': 24796, 'count': 53248}, 'core_vs_fp32': {'max_abs': 1.995731145143509e-05, 'max_bf16_ulp': 170, 'within_one': 53231, 'exact': 53111, 'count': 53248}}
+14 8 23 {'reference_ms': 0.5900160074234009, 'wy_ms': 0.07865600287914276, 'recurrent_ms': 0.2569600045681, 'post_norm_vs_fla': {'max_abs': 0.0625, 'max_bf16_ulp': 30252, 'within_one': 543580, 'exact': 336834, 'count': 753664}, 'core_vs_fp32': {'max_abs': 5.656294524669647e-05, 'max_bf16_ulp': 158, 'within_one': 753455, 'exact': 751292, 'count': 753664}}
+30 1 13 {'reference_ms': 0.5816320180892944, 'wy_ms': 0.05427199974656105, 'recurrent_ms': 0.0544000007212162, 'post_norm_vs_fla': {'max_abs': 0.0625, 'max_bf16_ulp': 29966, 'within_one': 39896, 'exact': 25721, 'count': 53248}, 'core_vs_fp32': {'max_abs': 5.081668496131897e-05, 'max_bf16_ulp': 13, 'within_one': 53239, 'exact': 53135, 'count': 53248}}
+30 8 23 {'reference_ms': 0.5917760133743286, 'wy_ms': 0.07440000027418137, 'recurrent_ms': 0.25760000944137573, 'post_norm_vs_fla': {'max_abs': 0.09375, 'max_bf16_ulp': 30450, 'within_one': 549243, 'exact': 348553, 'count': 753664}, 'core_vs_fp32': {'max_abs': 0.00010771304368972778, 'max_bf16_ulp': 313, 'within_one': 753521, 'exact': 751688, 'count': 753664}}
+release_micro exit=0

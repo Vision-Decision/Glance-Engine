@@ -1,0 +1,25 @@
+peaks exit=0
+pushed /content/out/scan/c0_peaks.json -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/c0_peaks.log -> Vision-Decision/collection-scan-results
+video exit=0
+pushed /content/out/scan/c0_video.json -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/c0_video.log -> Vision-Decision/collection-scan-results
+clients exit=0
+pushed /content/out/scan/c0_clients.json -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/c0_clients.log -> Vision-Decision/collection-scan-results
+clients_vllm exit=0
+pushed /content/out/scan/c0_clients_vllm.json -> Vision-Decision/collection-scan-results
+push failed /content/out/scan/c0_clients_vllm.log Vision-Decision/collection-scan-results (Request ID: Root=1-6afebc48-7a75321443db681d5dbd8a49;6b5e8bdd-2c72-411c-a148-6d0f8ea32056)
+
+429 Too Many Requests for u
+pushed /content/out/scan/c0_clients_vllm.log -> Vision-Decision/collection-scan-data
+clients_sglang exit=0
+pushed /content/out/scan/c0_clients_sglang.json -> Vision-Decision/collection-scan-results
+push failed /content/out/scan/c0_clients_sglang.log Vision-Decision/collection-scan-results (Request ID: Root=1-6afebcb1-3854ba3d2189e04949bc4cd0;a6ac4397-04ff-4c8b-9c98-213bcd307676)
+
+429 Too Many Requests for u
+pushed /content/out/scan/c0_clients_sglang.log -> Vision-Decision/collection-scan-data
+sglang_box exit=0
+pushed /content/out/scan/c0_sglang_box.json -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/c0_sglang_box.log -> Vision-Decision/collection-scan-results
+scan/vm/ceiling.sh: line 36: /vm/push.py: No such file or directory

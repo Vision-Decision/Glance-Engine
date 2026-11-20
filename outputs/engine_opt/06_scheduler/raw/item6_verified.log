@@ -1,0 +1,27 @@
+Thu Nov 19 03:15:58 PM UTC 2026
+name, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 0 MiB
+GPU_IDLE
+python -m speed.test_scheduler_gpu --out /content/out/scan/item6_verified.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 16696.67it/s]
+{"counts": {"total": 254, "agreed": 254}, "max_abs": {"presence_prob": 0.014085054397583008, "iou_prob": 0.044270455837249756, "box_pred": 0.0385381281375885, "typed_prob": 0.03557056188583374}, "limits": {"presence_prob": 0.031703651, "iou_prob": 0.407418222, "box_pred": 0.424944818, "typed_prob": 0.0233531148}, "metrics": {"queue_depth": 0, "queue_limit": 256, "requests": {"completed": 64}, "batch_sizes": {"8": 3, "10": 1, "9": 2, "5": 1, "7": 1}, "latency_ms_histogram": {"2500": 25, "5000": 39}}}
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/content/dv/speed/test_scheduler_gpu.py", line 88, in <module>
+    asyncio.run(check(p.parse_args()))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/asyncio/runners.py", line 196, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "/usr/lib/python3.13/asyncio/runners.py", line 119, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/usr/lib/python3.13/asyncio/base_events.py", line 726, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/content/dv/speed/test_scheduler_gpu.py", line 79, in check
+    assert all(v <= BF16_LIMIT[k] for k, v in errors.items())
+           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+exit=1

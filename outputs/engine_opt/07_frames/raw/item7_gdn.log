@@ -1,0 +1,13 @@
+Thu Nov 19 04:30:19 PM UTC 2026
+name, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 0 MiB
+GPU_IDLE
+python -m scan.profile_frames --stage gdn --ckpt /content/ckpt/v1/ckpt_final.pt --out /content/out/scan/item7_gdn.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 18140.76it/s]
+2026-11-19 16:30:28  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:137): TileLang begins to compile kernel `tilelang_fused_chunk_gdr_fwd_kernel` with `out_idx=None`
+2026-11-19 16:30:34  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:145): TileLang completes to compile kernel `tilelang_fused_chunk_gdr_fwd_kernel`
+2026-11-19 16:30:35  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:137): TileLang begins to compile kernel `tilelang_fused_chunk_gdr_fwd_kernel` with `out_idx=None`
+2026-11-19 16:30:40  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:145): TileLang completes to compile kernel `tilelang_fused_chunk_gdr_fwd_kernel`
+gdn 128
+gdn 256
+gdn exit=0

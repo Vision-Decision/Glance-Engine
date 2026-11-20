@@ -1,0 +1,12 @@
+Thu Nov 19 07:17:35 PM UTC 2026
+name, driver_version, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 580.82.07, 0 MiB
+GPU compute process list empty
+GLANCE_BOX_REDUCTION=tiled
+python -m scan.bench_scan --parts cached --cached_tvs 640 --Ns 256 --n_calls 15 --ckpt /content/ckpt/v1/ckpt_final.pt --out /content/out/scan/item9_full_cached.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 17757.18it/s]
+[mem] image bank Tv640: allocated 29.5 GB, reserved 48.8 GB
+cached 640 256 box {"prep_ms": 0.12, "model_ms": 95.59, "total_ms": 95.71, "total_ms_p90": 109.57}
+cached 640 256 noul {"prep_ms": 0.15, "model_ms": 175.69, "total_ms": 175.83, "total_ms_p90": 190.89}
+BENCH_DONE
+cached exit=0

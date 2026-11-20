@@ -1,0 +1,46 @@
+Thu Nov 19 08:14:57 UTC 2026
+name, memory.total [MiB], memory.used [MiB], driver_version
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 97887 MiB, 0 MiB, 580.82.07
+GPU compute process list empty before equiv in /content/dv
+python -m scan.bench_scan --ckpt /content/ckpt/v1/ckpt_final.pt --parts equiv --out /content/out/scan/item1_equiv.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 16723.74it/s]
+[transformers] Qwen3VL video processing does not apply the per-frame pixel cap the reference implementation (qwen-vl-utils) applies, so some videos cost far more tokens than they would there. In v5.22 the capped behavior will become the default and `cap_pixels_per_frame` will be removed. Pass `cap_pixels_per_frame=True` to adopt the reference behavior now, or `False` to keep the current behavior and silence this warning.
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/content/dv/scan/bench_scan.py", line 403, in <module>
+    main()
+    ~~~~^^
+  File "/content/dv/scan/bench_scan.py", line 369, in main
+    part_equiv(B, a, res)
+    ~~~~~~~~~~^^^^^^^^^^^
+  File "/content/dv/scan/bench_scan.py", line 120, in part_equiv
+    out[f"{s}/q{i}/cached"] = diff(eng.query(bank, q), refs[(s, i)])
+                                   ~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "/content/dv/scan/engine.py", line 571, in query
+    bank._graphs[key] = self._capture(lambda S: self._core_branch(S, host, bank), E)
+                        ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/dv/speed/engine.py", line 670, in _capture
+    with torch.cuda.graph(g, pool=self._pool):
+         ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/torch/cuda/graphs.py", line 1183, in __enter__
+    self.cuda_graph.capture_begin(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        # type: ignore[misc]
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        check_input_liveness=self.check_input_liveness,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/usr/local/lib/python3.13/dist-packages/torch/cuda/graphs.py", line 610, in capture_begin
+    super().capture_begin(
+    ~~~~~~~~~~~~~~~~~~~~~^
+        pool=_get_pool_id(pool), capture_error_mode=capture_error_mode
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+RuntimeError: it->second->use_count > 0 INTERNAL ASSERT FAILED at "/__w/pytorch/pytorch/c10/cuda/CUDACachingAllocator.cpp":3329, please report a bug to PyTorch. 
+stage=equiv exit=1

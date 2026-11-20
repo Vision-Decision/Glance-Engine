@@ -1,0 +1,3 @@
+tma exit=0
+pushed /content/out/scan/item3_tma.json -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item3_tma.log -> Vision-Decision/collection-scan-results

@@ -1,0 +1,36 @@
+fixed_vision=0
+push failed /content/out/scan/item1_fixed_vision.json Vision-Decision/collection-scan-results (Request ID: Root=1-6afeb370-41553672006810d15d2f3a3a;fb13732f-c7e0-4dfc-b886-87227ddae90e)
+
+429 Too Many Requests for u
+pushed /content/out/scan/item1_fixed_vision.json -> Vision-Decision/collection-scan-data
+push failed /content/out/scan/item1_fixed_vision.log Vision-Decision/collection-scan-results (Request ID: Root=1-6afeb371-126aadc131847954470b1f26;6d1c1cb6-0d68-4317-a92e-bf4dd9645f73)
+
+429 Too Many Requests for u
+pushed /content/out/scan/item1_fixed_vision.log -> Vision-Decision/collection-scan-data
+cp: warning: behavior of -n is non-portable and may change in future; use --update=none instead
+cp: warning: behavior of -n is non-portable and may change in future; use --update=none instead
+stage=before exit=2
+push failed /content/out/scan/item1_before.log Vision-Decision/collection-scan-results (Request ID: Root=1-6afeb376-57ecc4eb1583da7f69d3e5fd;f3ecff8d-c976-41b9-8db1-55b6a128a766)
+
+429 Too Many Requests for u
+pushed /content/out/scan/item1_before.log -> Vision-Decision/collection-scan-data
+No files have been modified since last commit. Skipping to prevent empty commit.
+pushed /content/out/scan/item1_before.json -> Vision-Decision/collection-scan-results
+before=2
+cp: warning: behavior of -n is non-portable and may change in future; use --update=none instead
+cp: warning: behavior of -n is non-portable and may change in future; use --update=none instead
+stage=after exit=0
+pushed /content/out/scan/item1_after.log -> Vision-Decision/collection-scan-results
+push failed /content/out/scan/item1_after.json Vision-Decision/collection-scan-results (Request ID: Root=1-6afeb418-2f05ef464580cc555e19b9f6;6051bf2f-ddb5-41cd-8254-9b514512a53d)
+
+429 Too Many Requests for u
+pushed /content/out/scan/item1_after.json -> Vision-Decision/collection-scan-data
+after=0
+cp: warning: behavior of -n is non-portable and may change in future; use --update=none instead
+cp: warning: behavior of -n is non-portable and may change in future; use --update=none instead
+stage=diag exit=0
+pushed /content/out/scan/item1_diag.log -> Vision-Decision/collection-scan-results
+No files have been modified since last commit. Skipping to prevent empty commit.
+pushed /content/out/scan/item1_diag.json -> Vision-Decision/collection-scan-results
+diag=0
+FINAL_CHAIN_DONE

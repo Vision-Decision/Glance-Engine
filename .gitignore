@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+.DS_Store
+*.egg-info/
+build/
+dist/
+*.pt
+*.safetensors
+
+# >5 MB files restored from HF by scripts/fetch_large_files.py (see LARGE_FILES.tsv)
+/outputs/scan/raw/scan-a/pilot_frames_v1.json.gz
+/outputs/scan/raw/scan-a/pilot_clips_short.json.gz
+.ruff_cache/
+.pytest_cache/

@@ -1,0 +1,532 @@
+{
+ "18432x2560": {
+  "shape": [
+   18432,
+   2560
+  ],
+  "layers": 4,
+  "samples": {
+   "1": {
+    "bf16": 66.47200137376785,
+    "segment": 50.20799860358238,
+    "epilogue": 51.14400014281273,
+    "max_error": 0.00390625,
+    "bit_agreement": 0.998643696308136,
+    "epilogue_max_error": 0.00390625,
+    "epilogue_repeatable": true
+   },
+   "8": {
+    "bf16": 68.76000016927719,
+    "segment": 50.200000405311584,
+    "epilogue": 52.2879995405674,
+    "decode_blas": 117.51200258731842,
+    "max_error": 0.0078125,
+    "bit_agreement": 0.9983656406402588,
+    "epilogue_max_error": 0.0078125,
+    "epilogue_repeatable": true
+   },
+   "16": {
+    "bf16": 69.93599981069565,
+    "segment": 50.50399899482727,
+    "epilogue": 54.55999821424484,
+    "max_error": 0.0078125,
+    "bit_agreement": 0.9984198808670044,
+    "epilogue_max_error": 0.0078125,
+    "epilogue_repeatable": true
+   },
+   "24": {
+    "bf16": 66.84000045061111,
+    "segment": 50.808001309633255,
+    "epilogue": 57.16799944639206,
+    "max_error": 0.0078125,
+    "bit_agreement": 0.9983882308006287,
+    "epilogue_max_error": 0.0078125,
+    "epilogue_repeatable": true
+   },
+   "32": {
+    "bf16": 66.8720006942749,
+    "segment": 51.35200172662735,
+    "epilogue": 60.231998562812805,
+    "max_error": 0.00390625,
+    "bit_agreement": 0.9983876347541809,
+    "epilogue_max_error": 0.00390625,
+    "epilogue_repeatable": true
+   },
+   "40": {
+    "bf16": 70.73599845170975,
+    "segment": 51.2159988284111,
+    "epilogue": 63.23999911546707,
+    "max_error": 0.0078125,
+    "bit_agreement": 0.9983290433883667,
+    "epilogue_max_error": 0.0078125,
+    "epilogue_repeatable": true
+   },
+   "48": {
+    "bf16": 71.00799679756165,
+    "segment": 51.70400068163872,
+    "epilogue": 65.93599915504456,
+    "max_error": 0.0078125,
+    "bit_agreement": 0.9983837008476257,
+    "epilogue_max_error": 0.0078125,
+    "epilogue_repeatable": true
+   },
+   "64": {
+    "bf16": 71.20800018310547,
+    "segment": 52.22399905323982,
+    "epilogue": 71.77600264549255,
+    "decode_blas": 127.78399884700775,
+    "max_error": 0.0078125,
+    "bit_agreement": 0.9983410239219666,
+    "epilogue_max_error": 0.0078125,
+    "epilogue_repeatable": true
+   },
+   "96": {
+    "bf16": 71.99200242757797,
+    "segment": 53.71199920773506,
+    "epilogue": 82.75199681520462,
+    "epilogue_max_error": 0.0078125,
+    "epilogue_repeatable": true
+   },
+   "128": {
+    "bf16": 76.28799974918365,
+    "segment": 72.20800220966339,
+    "epilogue": 95.271997153759,
+    "epilogue_max_error": 0.015625,
+    "epilogue_repeatable": true
+   },
+   "256": {
+    "bf16": 79.75199818611145
+   },
+   "512": {
+    "bf16": 150.82399547100067
+   },
+   "1024": {
+    "bf16": 293.69598627090454
+   }
+  }
+ },
+ "2560x9216": {
+  "shape": [
+   2560,
+   9216
+  ],
+  "layers": 8,
+  "samples": {
+   "1": {
+    "bf16": 35.071998834609985,
+    "segment": 27.97199971973896,
+    "epilogue": 29.915999621152878,
+    "max_error": 9.5367431640625e-07,
+    "bit_agreement": 0.9996094107627869,
+    "epilogue_max_error": 0.0009765625,
+    "epilogue_repeatable": true
+   },
+   "8": {
+    "bf16": 35.37999838590622,
+    "segment": 28.16000021994114,
+    "epilogue": 31.640000641345978,
+    "decode_blas": 48.54400083422661,
+    "max_error": 0.00390625,
+    "bit_agreement": 0.99853515625,
+    "epilogue_max_error": 0.00390625,
+    "epilogue_repeatable": true
+   },
+   "16": {
+    "bf16": 35.50399839878082,
+    "segment": 30.260000377893448,
+    "epilogue": 35.920001566410065,
+    "max_error": 0.00390625,
+    "bit_agreement": 0.9983154535293579,
+    "epilogue_max_error": 0.00390625,
+    "epilogue_repeatable": true
+   },
+   "24": {
+    "bf16": 38.520000874996185,
+    "segment": 32.66400098800659,
+    "epilogue": 40.13599827885628,
+    "max_error": 0.03125,
+    "bit_agreement": 0.5802083611488342,
+    "epilogue_max_error": 0.03125,
+    "epilogue_repeatable": true
+   },
+   "32": {
+    "bf16": 38.575999438762665,
+    "segment": 31.775999814271927,
+    "epilogue": 47.5119985640049,
+    "max_error": 0.0625,
+    "bit_agreement": 0.577587902545929,
+    "epilogue_max_error": 0.0625,
+    "epilogue_repeatable": true
+   },
+   "40": {
+    "bf16": 36.13999858498573,
+    "segment": 33.42000022530556,
+    "epilogue": 52.91200056672096,
+    "max_error": 0.015625,
+    "bit_agreement": 0.5820507407188416,
+    "epilogue_max_error": 0.015625,
+    "epilogue_repeatable": true
+   },
+   "48": {
+    "bf16": 35.89199855923653,
+    "segment": 35.79999879002571,
+    "epilogue": 59.10800024867058,
+    "max_error": 0.015625,
+    "bit_agreement": 0.5825846791267395,
+    "epilogue_max_error": 0.015625,
+    "epilogue_repeatable": true
+   },
+   "64": {
+    "bf16": 36.107998341321945,
+    "segment": 40.991999208927155,
+    "epilogue": 69.57600265741348,
+    "decode_blas": 45.44400051236153,
+    "max_error": 0.03125,
+    "bit_agreement": 0.585400402545929,
+    "epilogue_max_error": 0.03125,
+    "epilogue_repeatable": true
+   },
+   "96": {
+    "bf16": 38.548000156879425,
+    "segment": 55.0759993493557,
+    "epilogue": 92.62000024318695,
+    "epilogue_max_error": 0.015625,
+    "epilogue_repeatable": true
+   },
+   "128": {
+    "bf16": 38.88799995183945,
+    "segment": 75.81999897956848,
+    "epilogue": 112.83200234174728,
+    "epilogue_max_error": 0.03125,
+    "epilogue_repeatable": true
+   },
+   "256": {
+    "bf16": 50.92399939894676
+   },
+   "512": {
+    "bf16": 84.36399698257446
+   },
+   "1024": {
+    "bf16": 144.05600726604462
+   }
+  }
+ },
+ "12352x2560": {
+  "shape": [
+   12352,
+   2560
+  ],
+  "layers": 6,
+  "samples": {
+   "1": {
+    "bf16": 45.882667104403176,
+    "segment": 34.98133271932602,
+    "epilogue": 35.86666782697042,
+    "max_error": 0.00390625,
+    "bit_agreement": 0.9984617829322815,
+    "epilogue_max_error": 0.00390625,
+    "epilogue_repeatable": true
+   },
+   "8": {
+    "bf16": 48.41599861780802,
+    "segment": 34.901333351929985,
+    "epilogue": 36.890665690104164,
+    "decode_blas": 71.76533341407776,
+    "max_error": 0.03125,
+    "bit_agreement": 0.7288596630096436,
+    "epilogue_max_error": 0.03125,
+    "epilogue_repeatable": true
+   },
+   "16": {
+    "bf16": 49.02400076389313,
+    "segment": 35.17866631348928,
+    "epilogue": 39.13066784540812,
+    "max_error": 0.03125,
+    "bit_agreement": 0.7322903275489807,
+    "epilogue_max_error": 0.03125,
+    "epilogue_repeatable": true
+   },
+   "24": {
+    "bf16": 51.43466591835022,
+    "segment": 35.487999518712364,
+    "epilogue": 41.66933397452036,
+    "max_error": 0.03125,
+    "bit_agreement": 0.591327965259552,
+    "epilogue_max_error": 0.03125,
+    "epilogue_repeatable": true
+   },
+   "32": {
+    "bf16": 51.498666405677795,
+    "segment": 35.829332967599235,
+    "epilogue": 44.35733457406362,
+    "max_error": 0.03125,
+    "bit_agreement": 0.59033203125,
+    "epilogue_max_error": 0.03125,
+    "epilogue_repeatable": true
+   },
+   "40": {
+    "bf16": 46.93866769472758,
+    "segment": 36.17066641648611,
+    "epilogue": 47.16266691684723,
+    "max_error": 0.0078125,
+    "bit_agreement": 0.9983383417129517,
+    "epilogue_max_error": 0.0078125,
+    "epilogue_repeatable": true
+   },
+   "48": {
+    "bf16": 47.00266818205515,
+    "segment": 36.533333361148834,
+    "epilogue": 50.17599960168203,
+    "max_error": 0.0078125,
+    "bit_agreement": 0.9983235001564026,
+    "epilogue_max_error": 0.0078125,
+    "epilogue_repeatable": true
+   },
+   "64": {
+    "bf16": 47.14133342107137,
+    "segment": 37.39733248949051,
+    "epilogue": 56.02666735649109,
+    "decode_blas": 73.27466706434886,
+    "max_error": 0.015625,
+    "bit_agreement": 0.9983985424041748,
+    "epilogue_max_error": 0.015625,
+    "epilogue_repeatable": true
+   },
+   "96": {
+    "bf16": 55.63733478387197,
+    "segment": 40.752001106739044,
+    "epilogue": 66.63466493288676,
+    "epilogue_max_error": 0.03125,
+    "epilogue_repeatable": true
+   },
+   "128": {
+    "bf16": 51.95199946562449,
+    "segment": 69.04000043869019,
+    "epilogue": 84.6666693687439,
+    "epilogue_max_error": 0.015625,
+    "epilogue_repeatable": true
+   },
+   "256": {
+    "bf16": 70.5386648575465
+   },
+   "512": {
+    "bf16": 121.34400010108948
+   },
+   "1024": {
+    "bf16": 208.41066042582193
+   }
+  }
+ },
+ "2560x4096": {
+  "shape": [
+   2560,
+   4096
+  ],
+  "layers": 18,
+  "samples": {
+   "1": {
+    "bf16": 16.82844426896837,
+    "segment": 15.132443772421944,
+    "epilogue": 16.44444465637207,
+    "max_error": 0.0078125,
+    "bit_agreement": 0.9996094107627869,
+    "epilogue_max_error": 0.0078125,
+    "epilogue_repeatable": true
+   },
+   "8": {
+    "bf16": 17.875555488798355,
+    "segment": 15.153777268197802,
+    "epilogue": 17.480888300471836,
+    "decode_blas": 26.556443836953903,
+    "max_error": 0.001953125,
+    "bit_agreement": 0.999707043170929,
+    "epilogue_max_error": 0.001953125,
+    "epilogue_repeatable": true
+   },
+   "16": {
+    "bf16": 18.16177699300978,
+    "segment": 16.632889707883198,
+    "epilogue": 20.586666133668686,
+    "max_error": 0.001953125,
+    "bit_agreement": 0.999755859375,
+    "epilogue_max_error": 0.001953125,
+    "epilogue_repeatable": true
+   },
+   "24": {
+    "bf16": 19.24266748958164,
+    "segment": 17.703110973040264,
+    "epilogue": 23.30666614903344,
+    "max_error": 0.03125,
+    "bit_agreement": 0.5812825560569763,
+    "epilogue_max_error": 0.03125,
+    "epilogue_repeatable": true
+   },
+   "32": {
+    "bf16": 19.660444723235237,
+    "segment": 18.88711088233524,
+    "epilogue": 28.837333122889202,
+    "max_error": 0.03125,
+    "bit_agreement": 0.580859363079071,
+    "epilogue_max_error": 0.03125,
+    "epilogue_repeatable": true
+   },
+   "40": {
+    "bf16": 18.211555149820114,
+    "segment": 21.048888564109802,
+    "epilogue": 32.650666104422676,
+    "max_error": 0.0625,
+    "bit_agreement": 0.5845410227775574,
+    "epilogue_max_error": 0.0625,
+    "epilogue_repeatable": true
+   },
+   "48": {
+    "bf16": 18.209778600268894,
+    "segment": 23.441778288947212,
+    "epilogue": 36.609778801600136,
+    "max_error": 0.0625,
+    "bit_agreement": 0.5868083238601685,
+    "epilogue_max_error": 0.0625,
+    "epilogue_repeatable": true
+   },
+   "64": {
+    "bf16": 18.213333355055916,
+    "segment": 27.76000069247352,
+    "epilogue": 44.200887282689415,
+    "decode_blas": 26.021333204375374,
+    "max_error": 0.03125,
+    "bit_agreement": 0.5870300531387329,
+    "epilogue_max_error": 0.03125,
+    "epilogue_repeatable": true
+   },
+   "96": {
+    "bf16": 20.199111766285366,
+    "segment": 39.38488827811347,
+    "epilogue": 62.469330098893906,
+    "epilogue_max_error": 0.03125,
+    "epilogue_repeatable": true
+   },
+   "128": {
+    "bf16": 20.776889390415615,
+    "segment": 53.60355642106798,
+    "epilogue": 76.49955484602187,
+    "epilogue_max_error": 0.0625,
+    "epilogue_repeatable": true
+   },
+   "256": {
+    "bf16": 26.718222432666355
+   },
+   "512": {
+    "bf16": 39.098666773902046
+   },
+   "1024": {
+    "bf16": 67.88266367382474
+   }
+  }
+ },
+ "10240x2560": {
+  "shape": [
+   10240,
+   2560
+  ],
+  "layers": 7,
+  "samples": {
+   "1": {
+    "bf16": 38.683427231652395,
+    "segment": 30.043429562023707,
+    "epilogue": 31.29142948559352,
+    "max_error": 0.0078125,
+    "bit_agreement": 0.998339831829071,
+    "epilogue_max_error": 0.0078125,
+    "epilogue_repeatable": true
+   },
+   "8": {
+    "bf16": 38.811428206307546,
+    "segment": 30.15771508216858,
+    "epilogue": 32.182857394218445,
+    "decode_blas": 54.17599848338536,
+    "max_error": 0.0078125,
+    "bit_agreement": 0.998339831829071,
+    "epilogue_max_error": 0.0078125,
+    "epilogue_repeatable": true
+   },
+   "16": {
+    "bf16": 39.06743015561785,
+    "segment": 30.500571642603195,
+    "epilogue": 34.83428486755916,
+    "max_error": 0.015625,
+    "bit_agreement": 0.9985412955284119,
+    "epilogue_max_error": 0.015625,
+    "epilogue_repeatable": true
+   },
+   "24": {
+    "bf16": 38.61485634531294,
+    "segment": 31.16342851093837,
+    "epilogue": 37.35314096723284,
+    "max_error": 0.015625,
+    "bit_agreement": 0.9985107779502869,
+    "epilogue_max_error": 0.015625,
+    "epilogue_repeatable": true
+   },
+   "32": {
+    "bf16": 38.35428612572806,
+    "segment": 31.506285071372986,
+    "epilogue": 41.33485896246774,
+    "max_error": 0.015625,
+    "bit_agreement": 0.99859619140625,
+    "epilogue_max_error": 0.015625,
+    "epilogue_repeatable": true
+   },
+   "40": {
+    "bf16": 38.36342692375183,
+    "segment": 31.872000013078964,
+    "epilogue": 44.08228397369385,
+    "max_error": 0.015625,
+    "bit_agreement": 0.9985570907592773,
+    "epilogue_max_error": 0.015625,
+    "epilogue_repeatable": true
+   },
+   "48": {
+    "bf16": 38.3314277444567,
+    "segment": 32.33828502041953,
+    "epilogue": 47.670858246939524,
+    "max_error": 0.015625,
+    "bit_agreement": 0.9985677599906921,
+    "epilogue_max_error": 0.015625,
+    "epilogue_repeatable": true
+   },
+   "64": {
+    "bf16": 38.44114286558969,
+    "segment": 32.99657148974283,
+    "epilogue": 54.0525700364794,
+    "decode_blas": 58.86628372328622,
+    "max_error": 0.015625,
+    "bit_agreement": 0.9985412955284119,
+    "epilogue_max_error": 0.015625,
+    "epilogue_repeatable": true
+   },
+   "96": {
+    "bf16": 40.37485803876604,
+    "segment": 36.79085629326956,
+    "epilogue": 66.54171432767596,
+    "epilogue_max_error": 0.015625,
+    "epilogue_repeatable": true
+   },
+   "128": {
+    "bf16": 40.38857136453901,
+    "segment": 54.44114123071943,
+    "epilogue": 80.00000034059796,
+    "epilogue_max_error": 0.015625,
+    "epilogue_repeatable": true
+   },
+   "256": {
+    "bf16": 45.709712164742605
+   },
+   "512": {
+    "bf16": 76.84114149638584
+   },
+   "1024": {
+    "bf16": 149.46743420192175
+   }
+  }
+ }
+}

@@ -1,0 +1,19 @@
+Thu Nov 19 03:46:20 PM UTC 2026
+name, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 0 MiB
+GPU_IDLE
+eee7fc038f02667760de513f8c45352fcbd84810e2d31fbc94c412905de04be6  speed/decision_worker.py
+bd82ba6c12c630c397f80db0f98f3cfafac46b9e42be1f2c9bdd6874a5949620  speed/scheduler.py
+08160daebc0f6f7c3f0704108ffc4c4c543691d58e81e3110adffb9bb250fcb8  speed/engine.py
+cf08cdd51a022fb0e864813ccbefda4da9dc60111f95cd01be782760f6037be0  scan/varlen.py
+env PYTHONPATH=/content/dv:/content/item3-qla-deps:/content/item3-extras LD_LIBRARY_PATH=/content/item3-qla-deps/z3/lib:/usr/lib64-nvidia FLA_FLASH_QLA=0 python -m speed.bench_scheduler --backend scheduled --parts box\,yesno --warm-shapes --group-vision --out /content/out/scan/item6_grouped.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 19841.80it/s]
+box_1 {'burst_median_ms': 32.21, 'requests_s': 31.81, 'p50_ms': 32.21, 'p90_ms': 32.25, 'p99_ms': 32.25}
+box_4 {'burst_median_ms': 104.2, 'requests_s': 38.24, 'p50_ms': 104.19, 'p90_ms': 106.84, 'p99_ms': 106.85}
+box_16 {'burst_median_ms': 369.0, 'requests_s': 43.23, 'p50_ms': 271.63, 'p90_ms': 369.4, 'p99_ms': 375.33}
+box_64 {'burst_median_ms': 1443.19, 'requests_s': 44.2, 'p50_ms': 822.76, 'p90_ms': 1361.82, 'p99_ms': 1457.93}
+yesno_1 {'burst_median_ms': 32.16, 'requests_s': 32.08, 'p50_ms': 32.16, 'p90_ms': 32.24, 'p99_ms': 32.25}
+yesno_4 {'burst_median_ms': 105.75, 'requests_s': 37.71, 'p50_ms': 105.75, 'p90_ms': 106.86, 'p99_ms': 106.86}
+yesno_16 {'burst_median_ms': 375.28, 'requests_s': 42.53, 'p50_ms': 274.19, 'p90_ms': 375.62, 'p99_ms': 379.69}
+yesno_64 {'burst_median_ms': 1473.39, 'requests_s': 43.47, 'p50_ms': 826.16, 'p90_ms': 1373.31, 'p99_ms': 1478.47}
+exit=0

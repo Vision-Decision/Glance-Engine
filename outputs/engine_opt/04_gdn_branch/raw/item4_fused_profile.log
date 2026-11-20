@@ -1,0 +1,70 @@
+Thu Nov 19 12:59:43 PM UTC 2026
+name, driver_version, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 580.82.07, 0 MiB
+GPU compute process list empty
+5e5c04f41452517c926e640b23bcc880b728e50acf78ee189a09b810425ebcb4  speed/engine.py
+e1be1b00ca3082e11f2352d19f99840fbb5f202001d149eede24cbace9c838f9  scan/engine.py
+16b7f3e92b420a9e3be8486ef47390d3878196c84e70bf0b6b59e972f1434429  speed/gdn_branch.py
+GLANCE_BRANCH_MODE=fused
+python -m scan.profile_branch --stage profile --ckpt /content/ckpt/v1/ckpt_final.pt --out /content/out/scan/item4_fused_profile.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 17473.55it/s]
+triton.compiler.errors.CompilationError: at 1:0:
+def _group(block, Images, GroupOff, SHARED: tl.constexpr, UNIFORM: tl.constexpr, INDEXED: tl.constexpr):
+^
+TypeError('Return type mismatch: int32 and int64. Note all return types were: [<triton.language.core.tuple_type object at 0x79d28f308d10>, <triton.language.core.tuple_type object at 0x79d28f309550>]')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/content/dv/scan/profile_branch.py", line 74, in <module>
+    profile_calls(a)
+    ~~~~~~~~~~~~~^^^
+  File "/content/dv/scan/profile_branch.py", line 39, in profile_calls
+    bank = eng.encode(items, chunk=16 if tv in (640, 256) else 32)
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "/content/dv/scan/engine.py", line 433, in encode
+    res, cache, vis = self._core(E, host)          # eager: bank tensors must not alias graph buffers
+                      ~~~~~~~~~~^^^^^^^^^
+  File "/content/dv/scan/engine.py", line 254, in _core
+    h, cache = self.lm_forward(x, P, Q)
+               ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/content/dv/speed/engine.py", line 635, in lm_forward
+    oq = self.branch_output(m, mixed[Np:], z[Np:], beta[Np:], g[Np:], S, tail,
+                            M, Tq, Q["offsets"], q_img, groups=Q["groups"])
+  File "/content/dv/speed/gdn_branch.py", line 203, in branch_output
+    out = branch_core(m, mixed, beta, g, state, tail, blocks, max_length, offsets, images, recurrent, raw_ab, groups)
+  File "/content/dv/speed/gdn_branch.py", line 196, in branch_core
+    _branch_wy[(nw, vd // 128, 128 // 32)](
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        conv, beta, g, state, offsets, images, order, group_offsets, out, indexed, max_length > bt, kd // 128, vd // 128, *state.stride(),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        uniform, shared, bt, 32, bt.bit_length() - 1, num_stages=1)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/triton/runtime/jit.py", line 374, in <lambda>
+    return lambda *args, **kwargs: self.run(grid=grid, warmup=False, *args, **kwargs)
+                                   ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/triton/runtime/jit.py", line 757, in run
+    kernel = self._do_compile(key, signature, device, constexprs, options, attrs, warmup)
+  File "/usr/local/lib/python3.13/dist-packages/triton/runtime/jit.py", line 902, in _do_compile
+    kernel = self.compile(src, target=target, options=options.__dict__)
+  File "/usr/local/lib/python3.13/dist-packages/triton/compiler/compiler.py", line 307, in compile
+    module = src.make_ir(target, options, codegen_fns, module_map, context)
+  File "/usr/local/lib/python3.13/dist-packages/triton/compiler/compiler.py", line 80, in make_ir
+    return ast_to_ttir(self.fn, self, context=context, options=options, codegen_fns=codegen_fns,
+                       module_map=module_map)
+triton.compiler.errors.CompilationError: at 10:23:
+def _branch_wy(X, Beta, G, S, Off, Images, Order, GroupOff, O, INDEXED: tl.constexpr, LONG: tl.constexpr, H: tl.constexpr, HV: tl.constexpr,
+               SS0: tl.constexpr, SS1: tl.constexpr, SS2: tl.constexpr, SS3: tl.constexpr,
+               UNIFORM: tl.constexpr, SHARED: tl.constexpr, BT: tl.constexpr, BV: tl.constexpr, STEPS: tl.constexpr):
+    """Solve for the rank-one innovations by doubling a strictly lower triangular matrix."""
+    block, h = tl.program_id(0), tl.program_id(1)
+    kv = h // (HV // H)
+    v = tl.program_id(2) * BV + tl.arange(0, BV)
+    d = tl.arange(0, 128)
+    t = tl.arange(0, BT)
+    img, first, last = _group(block, Images, GroupOff, SHARED, UNIFORM, INDEXED)
+                       ^
+fused_profile exit=1

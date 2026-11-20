@@ -1,0 +1,152 @@
+{
+ "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "torch": "2.14.1+cu130",
+ "ckpt": "/content/ckpt/v1/ckpt_final.pt",
+ "args": {
+  "ckpt": "/content/ckpt/v1/ckpt_final.pt",
+  "prep": "data/prep/eval_refcoco_val.jsonl",
+  "gprep": "data/prep/eval_grefcoco_val.jsonl",
+  "image_root": "/content/data/coco/train2014",
+  "parts": "clips,cached",
+  "Ns": [
+   64,
+   256
+  ],
+  "Ns_fresh": [
+   1,
+   2,
+   4,
+   8,
+   16,
+   32,
+   64
+  ],
+  "Tvs": [
+   64,
+   128,
+   256,
+   640
+  ],
+  "max_fresh_tokens": 16384,
+  "fresh_impl": "varlen",
+  "lm_prefill": "fused",
+  "vision_prep": "fused",
+  "fresh_kind": "box",
+  "fresh_chunked": 0,
+  "n_equiv": 24,
+  "clip_cfgs": "4x96,4x48,2x96",
+  "clip_fresh": 0,
+  "cached_tvs": "640,256,64",
+  "short": 0,
+  "w12": null,
+  "fp8": 0,
+  "n_acc": 60,
+  "n_calls": 15,
+  "out": "/content/out/scan/item8_planes_after.json"
+ },
+ "n_merged": 200,
+ "clips": {
+  "f4_v96_encode_ms_per_clip": 20.689865636711602,
+  "f4_v96_bank_MB_per_clip": 49.94840061664581,
+  "f4_v96_prefix_tokens": 197,
+  "f4_v96_N64_noul": {
+   "prep_ms": 0.12087999493815005,
+   "model_ms": 59.971750000840984,
+   "total_ms": 60.090459999628365,
+   "total_ms_p90": 65.70143700082554
+  },
+  "f4_v96_N256_noul": {
+   "prep_ms": 0.1605400029802695,
+   "model_ms": 259.4814679978299,
+   "total_ms": 259.63671800127486,
+   "total_ms_p90": 284.4960674003232
+  },
+  "f4_v48_encode_ms_per_clip": 12.098777199213373,
+  "f4_v48_bank_MB_per_clip": 47.45242893695831,
+  "f4_v48_prefix_tokens": 117,
+  "f4_v48_N64_noul": {
+   "prep_ms": 0.12589000107254833,
+   "model_ms": 59.226589000900276,
+   "total_ms": 59.35837900324259,
+   "total_ms_p90": 64.92412500228966
+  },
+  "f4_v48_N256_noul": {
+   "prep_ms": 0.16805999621283263,
+   "model_ms": 253.01474799925927,
+   "total_ms": 253.1744180014357,
+   "total_ms_p90": 278.1758694021846
+  },
+  "f2_v96_encode_ms_per_clip": 9.395505621114353,
+  "f2_v96_bank_MB_per_clip": 46.946109890937805,
+  "f2_v96_prefix_tokens": 101,
+  "f2_v96_N64_noul": {
+   "prep_ms": 0.1225300002261065,
+   "model_ms": 59.17090900038602,
+   "total_ms": 59.29606899735518,
+   "total_ms_p90": 64.82888100144919
+  },
+  "f2_v96_N256_noul": {
+   "prep_ms": 0.17172999650938436,
+   "model_ms": 252.3340379993897,
+   "total_ms": 252.4993879997055,
+   "total_ms_p90": 277.42763360147364
+  }
+ },
+ "cached": {
+  "Tv640_encode_ms_per_image": 33.86540567970542,
+  "Tv640_bank_MB_per_image": 67.78199833631516,
+  "Tv640_N64_box": {
+   "prep_ms": 0.107640000351239,
+   "model_ms": 24.043189994699787,
+   "total_ms": 24.14959999441635,
+   "total_ms_p90": 30.38000559754437
+  },
+  "Tv640_N64_noul": {
+   "prep_ms": 0.12636000610655174,
+   "model_ms": 50.011280000035185,
+   "total_ms": 50.14862000098219,
+   "total_ms_p90": 53.73919140256476
+  },
+  "Tv640_N256_box": {
+   "prep_ms": 0.14232000103220344,
+   "model_ms": 95.74369900656166,
+   "total_ms": 95.86939900327707,
+   "total_ms_p90": 109.97685900510987
+  },
+  "Tv640_N256_noul": {
+   "prep_ms": 0.16974000027403235,
+   "model_ms": 194.99480800004676,
+   "total_ms": 195.17428800463676,
+   "total_ms_p90": 209.84603999968385
+  },
+  "Tv256_encode_ms_per_image": 13.338469179700496,
+  "Tv256_bank_MB_per_image": 53.69557246565819,
+  "Tv256_N64_box": {
+   "prep_ms": 0.10984999971697107,
+   "model_ms": 22.938939997402485,
+   "total_ms": 23.04164999804925,
+   "total_ms_p90": 29.20375739922747
+  },
+  "Tv256_N256_box": {
+   "prep_ms": 0.13403000048128888,
+   "model_ms": 85.43890900182305,
+   "total_ms": 85.57879900035914,
+   "total_ms_p90": 99.83417300099973
+  },
+  "Tv64_encode_ms_per_image": 5.843095496089745,
+  "Tv64_bank_MB_per_image": 46.51109465956688,
+  "Tv64_N64_box": {
+   "prep_ms": 0.10573000326985493,
+   "model_ms": 22.420540000894107,
+   "total_ms": 22.523690000525676,
+   "total_ms_p90": 28.67722159717232
+  },
+  "Tv64_N256_box": {
+   "prep_ms": 0.13051999849267304,
+   "model_ms": 83.44394899904728,
+   "total_ms": 83.57446899753995,
+   "total_ms_p90": 97.79733960313024
+  }
+ },
+ "peak_mem_gb": 49.5097713470459
+}

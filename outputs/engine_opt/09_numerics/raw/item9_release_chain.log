@@ -1,0 +1,29 @@
+micro exit=0
+pushed /content/out/scan/item9_release_micro.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item9_release_micro.json -> Vision-Decision/collection-scan-results
+real exit=0
+pushed /content/out/scan/item9_release_real.log -> Vision-Decision/collection-scan-results
+fused exit=0
+pushed /content/out/scan/item9_release_fused.log -> Vision-Decision/collection-scan-results
+fault exit=1
+pushed /content/out/scan/item9_release_fault.log -> Vision-Decision/collection-scan-results
+small_fault exit=1
+pushed /content/out/scan/item9_release_small_fault.log -> Vision-Decision/collection-scan-results
+cached exit=0
+pushed /content/out/scan/item9_release_cached.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item9_release_cached.json -> Vision-Decision/collection-scan-results
+fresh exit=0
+pushed /content/out/scan/item9_release_fresh.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item9_release_fresh.json -> Vision-Decision/collection-scan-results
+speed exit=0
+pushed /content/out/scan/item9_release_speed.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item9_release_speed.json -> Vision-Decision/collection-scan-results
+equiv exit=0
+pushed /content/out/scan/item9_release_equiv.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item9_release_equiv.json -> Vision-Decision/collection-scan-results
+diag exit=0
+pushed /content/out/scan/item9_release_diag.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item9_release_diag.json -> Vision-Decision/collection-scan-results
+interleaving exit=0
+pushed /content/out/scan/item9_release_interleaving.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item9_release_interleaving.json -> Vision-Decision/collection-scan-results

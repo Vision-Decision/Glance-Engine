@@ -1,0 +1,16 @@
+Thu Nov 19 04:15:38 PM UTC 2026
+name, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 0 MiB
+GPU_IDLE
+python -m scan.bench_scan --ckpt /content/ckpt/v1/ckpt_final.pt --parts fresh --Tvs 128\,256 --Ns_fresh 32\,64\,128\,256 --n_calls 10 --fresh_kind yesno --fresh_chunked 1 --max_fresh_tokens 16384 --out /content/out/scan/item7_before_fresh.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 17544.01it/s]
+fresh 128 32 {"prep_ms": 2.47, "vision_ms": 45.22, "lm_ms": 98.74, "total_ms": 146.32, "total_ms_p90": 153.59, "tokens": 4096, "chunks": 1, "chunks_per_call": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1], "images_per_s": 218.69, "readout": "yesno"}
+fresh 128 64 {"prep_ms": 4.07, "vision_ms": 91.99, "lm_ms": 199.54, "total_ms": 295.7, "total_ms_p90": 301.0, "tokens": 8192, "chunks": 1, "chunks_per_call": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1], "images_per_s": 216.44, "readout": "yesno"}
+fresh 128 128 {"prep_ms": 7.93, "vision_ms": 187.65, "lm_ms": 403.16, "total_ms": 598.76, "total_ms_p90": 608.54, "tokens": 16384, "chunks": 1, "chunks_per_call": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1], "images_per_s": 213.78, "readout": "yesno"}
+fresh 128 256 {"prep_ms": 15.77, "vision_ms": 375.91, "lm_ms": 814.88, "total_ms": 1206.72, "total_ms_p90": 1224.4, "tokens": 32768, "chunks": 2, "chunks_per_call": [2, 2, 2, 2, 2, 2, 2, 2, 2, 2], "images_per_s": 212.15, "readout": "yesno"}
+fresh 256 32 {"prep_ms": 4.55, "vision_ms": 112.68, "lm_ms": 194.11, "total_ms": 311.28, "total_ms_p90": 313.7, "tokens": 8192, "chunks": 1, "chunks_per_call": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1], "images_per_s": 102.8, "readout": "yesno"}
+fresh 256 64 {"prep_ms": 8.25, "vision_ms": 224.14, "lm_ms": 388.63, "total_ms": 621.16, "total_ms_p90": 627.24, "tokens": 16384, "chunks": 1, "chunks_per_call": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1], "images_per_s": 103.03, "readout": "yesno"}
+fresh 256 128 {"prep_ms": 16.33, "vision_ms": 448.58, "lm_ms": 779.37, "total_ms": 1244.41, "total_ms_p90": 1256.37, "tokens": 32768, "chunks": 2, "chunks_per_call": [2, 2, 2, 2, 2, 2, 2, 2, 2, 2], "images_per_s": 102.86, "readout": "yesno"}
+fresh 256 256 {"prep_ms": 32.67, "vision_ms": 898.34, "lm_ms": 1562.65, "total_ms": 2493.82, "total_ms_p90": 2516.97, "tokens": 65536, "chunks": 4, "chunks_per_call": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4], "images_per_s": 102.65, "readout": "yesno"}
+BENCH_DONE
+fresh exit=0

@@ -1,0 +1,88 @@
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights:  46%|████▌     | 333/723 [00:00<00:00, 3323.94it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 4826.78it/s]
+equiv ref_lora {"vs_ref_lora": {"presence_absdiff_max": 0.0, "presence_absdiff_mean": 0.0, "piou_absdiff_max": 0.0, "box_px_maxdiff_max": 0.0, "box_px_maxdiff_mean": 0.0, "box_iou_vs_ref_min": 1.0, "box_iou_vs_ref_mean": 1.0, "typed_prob_absdiff_max": 0.0, "decision_agreement": 1.0, "acc50": 0.912621359223301, "acc50_ref": 0.912621359223301}, "vs_ref_merged": null}
+ref_lora  bs1_box_N1 {"prep_ms_median": 5.45, "model_ms_median": 309.71, "model_ms_p90": 316.52, "total_ms_median": 315.21, "total_ms_p90": 322.47, "ttfa_ms_median": 315.21, "q_per_s": 3.17, "n_calls": 20, "questions_per_call": 1}
+ref_lora  bs1_box_N2 {"prep_ms_median": 6.07, "model_ms_median": 308.97, "model_ms_p90": 315.69, "total_ms_median": 315.17, "total_ms_p90": 321.78, "ttfa_ms_median": 315.17, "q_per_s": 6.34, "n_calls": 20, "questions_per_call": 2}
+ref_lora  bs1_box_N4 {"prep_ms_median": 6.27, "model_ms_median": 308.47, "model_ms_p90": 313.78, "total_ms_median": 314.74, "total_ms_p90": 320.07, "ttfa_ms_median": 314.74, "q_per_s": 12.73, "n_calls": 20, "questions_per_call": 4}
+ref_lora  bs1_box_N8 {"prep_ms_median": 7.0, "model_ms_median": 320.21, "model_ms_p90": 327.27, "total_ms_median": 327.21, "total_ms_p90": 334.4, "ttfa_ms_median": 327.21, "q_per_s": 24.5, "n_calls": 20, "questions_per_call": 8}
+ref_lora  bs1_box_N16 {"prep_ms_median": 8.03, "model_ms_median": 358.43, "model_ms_p90": 403.49, "total_ms_median": 366.44, "total_ms_p90": 411.74, "ttfa_ms_median": 366.44, "q_per_s": 43.42, "n_calls": 20, "questions_per_call": 16}
+ref_lora  bs1_box_N32 {"prep_ms_median": 10.26, "model_ms_median": 434.01, "model_ms_p90": 547.83, "total_ms_median": 444.02, "total_ms_p90": 558.19, "ttfa_ms_median": 444.02, "q_per_s": 68.56, "n_calls": 20, "questions_per_call": 32}
+ref_lora  bs1_box_N64 {"prep_ms_median": 15.38, "model_ms_median": 595.95, "model_ms_p90": 853.15, "total_ms_median": 611.24, "total_ms_p90": 868.73, "ttfa_ms_median": 611.24, "q_per_s": 95.53, "n_calls": 20, "questions_per_call": 64}
+ref_lora  bs1_mixed_N4 {"prep_ms_median": 7.07, "model_ms_median": 335.75, "model_ms_p90": 344.72, "total_ms_median": 342.83, "total_ms_p90": 351.97, "ttfa_ms_median": 342.83, "q_per_s": 11.76, "n_calls": 20, "questions_per_call": 4}
+ref_lora  bs1_mixed_N8 {"prep_ms_median": 8.13, "model_ms_median": 396.29, "model_ms_p90": 410.57, "total_ms_median": 404.31, "total_ms_p90": 418.73, "ttfa_ms_median": 404.31, "q_per_s": 19.64, "n_calls": 20, "questions_per_call": 8}
+ref_lora  bs1_mixed_N16 {"prep_ms_median": 9.86, "model_ms_median": 528.16, "model_ms_p90": 552.23, "total_ms_median": 538.1, "total_ms_p90": 562.19, "ttfa_ms_median": 538.1, "q_per_s": 29.36, "n_calls": 20, "questions_per_call": 16}
+ref_lora  bs1_mixed_N32 {"prep_ms_median": 12.54, "model_ms_median": 825.48, "model_ms_p90": 854.98, "total_ms_median": 838.08, "total_ms_p90": 867.58, "ttfa_ms_median": 838.08, "q_per_s": 37.52, "n_calls": 20, "questions_per_call": 32}
+ref_lora  bs1_mixed_N64 {"prep_ms_median": 18.74, "model_ms_median": 1517.53, "model_ms_p90": 1563.55, "total_ms_median": 1536.76, "total_ms_p90": 1582.86, "ttfa_ms_median": 1536.76, "q_per_s": 40.87, "n_calls": 20, "questions_per_call": 64}
+ref_lora  bs2_box_N1 {"prep_ms_median": 18.86, "model_ms_median": 558.35, "model_ms_p90": 561.89, "total_ms_median": 576.9, "total_ms_p90": 581.67, "ttfa_ms_median": 576.9, "q_per_s": 3.48, "n_calls": 6, "questions_per_call": 2}
+ref_lora  bs2_box_N8 {"prep_ms_median": 19.65, "model_ms_median": 629.48, "model_ms_p90": 673.08, "total_ms_median": 649.03, "total_ms_p90": 693.99, "ttfa_ms_median": 649.03, "q_per_s": 24.32, "n_calls": 6, "questions_per_call": 16}
+ref_lora  bs4_box_N1 {"prep_ms_median": 33.22, "model_ms_median": 1177.95, "model_ms_p90": 1183.44, "total_ms_median": 1211.32, "total_ms_p90": 1216.87, "ttfa_ms_median": 1211.32, "q_per_s": 3.3, "n_calls": 6, "questions_per_call": 4}
+ref_lora  bs4_box_N8 {"prep_ms_median": 37.14, "model_ms_median": 1413.89, "model_ms_p90": 1421.53, "total_ms_median": 1449.49, "total_ms_p90": 1461.53, "ttfa_ms_median": 1449.49, "q_per_s": 22.61, "n_calls": 6, "questions_per_call": 32}
+ref_lora  bs8_box_N1 {"prep_ms_median": 62.37, "model_ms_median": 2446.2, "model_ms_p90": 2452.98, "total_ms_median": 2506.01, "total_ms_p90": 2515.35, "ttfa_ms_median": 2506.01, "q_per_s": 3.19, "n_calls": 6, "questions_per_call": 8}
+ref_lora  bs8_box_N8 {"prep_ms_median": 69.76, "model_ms_median": 2977.14, "model_ms_p90": 2984.5, "total_ms_median": 3047.95, "total_ms_p90": 3054.86, "ttfa_ms_median": 3047.95, "q_per_s": 21.31, "n_calls": 6, "questions_per_call": 64}
+ref_lora  bs16_box_N1 {"prep_ms_median": 108.45, "model_ms_median": 4942.8, "model_ms_p90": 4954.49, "total_ms_median": 5051.67, "total_ms_p90": 5062.6, "ttfa_ms_median": 5051.67, "q_per_s": 3.17, "n_calls": 6, "questions_per_call": 16}
+ref_lora  bs16_box_N8 {"prep_ms_median": 129.42, "model_ms_median": 6171.35, "model_ms_p90": 6179.27, "total_ms_median": 6304.3, "total_ms_p90": 6312.93, "ttfa_ms_median": 6304.3, "q_per_s": 20.32, "n_calls": 6, "questions_per_call": 128}
+ref_lora  bs32_box_N1 {"prep_ms_median": 219.03, "model_ms_median": 9948.41, "model_ms_p90": 9971.24, "total_ms_median": 10175.18, "total_ms_p90": 10190.27, "ttfa_ms_median": 10175.18, "q_per_s": 3.15, "n_calls": 6, "questions_per_call": 32}
+ref_lora  bs32_box_N8 {"prep_ms_median": 266.25, "model_ms_median": 12477.11, "model_ms_p90": 12501.47, "total_ms_median": 12743.1, "total_ms_p90": 12763.54, "ttfa_ms_median": 12743.1, "q_per_s": 20.09, "n_calls": 6, "questions_per_call": 256}
+ref_lora  video_f8_N1 {"prep_ms_median": 23.96, "model_ms_median": 1034.1, "model_ms_p90": 1038.2, "total_ms_median": 1059.32, "total_ms_p90": 1063.66, "ttfa_ms_median": 1059.32, "q_per_s": 7.59, "n_calls": 6, "questions_per_call": 8}
+ref_lora  video_f8_N4 {"prep_ms_median": 33.65, "model_ms_median": 1610.86, "model_ms_p90": 1700.91, "total_ms_median": 1646.57, "total_ms_p90": 1733.03, "ttfa_ms_median": 1646.57, "q_per_s": 19.45, "n_calls": 6, "questions_per_call": 32}
+ref_lora  video_f32_N1 {"prep_ms_median": 114.78, "model_ms_median": 4413.72, "model_ms_p90": 4418.96, "total_ms_median": 4528.36, "total_ms_p90": 4542.11, "ttfa_ms_median": 4528.36, "q_per_s": 7.06, "n_calls": 6, "questions_per_call": 32}
+ref_lora  video_f32_N4 {"prep_ms_median": 146.34, "model_ms_median": 7401.64, "model_ms_p90": 7406.5, "total_ms_median": 7549.01, "total_ms_p90": 7561.81, "ttfa_ms_median": 7549.01, "q_per_s": 16.96, "n_calls": 6, "questions_per_call": 128}
+ref_lora  video_f64_N1 {"prep_ms_median": 212.01, "model_ms_median": 8890.32, "model_ms_p90": 8911.66, "total_ms_median": 9109.44, "total_ms_p90": 9129.03, "ttfa_ms_median": 9109.44, "q_per_s": 7.03, "n_calls": 6, "questions_per_call": 64}
+ref_lora  video_f64_N4 {"prep_ms_median": 265.82, "model_ms_median": 14857.78, "model_ms_p90": 14871.55, "total_ms_median": 15131.56, "total_ms_p90": 15140.95, "ttfa_ms_median": 15131.56, "q_per_s": 16.93, "n_calls": 6, "questions_per_call": 256}
+ref_lora  gui2048_box_N1 {"prep_ms_median": 24.52, "model_ms_median": 940.08, "model_ms_p90": 944.79, "total_ms_median": 964.71, "total_ms_p90": 969.26, "ttfa_ms_median": 964.71, "q_per_s": 1.04, "n_calls": 20, "questions_per_call": 1}
+ref_lora  gui2048_box_N8 {"prep_ms_median": 26.34, "model_ms_median": 973.49, "model_ms_p90": 990.22, "total_ms_median": 999.34, "total_ms_p90": 1016.95, "ttfa_ms_median": 999.34, "q_per_s": 7.97, "n_calls": 20, "questions_per_call": 8}
+ref_lora  gui2048_box_N32 {"prep_ms_median": 30.61, "model_ms_median": 1109.91, "model_ms_p90": 1227.57, "total_ms_median": 1140.28, "total_ms_p90": 1259.36, "ttfa_ms_median": 1140.28, "q_per_s": 27.27, "n_calls": 20, "questions_per_call": 32}
+ref_lora  gui4096_box_N1 {"prep_ms_median": 51.5, "model_ms_median": 2250.57, "model_ms_p90": 2258.18, "total_ms_median": 2302.85, "total_ms_p90": 2318.94, "ttfa_ms_median": 2302.85, "q_per_s": 0.47, "n_calls": 20, "questions_per_call": 1}
+ref_lora  gui4096_box_N8 {"prep_ms_median": 53.07, "model_ms_median": 2289.19, "model_ms_p90": 2314.64, "total_ms_median": 2342.3, "total_ms_p90": 2368.33, "ttfa_ms_median": 2342.3, "q_per_s": 3.71, "n_calls": 20, "questions_per_call": 8}
+ref_lora  gui4096_box_N32 {"prep_ms_median": 55.81, "model_ms_median": 2460.41, "model_ms_p90": 2581.39, "total_ms_median": 2516.98, "total_ms_p90": 2639.38, "ttfa_ms_median": 2516.98, "q_per_s": 13.57, "n_calls": 20, "questions_per_call": 32}
+equiv eng_graph {"vs_ref_lora": {"presence_absdiff_max": 0.04615408182144165, "presence_absdiff_mean": 0.0008522550022387566, "piou_absdiff_max": 0.07218360900878906, "box_px_maxdiff_max": 44.861114501953125, "box_px_maxdiff_mean": 4.204274339357195, "box_iou_vs_ref_min": 0.6914185917540822, "box_iou_vs_ref_mean": 0.9613300255835256, "typed_prob_absdiff_max": 0.048574864864349365, "decision_agreement": 1.0, "acc50": 0.9158576051779935, "acc50_ref": 0.912621359223301}, "vs_ref_merged": null}
+eng_graph  bs1_box_N1 {"prep_ms_median": 6.77, "vision_ms_median": 64.98, "lm_ms_median": 167.44, "model_ms_median": 231.84, "model_ms_p90": 239.41, "total_ms_median": 238.73, "total_ms_p90": 246.18, "ttfa_ms_median": 238.73, "q_per_s": 4.22, "n_calls": 20, "questions_per_call": 1}
+eng_graph  bs1_box_N2 {"prep_ms_median": 7.0, "vision_ms_median": 64.61, "lm_ms_median": 167.61, "model_ms_median": 231.89, "model_ms_p90": 241.28, "total_ms_median": 239.05, "total_ms_p90": 248.35, "ttfa_ms_median": 239.05, "q_per_s": 8.4, "n_calls": 20, "questions_per_call": 2}
+eng_graph  bs1_box_N4 {"prep_ms_median": 7.39, "vision_ms_median": 64.32, "lm_ms_median": 169.79, "model_ms_median": 234.97, "model_ms_p90": 239.64, "total_ms_median": 242.51, "total_ms_p90": 247.2, "ttfa_ms_median": 242.51, "q_per_s": 16.7, "n_calls": 20, "questions_per_call": 4}
+[W1118 09:45:03.594765268 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 12582912 bytes (free: 13697024, total: 23659151360).
+[W1118 09:45:03.605437627 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 16777216 bytes (free: 3211264, total: 23659151360).
+[W1118 09:45:03.609630912 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 16777216 bytes (free: 11599872, total: 23659151360).
+[W1118 09:45:03.611618404 CUDACachingAllocator.cpp:3934] memory allocation failed with OOM on device 0 while trying to allocate 16777216 bytes (free: 15794176, total: 23659151360).
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/content/dv/speed/bench_glance.py", line 318, in <module>
+    main()
+    ~~~~^^
+  File "/content/dv/speed/bench_glance.py", line 296, in main
+    r.update(sweep(R, imgs, [(f"bs1_box_N{n}", 1, n, "box", 640) for n in QS], a.n_calls))
+             ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/dv/speed/bench_glance.py", line 174, in sweep
+    R.call(im, qs, Nv=Nv)
+    ~~~~~~^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "/content/dv/speed/bench_glance.py", line 107, in call
+    res, cache, vis = self.eng.run(E, host)
+                      ~~~~~~~~~~~~^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "/content/dv/speed/engine.py", line 517, in run
+    self._graphs[key] = self._capture(lambda S: self._core(S, host), E)
+                        ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/dv/speed/engine.py", line 545, in _capture
+    fn(S)
+    ~~^^^
+  File "/content/dv/speed/engine.py", line 517, in <lambda>
+    self._graphs[key] = self._capture(lambda S: self._core(S, host), E)
+                                                ~~~~~~~~~~^^^^^^^^^
+  File "/content/dv/speed/engine.py", line 478, in _core
+    h, cache = self.lm_forward(x, P, Q)
+               ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/content/dv/speed/engine.py", line 431, in lm_forward
+    x = x + layer.mlp(layer.post_attention_layernorm(x))
+            ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/local/lib/python3.13/dist-packages/transformers/models/qwen3_5/modeling_qwen3_5.py", line 823, in forward
+    down_proj = self.down_proj(self.act_fn(self.gate_proj(x)) * self.up_proj(x))
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 16.00 MiB. GPU 0 has a total capacity of 22.03 GiB of which 15.06 MiB is free. Including non-PyTorch memory, this process has 22.01 GiB memory in use. Of the allocated memory 20.69 GiB is allocated by PyTorch, with 351.06 MiB allocated in private pools (e.g., CUDA Graphs), and 379.14 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)
+exit 1

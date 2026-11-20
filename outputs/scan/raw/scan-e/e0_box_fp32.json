@@ -1,0 +1,129 @@
+{
+ "ckpt": "/content/ckpt/v1/ckpt_final.pt",
+ "fp32": true,
+ "attn_mask": "block_bidir",
+ "sets": {
+  "Tv640_real": {
+   "cached": {
+    "n": 96,
+    "presence_logit_absdiff_max": 0.0982966423034668,
+    "presence_prob_absdiff_max": 0.003391668200492859,
+    "presence_prob_absdiff_mean": 0.00016756419849646895,
+    "iou_logit_absdiff_max": 0.08795833587646484,
+    "presence_decision_agree": 1.0,
+    "argmax_agree": 1.0,
+    "idx_known": true,
+    "box_absdiff_max_when_argmax_agrees": 0.0028647780418395996,
+    "box_absdiff_max_when_argmax_differs": null,
+    "ref_margin_at_disagreements": [],
+    "ref_margin_median_all": 0.0528111457824707
+   },
+   "fresh": {
+    "n": 96,
+    "presence_logit_absdiff_max": 0.09735250473022461,
+    "presence_prob_absdiff_max": 0.003947004675865173,
+    "presence_prob_absdiff_mean": 0.00018568611524945786,
+    "iou_logit_absdiff_max": 0.08785367012023926,
+    "presence_decision_agree": 1.0,
+    "argmax_agree": null,
+    "idx_known": false,
+    "box_absdiff_max_when_argmax_agrees": null,
+    "box_absdiff_max_when_argmax_differs": null,
+    "ref_margin_at_disagreements": [],
+    "ref_margin_median_all": 0.0528111457824707
+   }
+  },
+  "Tv640_random": {
+   "cached": {
+    "n": 24,
+    "presence_logit_absdiff_max": 0.004995822906494141,
+    "presence_prob_absdiff_max": 0.00027751922607421875,
+    "presence_prob_absdiff_mean": 9.349531804521878e-05,
+    "iou_logit_absdiff_max": 0.00219649076461792,
+    "presence_decision_agree": 1.0,
+    "argmax_agree": 1.0,
+    "idx_known": true,
+    "box_absdiff_max_when_argmax_agrees": 0.000557243824005127,
+    "box_absdiff_max_when_argmax_differs": null,
+    "ref_margin_at_disagreements": [],
+    "ref_margin_median_all": 0.11524105072021484
+   },
+   "fresh": {
+    "n": 24,
+    "presence_logit_absdiff_max": 0.0019178390502929688,
+    "presence_prob_absdiff_max": 0.0003414750099182129,
+    "presence_prob_absdiff_mean": 5.274312570691109e-05,
+    "iou_logit_absdiff_max": 0.001735687255859375,
+    "presence_decision_agree": 1.0,
+    "argmax_agree": null,
+    "idx_known": false,
+    "box_absdiff_max_when_argmax_agrees": null,
+    "box_absdiff_max_when_argmax_differs": null,
+    "ref_margin_at_disagreements": [],
+    "ref_margin_median_all": 0.11524105072021484
+   }
+  },
+  "Tv256_real": {
+   "cached": {
+    "n": 96,
+    "presence_logit_absdiff_max": 0.12949222326278687,
+    "presence_prob_absdiff_max": 0.030277371406555176,
+    "presence_prob_absdiff_mean": 0.0004838368432350156,
+    "iou_logit_absdiff_max": 0.34823572635650635,
+    "presence_decision_agree": 1.0,
+    "argmax_agree": 0.9895833333333334,
+    "idx_known": true,
+    "box_absdiff_max_when_argmax_agrees": 0.013054490089416504,
+    "box_absdiff_max_when_argmax_differs": 0.03319603204727173,
+    "ref_margin_at_disagreements": [
+     0.0069
+    ],
+    "ref_margin_median_all": 0.06936454772949219
+   },
+   "fresh": {
+    "n": 96,
+    "presence_logit_absdiff_max": 0.13065922260284424,
+    "presence_prob_absdiff_max": 0.030545592308044434,
+    "presence_prob_absdiff_mean": 0.0004666298947881842,
+    "iou_logit_absdiff_max": 0.34724855422973633,
+    "presence_decision_agree": 1.0,
+    "argmax_agree": null,
+    "idx_known": false,
+    "box_absdiff_max_when_argmax_agrees": null,
+    "box_absdiff_max_when_argmax_differs": null,
+    "ref_margin_at_disagreements": [],
+    "ref_margin_median_all": 0.06936454772949219
+   }
+  },
+  "Tv256_random": {
+   "cached": {
+    "n": 24,
+    "presence_logit_absdiff_max": 0.004797935485839844,
+    "presence_prob_absdiff_max": 0.0002202540636062622,
+    "presence_prob_absdiff_mean": 9.944747822980086e-05,
+    "iou_logit_absdiff_max": 0.0017415881156921387,
+    "presence_decision_agree": 1.0,
+    "argmax_agree": 1.0,
+    "idx_known": true,
+    "box_absdiff_max_when_argmax_agrees": 0.0005686283111572266,
+    "box_absdiff_max_when_argmax_differs": null,
+    "ref_margin_at_disagreements": [],
+    "ref_margin_median_all": 0.15192365646362305
+   },
+   "fresh": {
+    "n": 24,
+    "presence_logit_absdiff_max": 0.002978086471557617,
+    "presence_prob_absdiff_max": 0.0003203153610229492,
+    "presence_prob_absdiff_mean": 4.5257232462366424e-05,
+    "iou_logit_absdiff_max": 0.0016191601753234863,
+    "presence_decision_agree": 1.0,
+    "argmax_agree": null,
+    "idx_known": false,
+    "box_absdiff_max_when_argmax_agrees": null,
+    "box_absdiff_max_when_argmax_differs": null,
+    "ref_margin_at_disagreements": [],
+    "ref_margin_median_all": 0.15192365646362305
+   }
+  }
+ }
+}

@@ -1,0 +1,26 @@
+profile_after exit=0
+pushed /content/out/scan/item3_profile_after.json -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item3_profile_after.log -> Vision-Decision/collection-scan-results
+after exit=0
+pushed /content/out/scan/item3_after.json -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item3_after.log -> Vision-Decision/collection-scan-results
+equiv exit=0
+pushed /content/out/scan/item3_equiv.json -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item3_equiv.log -> Vision-Decision/collection-scan-results
+single exit=0
+pushed /content/out/scan/item3_single.json -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item3_single.log -> Vision-Decision/collection-scan-results
+gui2048 exit=0
+pushed /content/out/scan/item3_gui2048.json -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item3_gui2048.log -> Vision-Decision/collection-scan-results
+gui4096 exit=0
+pushed /content/out/scan/item3_gui4096.json -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item3_gui4096.log -> Vision-Decision/collection-scan-results
+video exit=0
+pushed /content/out/scan/item3_video.json -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item3_video.log -> Vision-Decision/collection-scan-results
+diag exit=0
+pushed /content/out/scan/item3_diag.json -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item3_diag.log -> Vision-Decision/collection-scan-results
+real exit=0
+pushed /content/out/scan/item3_real.log -> Vision-Decision/collection-scan-results

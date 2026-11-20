@@ -1,0 +1,76 @@
+Thu Nov 19 11:46:03 AM UTC 2026
+name, driver_version, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 580.82.07, 0 MiB
+GPU compute process list empty
+env PYTHONPATH=/content/dv:/content/item3-qla-deps:/content/item3-extras LD_LIBRARY_PATH=/content/item3-qla-deps/z3/lib:/usr/lib64-nvidia FLA_FLASH_QLA=0 python -m scan.profile_lm --stage gdn_optional --ckpt /content/ckpt/v1/ckpt_final.pt --out /content/out/scan/item3_gdn_optional.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 16396.31it/s]
+{'n': 32, 'width': 146, 'dense': False, 'backend': 'persistent_recurrent', 'ms': 0.6355199813842773, 'max_abs': 0.00048828125, 'mean_abs': 3.5334386438989895e-07}
+2026-11-19 11:46:13  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:137): TileLang begins to compile kernel `tilelang_chunk_local_cumsum_kernel` with `out_idx=None`
+2026-11-19 11:46:14  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:145): TileLang completes to compile kernel `tilelang_chunk_local_cumsum_kernel`
+2026-11-19 11:46:14  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:137): TileLang begins to compile kernel `tilelang_kkt_solve_kernel` with `out_idx=None`
+2026-11-19 11:46:17  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:145): TileLang completes to compile kernel `tilelang_kkt_solve_kernel`
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/content/dv/scan/profile_lm.py", line 398, in <module>
+    main()
+    ~~~~^^
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "/content/dv/scan/profile_lm.py", line 359, in main
+    res["results"] = delta_sweep(eng, frames, optional=True)
+                     ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/dv/scan/profile_lm.py", line 254, in delta_sweep
+    out = candidate()
+  File "/content/dv/scan/profile_lm.py", line 244, in candidate
+    return fn(
+           ~~^
+        *(a.reshape(*layout, *a.shape[2:]) for a in (q, k, v)),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        **extra,
+        ^^^^^^^^
+    )[0].reshape(n, width, -1)
+    ^
+  File "/usr/local/lib/python3.13/dist-packages/torch/_dynamo/eval_frame.py", line 1548, in _fn
+    return fn(*args, **kwargs)
+  File "/content/item3-extras/flash_qla/ops/gated_delta_rule/chunk/__init__.py", line 450, in chunk_gated_delta_rule
+    o, final_state = ChunkGatedDeltaRuleFunction.apply(
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        q,
+        ^^
+    ...<14 lines>...
+        is_train,
+        ^^^^^^^^^
+    )
+    ^
+  File "/content/item3-extras/flash_qla/utils/contiguous.py", line 39, in wrapper
+    return fn(*contiguous_args, **contiguous_kwargs)
+  File "/usr/local/lib/python3.13/dist-packages/torch/amp/autocast_mode.py", line 481, in decorate_fwd
+    return fwd(*args, **kwargs)  # pyrefly: ignore [not-callable]
+  File "/content/item3-extras/flash_qla/ops/gated_delta_rule/chunk/__init__.py", line 238, in forward
+    g, A, o, _, final_state, cp_cache = chunk_gated_delta_rule_fwd(
+                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        q=q,
+        ^^^^
+    ...<13 lines>...
+        is_train=is_train,
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/content/item3-extras/flash_qla/ops/gated_delta_rule/chunk/__init__.py", line 96, in chunk_gated_delta_rule_fwd
+    initial_state, cp_cache = cp_preprocess_fwd(
+                              ~~~~~~~~~~~~~~~~~^
+        cp_context, k=k, v=v, a=A, g=g, beta=beta,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        enable_fwd_cp_cache=enable_fwd_cp_cache,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/content/item3-extras/flash_qla/ops/gated_delta_rule/chunk/cp/preprocess.py", line 107, in cp_preprocess_fwd
+    from flash_qla.ops.gated_delta_rule.chunk import (
+    ...<2 lines>...
+    )
+ImportError: cannot import name 'aggregate_card_state' from 'flash_qla.ops.gated_delta_rule.chunk' (/content/item3-extras/flash_qla/ops/gated_delta_rule/chunk/__init__.py)
+gdn_optional exit=1

@@ -1,0 +1,44 @@
+Thu Nov 19 01:57:34 PM UTC 2026
+name, driver_version, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 580.82.07, 0 MiB
+GPU compute process list empty
+cda4f10367e262a06d8c48d4d24ece9a3f6a8b0df8f106bc15eb20a061188f32  speed/engine.py
+909b1daf956f0b8f75ac6e6cd9cdf1531d0f0f98c416fd8afcd27b6993f8282c  speed/bench_glance.py
+c19c419f4750920de68e82f132bcadbfc9546f61c4c0558836051152532d0f48  speed/bench_w12.py
+0f8d494ddb6fdd32093180eea9fd0bd7b8edbba53ae214e69b39beb55ee0c557  speed/w12.py
+python -m speed.bench_w12 --stage encode --ckpt /content/ckpt/v1/ckpt_final.pt --out /content/out/scan/item5_encode.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 16936.22it/s]
+layers.0.linear_attn.out_proj 4
+layers.1.linear_attn.out_proj 8
+layers.2.linear_attn.out_proj 12
+layers.3.self_attn.o_proj 16
+layers.4.linear_attn.out_proj 20
+layers.5.linear_attn.out_proj 24
+layers.6.linear_attn.out_proj 28
+layers.7.self_attn.o_proj 32
+layers.8.linear_attn.out_proj 36
+layers.9.linear_attn.out_proj 40
+layers.10.linear_attn.out_proj 44
+layers.11.self_attn.o_proj 48
+layers.12.linear_attn.out_proj 52
+layers.13.linear_attn.out_proj 56
+layers.14.linear_attn.out_proj 60
+layers.15.self_attn.o_proj 64
+layers.16.linear_attn.out_proj 68
+layers.17.linear_attn.out_proj 72
+layers.18.linear_attn.out_proj 76
+layers.19.self_attn.o_proj 80
+layers.20.linear_attn.out_proj 84
+layers.21.linear_attn.out_proj 88
+layers.22.linear_attn.out_proj 92
+layers.23.self_attn.o_proj 96
+layers.24.linear_attn.out_proj 100
+layers.25.linear_attn.out_proj 104
+layers.26.linear_attn.out_proj 108
+layers.27.self_attn.o_proj 112
+layers.28.linear_attn.out_proj 116
+layers.29.linear_attn.out_proj 120
+layers.30.linear_attn.out_proj 124
+layers.31.self_attn.o_proj 128
+{'weights': 3569090560, 'bytes': 5366326968, 'escapes': 281134}
+encode exit=0

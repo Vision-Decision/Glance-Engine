@@ -1,0 +1,16 @@
+Thu Nov 19 07:51:28 UTC 2026
+name, memory.total [MiB], memory.used [MiB], driver_version
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 97887 MiB, 0 MiB, 580.82.07
+GPU compute process list empty before after in /content/dv
+python -m scan.bench_scan --ckpt /content/ckpt/v1/ckpt_final.pt --parts fresh --Tvs 128\,256 --Ns_fresh 32\,64\,128\,256 --n_calls 10 --fresh_kind yesno --fresh_chunked 1 --max_fresh_tokens 16384 --fresh_impl varlen --out /content/out/scan/item1_after.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 16218.82it/s]
+fresh 128 32 {"prep_ms": 27.46, "vision_ms": 60.09, "lm_ms": 137.33, "total_ms": 224.87, "total_ms_p90": 233.12, "tokens": 4096, "chunks": 1, "chunks_per_call": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1], "images_per_s": 142.3, "readout": "yesno"}
+fresh 128 64 {"prep_ms": 53.66, "vision_ms": 128.33, "lm_ms": 289.67, "total_ms": 470.29, "total_ms_p90": 478.2, "tokens": 8192, "chunks": 1, "chunks_per_call": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1], "images_per_s": 136.09, "readout": "yesno"}
+fresh 128 128 {"prep_ms": 93.02, "vision_ms": 264.26, "lm_ms": 586.89, "total_ms": 943.83, "total_ms_p90": 958.95, "tokens": 16384, "chunks": 1, "chunks_per_call": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1], "images_per_s": 135.62, "readout": "yesno"}
+fresh 128 256 {"prep_ms": 197.73, "vision_ms": 529.29, "lm_ms": 1176.11, "total_ms": 1903.0, "total_ms_p90": 1930.68, "tokens": 32768, "chunks": 2, "chunks_per_call": [2, 2, 2, 2, 2, 2, 2, 2, 2, 2], "images_per_s": 134.52, "readout": "yesno"}
+fresh 256 32 {"prep_ms": 33.83, "vision_ms": 145.54, "lm_ms": 281.85, "total_ms": 461.14, "total_ms_p90": 464.31, "tokens": 8192, "chunks": 1, "chunks_per_call": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1], "images_per_s": 69.39, "readout": "yesno"}
+fresh 256 64 {"prep_ms": 74.1, "vision_ms": 293.53, "lm_ms": 567.97, "total_ms": 935.58, "total_ms_p90": 944.19, "tokens": 16384, "chunks": 1, "chunks_per_call": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1], "images_per_s": 68.41, "readout": "yesno"}
+fresh 256 128 {"prep_ms": 139.81, "vision_ms": 587.04, "lm_ms": 1136.43, "total_ms": 1873.06, "total_ms_p90": 1883.31, "tokens": 32768, "chunks": 2, "chunks_per_call": [2, 2, 2, 2, 2, 2, 2, 2, 2, 2], "images_per_s": 68.34, "readout": "yesno"}
+fresh 256 256 {"prep_ms": 275.94, "vision_ms": 1174.51, "lm_ms": 2273.02, "total_ms": 3723.24, "total_ms_p90": 3757.54, "tokens": 65536, "chunks": 4, "chunks_per_call": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4], "images_per_s": 68.76, "readout": "yesno"}
+BENCH_DONE
+stage=after exit=0

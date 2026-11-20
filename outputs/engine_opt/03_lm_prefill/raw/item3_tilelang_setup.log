@@ -1,0 +1,69 @@
+Collecting tilelang>=0.1.12
+  Downloading tilelang-0.1.15-cp39-abi3-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (27 kB)
+Collecting apache-tvm-ffi
+  Downloading apache_tvm_ffi-0.1.16-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.2 kB)
+Collecting z3-solver
+  Downloading z3_solver-5.4.1.0-py3-none-manylinux_2_27_x86_64.whl.metadata (777 bytes)
+Downloading tilelang-0.1.15-cp39-abi3-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (49.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 49.6/49.6 MB 183.0 MB/s  0:00:00
+Downloading apache_tvm_ffi-0.1.16-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (3.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.5/3.5 MB 128.9 MB/s  0:00:00
+Downloading z3_solver-5.4.1.0-py3-none-manylinux_2_27_x86_64.whl (38.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 38.6/38.6 MB 126.0 MB/s  0:00:00
+Installing collected packages: z3-solver, tilelang, apache-tvm-ffi
+
+Successfully installed apache-tvm-ffi-0.1.16 tilelang-0.1.15 z3-solver-5.4.1.0
+Requires-Dist: apache-tvm-ffi<0.1.13,>=0.1.11
+Requires-Dist: torch-c-dlpack-ext; python_version < "3.14"
+Requires-Dist: cloudpickle
+Requires-Dist: ml-dtypes
+Requires-Dist: numpy>=1.23.5
+Requires-Dist: psutil
+Requires-Dist: torch
+Requires-Dist: torch>=2.4; platform_system == "Darwin"
+Requires-Dist: setuptools; platform_system == "Darwin"
+Requires-Dist: tqdm>=4.62.3
+Requires-Dist: typing-extensions>=4.10.0
+Requires-Dist: z3-solver<4.15.5,>=4.13.0
+Requires-Dist: ml-dtypes>=0.5.1; extra == "fp4"
+Requires-Dist: matplotlib; extra == "vis"
+Requires-Dist: torch; extra == "nvcc"
+Requires-Dist: nvidia-cuda-nvcc>=13.0.48; extra == "nvcc"
+Requires-Dist: nvidia-cuda-cccl>=13.0.50; extra == "nvcc"
+Requires-Dist: nvidia-cuda-nvrtc>=13; platform_system == "Windows" and extra == "nvcc"
+Requires-Dist: nvidia-curand>=10.4; platform_system == "Windows" and extra == "nvcc"
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    import flash_qla, tilelang; print(tilelang.__version__)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/item3-extras/flash_qla/__init__.py", line 6, in <module>
+    from flash_qla.ops.gated_delta_rule.chunk import (
+    ...<3 lines>...
+    )
+  File "/content/item3-extras/flash_qla/ops/__init__.py", line 4, in <module>
+    from .gated_delta_rule import chunk_gated_delta_rule
+  File "/content/item3-extras/flash_qla/ops/gated_delta_rule/__init__.py", line 4, in <module>
+    from flash_qla.ops.gated_delta_rule.chunk import (
+    ...<3 lines>...
+    )
+  File "/content/item3-extras/flash_qla/ops/gated_delta_rule/chunk/__init__.py", line 5, in <module>
+    import tilelang
+  File "/content/item3-extras/tilelang/__init__.py", line 187, in <module>
+    import tvm
+  File "/content/item3-extras/tilelang/3rdparty/tvm/python/tvm/__init__.py", line 29, in <module>
+    from .base import TVMError, __version__, _RUNTIME_ONLY
+  File "/content/item3-extras/tilelang/3rdparty/tvm/python/tvm/base.py", line 60, in <module>
+    _LIB = libinfo.load_lib_ctypes(
+        "tvm", "tvm_compiler", "RTLD_LOCAL", extra_lib_paths=_extra_lib_paths
+    )
+  File "/content/item3-extras/tilelang/3rdparty/tvm/python/tvm/libinfo.py", line 147, in load_lib_ctypes
+    return ctypes.CDLL(str(lib_path), getattr(ctypes, mode))
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/item3-extras/tilelang/__init__.py", line 147, in lazy_init
+    return old_init(self, name, mode | os.RTLD_LAZY, *args, **kwargs)
+  File "/usr/lib/python3.13/ctypes/__init__.py", line 361, in __init__
+    self._handle = self._load_library(name, mode, handle, winmode)
+                   ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/ctypes/__init__.py", line 403, in _load_library
+    return _dlopen(name, mode)
+OSError: libz3.so.4.15: cannot open shared object file: No such file or directory

@@ -1,0 +1,9 @@
+Thu Nov 19 07:29:42 PM UTC 2026
+name, driver_version, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 580.82.07, 0 MiB
+GPU compute process list empty
+GLANCE_BOX_REDUCTION=fixed
+python -m scan.bench_box_readout --precision-latency /content/ckpt/v1/ckpt_final.pt --out /content/out/scan/item9_controls_precision_latency.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 17579.81it/s]
+{"bf16": {"prep_ms_median": 4.101149996131426, "model_ms_median": 92.18084449821617, "model_ms_p90": 104.60232909972547, "total_ms_median": 96.368258997245, "total_ms_p90": 108.8481891049014, "ttfa_ms_median": 96.368258997245, "q_per_s": 320.4511170461852, "n_calls": 50, "questions_per_call": 32}, "fp32": {"prep_ms_median": 4.312695498811081, "model_ms_median": 294.6130624986836, "model_ms_p90": 358.77017000238993, "total_ms_median": 300.67599750327645, "total_ms_p90": 363.74650199795724, "ttfa_ms_median": 300.67599750327645, "q_per_s": 100.3095393896511, "n_calls": 50, "questions_per_call": 32}}
+precision_latency exit=0

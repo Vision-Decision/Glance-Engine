@@ -1,0 +1,38 @@
+Thu Nov 19 06:40:58 PM UTC 2026
+name, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 0 MiB
+GPU compute process list empty
+6c55309da8444001f5adea3b51619e5cb4036f2234b83ed581f32616976048e7  scan/engine.py
+96eea3e007b2e1c8f61faab57fe9bae60451fa3bb3c0868becf94dcf5ba3b881  scan/bench_bank_memory.py
+a86a4c05f8b58d6701c9803e9b4ea9915df6a2b8fdc8031e3dc9d1b462e16428  scan/bench_bank_precision.py
+43e7c1cb4358089ca4ff76f1adfbf808f955133f4e644d80a6c3582ae064954e  scan/bench_bank_tier.py
+652c1f8e306e28d43cc6ec8189b1c2511333db3eecd02ab0ee4994ae6ad1bb3d  scan/bank_codec.py
+939c131e2154928965cbfef49ee8ff08f4696589d3dc4388984409a610bb3eda  scan/bank_kernels.py
+3f6823b1a3c3af3ad571a8ad03d3fa65a8ca43ce5c4cd347a59f95b42aec8fa0  scan/bank.py
+cd55e24229883f9310fd5b05b3be36078efb87a82c98f123ace55e1c37390a1d  scan/host_bank.py
+a477ad78aa1bfc77523500ab3ff8755ad775be8e2ea590b6b7b4b42bcd781a72  speed/gdn_branch.py
+python -m scan.bench_scan --parts clips\,cached --Ns 64\,256 --n_calls 15 --clip_fresh 0 --ckpt /content/ckpt/v1/ckpt_final.pt --out /content/out/scan/item8_exact_after.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 20718.49it/s]
+[transformers] Qwen3VL video processing does not apply the per-frame pixel cap the reference implementation (qwen-vl-utils) applies, so some videos cost far more tokens than they would there. In v5.22 the capped behavior will become the default and `cap_pixels_per_frame` will be removed. Pass `cap_pixels_per_frame=True` to adopt the reference behavior now, or `False` to keep the current behavior and silence this warning.
+[mem] clips bank f4 v96: allocated 21.3 GB, reserved 39.4 GB
+clips f4_v96 64 {"prep_ms": 0.13, "model_ms": 59.2, "total_ms": 59.33, "total_ms_p90": 65.09}
+clips f4_v96 256 {"prep_ms": 0.17, "model_ms": 256.76, "total_ms": 256.92, "total_ms_p90": 282.8}
+[mem] clips bank f4 v48: allocated 21.2 GB, reserved 37.4 GB
+clips f4_v48 64 {"prep_ms": 0.12, "model_ms": 58.42, "total_ms": 58.55, "total_ms_p90": 64.36}
+clips f4_v48 256 {"prep_ms": 0.16, "model_ms": 250.37, "total_ms": 250.52, "total_ms_p90": 276.53}
+[mem] clips bank f2 v96: allocated 21.5 GB, reserved 37.8 GB
+clips f2_v96 64 {"prep_ms": 0.12, "model_ms": 58.2, "total_ms": 58.31, "total_ms_p90": 64.18}
+clips f2_v96 256 {"prep_ms": 0.16, "model_ms": 249.87, "total_ms": 250.17, "total_ms_p90": 275.9}
+[mem] image bank Tv640: allocated 29.4 GB, reserved 56.8 GB
+cached 640 64 box {"prep_ms": 0.1, "model_ms": 27.14, "total_ms": 27.24, "total_ms_p90": 33.44}
+cached 640 64 noul {"prep_ms": 0.13, "model_ms": 47.82, "total_ms": 47.94, "total_ms_p90": 51.76}
+cached 640 256 box {"prep_ms": 0.13, "model_ms": 110.29, "total_ms": 110.43, "total_ms_p90": 124.38}
+cached 640 256 noul {"prep_ms": 0.15, "model_ms": 189.88, "total_ms": 190.03, "total_ms_p90": 205.99}
+[mem] image bank Tv256: allocated 26.1 GB, reserved 47.0 GB
+cached 256 64 box {"prep_ms": 0.1, "model_ms": 26.0, "total_ms": 26.11, "total_ms_p90": 32.25}
+cached 256 256 box {"prep_ms": 0.12, "model_ms": 98.83, "total_ms": 98.95, "total_ms_p90": 112.88}
+[mem] image bank Tv64: allocated 24.3 GB, reserved 41.0 GB
+cached 64 64 box {"prep_ms": 0.1, "model_ms": 25.47, "total_ms": 25.57, "total_ms_p90": 31.71}
+cached 64 256 box {"prep_ms": 0.12, "model_ms": 96.93, "total_ms": 97.05, "total_ms_p90": 110.95}
+BENCH_DONE
+after exit=0

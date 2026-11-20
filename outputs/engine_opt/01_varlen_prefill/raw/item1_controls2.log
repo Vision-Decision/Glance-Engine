@@ -1,0 +1,11 @@
+layout=0
+pushed /content/out/scan/item1_reference_layout.json -> Vision-Decision/collection-scan-results
+push failed /content/out/scan/item1_reference_layout.log Vision-Decision/collection-scan-results (Request ID: Root=1-6afeb48f-2e0a5cbe702e7b7216b5fe9f;5d3152cd-e624-4554-bfaf-e9f21b9ec103)
+
+429 Too Many Requests for u
+pushed /content/out/scan/item1_reference_layout.log -> Vision-Decision/collection-scan-data
+push failed /content/out/scan/item1_pool_probe.log Vision-Decision/collection-scan-results (Request ID: Root=1-6afeb490-78cb560948299abd7d7fe83d;6506df9a-5f74-4725-a87a-40feff2701b7)
+
+429 Too Many Requests for u
+pushed /content/out/scan/item1_pool_probe.log -> Vision-Decision/collection-scan-data
+CONTROLS_DONE

@@ -1,0 +1,9 @@
+Thu Nov 19 12:01:18 PM UTC 2026
+name, driver_version, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 580.82.07, 0 MiB
+GPU compute process list empty
+python -m speed.bench_glance --ckpt /content/ckpt/v1/ckpt_final.pt --modes eng_fused --parts video1 --out /content/out/scan/item3_video_packed.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 18365.43it/s]
+eng_fused  video_f32_N1 {"prep_ms_median": 31.33, "vision_ms_median": 166.28, "lm_ms_median": 193.25, "model_ms_median": 359.53, "model_ms_p90": 362.16, "total_ms_median": 390.85, "total_ms_p90": 393.88, "ttfa_ms_median": 390.85, "q_per_s": 81.68, "n_calls": 12, "questions_per_call": 32}
+eng_fused  video_f64_N1 {"prep_ms_median": 62.87, "vision_ms_median": 336.9, "lm_ms_median": 393.09, "model_ms_median": 730.07, "model_ms_p90": 731.96, "total_ms_median": 793.59, "total_ms_p90": 795.96, "ttfa_ms_median": 793.59, "q_per_s": 80.71, "n_calls": 12, "questions_per_call": 64}
+video_packed exit=0

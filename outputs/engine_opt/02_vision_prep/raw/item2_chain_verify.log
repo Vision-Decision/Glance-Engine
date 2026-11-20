@@ -1,0 +1,11 @@
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.provenance'
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.provenance'
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.provenance'
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.provenance'
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.provenance'
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.xattr.com.apple.provenance'
+pushed /tmp/item2verify/outputs/engine_opt/02_vision_prep/raw/item2_cpu.log -> Vision-Decision/collection-scan-results
+pushed /tmp/item2verify/outputs/engine_opt/02_vision_prep/raw/item2_floors.json -> Vision-Decision/collection-scan-results
+features_verify exit=0
+pushed /content/out/scan/item2_features_verify.json -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item2_features_verify.log -> Vision-Decision/collection-scan-results

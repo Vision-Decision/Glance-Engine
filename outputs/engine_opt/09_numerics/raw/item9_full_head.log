@@ -1,0 +1,24 @@
+micro exit=0
+pushed /content/out/scan/item9_full_micro.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item9_full_micro.json -> Vision-Decision/collection-scan-results
+fp32_probe exit=0
+pushed /content/out/scan/item9_precise_fp32_probe.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item9_precise_fp32_probe.json -> Vision-Decision/collection-scan-results
+cached exit=0
+pushed /content/out/scan/item9_full_cached.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item9_full_cached.json -> Vision-Decision/collection-scan-results
+fresh exit=0
+pushed /content/out/scan/item9_full_fresh.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item9_full_fresh.json -> Vision-Decision/collection-scan-results
+speed exit=0
+pushed /content/out/scan/item9_full_speed.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item9_full_speed.json -> Vision-Decision/collection-scan-results
+equiv exit=0
+pushed /content/out/scan/item9_full_equiv.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item9_full_equiv.json -> Vision-Decision/collection-scan-results
+interleaving exit=0
+pushed /content/out/scan/item9_full_interleaving.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item9_full_interleaving.json -> Vision-Decision/collection-scan-results
+diag exit=0
+pushed /content/out/scan/item9_full_diag.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item9_full_diag.json -> Vision-Decision/collection-scan-results

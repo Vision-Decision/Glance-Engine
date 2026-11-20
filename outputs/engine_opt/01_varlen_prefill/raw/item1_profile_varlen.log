@@ -1,0 +1,23 @@
+Thu Nov 19 08:13:25 UTC 2026
+name, memory.total [MiB], memory.used [MiB], driver_version
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 97887 MiB, 0 MiB, 580.82.07
+GPU compute process list empty before profile_varlen in /content/dv
+python -m scan.profile_fresh --ckpt /content/ckpt/v1/ckpt_final.pt --fresh_impl varlen --out /content/out/scan/item1_profile_varlen.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 16929.51it/s]
+timeline 32
+timeline 64
+timeline 128
+timeline 256
+eager 32
+USDT:2026-11-19 08:14:27 21387:21387 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 08:14:27 21387:21387 SyncActivityProfilerHandler.cpp:46] profiler_stop
+eager 64
+USDT:2026-11-19 08:14:30 21387:21387 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 08:14:30 21387:21387 SyncActivityProfilerHandler.cpp:46] profiler_stop
+eager 128
+USDT:2026-11-19 08:14:35 21387:21387 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 08:14:36 21387:21387 SyncActivityProfilerHandler.cpp:46] profiler_stop
+eager 256
+USDT:2026-11-19 08:14:52 21387:21387 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 08:14:53 21387:21387 SyncActivityProfilerHandler.cpp:46] profiler_stop
+stage=profile_varlen exit=0

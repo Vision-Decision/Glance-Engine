@@ -1,0 +1,45 @@
+QUEUE_WAITING
+START before Thu Nov 19 07:46:05 UTC 2026
+stage=before exit=0
+pushed /content/out/scan/item1_before.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item1_before.json -> Vision-Decision/collection-scan-results
+END before rc=0 Thu Nov 19 07:51:28 UTC 2026
+START after Thu Nov 19 07:51:28 UTC 2026
+stage=after exit=0
+pushed /content/out/scan/item1_after.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item1_after.json -> Vision-Decision/collection-scan-results
+END after rc=0 Thu Nov 19 07:54:48 UTC 2026
+START vllm Thu Nov 19 07:54:48 UTC 2026
+stage=vllm exit=0
+pushed /content/out/scan/item1_vllm.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item1_vllm.json -> Vision-Decision/collection-scan-results
+END vllm rc=0 Thu Nov 19 07:58:48 UTC 2026
+START scan_real Thu Nov 19 07:58:48 UTC 2026
+stage=scan_real exit=1
+pushed /content/out/scan/item1_scan_real.log -> Vision-Decision/collection-scan-results
+END scan_real rc=1 Thu Nov 19 07:59:32 UTC 2026
+START sglang Thu Nov 19 07:59:32 UTC 2026
+stage=sglang exit=0
+pushed /content/out/scan/item1_sglang.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item1_sglang.json -> Vision-Decision/collection-scan-results
+END sglang rc=0 Thu Nov 19 08:11:06 UTC 2026
+START profile_reference Thu Nov 19 08:11:06 UTC 2026
+stage=profile_reference exit=0
+pushed /content/out/scan/item1_profile_reference.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item1_profile_reference.json -> Vision-Decision/collection-scan-results
+END profile_reference rc=0 Thu Nov 19 08:13:25 UTC 2026
+START profile_varlen Thu Nov 19 08:13:25 UTC 2026
+stage=profile_varlen exit=0
+pushed /content/out/scan/item1_profile_varlen.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item1_profile_varlen.json -> Vision-Decision/collection-scan-results
+END profile_varlen rc=0 Thu Nov 19 08:14:57 UTC 2026
+START equiv Thu Nov 19 08:14:57 UTC 2026
+stage=equiv exit=1
+pushed /content/out/scan/item1_equiv.log -> Vision-Decision/collection-scan-results
+END equiv rc=1 Thu Nov 19 08:15:32 UTC 2026
+START diag Thu Nov 19 08:15:32 UTC 2026
+stage=diag exit=0
+pushed /content/out/scan/item1_diag.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item1_diag.json -> Vision-Decision/collection-scan-results
+END diag rc=0 Thu Nov 19 08:17:47 UTC 2026
+ITEM1_QUEUE_DONE

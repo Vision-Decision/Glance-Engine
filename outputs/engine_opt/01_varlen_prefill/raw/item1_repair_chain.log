@@ -1,0 +1,7 @@
+stage=scan_real exit=1
+pushed /content/out/scan/item1_scan_real.log -> Vision-Decision/collection-scan-results
+DONE-scan_real-1
+stage=equiv exit=0
+pushed /content/out/scan/item1_equiv.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item1_equiv.json -> Vision-Decision/collection-scan-results
+DONE-equiv-0

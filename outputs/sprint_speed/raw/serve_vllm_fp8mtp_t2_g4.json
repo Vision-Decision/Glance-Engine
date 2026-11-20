@@ -1,0 +1,135 @@
+{
+ "backend": "vllm",
+ "version": "0.34.0",
+ "engine_args": {
+  "model": "Qwen/Qwen3.5-4B",
+  "enable_prefix_caching": "True",
+  "max_model_len": "8192",
+  "limit_mm_per_prompt": "{'image': 1}",
+  "gpu_memory_utilization": "0.85",
+  "seed": "0",
+  "max_num_seqs": "256",
+  "max_num_batched_tokens": "16384",
+  "quantization": "fp8",
+  "speculative_config": "{'method': 'mtp', 'num_speculative_tokens': 2}",
+  "async_scheduling": "True"
+ },
+ "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "modes": {
+  "bs4_box_N32": {
+   "total_ms_median": 684.5106459995804,
+   "total_ms_p90": 735.7557594001264,
+   "ttfa_ms_median": 503.74878399998124,
+   "q_per_s": 185.7945127871665,
+   "n_calls": 12,
+   "questions_per_call": 128,
+   "gen_tokens_mean": 19.055338541666668,
+   "cached_prompt_tokens_mean": 558.0,
+   "prompt_tokens_mean": 694.6100260416666,
+   "examples": [
+    "[716, 0, 891, 508]",
+    "[631, 308, 951, 708]",
+    "[710,607,998,988]",
+    "[715, 607, 998, 988]",
+    "[715, 607, 998, 988]",
+    "[631, 308, 952, 704]"
+   ]
+  },
+  "bs8_box_N32": {
+   "total_ms_median": 1338.93755850022,
+   "total_ms_p90": 1417.2169197005132,
+   "ttfa_ms_median": 800.7858974997362,
+   "q_per_s": 188.36549080978304,
+   "n_calls": 12,
+   "questions_per_call": 256,
+   "gen_tokens_mean": 19.103841145833332,
+   "cached_prompt_tokens_mean": 551.25,
+   "prompt_tokens_mean": 690.9729817708334,
+   "examples": [
+    "[716, 0, 891, 508]",
+    "[631, 308, 951, 708]",
+    "[710,607,998,988]",
+    "[715, 607, 998, 988]",
+    "[715, 607, 998, 988]",
+    "[631, 308, 952, 708]"
+   ]
+  },
+  "bs16_box_N32": {
+   "total_ms_median": 2614.490628500789,
+   "total_ms_p90": 2745.370138999533,
+   "ttfa_ms_median": 842.4305080006889,
+   "q_per_s": 192.34166006712553,
+   "n_calls": 12,
+   "questions_per_call": 512,
+   "gen_tokens_mean": 19.156575520833332,
+   "cached_prompt_tokens_mean": 551.25,
+   "prompt_tokens_mean": 690.73291015625,
+   "examples": [
+    "[716, 0, 891, 508]",
+    "[631, 308, 951, 708]",
+    "[710,607,998,988]",
+    "[715, 607, 998, 988]",
+    "[715, 607, 998, 988]",
+    "[631, 308, 952, 708]"
+   ]
+  },
+  "bs4_box_N64": {
+   "total_ms_median": 1224.555271499412,
+   "total_ms_p90": 1309.7764959004053,
+   "ttfa_ms_median": 895.3696199996557,
+   "q_per_s": 207.14648306607089,
+   "n_calls": 12,
+   "questions_per_call": 256,
+   "gen_tokens_mean": 19.1123046875,
+   "cached_prompt_tokens_mean": 567.0,
+   "prompt_tokens_mean": 694.5927734375,
+   "examples": [
+    "[716, 0, 891, 508]",
+    "[631, 308, 951, 706]",
+    "[710,607,998,988]",
+    "[715, 607, 998, 988]",
+    "[715, 607, 998, 988]",
+    "[631, 308, 952, 704]"
+   ]
+  },
+  "bs8_box_N64": {
+   "total_ms_median": 2457.9762504999962,
+   "total_ms_p90": 2578.5003459010113,
+   "ttfa_ms_median": 942.4810839991551,
+   "q_per_s": 207.4432627848923,
+   "n_calls": 12,
+   "questions_per_call": 512,
+   "gen_tokens_mean": 19.174153645833332,
+   "cached_prompt_tokens_mean": 560.625,
+   "prompt_tokens_mean": 690.9609375,
+   "examples": [
+    "[716, 0, 891, 508]",
+    "[631, 308, 951, 706]",
+    "[710,607,998,988]",
+    "[715, 607, 998, 988]",
+    "[715, 607, 998, 988]",
+    "[631, 308, 952, 704]"
+   ]
+  }
+ },
+ "args": {
+  "backend": "vllm",
+  "prep": "data/prep/eval_refcoco_val.jsonl",
+  "image_root": "/content/data/coco/train2014",
+  "gui": "/content/gui/sspro40.jsonl",
+  "parts": "tput2",
+  "n_images": 100,
+  "n_calls": 50,
+  "max_model_len": 8192,
+  "max_num_seqs": 256,
+  "max_batched": 16384,
+  "gpu_mem": 0.85,
+  "quant": "fp8",
+  "spec": "mtp",
+  "spec_k": 2,
+  "async_sched": true,
+  "one_token": false,
+  "quick": false,
+  "out": "/content/out/spd/serve_vllm_fp8mtp_t2_g4.json"
+ }
+}

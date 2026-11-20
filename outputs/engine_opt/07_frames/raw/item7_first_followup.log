@@ -1,0 +1,67 @@
+Thu Nov 19 04:23:38 PM UTC 2026
+name, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 0 MiB
+GPU_IDLE
+python -m speed.bench_scheduler --backend scheduled --warm-shapes --parts followup --out /content/out/scan/item7_first_followup.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 19530.63it/s]
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/content/dv/speed/bench_scheduler.py", line 248, in <module>
+    asyncio.run(run(p.parse_args()))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/asyncio/runners.py", line 196, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "/usr/lib/python3.13/asyncio/runners.py", line 119, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/usr/lib/python3.13/asyncio/base_events.py", line 726, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/content/dv/speed/bench_scheduler.py", line 189, in run
+    await asyncio.gather(
+    ...<4 lines>...
+    )
+  File "/content/dv/speed/bench_scheduler.py", line 135, in answer
+    await self.scheduler.submit(req, timeout=900)
+  File "/content/dv/speed/scheduler.py", line 55, in submit
+    return await asyncio.wait_for(job.future, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/asyncio/tasks.py", line 514, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "/content/dv/speed/scheduler.py", line 122, in _execute
+    result = await loop.run_in_executor(self.pool, self.worker, [j.request for j in batch])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "/content/dv/speed/decision_worker.py", line 224, in __call__
+    self._step([unit], False, results)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/dv/speed/decision_worker.py", line 280, in _step
+    self._forward(units, hit, results)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/content/dv/speed/decision_worker.py", line 306, in _forward
+    feats = self._vision(units, batch["grid_thw"])
+  File "/content/dv/speed/decision_worker.py", line 262, in _vision
+    return eng.fresh_vision(self._pixels(units), grid)
+                            ~~~~~~~~~~~~^^^^^^^
+  File "/content/dv/speed/decision_worker.py", line 254, in _pixels
+    eng.frame_prep.pixels(upload_frames(list(group)))
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/dv/scan/vision_prep.py", line 107, in pixels
+    return patches(raw, self._lut())
+  File "/content/dv/speed/frame_pixels.py", line 39, in patches
+    _patches[(maximum, n)](raw, lut, layout, w, maximum, layout is not None)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/triton/runtime/jit.py", line 374, in <lambda>
+    return lambda *args, **kwargs: self.run(grid=grid, warmup=False, *args, **kwargs)
+                                   ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/triton/runtime/jit.py", line 741, in run
+    bound_args, specialization, options = binder(*args, **kwargs)
+                                          ~~~~~~^^^^^^^^^^^^^^^^^
+TypeError: dynamic_func() missing 1 required positional argument: 'MIXED'
+followup exit=1

@@ -1,0 +1,177 @@
+{
+ "cublas": "13.1.1.3",
+ "torch": "2.14.1+cu130",
+ "cuda": "13.0",
+ "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "capability": [
+  12,
+  0
+ ],
+ "triton": "3.8.0",
+ "tf32": false,
+ "bf16_reduced_precision": true,
+ "results": {
+  "fixed_features": [
+   {
+    "n": 32,
+    "tokens": 4352,
+    "kind": "box",
+    "p_absdiff_max": 0.0007703490555286407,
+    "p_absdiff_mean": 3.551277404767461e-05,
+    "decision_agree": 1.0,
+    "box_absdiff_max": 0.05053946375846863,
+    "box_absdiff_mean": 0.0009541909676045179,
+    "piou_absdiff_max": 0.025881558656692505
+   },
+   {
+    "n": 32,
+    "tokens": 4672,
+    "kind": "noul",
+    "prob_absdiff_max": 0.0012227892875671387,
+    "decision_agree": 1.0
+   },
+   {
+    "n": 64,
+    "tokens": 8704,
+    "kind": "box",
+    "p_absdiff_max": 0.0010299831628799438,
+    "p_absdiff_mean": 2.778074485831894e-05,
+    "decision_agree": 1.0,
+    "box_absdiff_max": 0.3228808343410492,
+    "box_absdiff_mean": 0.0046248892322182655,
+    "piou_absdiff_max": 0.1464325189590454
+   },
+   {
+    "n": 64,
+    "tokens": 9344,
+    "kind": "noul",
+    "prob_absdiff_max": 0.0034410953521728516,
+    "decision_agree": 1.0
+   },
+   {
+    "n": 128,
+    "tokens": 17408,
+    "kind": "box",
+    "p_absdiff_max": 0.0013987571001052856,
+    "p_absdiff_mean": 2.9414235541480593e-05,
+    "decision_agree": 1.0,
+    "box_absdiff_max": 0.16169697046279907,
+    "box_absdiff_mean": 0.002835904946550727,
+    "piou_absdiff_max": 0.08617186546325684
+   },
+   {
+    "n": 128,
+    "tokens": 18688,
+    "kind": "noul",
+    "prob_absdiff_max": 0.006567955017089844,
+    "decision_agree": 1.0
+   },
+   {
+    "n": 256,
+    "tokens": 34816,
+    "kind": "box",
+    "p_absdiff_max": 0.014920830726623535,
+    "p_absdiff_mean": 0.00015919163706712425,
+    "decision_agree": 1.0,
+    "box_absdiff_max": 0.22893428802490234,
+    "box_absdiff_mean": 0.002030822914093733,
+    "piou_absdiff_max": 0.08215340971946716
+   },
+   {
+    "n": 256,
+    "tokens": 37376,
+    "kind": "noul",
+    "prob_absdiff_max": 0.0065679848194122314,
+    "decision_agree": 1.0
+   }
+  ],
+  "video": [
+   {
+    "n": 32,
+    "call": 0,
+    "p_absdiff_max": 0.002701699733734131,
+    "p_absdiff_mean": 0.00020068010780960321,
+    "decision_agree": 1.0,
+    "box_absdiff_max": 0.028341591358184814,
+    "box_absdiff_mean": 0.0023340408224612474,
+    "piou_absdiff_max": 0.006802797317504883
+   },
+   {
+    "n": 32,
+    "call": 1,
+    "p_absdiff_max": 0.012466669082641602,
+    "p_absdiff_mean": 0.0006837937980890274,
+    "decision_agree": 1.0,
+    "box_absdiff_max": 0.05171173810958862,
+    "box_absdiff_mean": 0.003536874894052744,
+    "piou_absdiff_max": 0.029069960117340088
+   },
+   {
+    "n": 32,
+    "call": 2,
+    "p_absdiff_max": 0.005276143550872803,
+    "p_absdiff_mean": 0.00046689994633197784,
+    "decision_agree": 1.0,
+    "box_absdiff_max": 0.07092416286468506,
+    "box_absdiff_mean": 0.005235230550169945,
+    "piou_absdiff_max": 0.007731497287750244
+   },
+   {
+    "n": 32,
+    "call": 3,
+    "p_absdiff_max": 0.002701699733734131,
+    "p_absdiff_mean": 0.00024338311050087214,
+    "decision_agree": 1.0,
+    "box_absdiff_max": 0.028341591358184814,
+    "box_absdiff_mean": 0.002366292057558894,
+    "piou_absdiff_max": 0.006802797317504883
+   },
+   {
+    "n": 64,
+    "call": 0,
+    "p_absdiff_max": 0.005581796169281006,
+    "p_absdiff_mean": 0.00017998175462707877,
+    "decision_agree": 1.0,
+    "box_absdiff_max": 0.04883381724357605,
+    "box_absdiff_mean": 0.0028492372948676348,
+    "piou_absdiff_max": 0.08147943019866943
+   },
+   {
+    "n": 64,
+    "call": 1,
+    "p_absdiff_max": 0.007838010787963867,
+    "p_absdiff_mean": 0.0003932146937586367,
+    "decision_agree": 1.0,
+    "box_absdiff_max": 0.04450875520706177,
+    "box_absdiff_mean": 0.0029045413248240948,
+    "piou_absdiff_max": 0.094082772731781
+   },
+   {
+    "n": 64,
+    "call": 2,
+    "p_absdiff_max": 0.007838010787963867,
+    "p_absdiff_mean": 0.00042432069312781096,
+    "decision_agree": 1.0,
+    "box_absdiff_max": 0.04883381724357605,
+    "box_absdiff_mean": 0.0031065461225807667,
+    "piou_absdiff_max": 0.094082772731781
+   },
+   {
+    "n": 64,
+    "call": 3,
+    "p_absdiff_max": 0.003176271915435791,
+    "p_absdiff_mean": 0.00014237308641895652,
+    "decision_agree": 1.0,
+    "box_absdiff_max": 0.04883381724357605,
+    "box_absdiff_mean": 0.0027698418125510216,
+    "piou_absdiff_max": 0.08147943019866943
+   }
+  ],
+  "median_ms": {
+   "32": 99.6863021850586,
+   "64": 201.12733459472656,
+   "128": 403.01531982421875,
+   "256": 805.1732788085938
+  }
+ }
+}

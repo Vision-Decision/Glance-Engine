@@ -1,0 +1,15 @@
+singleton exit=0
+pushed /content/out/scan/item7_dispatch_singleton.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item7_dispatch_singleton.json -> Vision-Decision/collection-scan-results
+features exit=0
+pushed /content/out/scan/item7_dispatch_features.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item7_dispatch_features.json -> Vision-Decision/collection-scan-results
+video_checks exit=0
+pushed /content/out/scan/item7_dispatch_video_checks.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item7_dispatch_video_checks.json -> Vision-Decision/collection-scan-results
+fresh exit=0
+pushed /content/out/scan/item7_dispatch_fresh.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item7_dispatch_fresh.json -> Vision-Decision/collection-scan-results
+video exit=0
+pushed /content/out/scan/item7_dispatch_video.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item7_dispatch_video.json -> Vision-Decision/collection-scan-results

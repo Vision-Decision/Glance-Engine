@@ -1,0 +1,73 @@
+{
+ "backend": "vllm",
+ "version": "0.34.0",
+ "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "engine_args": {
+  "model": "Qwen/Qwen3.5-4B",
+  "enable_prefix_caching": "True",
+  "max_model_len": "4096",
+  "limit_mm_per_prompt": "{'image': 1, 'video': 1}",
+  "gpu_memory_utilization": "0.85",
+  "seed": "0",
+  "max_num_seqs": "256",
+  "max_num_batched_tokens": "16384",
+  "async_scheduling": "True",
+  "mm_processor_kwargs": "{'max_pixels': 4194304, 'min_pixels': 16384}"
+ },
+ "args": {
+  "prep": "data/prep/eval_refcoco_val.jsonl",
+  "image_root": "/content/data/coco/train2014",
+  "clip_cfgs": "4x48,2x96",
+  "parts": "cached_clips",
+  "retain_encoder_cache": false,
+  "unique_fresh": false,
+  "kinds": "yesno,box",
+  "Ns": "64,256",
+  "Ns_fresh": "1,2,4,8,16,32,64",
+  "Tvs": "64,128,256,640",
+  "max_fresh_tokens": 16384,
+  "n_calls": 8,
+  "max_num_seqs": 256,
+  "max_batched": 16384,
+  "gpu_mem": 0.85,
+  "quant": "",
+  "spec": "",
+  "prefix_len": 197,
+  "engine_kw": "",
+  "out": "/content/out/scan/item8_test_vllm.json"
+ },
+ "modes": {
+  "clips_f4_v48_N64_yesno": {
+   "total_ms": 235.97467800209415,
+   "total_ms_p90": 239.4678410004417,
+   "n_calls": 8,
+   "images_per_s": 271.21554118375377,
+   "cached_prompt_tokens_mean": 0.0,
+   "prompt_tokens_mean": 141.0
+  },
+  "clips_f4_v48_N256_yesno": {
+   "total_ms": 907.7447020026739,
+   "total_ms_p90": 924.0896419993078,
+   "n_calls": 8,
+   "images_per_s": 282.01761953026073,
+   "cached_prompt_tokens_mean": 0.0,
+   "prompt_tokens_mean": 141.0
+  },
+  "clips_f2_v96_N64_yesno": {
+   "total_ms": 214.2228279990377,
+   "total_ms_p90": 220.0124466980924,
+   "n_calls": 8,
+   "images_per_s": 298.7543419055578,
+   "cached_prompt_tokens_mean": 0.0,
+   "prompt_tokens_mean": 125.0
+  },
+  "clips_f2_v96_N256_yesno": {
+   "total_ms": 823.2777775010618,
+   "total_ms_p90": 953.518743400491,
+   "n_calls": 8,
+   "images_per_s": 310.9521561204412,
+   "cached_prompt_tokens_mean": 0.0,
+   "prompt_tokens_mean": 125.0
+  }
+ }
+}

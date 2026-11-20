@@ -1,0 +1,31 @@
+Thu Nov 19 02:03:50 PM UTC 2026
+name, driver_version, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 580.82.07, 0 MiB
+GPU compute process list empty
+35f8223f8bee0163c688d3e661c39d54ad75685a02107503c9a0dfb57b01fcd9  speed/engine.py
+1dddb90995b7b27a4f98c9f93b7b1ad7a441862faad435d5ba4ace39190e3843  speed/bench_glance.py
+f4183b0e71473da4db1cc28a8b5fc1aace276e03dade6c5e709a933bedaec578  speed/bench_w12.py
+605da8e8814d62300202d9ce58c86e0b7e703f4fb1342fd2ba7a8185aa2cc243  speed/w12.py
+python -m scan.bench_scan --parts cached\,fresh --Ns 1\,8\,32\,64\,256 --cached_tvs 640 --Ns_fresh 1\,2\,4\,8 --Tvs 128\,256 --fresh_kind yesno --fresh_chunked 1 --n_calls 10 --w12 /content/item5-w12-v1 --ckpt /content/ckpt/v1/ckpt_final.pt --out /content/out/scan/item5_scan_w12.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 16674.36it/s]
+[mem] image bank Tv640: allocated 35.1 GB, reserved 52.3 GB
+cached 640 1 box {"prep_ms": 0.09, "model_ms": 5.47, "total_ms": 5.56, "total_ms_p90": 5.8}
+cached 640 1 noul {"prep_ms": 0.09, "model_ms": 5.95, "total_ms": 6.04, "total_ms_p90": 6.06}
+cached 640 8 box {"prep_ms": 0.09, "model_ms": 8.31, "total_ms": 8.41, "total_ms_p90": 8.53}
+cached 640 8 noul {"prep_ms": 0.1, "model_ms": 9.69, "total_ms": 9.78, "total_ms_p90": 10.25}
+cached 640 32 box {"prep_ms": 0.1, "model_ms": 13.39, "total_ms": 13.49, "total_ms_p90": 16.66}
+cached 640 32 noul {"prep_ms": 0.11, "model_ms": 24.04, "total_ms": 24.15, "total_ms_p90": 25.61}
+cached 640 64 box {"prep_ms": 0.1, "model_ms": 23.4, "total_ms": 23.5, "total_ms_p90": 30.23}
+cached 640 64 noul {"prep_ms": 0.11, "model_ms": 44.52, "total_ms": 44.63, "total_ms_p90": 49.34}
+cached 640 256 box {"prep_ms": 0.12, "model_ms": 92.34, "total_ms": 92.46, "total_ms_p90": 112.62}
+cached 640 256 noul {"prep_ms": 0.14, "model_ms": 177.36, "total_ms": 177.49, "total_ms_p90": 195.23}
+fresh 128 1 {"prep_ms": 0.48, "vision_ms": 2.89, "lm_ms": 9.31, "total_ms": 12.68, "total_ms_p90": 12.7, "tokens": 128, "chunks": 1, "chunks_per_call": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1], "images_per_s": 78.85, "readout": "yesno"}
+fresh 128 2 {"prep_ms": 0.21, "vision_ms": 3.95, "lm_ms": 12.1, "total_ms": 16.27, "total_ms_p90": 16.29, "tokens": 256, "chunks": 1, "chunks_per_call": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1], "images_per_s": 122.95, "readout": "yesno"}
+fresh 128 4 {"prep_ms": 0.33, "vision_ms": 6.71, "lm_ms": 18.51, "total_ms": 25.56, "total_ms_p90": 25.58, "tokens": 512, "chunks": 1, "chunks_per_call": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1], "images_per_s": 156.5, "readout": "yesno"}
+fresh 128 8 {"prep_ms": 0.57, "vision_ms": 11.9, "lm_ms": 32.98, "total_ms": 45.47, "total_ms_p90": 45.61, "tokens": 1024, "chunks": 1, "chunks_per_call": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1], "images_per_s": 175.96, "readout": "yesno"}
+fresh 256 1 {"prep_ms": 0.56, "vision_ms": 4.79, "lm_ms": 12.02, "total_ms": 17.39, "total_ms_p90": 17.41, "tokens": 256, "chunks": 1, "chunks_per_call": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1], "images_per_s": 57.5, "readout": "yesno"}
+fresh 256 2 {"prep_ms": 0.34, "vision_ms": 8.22, "lm_ms": 18.25, "total_ms": 26.81, "total_ms_p90": 26.83, "tokens": 512, "chunks": 1, "chunks_per_call": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1], "images_per_s": 74.59, "readout": "yesno"}
+fresh 256 4 {"prep_ms": 0.6, "vision_ms": 14.57, "lm_ms": 30.54, "total_ms": 45.72, "total_ms_p90": 45.85, "tokens": 1024, "chunks": 1, "chunks_per_call": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1], "images_per_s": 87.48, "readout": "yesno"}
+fresh 256 8 {"prep_ms": 1.1, "vision_ms": 27.26, "lm_ms": 53.26, "total_ms": 81.63, "total_ms_p90": 82.1, "tokens": 2048, "chunks": 1, "chunks_per_call": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1], "images_per_s": 98.0, "readout": "yesno"}
+BENCH_DONE
+scan_w12 exit=0

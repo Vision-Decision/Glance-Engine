@@ -1,0 +1,11 @@
+Thu Nov 19 04:19:24 PM UTC 2026
+name, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 0 MiB
+GPU_IDLE
+python -m speed.bench_scheduler --backend serial --warm-shapes --parts followup --out /content/out/scan/item7_before_serial.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 16250.11it/s]
+followup_1 {'burst_median_ms': 8.77, 'requests_s': 113.89, 'p50_ms': 8.77, 'p90_ms': 8.84, 'p99_ms': 8.88}
+followup_4 {'burst_median_ms': 34.81, 'requests_s': 114.91, 'p50_ms': 21.88, 'p90_ms': 34.82, 'p99_ms': 34.95}
+followup_16 {'burst_median_ms': 138.22, 'requests_s': 115.77, 'p50_ms': 73.64, 'p90_ms': 129.46, 'p99_ms': 138.33}
+followup_64 {'burst_median_ms': 551.81, 'requests_s': 116.0, 'p50_ms': 280.5, 'p90_ms': 500.2, 'p99_ms': 551.42}
+serial exit=0

@@ -1,0 +1,12 @@
+mlp exit=0
+pushed /content/out/scan/item7_candidate_mlp.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item7_candidate_mlp.json -> Vision-Decision/collection-scan-results
+singleton exit=0
+pushed /content/out/scan/item7_candidate_singleton.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item7_candidate_singleton.json -> Vision-Decision/collection-scan-results
+interleaving exit=0
+pushed /content/out/scan/item7_candidate_interleaving.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item7_candidate_interleaving.json -> Vision-Decision/collection-scan-results
+diag exit=0
+pushed /content/out/scan/item7_candidate_diag.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item7_candidate_diag.json -> Vision-Decision/collection-scan-results

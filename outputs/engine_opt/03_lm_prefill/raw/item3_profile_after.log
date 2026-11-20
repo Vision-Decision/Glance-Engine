@@ -1,0 +1,19 @@
+Thu Nov 19 11:22:38 AM UTC 2026
+name, driver_version, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 580.82.07, 0 MiB
+GPU compute process list empty
+python -m scan.profile_lm --stage profile_after --ckpt /content/ckpt/v1/ckpt_final.pt --out /content/out/scan/item3_profile_after.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 16544.45it/s]
+USDT:2026-11-19 11:22:49 117412:117412 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 11:22:49 117412:117412 SyncActivityProfilerHandler.cpp:46] profiler_stop
+32 4672 109.35238647460938
+USDT:2026-11-19 11:22:51 117412:117412 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 11:22:51 117412:117412 SyncActivityProfilerHandler.cpp:46] profiler_stop
+64 9344 221.3831329345703
+USDT:2026-11-19 11:22:55 117412:117412 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 11:22:55 117412:117412 SyncActivityProfilerHandler.cpp:46] profiler_stop
+128 18688 447.9226379394531
+USDT:2026-11-19 11:23:09 117412:117412 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 11:23:10 117412:117412 SyncActivityProfilerHandler.cpp:46] profiler_stop
+256 37376 903.2484130859375
+profile_after exit=0

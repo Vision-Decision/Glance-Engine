@@ -1,0 +1,70 @@
+{
+  "vs_isolated": {
+    "counts": {
+      "total": 254,
+      "agreed": 254
+    },
+    "max_abs": {
+      "presence_prob": 0.004383862018585205,
+      "iou_prob": 0.018084824085235596,
+      "box_pred": 0.01579219102859497,
+      "typed_prob": 0.01900467276573181
+    },
+    "outliers": []
+  },
+  "vs_shipped": {
+    "counts": {
+      "total": 254,
+      "agreed": 254
+    },
+    "max_abs": {
+      "presence_prob": 0.0125846266746521,
+      "iou_prob": 0.05043923854827881,
+      "box_pred": 0.04117220640182495,
+      "typed_prob": 0.008271634578704834
+    },
+    "outliers": []
+  },
+  "isolated_vs_shipped": {
+    "counts": {
+      "total": 127,
+      "agreed": 127
+    },
+    "max_abs": {
+      "presence_prob": 0.0123404860496521,
+      "iou_prob": 0.04187572002410889,
+      "box_pred": 0.03929969668388367,
+      "typed_prob": 0.0156438946723938
+    },
+    "outliers": []
+  },
+  "limits": {
+    "presence_prob": 0.031703651,
+    "iou_prob": 0.407418222,
+    "box_pred": 0.424944818,
+    "typed_prob": 0.0233531148
+  },
+  "metrics": {
+    "queue_depth": 0,
+    "queue_limit": 256,
+    "requests": {
+      "completed": 96
+    },
+    "batch_sizes": {
+      "1": 32,
+      "8": 3,
+      "10": 1,
+      "9": 2,
+      "5": 1,
+      "7": 1
+    },
+    "latency_ms_histogram": {
+      "1000": 20,
+      "250": 9,
+      "500": 19,
+      "100": 6,
+      "50": 14,
+      "2500": 28
+    }
+  }
+}

@@ -1,0 +1,97 @@
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights:  71%|███████   | 512/723 [00:00<00:00, 5109.31it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 5883.63it/s]
+USDT:2026-11-18 08:29:11 14707:14707 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-18 08:29:11 14707:14707 SyncActivityProfilerHandler.cpp:46] profiler_stop
+ref_merged 1 {"prep": 5.954211999778636, "model": 262.5925889997234, "total": 268.49882000033176} gpu 227.502 launches 5748
+    {"gemm": 153.164, "elementwise/other": 28.18, "copy/cat": 21.452, "gdn(fla)": 11.39, "conv": 6.094, "memcpy": 3.373, "reduce/norm": 2.938, "index": 0.91, "softmax": 0.002}
+      47.596 ms  x120  ampere_bf16_s1688gemm_bf16_128x128_ldg8_f2f_stages_32x1_tn
+      30.628 ms  x64  void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8
+      25.704 ms  x168  void cutlass::Kernel2<cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_16x16_128x2_tn_align8
+      23.523 ms  x97  ampere_bf16_s1688gemm_bf16_128x128_ldg8_relu_f2f_stages_32x1_tn
+      10.184 ms  x24  void pytorch_flash::flash_fwd_kernel<Flash_fwd_kernel_traits<64, 128, 128, 4, false, false
+      8.576 ms  x184  void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native:
+      8.482 ms  x80  void cutlass::Kernel2<cutlass_80_wmma_tensorop_bf16_s161616gemm_bf16_16x16_128x1_tn_align8
+      7.423 ms  x523  void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native:
+      6.094 ms  x48  void at::native::(anonymous namespace)::conv_depthwise2d_forward_kernel_generic<c10::BFloa
+      5.695 ms  x48  ChunkGatedDeltaRuleFunction
+      4.086 ms  x507  void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::Tenso
+      3.783 ms  x16  fmha_cutlassF_bf16_aligned_32x128_gmem_sm80(PyTorchMemEffAttention::AttentionKernel<cutlas
+USDT:2026-11-18 08:29:18 14707:14707 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-18 08:29:19 14707:14707 SyncActivityProfilerHandler.cpp:46] profiler_stop
+ref_merged 8 {"prep": 7.2086220002347545, "model": 301.68843499996, "total": 308.89705700019476} gpu 273.624 launches 5963
+    {"gemm": 173.32, "elementwise/other": 34.486, "copy/cat": 27.994, "gdn(fla)": 20.337, "conv": 9.24, "reduce/norm": 3.57, "memcpy": 3.432, "index": 1.242, "softmax": 0.002}
+      81.136 ms  x240  ampere_bf16_s1688gemm_bf16_128x128_ldg8_f2f_stages_32x1_tn
+      33.689 ms  x64  void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8
+      24.403 ms  x97  ampere_bf16_s1688gemm_bf16_128x128_ldg8_relu_f2f_stages_32x1_tn
+      10.993 ms  x24  void pytorch_flash::flash_fwd_kernel<Flash_fwd_kernel_traits<64, 128, 128, 4, false, false
+      10.691 ms  x184  void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native:
+      10.168 ms  x48  ChunkGatedDeltaRuleFunction
+      9.240 ms  x48  void at::native::(anonymous namespace)::conv_depthwise2d_forward_kernel_generic<c10::BFloa
+      8.748 ms  x32  ampere_bf16_s16816gemm_bf16_256x128_ldg8_f2f_stages_32x3_tn
+      8.726 ms  x523  void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native:
+      5.650 ms  x16  fmha_cutlassF_bf16_aligned_32x128_gmem_sm80(PyTorchMemEffAttention::AttentionKernel<cutlas
+      5.323 ms  x507  void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::Tenso
+      4.715 ms  x48  ampere_bf16_s16816gemm_bf16_128x128_ldg8_f2f_stages_64x3_tn
+USDT:2026-11-18 08:29:26 14707:14707 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-18 08:29:26 14707:14707 SyncActivityProfilerHandler.cpp:46] profiler_stop
+eng_eager 1 {"prep": 6.4245909998135176, "vision": 71.62806399992405, "lm": 165.84599499992692, "model": 236.85965699996814, "total": 243.28424799978166} gpu 201.32 launches 4376
+    {"gemm": 125.134, "elementwise/other": 28.027, "copy/cat": 22.419, "gdn(fla)": 11.959, "conv": 6.674, "memcpy": 3.398, "reduce/norm": 2.695, "index": 1.012, "softmax": 0.002}
+      49.531 ms  x120  ampere_bf16_s1688gemm_bf16_128x128_ldg8_f2f_stages_32x1_tn
+      32.131 ms  x64  void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8
+      24.498 ms  x97  ampere_bf16_s1688gemm_bf16_128x128_ldg8_relu_f2f_stages_32x1_tn
+      11.065 ms  x24  void pytorch_flash::flash_fwd_kernel<Flash_fwd_kernel_traits<64, 128, 128, 4, false, false
+      9.448 ms  x184  void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native:
+      7.180 ms  x337  void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native:
+      6.674 ms  x48  void at::native::(anonymous namespace)::conv_depthwise2d_forward_kernel_generic<c10::BFloa
+      5.979 ms  x48  ChunkGatedDeltaRuleFunction
+      4.170 ms  x16  fmha_cutlassF_bf16_aligned_32x128_gmem_sm80(PyTorchMemEffAttention::AttentionKernel<cutlas
+      3.718 ms  x306  void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::Tenso
+      3.677 ms  x113  void at::native::vectorized_elementwise_kernel<4, at::native::CUDAFunctor_add<c10::BFloat1
+      3.072 ms  x17  Memcpy HtoD (Pageable -> Device)
+USDT:2026-11-18 08:29:33 14707:14707 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-18 08:29:33 14707:14707 SyncActivityProfilerHandler.cpp:46] profiler_stop
+eng_eager 8 {"prep": 7.653368999854138, "vision": 72.34771499997805, "lm": 211.19431499982966, "model": 283.38003399994705, "total": 291.0748119998061} gpu 277.628 launches 4310
+    {"gemm": 168.639, "elementwise/other": 35.912, "copy/cat": 31.633, "gdn(fla)": 22.35, "conv": 10.582, "reduce/norm": 3.515, "memcpy": 3.42, "index": 1.574, "softmax": 0.003}
+      73.006 ms  x136  ampere_bf16_s1688gemm_bf16_128x128_ldg8_f2f_stages_32x1_tn
+      48.697 ms  x64  void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8
+      25.008 ms  x97  ampere_bf16_s1688gemm_bf16_128x128_ldg8_relu_f2f_stages_32x1_tn
+      12.630 ms  x184  void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native:
+      11.413 ms  x24  void pytorch_flash::flash_fwd_kernel<Flash_fwd_kernel_traits<64, 128, 128, 4, false, false
+      11.175 ms  x48  ChunkGatedDeltaRuleFunction
+      10.582 ms  x48  void at::native::(anonymous namespace)::conv_depthwise2d_forward_kernel_generic<c10::BFloa
+      8.848 ms  x337  void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native:
+      6.602 ms  x16  fmha_cutlassF_bf16_aligned_32x128_gmem_sm80(PyTorchMemEffAttention::AttentionKernel<cutlas
+      5.150 ms  x306  void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::Tenso
+      5.033 ms  x48  chunk_gated_delta_rule_fwd_kernel_h_blockdim64
+      4.620 ms  x48  void at::native::vectorized_elementwise_kernel<4, at::native::BinaryFunctor<c10::BFloat16,
+USDT:2026-11-18 08:29:40 14707:14707 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-18 08:29:41 14707:14707 SyncActivityProfilerHandler.cpp:46] profiler_stop
+eng_graph 1 {"prep": 6.800030999784212, "vision": 72.48158699985652, "lm": 163.41232499962643, "model": 235.34934799999974, "total": 242.11798599981194} gpu 224.049 launches 4343
+    {"gemm": 145.493, "elementwise/other": 29.996, "copy/cat": 25.36, "conv": 8.455, "gdn(fla)": 7.353, "memcpy": 3.465, "reduce/norm": 2.888, "index": 1.037, "softmax": 0.003}
+      59.743 ms  x120  ampere_bf16_s1688gemm_bf16_128x128_ldg8_f2f_stages_32x1_tn
+      40.902 ms  x64  void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8
+      24.050 ms  x97  ampere_bf16_s1688gemm_bf16_128x128_ldg8_relu_f2f_stages_32x1_tn
+      11.378 ms  x184  void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native:
+      10.665 ms  x24  void pytorch_flash::flash_fwd_kernel<Flash_fwd_kernel_traits<64, 128, 128, 4, false, false
+      8.455 ms  x48  void at::native::(anonymous namespace)::conv_depthwise2d_forward_kernel_generic<c10::BFloa
+      7.911 ms  x337  void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native:
+      5.449 ms  x16  fmha_cutlassF_bf16_aligned_32x128_gmem_sm80(PyTorchMemEffAttention::AttentionKernel<cutlas
+      4.305 ms  x306  void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::Tenso
+      3.997 ms  x113  void at::native::vectorized_elementwise_kernel<4, at::native::CUDAFunctor_add<c10::BFloat1
+      3.179 ms  x231  void at::native::vectorized_elementwise_kernel<4, at::native::bfloat16_copy_kernel_cuda(at
+      3.117 ms  x17  Memcpy HtoD (Pageable -> Device)
+USDT:2026-11-18 08:29:46 14707:14707 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-18 08:29:46 14707:14707 SyncActivityProfilerHandler.cpp:46] profiler_stop
+eng_graph 8 {"prep": 6.676332000097318, "vision": 72.55680700018274, "lm": 210.50756500017087, "model": 282.8522790000534, "total": 289.41468800030634} gpu 270.907 launches 4277
+    {"gemm": 173.364, "elementwise/other": 35.393, "copy/cat": 31.426, "gdn(fla)": 11.385, "conv": 10.995, "memcpy": 3.442, "reduce/norm": 3.39, "index": 1.508, "softmax": 0.003}
+      75.559 ms  x136  ampere_bf16_s1688gemm_bf16_128x128_ldg8_f2f_stages_32x1_tn
+      50.705 ms  x64  void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8
+      24.939 ms  x97  ampere_bf16_s1688gemm_bf16_128x128_ldg8_relu_f2f_stages_32x1_tn
+      12.567 ms  x184  void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native:
+      11.302 ms  x24  void pytorch_flash::flash_fwd_kernel<Flash_fwd_kernel_traits<64, 128, 128, 4, false, false
+      10.995 ms  x48  void at::native::(anonymous namespace)::conv_depthwise2d_forward_kernel_generic<c10::BFloa
+      8.628 ms  x337  void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native:
+      6.822 ms  x16  fmha_cutlassF_bf16_aligned_32x128_gmem_sm80(PyTorchMemEffAttention::AttentionKernel<cutlas
+      5.183 ms  x48  chunk_gated_delta_rule_fwd_kernel_h_blockdim64
+      5.097 ms  x306  void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::Tenso
+      4.618 ms  x48  void at::native::vectorized_elementwise_kernel<4, at::native::BinaryFunctor<c10::BFloat16,
+      4.388 ms  x113  void at::native::vectorized_elementwise_kernel<4, at::native::CUDAFunctor_add<c10::BFloat1

@@ -1,0 +1,23 @@
+Thu Nov 19 08:47:18 AM UTC 2026
+name, driver_version, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 580.82.07, 0 MiB
+GPU compute process list empty
+python -m scan.bench_scan --ckpt /content/ckpt/v1/ckpt_final.pt --parts clips\,cached --Ns 64\,256 --clip_cfgs 4x96 --clip_fresh 0 --n_calls 30 --out /content/out/scan/c0_cached.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 17637.48it/s]
+[transformers] Qwen3VL video processing does not apply the per-frame pixel cap the reference implementation (qwen-vl-utils) applies, so some videos cost far more tokens than they would there. In v5.22 the capped behavior will become the default and `cap_pixels_per_frame` will be removed. Pass `cap_pixels_per_frame=True` to adopt the reference behavior now, or `False` to keep the current behavior and silence this warning.
+[mem] clips bank f4 v96: allocated 22.7 GB, reserved 31.9 GB
+clips f4_v96 64 {"prep_ms": 0.11, "model_ms": 60.63, "total_ms": 60.74, "total_ms_p90": 65.08}
+clips f4_v96 256 {"prep_ms": 0.17, "model_ms": 272.77, "total_ms": 272.94, "total_ms_p90": 288.83}
+[mem] image bank Tv640: allocated 30.7 GB, reserved 48.0 GB
+cached 640 64 box {"prep_ms": 0.1, "model_ms": 34.39, "total_ms": 34.49, "total_ms_p90": 40.69}
+cached 640 64 noul {"prep_ms": 0.12, "model_ms": 65.92, "total_ms": 66.03, "total_ms_p90": 70.71}
+cached 640 256 box {"prep_ms": 0.12, "model_ms": 139.68, "total_ms": 139.94, "total_ms_p90": 158.07}
+cached 640 256 noul {"prep_ms": 0.16, "model_ms": 300.34, "total_ms": 300.5, "total_ms_p90": 316.46}
+[mem] image bank Tv256: allocated 27.3 GB, reserved 42.8 GB
+cached 256 64 box {"prep_ms": 0.1, "model_ms": 32.86, "total_ms": 32.96, "total_ms_p90": 39.05}
+cached 256 256 box {"prep_ms": 0.12, "model_ms": 123.93, "total_ms": 124.05, "total_ms_p90": 142.24}
+[mem] image bank Tv64: allocated 25.5 GB, reserved 36.7 GB
+cached 64 64 box {"prep_ms": 0.1, "model_ms": 32.1, "total_ms": 32.2, "total_ms_p90": 38.35}
+cached 64 256 box {"prep_ms": 0.13, "model_ms": 120.23, "total_ms": 120.36, "total_ms_p90": 138.36}
+BENCH_DONE
+cached exit=0

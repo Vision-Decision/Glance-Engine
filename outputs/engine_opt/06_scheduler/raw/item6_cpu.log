@@ -1,0 +1,78 @@
+Thu Nov 19 02:50:31 PM UTC 2026
+GPU_IDLE
+/usr/local/lib/python3.13/dist-packages/fla/utils/hardware.py:62: UserWarning: Triton is not supported on current platform, roll back to CPU.
+  _cpu_device_warning()
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/content/dv/scan/test_scan_equivalence.py", line 226, in <module>
+    bank = eng.encode(ims, chunk=2)                        # several banks, different prefix lengths -> concat
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "/content/dv/scan/engine.py", line 434, in encode
+    res, cache, vis = self._core(E, host)          # eager: bank tensors must not alias graph buffers
+                      ~~~~~~~~~~^^^^^^^^^
+  File "/content/dv/scan/engine.py", line 255, in _core
+    h, cache = self.lm_forward(x, P, Q)
+               ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/content/dv/speed/engine.py", line 640, in lm_forward
+    op, S, tail = self._mix_gdn_prefix(m, mixed[:Np], z[:Np], beta[:Np], g[:Np], B, Lp)
+                  ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/dv/speed/engine.py", line 533, in _mix_gdn_prefix
+    o, S = _gdn_core_noproj(m, conv, z.view(B, Lp, -1, m.head_v_dim), beta.view(B, Lp, -1), g.view(B, Lp, -1), None, self.lm_prefill)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/dv/speed/engine.py", line 158, in _gdn_core_noproj
+    o, S = bb._gdr(q, k, v, g, beta, init)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/dv/dv/model/backbone.py", line 30, in _gdr
+    return fla_chunk_gdr(q, k, v, g=g, beta=beta, initial_state=initial_state, output_final_state=True,
+                         use_qk_l2norm_in_kernel=True)
+  File "/usr/local/lib/python3.13/dist-packages/torch/_dynamo/eval_frame.py", line 1548, in _fn
+    return fn(*args, **kwargs)
+  File "/usr/local/lib/python3.13/dist-packages/fla/backends.py", line 200, in wrapper
+    return default_function(*args, **kwargs)
+  File "/usr/local/lib/python3.13/dist-packages/fla/ops/gated_delta_rule/chunk.py", line 571, in chunk_gated_delta_rule
+    o, final_state = ChunkGatedDeltaRuleFunction.apply(
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        q,
+        ^^
+    ...<18 lines>...
+        chunk_size,
+        ^^^^^^^^^^^
+    )
+    ^
+  File "/usr/local/lib/python3.13/dist-packages/fla/utils/decorators.py", line 152, in wrapper
+    return fn(*processed_args, **processed_kwargs)
+  File "/usr/local/lib/python3.13/dist-packages/torch/amp/autocast_mode.py", line 481, in decorate_fwd
+    return fwd(*args, **kwargs)  # pyrefly: ignore [not-callable]
+  File "/usr/local/lib/python3.13/dist-packages/fla/ops/gated_delta_rule/chunk.py", line 283, in forward
+    q, q_rstd = l2norm_fwd(q)
+                ~~~~~~~~~~^^^
+  File "/usr/local/lib/python3.13/dist-packages/torch/_dynamo/eval_frame.py", line 1548, in _fn
+    return fn(*args, **kwargs)
+  File "/usr/local/lib/python3.13/dist-packages/fla/backends.py", line 200, in wrapper
+    return default_function(*args, **kwargs)
+  File "/usr/local/lib/python3.13/dist-packages/fla/modules/norm/l2norm.py", line 136, in l2norm_fwd
+    l2norm_fwd_kernel[grid](x=x, y=y, rstd=rstd, eps=eps, T=T, D=D, BD=BD, NB=NB)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/triton/runtime/jit.py", line 374, in <lambda>
+    return lambda *args, **kwargs: self.run(grid=grid, warmup=False, *args, **kwargs)
+                                   ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/fla/ops/utils/cache.py", line 378, in run
+    return super().run(*args, **kwargs)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/triton/runtime/autotuner.py", line 249, in run
+    used_cached_result = self.check_disk_cache(key, pruned_configs, benchmark)
+  File "/usr/local/lib/python3.13/dist-packages/triton/runtime/autotuner.py", line 190, in check_disk_cache
+    make_backend(driver.active.get_current_target()).hash(),
+                 ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/triton/runtime/driver.py", line 39, in active
+    self._active = self.default
+                   ^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/triton/runtime/driver.py", line 33, in default
+    self._default = _create_driver()
+                    ~~~~~~~~~~~~~~^^
+  File "/usr/local/lib/python3.13/dist-packages/triton/runtime/driver.py", line 20, in _create_driver
+    raise RuntimeError(f"{len(active_drivers)} active drivers ({active_drivers}). There should only be one.")
+RuntimeError: 0 active drivers ([]). There should only be one.
+exit=1

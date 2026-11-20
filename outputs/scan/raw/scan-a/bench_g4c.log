@@ -1,0 +1,126 @@
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 17910.83it/s]
+[transformers] Qwen3VL video processing does not apply the per-frame pixel cap the reference implementation (qwen-vl-utils) applies, so some videos cost far more tokens than they would there. In v5.22 the capped behavior will become the default and `cap_pixels_per_frame` will be removed. Pass `cap_pixels_per_frame=True` to adopt the reference behavior now, or `False` to keep the current behavior and silence this warning.
+[mem] clips bank f4 v96: allocated 23.2 GB, reserved 45.7 GB
+clips f4_v96 1 {"prep_ms": 0.1, "model_ms": 9.9, "total_ms": 9.99, "total_ms_p90": 10.04}
+clips f4_v96 8 {"prep_ms": 0.11, "model_ms": 14.31, "total_ms": 14.42, "total_ms_p90": 14.94}
+clips f4_v96 16 {"prep_ms": 0.1, "model_ms": 20.75, "total_ms": 20.86, "total_ms_p90": 21.72}
+clips f4_v96 32 {"prep_ms": 0.11, "model_ms": 33.15, "total_ms": 33.26, "total_ms_p90": 34.34}
+clips f4_v96 64 {"prep_ms": 0.12, "model_ms": 63.48, "total_ms": 63.6, "total_ms_p90": 68.53}
+clips f4_v96 128 {"prep_ms": 0.13, "model_ms": 131.04, "total_ms": 131.18, "total_ms_p90": 138.33}
+clips f4_v96 256 {"prep_ms": 0.14, "model_ms": 288.77, "total_ms": 288.89, "total_ms_p90": 304.41}
+clips fresh f4_v96 8 {"prep_ms": 41.5, "vision_ms": 19.16, "lm_ms": 69.92, "total_ms": 130.51}
+clips fresh f4_v96 16 {"prep_ms": 84.08, "vision_ms": 42.34, "lm_ms": 144.23, "total_ms": 271.68}
+clips fresh f4_v96 32 {"prep_ms": 153.15, "vision_ms": 95.29, "lm_ms": 305.43, "total_ms": 552.86}
+clips fresh f4_v96 64 {"prep_ms": 299.1, "vision_ms": 199.01, "lm_ms": 2004.44, "total_ms": 2503.25}
+[mem] clips bank f4 v48: allocated 23.4 GB, reserved 42.3 GB
+clips f4_v48 1 {"prep_ms": 0.1, "model_ms": 9.61, "total_ms": 9.72, "total_ms_p90": 9.73}
+clips f4_v48 8 {"prep_ms": 0.11, "model_ms": 13.72, "total_ms": 13.84, "total_ms_p90": 14.32}
+clips f4_v48 16 {"prep_ms": 0.12, "model_ms": 20.1, "total_ms": 20.25, "total_ms_p90": 21.4}
+clips f4_v48 32 {"prep_ms": 0.12, "model_ms": 32.85, "total_ms": 32.97, "total_ms_p90": 34.09}
+clips f4_v48 64 {"prep_ms": 0.13, "model_ms": 62.91, "total_ms": 63.03, "total_ms_p90": 67.98}
+clips f4_v48 128 {"prep_ms": 0.15, "model_ms": 129.5, "total_ms": 129.64, "total_ms_p90": 136.7}
+clips f4_v48 256 {"prep_ms": 0.17, "model_ms": 280.67, "total_ms": 280.83, "total_ms_p90": 296.28}
+clips fresh f4_v48 8 {"prep_ms": 37.68, "vision_ms": 12.41, "lm_ms": 42.93, "total_ms": 92.92}
+clips fresh f4_v48 16 {"prep_ms": 73.87, "vision_ms": 23.35, "lm_ms": 81.58, "total_ms": 179.02}
+clips fresh f4_v48 32 {"prep_ms": 155.23, "vision_ms": 48.93, "lm_ms": 163.28, "total_ms": 368.13}
+clips fresh f4_v48 64 {"prep_ms": 312.14, "vision_ms": 106.59, "lm_ms": 742.22, "total_ms": 1158.54}
+[mem] clips bank f2 v96: allocated 23.5 GB, reserved 42.3 GB
+clips f2_v96 1 {"prep_ms": 0.1, "model_ms": 9.63, "total_ms": 9.74, "total_ms_p90": 9.75}
+clips f2_v96 8 {"prep_ms": 0.11, "model_ms": 13.72, "total_ms": 13.84, "total_ms_p90": 14.33}
+clips f2_v96 16 {"prep_ms": 0.11, "model_ms": 20.1, "total_ms": 20.22, "total_ms_p90": 21.37}
+clips f2_v96 32 {"prep_ms": 0.11, "model_ms": 32.84, "total_ms": 32.95, "total_ms_p90": 34.09}
+clips f2_v96 64 {"prep_ms": 0.12, "model_ms": 62.87, "total_ms": 62.99, "total_ms_p90": 67.92}
+clips f2_v96 128 {"prep_ms": 0.14, "model_ms": 129.38, "total_ms": 129.52, "total_ms_p90": 136.54}
+clips f2_v96 256 {"prep_ms": 0.15, "model_ms": 280.58, "total_ms": 280.73, "total_ms_p90": 296.21}
+clips fresh f2_v96 8 {"prep_ms": 22.87, "vision_ms": 10.15, "lm_ms": 42.85, "total_ms": 75.99}
+clips fresh f2_v96 16 {"prep_ms": 43.4, "vision_ms": 18.92, "lm_ms": 81.56, "total_ms": 143.95}
+clips fresh f2_v96 32 {"prep_ms": 87.77, "vision_ms": 42.31, "lm_ms": 163.21, "total_ms": 294.21}
+clips fresh f2_v96 64 {"prep_ms": 184.37, "vision_ms": 95.52, "lm_ms": 741.37, "total_ms": 1024.94}
+[mem] image bank Tv640: allocated 31.7 GB, reserved 55.2 GB
+cached 640 1 box {"prep_ms": 0.09, "model_ms": 9.54, "total_ms": 9.63, "total_ms_p90": 9.68}
+cached 640 1 noul {"prep_ms": 0.1, "model_ms": 9.71, "total_ms": 9.8, "total_ms_p90": 9.82}
+cached 640 8 box {"prep_ms": 0.1, "model_ms": 12.11, "total_ms": 12.2, "total_ms_p90": 12.24}
+cached 640 8 noul {"prep_ms": 0.11, "model_ms": 14.18, "total_ms": 14.29, "total_ms_p90": 14.76}
+cached 640 16 box {"prep_ms": 0.09, "model_ms": 14.69, "total_ms": 14.78, "total_ms_p90": 15.65}
+cached 640 16 noul {"prep_ms": 0.11, "model_ms": 20.95, "total_ms": 21.06, "total_ms_p90": 22.16}
+cached 640 32 box {"prep_ms": 0.1, "model_ms": 22.28, "total_ms": 22.38, "total_ms_p90": 24.79}
+cached 640 32 noul {"prep_ms": 0.12, "model_ms": 34.56, "total_ms": 34.67, "total_ms_p90": 35.76}
+cached 640 64 box {"prep_ms": 0.11, "model_ms": 39.78, "total_ms": 39.89, "total_ms_p90": 46.12}
+cached 640 64 noul {"prep_ms": 0.12, "model_ms": 68.34, "total_ms": 68.46, "total_ms_p90": 73.55}
+cached 640 128 box {"prep_ms": 0.11, "model_ms": 77.46, "total_ms": 77.56, "total_ms_p90": 85.88}
+cached 640 128 noul {"prep_ms": 0.13, "model_ms": 146.08, "total_ms": 146.2, "total_ms_p90": 153.58}
+cached 640 256 box {"prep_ms": 0.12, "model_ms": 163.56, "total_ms": 163.69, "total_ms_p90": 181.52}
+cached 640 256 noul {"prep_ms": 0.15, "model_ms": 313.13, "total_ms": 313.27, "total_ms_p90": 328.84}
+[mem] image bank Tv256: allocated 28.3 GB, reserved 47.5 GB
+cached 256 1 box {"prep_ms": 0.09, "model_ms": 9.52, "total_ms": 9.62, "total_ms_p90": 9.66}
+cached 256 8 box {"prep_ms": 0.1, "model_ms": 11.91, "total_ms": 12.01, "total_ms_p90": 12.05}
+cached 256 16 box {"prep_ms": 0.09, "model_ms": 14.3, "total_ms": 14.39, "total_ms_p90": 15.28}
+cached 256 32 box {"prep_ms": 0.1, "model_ms": 21.63, "total_ms": 21.73, "total_ms_p90": 24.13}
+cached 256 64 box {"prep_ms": 0.1, "model_ms": 38.31, "total_ms": 38.42, "total_ms_p90": 44.64}
+cached 256 128 box {"prep_ms": 0.11, "model_ms": 72.54, "total_ms": 72.66, "total_ms_p90": 80.7}
+cached 256 256 box {"prep_ms": 0.13, "model_ms": 149.71, "total_ms": 149.83, "total_ms_p90": 167.78}
+[mem] image bank Tv64: allocated 26.5 GB, reserved 50.1 GB
+cached 64 1 box {"prep_ms": 0.09, "model_ms": 9.49, "total_ms": 9.58, "total_ms_p90": 9.61}
+cached 64 8 box {"prep_ms": 0.1, "model_ms": 11.81, "total_ms": 11.91, "total_ms_p90": 11.94}
+cached 64 16 box {"prep_ms": 0.1, "model_ms": 14.13, "total_ms": 14.22, "total_ms_p90": 15.11}
+cached 64 32 box {"prep_ms": 0.1, "model_ms": 21.29, "total_ms": 21.39, "total_ms_p90": 23.82}
+cached 64 64 box {"prep_ms": 0.1, "model_ms": 37.64, "total_ms": 37.75, "total_ms_p90": 43.94}
+cached 64 128 box {"prep_ms": 0.11, "model_ms": 71.03, "total_ms": 71.16, "total_ms_p90": 79.15}
+cached 64 256 box {"prep_ms": 0.12, "model_ms": 145.06, "total_ms": 145.2, "total_ms_p90": 162.98}
+fresh 64 1 {"prep_ms": 0.81, "vision_ms": 2.53, "lm_ms": 14.11, "total_ms": 17.45, "total_ms_p90": 17.54, "tokens": 64}
+fresh 64 2 {"prep_ms": 1.3, "vision_ms": 3.22, "lm_ms": 17.66, "total_ms": 22.18, "total_ms_p90": 22.33, "tokens": 128}
+fresh 64 4 {"prep_ms": 2.33, "vision_ms": 4.79, "lm_ms": 25.19, "total_ms": 32.3, "total_ms_p90": 32.38, "tokens": 256}
+fresh 64 8 {"prep_ms": 4.2, "vision_ms": 8.09, "lm_ms": 39.45, "total_ms": 51.73, "total_ms_p90": 51.87, "tokens": 512}
+fresh 64 16 {"prep_ms": 7.66, "vision_ms": 14.46, "lm_ms": 70.75, "total_ms": 93.01, "total_ms_p90": 93.43, "tokens": 1024}
+fresh 64 32 {"prep_ms": 13.85, "vision_ms": 29.45, "lm_ms": 147.66, "total_ms": 191.19, "total_ms_p90": 198.08, "tokens": 2048}
+fresh 64 64 {"prep_ms": 28.53, "vision_ms": 64.85, "lm_ms": 1040.83, "total_ms": 1134.13, "total_ms_p90": 1196.15, "tokens": 4096}
+fresh 128 1 {"prep_ms": 0.97, "vision_ms": 3.32, "lm_ms": 14.12, "total_ms": 18.41, "total_ms_p90": 18.55, "tokens": 128}
+fresh 128 2 {"prep_ms": 1.6, "vision_ms": 4.45, "lm_ms": 17.74, "total_ms": 23.79, "total_ms_p90": 23.86, "tokens": 256}
+fresh 128 4 {"prep_ms": 2.64, "vision_ms": 7.41, "lm_ms": 25.27, "total_ms": 35.31, "total_ms_p90": 35.52, "tokens": 512}
+fresh 128 8 {"prep_ms": 4.73, "vision_ms": 13.22, "lm_ms": 39.65, "total_ms": 57.59, "total_ms_p90": 57.9, "tokens": 1024}
+fresh 128 16 {"prep_ms": 9.15, "vision_ms": 27.54, "lm_ms": 71.23, "total_ms": 107.96, "total_ms_p90": 108.57, "tokens": 2048}
+fresh 128 32 {"prep_ms": 17.91, "vision_ms": 59.92, "lm_ms": 148.4, "total_ms": 226.4, "total_ms_p90": 233.16, "tokens": 4096}
+fresh 128 64 {"prep_ms": 35.83, "vision_ms": 128.1, "lm_ms": 1047.36, "total_ms": 1211.15, "total_ms_p90": 1271.73, "tokens": 8192}
+fresh 256 1 {"prep_ms": 1.22, "vision_ms": 5.46, "lm_ms": 19.24, "total_ms": 25.93, "total_ms_p90": 26.15, "tokens": 256}
+fresh 256 2 {"prep_ms": 2.03, "vision_ms": 8.74, "lm_ms": 28.79, "total_ms": 39.55, "total_ms_p90": 39.71, "tokens": 512}
+fresh 256 4 {"prep_ms": 3.63, "vision_ms": 15.24, "lm_ms": 47.04, "total_ms": 65.91, "total_ms_p90": 66.07, "tokens": 1024}
+fresh 256 8 {"prep_ms": 7.32, "vision_ms": 31.34, "lm_ms": 87.85, "total_ms": 126.56, "total_ms_p90": 127.01, "tokens": 2048}
+fresh 256 16 {"prep_ms": 14.45, "vision_ms": 67.69, "lm_ms": 178.09, "total_ms": 260.43, "total_ms_p90": 260.76, "tokens": 4096}
+fresh 256 32 {"prep_ms": 28.9, "vision_ms": 145.2, "lm_ms": 371.49, "total_ms": 546.38, "total_ms_p90": 1387.33, "tokens": 8192}
+fresh 256 64 {"prep_ms": 61.94, "vision_ms": 292.63, "lm_ms": 2384.3, "total_ms": 2739.07, "total_ms_p90": 2858.51, "tokens": 16384}
+fresh 640 1 {"prep_ms": 2.07, "vision_ms": 11.1, "lm_ms": 29.97, "total_ms": 43.15, "total_ms_p90": 43.52, "tokens": 640}
+fresh 640 2 {"prep_ms": 3.95, "vision_ms": 21.01, "lm_ms": 51.1, "total_ms": 76.06, "total_ms_p90": 76.28, "tokens": 1280}
+fresh 640 4 {"prep_ms": 7.72, "vision_ms": 44.13, "lm_ms": 93.29, "total_ms": 145.12, "total_ms_p90": 145.33, "tokens": 2560}
+fresh 640 8 {"prep_ms": 14.74, "vision_ms": 97.29, "lm_ms": 195.97, "total_ms": 308.03, "total_ms_p90": 308.34, "tokens": 5120}
+fresh 640 16 {"prep_ms": 31.69, "vision_ms": 201.31, "lm_ms": 399.34, "total_ms": 632.34, "total_ms_p90": 636.29, "tokens": 10240}
+fresh_qfirst 64 1 {"prep_ms": 0.87, "vision_ms": 2.53, "lm_ms": 14.11, "total_ms": 17.5, "total_ms_p90": 17.61, "tokens": 64}
+fresh_qfirst 64 2 {"prep_ms": 1.37, "vision_ms": 3.22, "lm_ms": 17.67, "total_ms": 22.26, "total_ms_p90": 22.38, "tokens": 128}
+fresh_qfirst 64 4 {"prep_ms": 2.26, "vision_ms": 4.81, "lm_ms": 25.21, "total_ms": 32.27, "total_ms_p90": 32.41, "tokens": 256}
+fresh_qfirst 64 8 {"prep_ms": 4.05, "vision_ms": 8.13, "lm_ms": 39.51, "total_ms": 51.68, "total_ms_p90": 51.95, "tokens": 512}
+fresh_qfirst 64 16 {"prep_ms": 7.39, "vision_ms": 14.52, "lm_ms": 70.86, "total_ms": 92.9, "total_ms_p90": 93.49, "tokens": 1024}
+fresh_qfirst 64 32 {"prep_ms": 14.97, "vision_ms": 29.49, "lm_ms": 147.88, "total_ms": 192.53, "total_ms_p90": 199.38, "tokens": 2048}
+fresh_qfirst 64 64 {"prep_ms": 29.43, "vision_ms": 64.84, "lm_ms": 1043.28, "total_ms": 1137.53, "total_ms_p90": 1200.05, "tokens": 4096}
+fresh_qfirst 128 1 {"prep_ms": 1.0, "vision_ms": 3.32, "lm_ms": 14.14, "total_ms": 18.46, "total_ms_p90": 20.13, "tokens": 128}
+fresh_qfirst 128 2 {"prep_ms": 1.61, "vision_ms": 4.46, "lm_ms": 17.8, "total_ms": 23.83, "total_ms_p90": 28.29, "tokens": 256}
+fresh_qfirst 128 4 {"prep_ms": 2.77, "vision_ms": 7.42, "lm_ms": 25.25, "total_ms": 35.42, "total_ms_p90": 42.13, "tokens": 512}
+fresh_qfirst 128 8 {"prep_ms": 5.02, "vision_ms": 13.23, "lm_ms": 39.68, "total_ms": 57.9, "total_ms_p90": 73.03, "tokens": 1024}
+fresh_qfirst 128 16 {"prep_ms": 9.96, "vision_ms": 27.61, "lm_ms": 71.05, "total_ms": 108.61, "total_ms_p90": 148.88, "tokens": 2048}
+fresh_qfirst 128 32 {"prep_ms": 19.35, "vision_ms": 59.98, "lm_ms": 148.42, "total_ms": 227.82, "total_ms_p90": 809.79, "tokens": 4096}
+fresh_qfirst 128 64 {"prep_ms": 38.64, "vision_ms": 128.11, "lm_ms": 758.78, "total_ms": 926.4, "total_ms_p90": 1669.36, "tokens": 8192}
+fresh_qfirst 256 1 {"prep_ms": 1.28, "vision_ms": 5.46, "lm_ms": 19.25, "total_ms": 25.98, "total_ms_p90": 26.23, "tokens": 256}
+fresh_qfirst 256 2 {"prep_ms": 2.17, "vision_ms": 8.73, "lm_ms": 28.81, "total_ms": 39.71, "total_ms_p90": 39.94, "tokens": 512}
+fresh_qfirst 256 4 {"prep_ms": 3.8, "vision_ms": 15.23, "lm_ms": 47.07, "total_ms": 66.1, "total_ms_p90": 66.61, "tokens": 1024}
+fresh_qfirst 256 8 {"prep_ms": 7.55, "vision_ms": 31.33, "lm_ms": 87.88, "total_ms": 126.76, "total_ms_p90": 127.81, "tokens": 2048}
+fresh_qfirst 256 16 {"prep_ms": 14.8, "vision_ms": 67.67, "lm_ms": 178.14, "total_ms": 260.81, "total_ms_p90": 261.41, "tokens": 4096}
+fresh_qfirst 256 32 {"prep_ms": 29.35, "vision_ms": 145.31, "lm_ms": 371.84, "total_ms": 546.52, "total_ms_p90": 1387.87, "tokens": 8192}
+fresh_qfirst 256 64 {"prep_ms": 64.28, "vision_ms": 292.63, "lm_ms": 2383.34, "total_ms": 2741.7, "total_ms_p90": 2859.53, "tokens": 16384}
+fresh_qfirst 640 1 {"prep_ms": 2.02, "vision_ms": 11.09, "lm_ms": 29.96, "total_ms": 43.07, "total_ms_p90": 43.31, "tokens": 640}
+fresh_qfirst 640 2 {"prep_ms": 3.8, "vision_ms": 21.0, "lm_ms": 51.06, "total_ms": 75.87, "total_ms_p90": 76.04, "tokens": 1280}
+fresh_qfirst 640 4 {"prep_ms": 7.35, "vision_ms": 44.13, "lm_ms": 93.17, "total_ms": 144.65, "total_ms_p90": 144.99, "tokens": 2560}
+fresh_qfirst 640 8 {"prep_ms": 14.25, "vision_ms": 97.36, "lm_ms": 196.19, "total_ms": 307.77, "total_ms_p90": 308.28, "tokens": 5120}
+fresh_qfirst 640 16 {"prep_ms": 31.05, "vision_ms": 201.5, "lm_ms": 399.57, "total_ms": 632.32, "total_ms_p90": 636.24, "tokens": 10240}
+acc 64 False {"refcoco_val": {"n_pos": 393, "n_neg": 0, "acc50": 0.31297709923664124}, "grefcoco_val": {"n_pos": 146, "n_neg": 309, "acc50": null, "auroc": 0.9512789821341491, "false_alarm_at_05": 0.15210355987055016, "miss_at_05": 0.1095890410958904}}
+acc 128 False {"refcoco_val": {"n_pos": 393, "n_neg": 0, "acc50": 0.6106870229007634}, "grefcoco_val": {"n_pos": 146, "n_neg": 309, "acc50": null, "auroc": 0.9604114022254733, "false_alarm_at_05": 0.13268608414239483, "miss_at_05": 0.10273972602739725}}
+acc 256 False {"refcoco_val": {"n_pos": 393, "n_neg": 0, "acc50": 0.8778625954198473}, "grefcoco_val": {"n_pos": 146, "n_neg": 309, "acc50": null, "auroc": 0.9678592011349026, "false_alarm_at_05": 0.13592233009708737, "miss_at_05": 0.0684931506849315}}
+acc 256 True {"refcoco_val": {"n_pos": 393, "n_neg": 0, "acc50": 0.8753180661577609}, "grefcoco_val": {"n_pos": 146, "n_neg": 309, "acc50": null, "auroc": 0.9481757325885535, "false_alarm_at_05": 0.2588996763754045, "miss_at_05": 0.0410958904109589}}
+acc 640 False {"refcoco_val": {"n_pos": 393, "n_neg": 0, "acc50": 0.9363867684478372}, "grefcoco_val": {"n_pos": 146, "n_neg": 309, "acc50": null, "auroc": 0.969588154453163, "false_alarm_at_05": 0.12944983818770225, "miss_at_05": 0.06164383561643835}}

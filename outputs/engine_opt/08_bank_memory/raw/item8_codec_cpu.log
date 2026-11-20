@@ -1,0 +1,8 @@
+test_ragged_storage_and_repeated_selection (scan.test_bank.BankIndexTest.test_ragged_storage_and_repeated_selection) ... ok
+test_grouped_copy_keeps_variable_tables_at_the_captured_offsets (scan.test_bank.HostCopyTest.test_grouped_copy_keeps_variable_tables_at_the_captured_offsets) ... ok
+test_round_trip (scan.test_bank.StatePlanesTest.test_round_trip) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.011s
+
+OK

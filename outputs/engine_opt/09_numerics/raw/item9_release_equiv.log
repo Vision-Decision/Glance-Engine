@@ -1,0 +1,141 @@
+Thu Nov 19 07:35:48 PM UTC 2026
+name, driver_version, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 580.82.07, 0 MiB
+GPU compute process list empty
+GLANCE_BOX_REDUCTION=blocks
+python -m scan.bench_scan --parts equiv --ckpt /content/ckpt/v1/ckpt_final.pt --out /content/out/scan/item9_release_equiv.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 17281.86it/s]
+[transformers] Qwen3VL video processing does not apply the per-frame pixel cap the reference implementation (qwen-vl-utils) applies, so some videos cost far more tokens than they would there. In v5.22 the capped behavior will become the default and `cap_pixels_per_frame` will be removed. Pass `cap_pixels_per_frame=True` to adopt the reference behavior now, or `False` to keep the current behavior and silence this warning.
+[mem] after equiv: allocated 10.2 GB, reserved 11.7 GB
+equiv {
+"img640/q0/cached": {
+"p_absdiff_max": 0.016569674015045166,
+"p_absdiff_mean": 0.0013059604680165648,
+"decision_agree": 1.0,
+"box_absdiff_max": 0.04725617170333862,
+"box_absdiff_mean": 0.0028211770113557577,
+"piou_absdiff_max": 0.04516211152076721
+},
+"img640/q0/fresh": {
+"p_absdiff_max": 0.024337172508239746,
+"p_absdiff_mean": 0.0023699665907770395,
+"decision_agree": 1.0,
+"box_absdiff_max": 0.047542691230773926,
+"box_absdiff_mean": 0.0026187810581177473,
+"piou_absdiff_max": 0.05507180094718933
+},
+"img640/q0/separate_engine": {
+"p_absdiff_max": 0.024397000670433044,
+"p_absdiff_mean": 0.0031102767679840326,
+"decision_agree": 1.0,
+"box_absdiff_max": 0.04902106523513794,
+"box_absdiff_mean": 0.0032284026965498924,
+"piou_absdiff_max": 0.07045096158981323
+},
+"img640/q1/cached": {
+"p_absdiff_max": 0.0008588731288909912,
+"p_absdiff_mean": 4.303500827518292e-05,
+"decision_agree": 1.0,
+"box_absdiff_max": 0.0039351582527160645,
+"box_absdiff_mean": 0.0009189515840262175,
+"piou_absdiff_max": 0.0074846744537353516
+},
+"img640/q1/fresh": {
+"p_absdiff_max": 0.0005078837275505066,
+"p_absdiff_mean": 3.19415885314811e-05,
+"decision_agree": 1.0,
+"box_absdiff_max": 0.05342519283294678,
+"box_absdiff_mean": 0.002660792088136077,
+"piou_absdiff_max": 0.05655142664909363
+},
+"img640/q1/separate_engine": {
+"p_absdiff_max": 0.000441528856754303,
+"p_absdiff_mean": 3.309212843305431e-05,
+"decision_agree": 1.0,
+"box_absdiff_max": 0.07132333517074585,
+"box_absdiff_mean": 0.003419657936319709,
+"piou_absdiff_max": 0.03494220972061157
+},
+"img640/q2/cached": {
+"prob_absdiff_max": 0.0042785778641700745,
+"decision_agree": 1.0
+},
+"img640/q2/fresh": {
+"prob_absdiff_max": 0.008317768573760986,
+"decision_agree": 1.0
+},
+"img640/q2/separate_engine": {
+"prob_absdiff_max": 0.0026729702949523926,
+"decision_agree": 1.0
+},
+"frame256/q0/cached": {
+"p_absdiff_max": 0.015572190284729004,
+"p_absdiff_mean": 0.0017725946381688118,
+"decision_agree": 1.0,
+"box_absdiff_max": 0.15509629249572754,
+"box_absdiff_mean": 0.006863078568130732,
+"piou_absdiff_max": 0.08378368616104126
+},
+"frame256/q0/fresh": {
+"p_absdiff_max": 0.004036545753479004,
+"p_absdiff_mean": 0.0005071367486380041,
+"decision_agree": 1.0,
+"box_absdiff_max": 0.03468698263168335,
+"box_absdiff_mean": 0.0018023870652541518,
+"piou_absdiff_max": 0.029744952917099
+},
+"frame256/q0/separate_engine": {
+"p_absdiff_max": 0.016671329736709595,
+"p_absdiff_mean": 0.002841782523319125,
+"decision_agree": 1.0,
+"box_absdiff_max": 0.1546553373336792,
+"box_absdiff_mean": 0.0076051317155361176,
+"piou_absdiff_max": 0.07578948140144348
+},
+"frame256/q1/cached": {
+"p_absdiff_max": 0.011889323592185974,
+"p_absdiff_mean": 0.000507329881656915,
+"decision_agree": 1.0,
+"box_absdiff_max": 0.006434231996536255,
+"box_absdiff_mean": 0.001058334019035101,
+"piou_absdiff_max": 0.009943634271621704
+},
+"frame256/q1/fresh": {
+"p_absdiff_max": 0.006626799702644348,
+"p_absdiff_mean": 0.0002830890298355371,
+"decision_agree": 1.0,
+"box_absdiff_max": 0.11131897568702698,
+"box_absdiff_mean": 0.00489333551377058,
+"piou_absdiff_max": 0.05586281418800354
+},
+"frame256/q1/separate_engine": {
+"p_absdiff_max": 0.0012866109609603882,
+"p_absdiff_mean": 6.698622746625915e-05,
+"decision_agree": 1.0,
+"box_absdiff_max": 0.039566487073898315,
+"box_absdiff_mean": 0.0024687775876373053,
+"piou_absdiff_max": 0.0583837628364563
+},
+"frame256/q2/cached": {
+"prob_absdiff_max": 0.004142343997955322,
+"decision_agree": 1.0
+},
+"frame256/q2/fresh": {
+"prob_absdiff_max": 0.0034182965755462646,
+"decision_agree": 1.0
+},
+"frame256/q2/separate_engine": {
+"prob_absdiff_max": 0.006894789636135101,
+"decision_agree": 1.0
+},
+"clip4x96/noul/cached": {
+"prob_absdiff_max": 0.02308708429336548,
+"decision_agree": 1.0
+},
+"clip4x96/noul/fresh": {
+"prob_absdiff_max": 0.02313387393951416,
+"decision_agree": 1.0
+}
+}
+BENCH_DONE
+equiv exit=0

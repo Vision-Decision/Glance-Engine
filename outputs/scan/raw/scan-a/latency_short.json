@@ -1,0 +1,67 @@
+{
+ "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "torch": "2.14.1+cu130",
+ "ckpt": "/content/out/distill_v1/ckpt_final.pt",
+ "args": {
+  "ckpt": "/content/out/distill_v1/ckpt_final.pt",
+  "prep": "data/prep/eval_refcoco_val.jsonl",
+  "gprep": "data/prep/eval_grefcoco_val.jsonl",
+  "image_root": "/content/data/coco/train2014",
+  "parts": "clips",
+  "Ns": [
+   64,
+   128,
+   256
+  ],
+  "Ns_fresh": [
+   1,
+   2,
+   4,
+   8,
+   16,
+   32,
+   64
+  ],
+  "Tvs": [
+   64,
+   128,
+   256,
+   640
+  ],
+  "max_fresh_tokens": 16384,
+  "n_equiv": 24,
+  "clip_cfgs": "4x96",
+  "clip_fresh": 0,
+  "cached_tvs": "640,256,64",
+  "short": 1,
+  "fp8": 0,
+  "n_acc": 60,
+  "n_calls": 20,
+  "out": "/content/out/scan/latency_short.json"
+ },
+ "n_merged": 200,
+ "clips": {
+  "f4_v96_encode_ms_per_clip": 20.89973383984045,
+  "f4_v96_bank_MB_per_clip": 55.2880859375,
+  "f4_v96_prefix_tokens": 197,
+  "f4_v96_N64_short": {
+   "prep_ms": 0.10348500018153572,
+   "model_ms": 27.69779499976721,
+   "total_ms": 27.804310000647092,
+   "total_ms_p90": 30.50214710110595
+  },
+  "f4_v96_N128_short": {
+   "prep_ms": 0.10219500018138206,
+   "model_ms": 46.5087050006332,
+   "total_ms": 46.608915000433626,
+   "total_ms_p90": 55.54884490029509
+  },
+  "f4_v96_N256_short": {
+   "prep_ms": 0.11377999908290803,
+   "model_ms": 97.20681450016855,
+   "total_ms": 97.31592450043536,
+   "total_ms_p90": 116.32568309905766
+  }
+ },
+ "peak_mem_gb": 28.976046562194824
+}

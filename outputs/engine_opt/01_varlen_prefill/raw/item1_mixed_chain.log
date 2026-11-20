@@ -1,0 +1,6 @@
+mixed_exit=0
+pushed /content/out/scan/item1_mixed_box.json -> Vision-Decision/collection-scan-results
+push failed /content/out/scan/item1_mixed_box.log Vision-Decision/collection-scan-results (Request ID: Root=1-6afeb5e4-6552afd75ba05fd00f0e7de6;59789495-cb75-4b3f-99b5-fa4f167917a0)
+
+429 Too Many Requests for u
+pushed /content/out/scan/item1_mixed_box.log -> Vision-Decision/collection-scan-data

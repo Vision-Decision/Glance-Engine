@@ -1,0 +1,36 @@
+{
+  "counts": {
+    "total": 254,
+    "agreed": 254
+  },
+  "max_abs": {
+    "presence_prob": 0.014085054397583008,
+    "iou_prob": 0.044270455837249756,
+    "box_pred": 0.0385381281375885,
+    "typed_prob": 0.03557056188583374
+  },
+  "limits": {
+    "presence_prob": 0.031703651,
+    "iou_prob": 0.407418222,
+    "box_pred": 0.424944818,
+    "typed_prob": 0.0233531148
+  },
+  "metrics": {
+    "queue_depth": 0,
+    "queue_limit": 256,
+    "requests": {
+      "completed": 64
+    },
+    "batch_sizes": {
+      "8": 3,
+      "10": 1,
+      "9": 2,
+      "5": 1,
+      "7": 1
+    },
+    "latency_ms_histogram": {
+      "2500": 25,
+      "5000": 39
+    }
+  }
+}

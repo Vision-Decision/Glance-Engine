@@ -1,0 +1,13 @@
+Thu Nov 19 04:03:25 PM UTC 2026
+name, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 0 MiB
+GPU_IDLE
+3dec8e7bc7a14e6174932dc7db272aab7f06b498616f2d91a3ce238b79b306be  speed/decision_worker.py
+bd82ba6c12c630c397f80db0f98f3cfafac46b9e42be1f2c9bdd6874a5949620  speed/scheduler.py
+08160daebc0f6f7c3f0704108ffc4c4c543691d58e81e3110adffb9bb250fcb8  speed/engine.py
+cf08cdd51a022fb0e864813ccbefda4da9dc60111f95cd01be782760f6037be0  scan/varlen.py
+env PYTHONPATH=/content/dv:/content/item3-qla-deps:/content/item3-extras LD_LIBRARY_PATH=/content/item3-qla-deps/z3/lib:/usr/lib64-nvidia FLA_FLASH_QLA=0 python -m speed.load_server --self-test --out /content/out/scan/item6_validation_production_http.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 17591.13it/s]
+[transformers] Qwen3VL video processing does not apply the per-frame pixel cap the reference implementation (qwen-vl-utils) applies, so some videos cost far more tokens than they would there. In v5.22 the capped behavior will become the default and `cap_pixels_per_frame` will be removed. Pass `cap_pixels_per_frame=True` to adopt the reference behavior now, or `False` to keep the current behavior and silence this warning.
+{"clients": 16, "runs": 5, "requests_s": 58.21517831554384, "p50_ms": 251.62556300165306, "p90_ms": 324.53089999908116, "p99_ms": 339.4301890994757, "endpoint_checks": "passed", "metrics": {"queue_depth": 0, "queue_limit": 32, "requests": {"completed": 106, "failed": 2}, "batch_sizes": {"8": 2, "5": 1, "11": 1, "2": 1, "14": 1, "1": 14, "15": 2, "12": 1, "4": 1}, "latency_ms_histogram": {"2500": 16, "100": 9, "250": 41, "500": 34, "25": 3, "10": 1, "50": 2}, "active": 0, "cache_bytes": 387918628}}
+exit=0

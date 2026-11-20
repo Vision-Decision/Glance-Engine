@@ -1,0 +1,26 @@
+{
+ "reference": {
+  "prob_absdiff_max": 0.02308708429336548,
+  "decision_agree": 1.0
+ },
+ "wy": {
+  "prob_absdiff_max": 0.023544669151306152,
+  "decision_agree": 1.0
+ },
+ "attention": {
+  "prob_absdiff_max": 0.024261295795440674,
+  "decision_agree": 1.0
+ },
+ "both": {
+  "prob_absdiff_max": 0.02708229422569275,
+  "decision_agree": 1.0
+ },
+ "serial": {
+  "prob_absdiff_max": 0.025195002555847168,
+  "decision_agree": 1.0
+ },
+ "serial_attention": {
+  "prob_absdiff_max": 0.024941444396972656,
+  "decision_agree": 1.0
+ }
+}

@@ -1,0 +1,146 @@
+{
+ "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "torch": "2.14.1+cu130",
+ "ckpt": "/content/ckpt/v1/ckpt_final.pt",
+ "modes": {
+  "eng_fused": {
+   "bs4_box_N32": {
+    "prep_ms_median": 13.520841999707045,
+    "vision_ms_median": 44.29624450040137,
+    "lm_ms_median": 198.8697469996623,
+    "model_ms_median": 243.08927150104864,
+    "model_ms_p90": 245.24754190006206,
+    "total_ms_median": 256.19831800031534,
+    "total_ms_p90": 258.55445500001224,
+    "ttfa_ms_median": 256.19831800031534,
+    "q_per_s": 505.9044480308944,
+    "n_calls": 12,
+    "questions_per_call": 128
+   },
+   "bs8_box_N32": {
+    "prep_ms_median": 26.768994000121893,
+    "vision_ms_median": 98.9104114996735,
+    "lm_ms_median": 424.11331299899757,
+    "model_ms_median": 523.4760794992326,
+    "model_ms_p90": 527.6228199994875,
+    "total_ms_median": 550.4553129994747,
+    "total_ms_p90": 553.3195600994077,
+    "ttfa_ms_median": 550.4553129994747,
+    "q_per_s": 472.8272641138146,
+    "n_calls": 12,
+    "questions_per_call": 256
+   },
+   "bs16_box_N32": {
+    "prep_ms_median": 57.70081649916392,
+    "vision_ms_median": 205.38322100037476,
+    "lm_ms_median": 878.2138995002242,
+    "model_ms_median": 1083.2834500006356,
+    "model_ms_p90": 1084.7856520007554,
+    "total_ms_median": 1140.8552415005033,
+    "total_ms_p90": 1142.7383409994945,
+    "ttfa_ms_median": 1140.8552415005033,
+    "q_per_s": 449.42916947834294,
+    "n_calls": 12,
+    "questions_per_call": 512
+   },
+   "bs4_box_N64": {
+    "prep_ms_median": 18.93875099995057,
+    "vision_ms_median": 44.23644400048943,
+    "lm_ms_median": 328.7011614993389,
+    "model_ms_median": 373.02665100014565,
+    "model_ms_p90": 374.49950899881514,
+    "total_ms_median": 391.91347650103125,
+    "total_ms_p90": 393.3603679988664,
+    "ttfa_ms_median": 391.91347650103125,
+    "q_per_s": 669.551405649705,
+    "n_calls": 12,
+    "questions_per_call": 256
+   },
+   "bs8_box_N64": {
+    "prep_ms_median": 38.22571599994262,
+    "vision_ms_median": 99.10708649931621,
+    "lm_ms_median": 677.8146725009719,
+    "model_ms_median": 776.8751740004518,
+    "model_ms_p90": 782.3251300998891,
+    "total_ms_median": 815.2526295007192,
+    "total_ms_p90": 821.0762120990694,
+    "ttfa_ms_median": 815.2526295007192,
+    "q_per_s": 643.836822544226,
+    "n_calls": 12,
+    "questions_per_call": 512
+   },
+   "peak_mem_gb": 33.10386800765991
+  },
+  "eng_fp8": {
+   "bs4_box_N32": {
+    "prep_ms_median": 15.48202600042714,
+    "vision_ms_median": 44.34140949979337,
+    "lm_ms_median": 167.98057999949378,
+    "model_ms_median": 212.48322899919003,
+    "model_ms_p90": 214.43465399988781,
+    "total_ms_median": 228.0467000000499,
+    "total_ms_p90": 230.25622300046962,
+    "ttfa_ms_median": 228.0467000000499,
+    "q_per_s": 569.9135738646444,
+    "n_calls": 12,
+    "questions_per_call": 128
+   },
+   "bs8_box_N32": {
+    "prep_ms_median": 30.31030800048029,
+    "vision_ms_median": 99.08994700072071,
+    "lm_ms_median": 365.8420819992898,
+    "model_ms_median": 465.1524685004915,
+    "model_ms_p90": 467.38370200091595,
+    "total_ms_median": 495.57081650073087,
+    "total_ms_p90": 497.6432111003305,
+    "ttfa_ms_median": 495.57081650073087,
+    "q_per_s": 526.8023025193943,
+    "n_calls": 12,
+    "questions_per_call": 256
+   },
+   "bs16_box_N32": {
+    "prep_ms_median": 59.66470549992664,
+    "vision_ms_median": 204.88888599993516,
+    "lm_ms_median": 759.093378000216,
+    "model_ms_median": 962.6889595001558,
+    "model_ms_p90": 965.9075049989042,
+    "total_ms_median": 1022.4526649999461,
+    "total_ms_p90": 1026.4802590001636,
+    "ttfa_ms_median": 1022.4526649999461,
+    "q_per_s": 501.0199971657659,
+    "n_calls": 12,
+    "questions_per_call": 512
+   },
+   "bs4_box_N64": {
+    "prep_ms_median": 20.997289499973704,
+    "vision_ms_median": 44.258883998736565,
+    "lm_ms_median": 284.81534699949407,
+    "model_ms_median": 329.25329050067376,
+    "model_ms_p90": 331.3364970001203,
+    "total_ms_median": 350.11272600058874,
+    "total_ms_p90": 352.5595249999242,
+    "ttfa_ms_median": 350.11272600058874,
+    "q_per_s": 750.085434840443,
+    "n_calls": 12,
+    "questions_per_call": 256
+   },
+   "bs8_box_N64": {
+    "prep_ms_median": 40.46704000120371,
+    "vision_ms_median": 99.19075200014049,
+    "lm_ms_median": 592.6768975004961,
+    "model_ms_median": 691.8582100006461,
+    "model_ms_p90": 694.8989770999106,
+    "total_ms_median": 732.2062950015606,
+    "total_ms_p90": 735.8015151001382,
+    "ttfa_ms_median": 732.2062950015606,
+    "q_per_s": 716.6483991461845,
+    "n_calls": 12,
+    "questions_per_call": 512
+   },
+   "peak_mem_gb": 34.32628154754639
+  }
+ },
+ "equiv": {},
+ "n_merged": 200,
+ "n_fp8": 128
+}

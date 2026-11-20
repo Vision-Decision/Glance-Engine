@@ -1,0 +1,27 @@
+Thu Nov 19 06:29:58 PM UTC 2026
+name, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 0 MiB
+GPU compute process list empty
+6c55309da8444001f5adea3b51619e5cb4036f2234b83ed581f32616976048e7  scan/engine.py
+96eea3e007b2e1c8f61faab57fe9bae60451fa3bb3c0868becf94dcf5ba3b881  scan/bench_bank_memory.py
+a86a4c05f8b58d6701c9803e9b4ea9915df6a2b8fdc8031e3dc9d1b462e16428  scan/bench_bank_precision.py
+fd5a40143695b7aedc47a4a9be32530a468a6fdb97eb3569c5d5b737a7b95b2c  scan/bench_bank_tier.py
+652c1f8e306e28d43cc6ec8189b1c2511333db3eecd02ab0ee4994ae6ad1bb3d  scan/bank_codec.py
+939c131e2154928965cbfef49ee8ff08f4696589d3dc4388984409a610bb3eda  scan/bank_kernels.py
+0804f85b3cc66f305df24896ad392d6ead9eef6e97f1841e152eef61a4924889  scan/bank.py
+cd55e24229883f9310fd5b05b3be36078efb87a82c98f123ace55e1c37390a1d  scan/host_bank.py
+a477ad78aa1bfc77523500ab3ff8755ad775be8e2ea590b6b7b4b42bcd781a72  speed/gdn_branch.py
+python -m scan.profile_branch --stage stages --banks-only --ckpt /content/ckpt/v1/ckpt_final.pt --out /content/out/scan/item8_release_stages.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 16504.83it/s]
+Tv640_N64_box {'bank decode': 0.01392000011401251, 'LM dense': 17.209439866244793, 'GDN': 3.3608639985322952, 'LM attention': 1.8213440030813217, 'heads': 0.40755200386047363}
+Tv640_N64_noul {'bank decode': 0.013568000198574737, 'LM dense': 31.571680016815662, 'GDN': 6.69337597489357, 'LM attention': 3.4947520196437836, 'heads': 0.4280320107936859}
+Tv640_N256_box {'bank decode': 0.013696000241907313, 'LM dense': 55.39814393222332, 'GDN': 16.07625585794449, 'LM attention': 14.051200032234192, 'heads': 1.1704319715499878}
+Tv640_N256_noul {'bank decode': 0.014304000040283427, 'LM dense': 112.14060726761818, 'GDN': 27.369248270988464, 'LM attention': 27.59769630432129, 'heads': 1.2093440294265747}
+Tv256_N64_box {'bank decode': 0.013760000059846789, 'LM dense': 17.217727914452553, 'GDN': 3.3576000034809113, 'LM attention': 0.8016319870948792, 'heads': 0.33792001008987427}
+Tv256_N256_box {'bank decode': 0.013536000245949253, 'LM dense': 55.469503968954086, 'GDN': 16.06089597940445, 'LM attention': 3.0207680463790894, 'heads': 0.5816320180892944}
+Tv64_N64_box {'bank decode': 0.014048000128241256, 'LM dense': 17.235135950148106, 'GDN': 3.358240008354187, 'LM attention': 0.325312003493309, 'heads': 0.319487988948822}
+Tv64_N256_box {'bank decode': 0.013568000256782398, 'LM dense': 55.48585623502731, 'GDN': 16.056096076965332, 'LM attention': 1.1824960261583328, 'heads': 0.522271990776062}
+[transformers] Qwen3VL video processing does not apply the per-frame pixel cap the reference implementation (qwen-vl-utils) applies, so some videos cost far more tokens than they would there. In v5.22 the capped behavior will become the default and `cap_pixels_per_frame` will be removed. Pass `cap_pixels_per_frame=True` to adopt the reference behavior now, or `False` to keep the current behavior and silence this warning.
+f4_v96_N64_noul {'bank decode': 0.44566399601171724, 'LM dense': 30.497568175196648, 'GDN': 14.848608016967773, 'LM attention': 2.754368007183075, 'heads': 0.3113279938697815}
+f4_v96_N256_noul {'bank decode': 2.1295679885079153, 'LM dense': 112.19113650918007, 'GDN': 77.47680020332336, 'LM attention': 19.53980803489685, 'heads': 0.4925439953804016}
+stages exit=0

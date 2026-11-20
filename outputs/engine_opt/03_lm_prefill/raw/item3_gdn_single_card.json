@@ -1,0 +1,143 @@
+{
+ "cublas": "13.1.1.3",
+ "torch": "2.14.1+cu130",
+ "cuda": "13.0",
+ "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "capability": [
+  12,
+  0
+ ],
+ "triton": "3.8.0",
+ "tf32": false,
+ "bf16_reduced_precision": true,
+ "results": [
+  {
+   "n": 32,
+   "width": 146,
+   "dense": false,
+   "backend": "persistent_recurrent",
+   "ms": 0.6409279704093933,
+   "max_abs": 0.0009765625,
+   "mean_abs": 3.5236726603216084e-07
+  },
+  {
+   "n": 32,
+   "width": 146,
+   "dense": false,
+   "backend": "flash_qla",
+   "error": "Failed to set the allowed dynamic shared memory size to 112640"
+  },
+  {
+   "n": 32,
+   "width": 146,
+   "dense": true,
+   "backend": "persistent_recurrent",
+   "ms": 0.6355839967727661,
+   "max_abs": 0.0009765625,
+   "mean_abs": 3.5236726603216084e-07
+  },
+  {
+   "n": 32,
+   "width": 146,
+   "dense": true,
+   "backend": "flash_qla",
+   "error": "Failed to set the allowed dynamic shared memory size to 112640"
+  },
+  {
+   "n": 32,
+   "width": 281,
+   "dense": false,
+   "backend": "persistent_recurrent",
+   "ms": 1.25273597240448,
+   "max_abs": 0.0009765625,
+   "mean_abs": 4.2129150301661866e-07
+  },
+  {
+   "n": 32,
+   "width": 281,
+   "dense": false,
+   "backend": "flash_qla",
+   "error": "Failed to set the allowed dynamic shared memory size to 112640"
+  },
+  {
+   "n": 32,
+   "width": 281,
+   "dense": true,
+   "backend": "persistent_recurrent",
+   "ms": 1.2416319847106934,
+   "max_abs": 0.0009765625,
+   "mean_abs": 4.2129150301661866e-07
+  },
+  {
+   "n": 32,
+   "width": 281,
+   "dense": true,
+   "backend": "flash_qla",
+   "error": "Failed to set the allowed dynamic shared memory size to 112640"
+  },
+  {
+   "n": 128,
+   "width": 146,
+   "dense": false,
+   "backend": "persistent_recurrent",
+   "ms": 2.388672113418579,
+   "max_abs": 0.0009765625,
+   "mean_abs": 3.601839182465483e-07
+  },
+  {
+   "n": 128,
+   "width": 146,
+   "dense": false,
+   "backend": "flash_qla",
+   "error": "Failed to set the allowed dynamic shared memory size to 112640"
+  },
+  {
+   "n": 128,
+   "width": 146,
+   "dense": true,
+   "backend": "persistent_recurrent",
+   "ms": 2.3652799129486084,
+   "max_abs": 0.0009765625,
+   "mean_abs": 3.601839182465483e-07
+  },
+  {
+   "n": 128,
+   "width": 146,
+   "dense": true,
+   "backend": "flash_qla",
+   "error": "Failed to set the allowed dynamic shared memory size to 112640"
+  },
+  {
+   "n": 128,
+   "width": 281,
+   "dense": false,
+   "backend": "persistent_recurrent",
+   "ms": 4.289663791656494,
+   "max_abs": 0.0009765625,
+   "mean_abs": 4.230099079904903e-07
+  },
+  {
+   "n": 128,
+   "width": 281,
+   "dense": false,
+   "backend": "flash_qla",
+   "error": "Failed to set the allowed dynamic shared memory size to 112640"
+  },
+  {
+   "n": 128,
+   "width": 281,
+   "dense": true,
+   "backend": "persistent_recurrent",
+   "ms": 4.273312091827393,
+   "max_abs": 0.0009765625,
+   "mean_abs": 4.230099079904903e-07
+  },
+  {
+   "n": 128,
+   "width": 281,
+   "dense": true,
+   "backend": "flash_qla",
+   "error": "Failed to set the allowed dynamic shared memory size to 112640"
+  }
+ ]
+}

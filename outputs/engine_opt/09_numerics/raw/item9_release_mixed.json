@@ -1,0 +1,78 @@
+{
+ "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "torch": "2.14.1+cu130",
+ "ckpt": "/content/ckpt/v1/ckpt_final.pt",
+ "modes": {
+  "eng_fused": {
+   "bs1_mixed_N4": {
+    "prep_ms_median": 2.5517050016787834,
+    "vision_ms_median": 9.872775000985712,
+    "lm_ms_median": 28.14959449824528,
+    "model_ms_median": 38.04949449840933,
+    "model_ms_p90": 38.691031104826834,
+    "total_ms_median": 40.6737150005938,
+    "total_ms_p90": 41.39964010100812,
+    "ttfa_ms_median": 40.6737150005938,
+    "q_per_s": 98.16579354625449,
+    "n_calls": 50,
+    "questions_per_call": 4
+   },
+   "bs1_mixed_N8": {
+    "prep_ms_median": 2.740539999649627,
+    "vision_ms_median": 9.861115002422594,
+    "lm_ms_median": 33.39160449831979,
+    "model_ms_median": 43.27971400198294,
+    "model_ms_p90": 44.07289699956891,
+    "total_ms_median": 46.24468450128916,
+    "total_ms_p90": 46.91813200042816,
+    "ttfa_ms_median": 46.24468450128916,
+    "q_per_s": 172.68795973007656,
+    "n_calls": 50,
+    "questions_per_call": 8
+   },
+   "bs1_mixed_N16": {
+    "prep_ms_median": 2.9193299960752483,
+    "vision_ms_median": 9.821139996347483,
+    "lm_ms_median": 38.85441449529026,
+    "model_ms_median": 48.681769498216454,
+    "model_ms_p90": 51.940140103397425,
+    "total_ms_median": 51.6375644983782,
+    "total_ms_p90": 54.96397490496747,
+    "ttfa_ms_median": 51.6375644983782,
+    "q_per_s": 301.04167995906266,
+    "n_calls": 50,
+    "questions_per_call": 16
+   },
+   "bs1_mixed_N32": {
+    "prep_ms_median": 4.045490000862628,
+    "vision_ms_median": 9.864134499366628,
+    "lm_ms_median": 55.28661949574598,
+    "model_ms_median": 65.1666195008147,
+    "model_ms_p90": 70.49737589986762,
+    "total_ms_median": 69.21329949545907,
+    "total_ms_p90": 74.50021889890195,
+    "ttfa_ms_median": 69.21329949545907,
+    "q_per_s": 455.1457787722877,
+    "n_calls": 50,
+    "questions_per_call": 32
+   },
+   "bs1_mixed_N64": {
+    "prep_ms_median": 6.1399900005199015,
+    "vision_ms_median": 9.931414999300614,
+    "lm_ms_median": 92.3408995004138,
+    "model_ms_median": 102.20429399851128,
+    "model_ms_p90": 112.9687259948696,
+    "total_ms_median": 108.46181449960568,
+    "total_ms_p90": 119.22447699616896,
+    "ttfa_ms_median": 108.46181449960568,
+    "q_per_s": 585.2212461310652,
+    "n_calls": 50,
+    "questions_per_call": 64
+   },
+   "peak_mem_gb": 41.268792152404785
+  }
+ },
+ "equiv": {},
+ "n_merged": 200,
+ "n_fp8": null
+}

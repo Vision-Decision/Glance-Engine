@@ -1,0 +1,15 @@
+Thu Nov 19 04:03:40 PM UTC 2026
+name, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 0 MiB
+GPU_IDLE
+3dec8e7bc7a14e6174932dc7db272aab7f06b498616f2d91a3ce238b79b306be  speed/decision_worker.py
+bd82ba6c12c630c397f80db0f98f3cfafac46b9e42be1f2c9bdd6874a5949620  speed/scheduler.py
+08160daebc0f6f7c3f0704108ffc4c4c543691d58e81e3110adffb9bb250fcb8  speed/engine.py
+cf08cdd51a022fb0e864813ccbefda4da9dc60111f95cd01be782760f6037be0  scan/varlen.py
+python -m unittest speed.test_scheduler speed.test_server 
+......
+----------------------------------------------------------------------
+Ran 6 tests in 0.560s
+
+OK
+exit=0

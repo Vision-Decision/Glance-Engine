@@ -1,0 +1,15 @@
+Thu Nov 19 12:31:31 PM UTC 2026
+name, driver_version, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 580.82.07, 0 MiB
+GPU compute process list empty
+411d36724e64943c71b338751ab1fd43aa41cce0ec46b960937ddaf614770fb1  speed/lm_prefill.py
+505856ffc868c89b47e6fe5cb68c1775f6ea485a768676710279f4cb54005667  speed/engine.py
+2549dad08cb438b18d94ce53ef4de103175df3c75b6cf0d37f147b8e64efb74a  scan/varlen.py
+3d3632ee9720f7a73075a2cb22456a49fdb15b6643cd55386cbd2a04c3569201  scan/engine.py
+env PYTHONPATH=/content/dv:/content/item3-qla-deps:/content/item3-extras LD_LIBRARY_PATH=/content/item3-qla-deps/z3/lib:/usr/lib64-nvidia FLA_FLASH_QLA=0 python -m scan.profile_lm --stage stages_final --ckpt /content/ckpt/v1/ckpt_final.pt --out /content/out/scan/item3_accel_stages_final.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 17997.99it/s]
+32 {'samples': [{'LM dense': 86.9068498313427, 'GDN': 8.013824179768562, 'LM attention': 1.7671360522508621, 'heads': 0.6136959791183472}, {'LM dense': 87.80566002428532, 'GDN': 8.034336104989052, 'LM attention': 1.7790400683879852, 'heads': 0.6219840049743652}, {'LM dense': 88.86377735435963, 'GDN': 8.019616216421127, 'LM attention': 1.770463839173317, 'heads': 0.616864025592804}], 'median_ms': {'LM dense': 87.80566002428532, 'GDN': 8.019616216421127, 'LM attention': 1.770463839173317, 'heads': 0.616864025592804}}
+64 {'samples': [{'LM dense': 176.95120707154274, 'GDN': 18.524031788110733, 'LM attention': 3.5467523336410522, 'heads': 0.9844480156898499}, {'LM dense': 177.85619553923607, 'GDN': 18.496512055397034, 'LM attention': 3.543072670698166, 'heads': 0.9904959797859192}, {'LM dense': 177.99356481432915, 'GDN': 18.518976598978043, 'LM attention': 3.5511040687561035, 'heads': 0.9884480237960815}], 'median_ms': {'LM dense': 177.85619553923607, 'GDN': 18.518976598978043, 'LM attention': 3.5467523336410522, 'heads': 0.9884480237960815}}
+128 {'samples': [{'LM dense': 355.6043725013733, 'GDN': 37.565889060497284, 'LM attention': 7.017087519168854, 'heads': 1.8708479404449463}, {'LM dense': 355.7113800048828, 'GDN': 37.571039736270905, 'LM attention': 7.008896291255951, 'heads': 1.876255989074707}, {'LM dense': 356.2603734135628, 'GDN': 37.582176089286804, 'LM attention': 7.010944068431854, 'heads': 1.868064045906067}], 'median_ms': {'LM dense': 355.7113800048828, 'GDN': 37.571039736270905, 'LM attention': 7.010944068431854, 'heads': 1.8708479404449463}}
+256 {'samples': [{'LM dense': 712.0959634780884, 'GDN': 76.20130920410156, 'LM attention': 14.215007066726685, 'heads': 3.312000036239624}, {'LM dense': 711.6790153980255, 'GDN': 76.1914210319519, 'LM attention': 14.209505319595337, 'heads': 3.311903953552246}, {'LM dense': 713.0044639110565, 'GDN': 76.21984004974365, 'LM attention': 14.21638536453247, 'heads': 3.3046720027923584}], 'median_ms': {'LM dense': 712.0959634780884, 'GDN': 76.20130920410156, 'LM attention': 14.215007066726685, 'heads': 3.311903953552246}}
+accel_stages_final exit=0

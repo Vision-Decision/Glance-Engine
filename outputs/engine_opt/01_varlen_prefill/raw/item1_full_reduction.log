@@ -1,0 +1,42 @@
+default allow_bf16_reduced_precision_reduction True
+default allow_bf16_reduced_precision_reduction_split_k True
+control allow_bf16_reduced_precision_reduction False
+control allow_bf16_reduced_precision_reduction_split_k False
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 16344.17it/s]
+Traceback (most recent call last):
+  File "/content/item1_reduction.py", line 7, in <module>
+    runpy.run_module("scan.test_scan_equivalence",run_name="__main__")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen runpy>", line 234, in run_module
+  File "<frozen runpy>", line 88, in _run_code
+  File "/content/dv/scan/test_scan_equivalence.py", line 118, in <module>
+    bank = eng.encode(ims, chunk=2)                        # several banks, different prefix lengths -> concat
+  File "/usr/local/lib/python3.13/dist-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "/content/dv/scan/engine.py", line 400, in encode
+    res, cache, vis = self._core(E, host)          # eager: bank tensors must not alias graph buffers
+                      ~~~~~~~~~~^^^^^^^^^
+  File "/content/dv/scan/engine.py", line 243, in _core
+    h, cache = self.lm_forward(x, P, Q)
+               ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/content/dv/speed/engine.py", line 504, in lm_forward
+    mixed, z, beta, g = self._gdn_projections(m, h)
+                        ~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/content/dv/speed/engine.py", line 447, in _gdn_projections
+    mixed = m.in_proj_qkv(h)
+  File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/local/lib/python3.13/dist-packages/peft/tuners/lora/layer.py", line 1088, in forward
+    result = self.base_layer(x, *args, **kwargs)
+  File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py", line 1783, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/module.py", line 1794, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/local/lib/python3.13/dist-packages/torch/nn/modules/linear.py", line 134, in forward
+    return F.linear(input, self.weight, self.bias)
+           ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: torch.backends.cuda.matmul.allow_fp16_reduced_precision_reduction(..., allow_splitk=False) requires the cuBLASLt backend

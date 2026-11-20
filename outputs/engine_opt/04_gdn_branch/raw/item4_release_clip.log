@@ -1,0 +1,20 @@
+Thu Nov 19 01:14:12 PM UTC 2026
+name, driver_version, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 580.82.07, 0 MiB
+GPU compute process list empty
+5e5c04f41452517c926e640b23bcc880b728e50acf78ee189a09b810425ebcb4  speed/engine.py
+e1be1b00ca3082e11f2352d19f99840fbb5f202001d149eede24cbace9c838f9  scan/engine.py
+4874a3db7a89bbb30756b051e5c60545a082c45fe56d8c94986d4e142e8bd250  scan/profile_branch.py
+4b941416ac2bc2658da5b9db02dd946fade458cec7c2ebdae21fe2f3d1929a58  scan/branch_micro.py
+1dd589287dc9bed44c2964c26e5ac90b2f906f65dca5b0ee37f2ade05444f17a  speed/gdn_branch.py
+GLANCE_BRANCH_MODE=fused
+python -m scan.profile_branch --stage clip --ckpt /content/ckpt/v1/ckpt_final.pt --out /content/out/scan/item4_release_clip.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 19048.49it/s]
+[transformers] Qwen3VL video processing does not apply the per-frame pixel cap the reference implementation (qwen-vl-utils) applies, so some videos cost far more tokens than they would there. In v5.22 the capped behavior will become the default and `cap_pixels_per_frame` will be removed. Pass `cap_pixels_per_frame=True` to adopt the reference behavior now, or `False` to keep the current behavior and silence this warning.
+reference {'prob_absdiff_max': 0.02308708429336548, 'decision_agree': 1.0}
+wy {'prob_absdiff_max': 0.023544669151306152, 'decision_agree': 1.0}
+attention {'prob_absdiff_max': 0.024261295795440674, 'decision_agree': 1.0}
+both {'prob_absdiff_max': 0.02708229422569275, 'decision_agree': 1.0}
+serial {'prob_absdiff_max': 0.025195002555847168, 'decision_agree': 1.0}
+serial_attention {'prob_absdiff_max': 0.024941444396972656, 'decision_agree': 1.0}
+release_clip exit=0

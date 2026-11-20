@@ -1,0 +1,34 @@
+{
+ "Tv128_N128": [
+  {
+   "max_abs": 0.0,
+   "mean_abs": 0.0,
+   "relative_max": 0.0,
+   "equal": true,
+   "graph_entries": 1
+  },
+  {
+   "max_abs": 0.0,
+   "mean_abs": 0.0,
+   "relative_max": 0.0,
+   "equal": true,
+   "graph_entries": 1
+  }
+ ],
+ "Tv256_N64": [
+  {
+   "max_abs": 0.0,
+   "mean_abs": 0.0,
+   "relative_max": 0.0,
+   "equal": true,
+   "graph_entries": 1
+  },
+  {
+   "max_abs": 0.0,
+   "mean_abs": 0.0,
+   "relative_max": 0.0,
+   "equal": true,
+   "graph_entries": 1
+  }
+ ]
+}

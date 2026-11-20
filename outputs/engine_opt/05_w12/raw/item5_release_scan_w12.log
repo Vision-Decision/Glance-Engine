@@ -1,0 +1,35 @@
+Thu Nov 19 02:23:51 PM UTC 2026
+name, driver_version, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 580.82.07, 0 MiB
+GPU compute process list empty
+112c8141744dfc626a75c49707b253cf50d475ffae084d43bc4dd32ed5c68a2b  speed/engine.py
+264dc486606b4e239e9a2aaedc59cd302bc4d38649dc0ae7c5919f4758a09dd8  speed/bench_glance.py
+54adb906f8c801702b8541f5e5b239154dd3df3da5fe1e8b86cbb120159b9e28  speed/bench_w12.py
+6df0e68afed540b705d9382d07ab698ddced824e03388baf90211e5c65db8422  speed/test_w12.py
+25023c4ce1df39e817adcdb264396eae33253f10e9b6f00d7aa6a8ca875fc317  speed/w12.py
+13b072b822abf9cbdb664032e57387422215e8d72d0e34446becf1206d1b052d  speed/specpilot/w12.cu
+783ab0eca111f8631b32ec7b1ddc786aa12cd120cf19cf72f9fec56a96689d3a  scan/engine.py
+bbd6ba5baf19263dfca5255ef2a4ca23a6abdaab5ed1937b6d15ef64ee83b172  scan/bench_scan.py
+python -m scan.bench_scan --parts cached\,fresh --Ns 1\,8\,32\,64\,256 --cached_tvs 640 --Ns_fresh 1\,2\,4\,8 --Tvs 128\,256 --fresh_kind yesno --fresh_chunked 1 --n_calls 10 --w12 /content/item5-w12-v1 --ckpt /content/ckpt/v1/ckpt_final.pt --out /content/out/scan/item5_release_scan_w12.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 17331.24it/s]
+[mem] image bank Tv640: allocated 35.1 GB, reserved 52.3 GB
+cached 640 1 box {"prep_ms": 0.09, "model_ms": 5.47, "total_ms": 5.56, "total_ms_p90": 5.82}
+cached 640 1 noul {"prep_ms": 0.1, "model_ms": 5.95, "total_ms": 6.05, "total_ms_p90": 6.06}
+cached 640 8 box {"prep_ms": 0.1, "model_ms": 6.92, "total_ms": 7.02, "total_ms_p90": 8.28}
+cached 640 8 noul {"prep_ms": 0.1, "model_ms": 9.7, "total_ms": 9.8, "total_ms_p90": 10.27}
+cached 640 32 box {"prep_ms": 0.1, "model_ms": 13.39, "total_ms": 13.49, "total_ms_p90": 16.67}
+cached 640 32 noul {"prep_ms": 0.12, "model_ms": 24.05, "total_ms": 24.17, "total_ms_p90": 25.62}
+cached 640 64 box {"prep_ms": 0.1, "model_ms": 23.4, "total_ms": 23.5, "total_ms_p90": 30.21}
+cached 640 64 noul {"prep_ms": 0.12, "model_ms": 44.62, "total_ms": 44.74, "total_ms_p90": 49.37}
+cached 640 256 box {"prep_ms": 0.12, "model_ms": 92.33, "total_ms": 92.45, "total_ms_p90": 112.7}
+cached 640 256 noul {"prep_ms": 0.14, "model_ms": 177.24, "total_ms": 177.37, "total_ms_p90": 195.19}
+fresh 128 1 {"prep_ms": 0.49, "vision_ms": 2.89, "lm_ms": 9.33, "total_ms": 12.71, "total_ms_p90": 12.73, "tokens": 128, "chunks": 1, "chunks_per_call": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1], "images_per_s": 78.65, "readout": "yesno"}
+fresh 128 2 {"prep_ms": 0.22, "vision_ms": 3.95, "lm_ms": 12.11, "total_ms": 16.29, "total_ms_p90": 16.31, "tokens": 256, "chunks": 1, "chunks_per_call": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1], "images_per_s": 122.81, "readout": "yesno"}
+fresh 128 4 {"prep_ms": 0.33, "vision_ms": 6.72, "lm_ms": 18.53, "total_ms": 25.58, "total_ms_p90": 25.59, "tokens": 512, "chunks": 1, "chunks_per_call": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1], "images_per_s": 156.37, "readout": "yesno"}
+fresh 128 8 {"prep_ms": 0.57, "vision_ms": 11.89, "lm_ms": 33.03, "total_ms": 45.51, "total_ms_p90": 45.68, "tokens": 1024, "chunks": 1, "chunks_per_call": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1], "images_per_s": 175.79, "readout": "yesno"}
+fresh 256 1 {"prep_ms": 0.56, "vision_ms": 4.78, "lm_ms": 12.04, "total_ms": 17.37, "total_ms_p90": 17.41, "tokens": 256, "chunks": 1, "chunks_per_call": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1], "images_per_s": 57.57, "readout": "yesno"}
+fresh 256 2 {"prep_ms": 0.35, "vision_ms": 8.22, "lm_ms": 18.25, "total_ms": 26.81, "total_ms_p90": 26.83, "tokens": 512, "chunks": 1, "chunks_per_call": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1], "images_per_s": 74.59, "readout": "yesno"}
+fresh 256 4 {"prep_ms": 0.6, "vision_ms": 14.56, "lm_ms": 30.54, "total_ms": 45.7, "total_ms_p90": 45.79, "tokens": 1024, "chunks": 1, "chunks_per_call": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1], "images_per_s": 87.52, "readout": "yesno"}
+fresh 256 8 {"prep_ms": 1.14, "vision_ms": 27.26, "lm_ms": 53.36, "total_ms": 81.77, "total_ms_p90": 81.95, "tokens": 2048, "chunks": 1, "chunks_per_call": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1], "images_per_s": 97.84, "readout": "yesno"}
+BENCH_DONE
+release_scan_w12 exit=0

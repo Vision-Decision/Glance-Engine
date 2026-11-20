@@ -1,0 +1,7 @@
+Collecting flash-qla==0.1.3
+  Downloading flash_qla-0.1.3-py3-none-any.whl.metadata (6.2 kB)
+Downloading flash_qla-0.1.3-py3-none-any.whl (131 kB)
+Installing collected packages: flash-qla
+Successfully installed flash-qla-0.1.3
+Requires-Dist: torch>=2.8
+Requires-Dist: tilelang>=0.1.12

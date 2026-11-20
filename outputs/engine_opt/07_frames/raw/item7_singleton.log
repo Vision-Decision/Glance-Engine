@@ -1,0 +1,8 @@
+Thu Nov 19 04:31:49 PM UTC 2026
+name, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 0 MiB
+GPU_IDLE
+python -m speed.bench_scheduler --backend scheduled --warm-shapes --parts followup --clients 1 --out /content/out/scan/item7_singleton.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 19720.25it/s]
+followup_1 {'burst_median_ms': 9.0, 'requests_s': 110.25, 'p50_ms': 9.0, 'p90_ms': 9.3, 'p99_ms': 9.43}
+singleton exit=0

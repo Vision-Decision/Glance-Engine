@@ -1,0 +1,26 @@
+real_control exit=1
+pushed /content/out/scan/item3_real_control.log -> Vision-Decision/collection-scan-results
+ncu_final_128 exit=0
+pushed /content/out/scan/item3_ncu_final_128.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item3_ncu_final_128.csv -> Vision-Decision/collection-scan-results
+ncu_before_128 exit=0
+pushed /content/out/scan/item3_ncu_before_128.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item3_ncu_before_128.csv -> Vision-Decision/collection-scan-results
+ncu_final_32 exit=0
+pushed /content/out/scan/item3_ncu_final_32.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item3_ncu_final_32.csv -> Vision-Decision/collection-scan-results
+ncu_before_32 exit=0
+pushed /content/out/scan/item3_ncu_before_32.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item3_ncu_before_32.csv -> Vision-Decision/collection-scan-results
+ncu_final_64 exit=0
+pushed /content/out/scan/item3_ncu_final_64.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item3_ncu_final_64.csv -> Vision-Decision/collection-scan-results
+ncu_before_64 exit=0
+pushed /content/out/scan/item3_ncu_before_64.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item3_ncu_before_64.csv -> Vision-Decision/collection-scan-results
+ncu_final_256 exit=0
+pushed /content/out/scan/item3_ncu_final_256.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item3_ncu_final_256.csv -> Vision-Decision/collection-scan-results
+ncu_before_256 exit=0
+pushed /content/out/scan/item3_ncu_before_256.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item3_ncu_before_256.csv -> Vision-Decision/collection-scan-results

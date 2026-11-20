@@ -1,0 +1,12 @@
+micro exit=0
+pushed /content/out/scan/item9_tiled_micro.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item9_tiled_micro.json -> Vision-Decision/collection-scan-results
+cached exit=0
+pushed /content/out/scan/item9_tiled_cached.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item9_tiled_cached.json -> Vision-Decision/collection-scan-results
+fresh exit=0
+pushed /content/out/scan/item9_tiled_fresh.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item9_tiled_fresh.json -> Vision-Decision/collection-scan-results
+speed exit=0
+pushed /content/out/scan/item9_tiled_speed.log -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item9_tiled_speed.json -> Vision-Decision/collection-scan-results

@@ -1,0 +1,5 @@
+reduction_exit=1
+push failed /content/out/scan/item1_full_reduction.log Vision-Decision/collection-scan-results (Request ID: Root=1-6afeb5b7-565e1c100628b086415cecf8;c6ba55e1-c586-4ce0-87c5-3e02b1ab7097)
+
+429 Too Many Requests for u
+pushed /content/out/scan/item1_full_reduction.log -> Vision-Decision/collection-scan-data

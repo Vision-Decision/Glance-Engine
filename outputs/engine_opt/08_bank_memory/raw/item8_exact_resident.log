@@ -1,0 +1,19 @@
+Thu Nov 19 06:24:37 PM UTC 2026
+name, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 0 MiB
+GPU compute process list empty
+6c55309da8444001f5adea3b51619e5cb4036f2234b83ed581f32616976048e7  scan/engine.py
+96eea3e007b2e1c8f61faab57fe9bae60451fa3bb3c0868becf94dcf5ba3b881  scan/bench_bank_memory.py
+a86a4c05f8b58d6701c9803e9b4ea9915df6a2b8fdc8031e3dc9d1b462e16428  scan/bench_bank_precision.py
+fd5a40143695b7aedc47a4a9be32530a468a6fdb97eb3569c5d5b737a7b95b2c  scan/bench_bank_tier.py
+652c1f8e306e28d43cc6ec8189b1c2511333db3eecd02ab0ee4994ae6ad1bb3d  scan/bank_codec.py
+939c131e2154928965cbfef49ee8ff08f4696589d3dc4388984409a610bb3eda  scan/bank_kernels.py
+0804f85b3cc66f305df24896ad392d6ead9eef6e97f1841e152eef61a4924889  scan/bank.py
+cd55e24229883f9310fd5b05b3be36078efb87a82c98f123ace55e1c37390a1d  scan/host_bank.py
+a477ad78aa1bfc77523500ab3ff8755ad775be8e2ea590b6b7b4b42bcd781a72  speed/gdn_branch.py
+python -m scan.bench_bank_tier --resident --out /content/out/scan/item8_exact_resident.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 16601.33it/s]
+[transformers] Qwen3VL video processing does not apply the per-frame pixel cap the reference implementation (qwen-vl-utils) applies, so some videos cost far more tokens than they would there. In v5.22 the capped behavior will become the default and `cap_pixels_per_frame` will be removed. Pass `cap_pixels_per_frame=True` to adopt the reference behavior now, or `False` to keep the current behavior and silence this warning.
+[W1119 18:25:08.512370554 CUDACachingAllocator.cpp:528] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 10354688, total: 101974081536).
+[W1119 18:25:08.661253263 CUDACachingAllocator.cpp:528] expandable_segments: memory mapping failed with OOM on device 0 while trying to map 20971520 bytes (free: 12451840, total: 101974081536).
+resident exit=0

@@ -1,0 +1,111 @@
+{
+ "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "torch": "2.14.1+cu130",
+ "ckpt": "/content/out/distill_v1/ckpt_final.pt",
+ "args": {
+  "ckpt": "/content/out/distill_v1/ckpt_final.pt",
+  "prep": "data/prep/eval_refcoco_val.jsonl",
+  "gprep": "data/prep/eval_grefcoco_val.jsonl",
+  "image_root": "/content/data/coco/train2014",
+  "parts": "acc",
+  "Ns": [
+   1,
+   8,
+   16,
+   32,
+   64,
+   128,
+   256
+  ],
+  "Ns_fresh": [
+   1,
+   2,
+   4,
+   8,
+   16,
+   32,
+   64
+  ],
+  "Tvs": [
+   256
+  ],
+  "max_fresh_tokens": 16384,
+  "n_equiv": 24,
+  "clip_cfgs": "4x96,4x48,2x96",
+  "clip_fresh": 1,
+  "cached_tvs": "640,256,64",
+  "short": 0,
+  "fp8": 0,
+  "n_acc": 150,
+  "n_calls": 30,
+  "out": "/content/out/scan/parity150_short.json"
+ },
+ "n_merged": 200,
+ "acc_vs_tokens": {
+  "Tv256": {
+   "refcoco_val": {
+    "n_pos": 957,
+    "n_neg": 0,
+    "acc50": 0.857889237199582
+   },
+   "grefcoco_val": {
+    "n_pos": 368,
+    "n_neg": 744,
+    "acc50": null,
+    "auroc": 0.9696046633941094,
+    "false_alarm_at_05": 0.16666666666666666,
+    "miss_at_05": 0.03804347826086957,
+    "ece15": 0.10484379903992513
+   }
+  },
+  "Tv256_qfirst": {
+   "refcoco_val": {
+    "n_pos": 957,
+    "n_neg": 0,
+    "acc50": 0.8349007314524556
+   },
+   "grefcoco_val": {
+    "n_pos": 368,
+    "n_neg": 744,
+    "acc50": null,
+    "auroc": 0.9566532258064516,
+    "false_alarm_at_05": 0.3024193548387097,
+    "miss_at_05": 0.016304347826086956,
+    "ece15": 0.19470945195099773
+   }
+  },
+  "Tv640": {
+   "refcoco_val": {
+    "n_pos": 957,
+    "n_neg": 0,
+    "acc50": 0.9404388714733543
+   },
+   "grefcoco_val": {
+    "n_pos": 368,
+    "n_neg": 744,
+    "acc50": null,
+    "auroc": 0.9695754441327723,
+    "false_alarm_at_05": 0.18010752688172044,
+    "miss_at_05": 0.029891304347826088,
+    "ece15": 0.11386907763047432
+   }
+  },
+  "Tv640_qfirst": {
+   "refcoco_val": {
+    "n_pos": 957,
+    "n_neg": 0,
+    "acc50": 0.9247648902821317
+   },
+   "grefcoco_val": {
+    "n_pos": 368,
+    "n_neg": 744,
+    "acc50": null,
+    "auroc": 0.960992286115007,
+    "false_alarm_at_05": 0.3010752688172043,
+    "miss_at_05": 0.021739130434782608,
+    "ece15": 0.19735205217849602
+   }
+  }
+ },
+ "peak_mem_gb": 11.1288743019104
+}

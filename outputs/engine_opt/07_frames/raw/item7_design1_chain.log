@@ -1,0 +1,6 @@
+video exit=1
+pushed /content/out/scan/item7_first_video.log -> Vision-Decision/collection-scan-results
+followup exit=1
+pushed /content/out/scan/item7_first_followup.log -> Vision-Decision/collection-scan-results
+fresh exit=1
+pushed /content/out/scan/item7_first_fresh.log -> Vision-Decision/collection-scan-results

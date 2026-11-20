@@ -1,0 +1,19 @@
+Thu Nov 19 09:15:45 AM UTC 2026
+name, driver_version, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 580.82.07, 0 MiB
+GPU compute process list empty
+python -m speed.profile_cached_scan --ckpt /content/ckpt/v1/ckpt_final.pt --out /content/out/scan/c0_profile_bank.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 20452.84it/s]
+USDT:2026-11-19 09:16:06 47527:47527 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 09:16:06 47527:47527 SyncActivityProfilerHandler.cpp:46] profiler_stop
+64_box {'gemm': 18.351111, 'gdn(fla)': 5.804231999999996, 'copy/cat': 5.205192999999984, 'elementwise/other': 3.6830869999999796, 'reduce/norm': 0.39450199999997937, 'memcpy': 0.14409499999999587, 'index': 0.12374899999999137, 'softmax': 0.001184000000001106}
+USDT:2026-11-19 09:16:06 47527:47527 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 09:16:06 47527:47527 SyncActivityProfilerHandler.cpp:46] profiler_stop
+64_noul {'gemm': 33.82859100000003, 'copy/cat': 11.06625900000006, 'gdn(fla)': 10.360562000000007, 'elementwise/other': 8.943283999999975, 'reduce/norm': 0.9299890000000637, 'memcpy': 0.8190150000000103, 'index': 0.2106559999999937, 'softmax': 0.001184000000008382}
+USDT:2026-11-19 09:16:07 47527:47527 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 09:16:07 47527:47527 SyncActivityProfilerHandler.cpp:46] profiler_stop
+256_box {'gemm': 65.46295599999986, 'copy/cat': 27.79567199999987, 'elementwise/other': 22.771772000000325, 'gdn(fla)': 20.709530000000004, 'reduce/norm': 3.3446640000000003, 'memcpy': 1.9217699999999283, 'index': 0.3880339999999757, 'softmax': 0.001183999999979278}
+USDT:2026-11-19 09:16:09 47527:47527 SyncActivityProfilerHandler.cpp:39] profiler_start
+USDT:2026-11-19 09:16:09 47527:47527 SyncActivityProfilerHandler.cpp:46] profiler_stop
+256_noul {'gemm': 122.45542699999986, 'copy/cat': 67.14053600000025, 'elementwise/other': 59.87025900000012, 'gdn(fla)': 38.6062369999999, 'reduce/norm': 7.798548999999998, 'memcpy': 4.070717000000079, 'index': 1.35105000000013, 'softmax': 0.001184000000008382}
+profile_bank exit=0

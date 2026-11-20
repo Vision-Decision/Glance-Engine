@@ -1,0 +1,35 @@
+Thu Nov 19 03:51:21 PM UTC 2026
+name, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 0 MiB
+GPU_IDLE
+3dec8e7bc7a14e6174932dc7db272aab7f06b498616f2d91a3ce238b79b306be  speed/decision_worker.py
+bd82ba6c12c630c397f80db0f98f3cfafac46b9e42be1f2c9bdd6874a5949620  speed/scheduler.py
+08160daebc0f6f7c3f0704108ffc4c4c543691d58e81e3110adffb9bb250fcb8  speed/engine.py
+cf08cdd51a022fb0e864813ccbefda4da9dc60111f95cd01be782760f6037be0  scan/varlen.py
+env PYTHONPATH=/content/dv:/content/item3-qla-deps:/content/item3-extras LD_LIBRARY_PATH=/content/item3-qla-deps/z3/lib:/usr/lib64-nvidia FLA_FLASH_QLA=0 python -m speed.bench_scheduler --backend scheduled --warm-shapes --out /content/out/scan/item6_production.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 16525.70it/s]
+box_1 {'burst_median_ms': 32.23, 'requests_s': 31.76, 'p50_ms': 32.23, 'p90_ms': 32.27, 'p99_ms': 32.28}
+box_4 {'burst_median_ms': 103.62, 'requests_s': 38.42, 'p50_ms': 103.62, 'p90_ms': 106.05, 'p99_ms': 106.06}
+box_16 {'burst_median_ms': 368.75, 'requests_s': 43.29, 'p50_ms': 270.96, 'p90_ms': 369.11, 'p99_ms': 374.32}
+box_64 {'burst_median_ms': 1439.44, 'requests_s': 44.34, 'p50_ms': 820.45, 'p90_ms': 1358.45, 'p99_ms': 1453.89}
+yesno_1 {'burst_median_ms': 32.17, 'requests_s': 32.08, 'p50_ms': 32.17, 'p90_ms': 32.23, 'p99_ms': 32.25}
+yesno_4 {'burst_median_ms': 105.56, 'requests_s': 37.77, 'p50_ms': 105.55, 'p90_ms': 107.21, 'p99_ms': 107.22}
+yesno_16 {'burst_median_ms': 374.78, 'requests_s': 42.58, 'p50_ms': 274.05, 'p90_ms': 375.14, 'p99_ms': 379.34}
+yesno_64 {'burst_median_ms': 1471.52, 'requests_s': 43.52, 'p50_ms': 824.99, 'p90_ms': 1372.04, 'p99_ms': 1477.36}
+multi_1 {'burst_median_ms': 45.61, 'requests_s': 21.82, 'p50_ms': 45.61, 'p90_ms': 46.39, 'p99_ms': 46.39}
+multi_4 {'burst_median_ms': 142.36, 'requests_s': 28.07, 'p50_ms': 142.36, 'p90_ms': 145.47, 'p99_ms': 145.47}
+multi_16 {'burst_median_ms': 538.43, 'requests_s': 29.58, 'p50_ms': 307.98, 'p90_ms': 541.88, 'p99_ms': 550.2}
+multi_64 {'burst_median_ms': 2161.03, 'requests_s': 29.64, 'p50_ms': 1121.46, 'p90_ms': 2144.88, 'p99_ms': 2167.06}
+followup_1 {'burst_median_ms': 11.65, 'requests_s': 85.96, 'p50_ms': 11.65, 'p90_ms': 11.71, 'p99_ms': 11.71}
+followup_4 {'burst_median_ms': 17.38, 'requests_s': 230.22, 'p50_ms': 17.37, 'p90_ms': 17.57, 'p99_ms': 17.57}
+followup_16 {'burst_median_ms': 48.62, 'requests_s': 329.29, 'p50_ms': 32.44, 'p90_ms': 48.63, 'p99_ms': 48.78}
+followup_64 {'burst_median_ms': 175.16, 'requests_s': 365.54, 'p50_ms': 97.03, 'p90_ms': 160.16, 'p99_ms': 175.69}
+gui_1 {'burst_median_ms': 98.56, 'requests_s': 10.15, 'p50_ms': 98.56, 'p90_ms': 98.58, 'p99_ms': 98.58}
+gui_4 {'burst_median_ms': 358.56, 'requests_s': 11.22, 'p50_ms': 264.11, 'p90_ms': 358.57, 'p99_ms': 361.18}
+gui_16 {'burst_median_ms': 1409.5, 'requests_s': 11.37, 'p50_ms': 800.02, 'p90_ms': 1391.26, 'p99_ms': 1417.58}
+gui_64 {'burst_median_ms': 5621.17, 'requests_s': 11.37, 'p50_ms': 2917.23, 'p90_ms': 5196.41, 'p99_ms': 5621.17}
+fresh_1 {'burst_median_ms': 160.33, 'requests_s': 6.35, 'p50_ms': 160.33, 'p90_ms': 160.77, 'p99_ms': 160.91}
+fresh_4 {'burst_median_ms': 622.42, 'requests_s': 6.44, 'p50_ms': 391.0, 'p90_ms': 622.47, 'p99_ms': 623.35}
+fresh_16 {'burst_median_ms': 2479.12, 'requests_s': 6.45, 'p50_ms': 1321.48, 'p90_ms': 2320.61, 'p99_ms': 2482.51}
+fresh_64 {'burst_median_ms': 9917.85, 'requests_s': 6.45, 'p50_ms': 5040.6, 'p90_ms': 9002.39, 'p99_ms': 9915.84}
+exit=0

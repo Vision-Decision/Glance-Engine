@@ -1,0 +1,94 @@
+{
+ "backend": "sglang",
+ "version": "0.5.23",
+ "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "engine_args": {
+  "model_path": "Qwen/Qwen3.5-4B",
+  "mem_fraction_static": "0.8",
+  "context_length": "4096",
+  "random_seed": "0",
+  "max_running_requests": "256",
+  "chunked_prefill_size": "16384",
+  "log_level": "error"
+ },
+ "args": {
+  "prep": "data/prep/eval_refcoco_val.jsonl",
+  "image_root": "/content/data/coco/train2014",
+  "parts": "fresh",
+  "Ns": "32,64,128,256",
+  "n_calls": 8,
+  "Tvs": "128,256",
+  "prefix_len": 197,
+  "max_running": 256,
+  "max_batched": 16384,
+  "gpu_mem": 0.8,
+  "server_kw": "",
+  "out": "/content/out/scan/e1b_sglang_fresh3.json"
+ },
+ "modes": {
+  "fresh_Tv128_N32_yesno": {
+   "total_ms": 252.332765000574,
+   "total_ms_p90": 344.202353298715,
+   "n_calls": 8,
+   "images_per_s": 126.81666607952086,
+   "cached_prompt_tokens_mean": 0.0,
+   "prompt_tokens_mean": 146.0
+  },
+  "fresh_Tv128_N64_yesno": {
+   "total_ms": 446.5999415006081,
+   "total_ms_p90": 482.67421899981855,
+   "n_calls": 8,
+   "images_per_s": 143.30498966246026,
+   "cached_prompt_tokens_mean": 0.0,
+   "prompt_tokens_mean": 146.0
+  },
+  "fresh_Tv128_N128_yesno": {
+   "total_ms": 816.041564000443,
+   "total_ms_p90": 974.5594940008231,
+   "n_calls": 8,
+   "images_per_s": 156.8547555010697,
+   "cached_prompt_tokens_mean": 0.0,
+   "prompt_tokens_mean": 146.0
+  },
+  "fresh_Tv128_N256_yesno": {
+   "total_ms": 1555.4120725000757,
+   "total_ms_p90": 1721.495390900418,
+   "n_calls": 8,
+   "images_per_s": 164.5866098933648,
+   "cached_prompt_tokens_mean": 0.0,
+   "prompt_tokens_mean": 146.0
+  },
+  "fresh_Tv256_N32_yesno": {
+   "total_ms": 447.83196250045876,
+   "total_ms_p90": 614.7120675001132,
+   "n_calls": 8,
+   "images_per_s": 71.45537317463628,
+   "cached_prompt_tokens_mean": 0.0,
+   "prompt_tokens_mean": 281.0
+  },
+  "fresh_Tv256_N64_yesno": {
+   "total_ms": 820.4489755007671,
+   "total_ms_p90": 842.4485786998048,
+   "n_calls": 8,
+   "images_per_s": 78.00606973875142,
+   "cached_prompt_tokens_mean": 0.0,
+   "prompt_tokens_mean": 281.0
+  },
+  "fresh_Tv256_N128_yesno": {
+   "total_ms": 1560.9134275009637,
+   "total_ms_p90": 1584.3210113005625,
+   "n_calls": 8,
+   "images_per_s": 82.00326664171833,
+   "cached_prompt_tokens_mean": 0.0,
+   "prompt_tokens_mean": 281.0
+  },
+  "fresh_Tv256_N256_yesno": {
+   "total_ms": 2977.4783655002466,
+   "total_ms_p90": 3021.736076900197,
+   "n_calls": 8,
+   "images_per_s": 85.97879432685295,
+   "cached_prompt_tokens_mean": 0.0,
+   "prompt_tokens_mean": 281.0
+  }
+ }
+}

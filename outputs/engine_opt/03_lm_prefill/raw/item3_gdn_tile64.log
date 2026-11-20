@@ -1,0 +1,31 @@
+Thu Nov 19 12:20:26 PM UTC 2026
+name, driver_version, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 580.82.07, 0 MiB
+GPU compute process list empty
+411d36724e64943c71b338751ab1fd43aa41cce0ec46b960937ddaf614770fb1  speed/lm_prefill.py
+763f35faf11f7388c7e855d895a4c5b80fb8a4d0a5dbc78d19d5a31639b6feae  speed/engine.py
+1f9d0b846c8546514ad65fcf48dc37770a9ca8c50661bc4888fee9663fb2c3b0  scan/varlen.py
+3d3632ee9720f7a73075a2cb22456a49fdb15b6643cd55386cbd2a04c3569201  scan/engine.py
+env PYTHONPATH=/content/dv:/content/item3-qla-deps:/content/item3-extras LD_LIBRARY_PATH=/content/item3-qla-deps/z3/lib:/usr/lib64-nvidia FLA_FLASH_QLA=0 python -m scan.profile_lm --stage gdn_tile64 --ckpt /content/ckpt/v1/ckpt_final.pt --out /content/out/scan/item3_gdn_tile64.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 16392.95it/s]
+{'n': 32, 'width': 146, 'dense': False, 'backend': 'persistent_recurrent', 'ms': 0.597823977470398, 'max_abs': 0.0009765625, 'mean_abs': 3.573841240722686e-07}
+2026-11-19 12:20:36  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:137): TileLang begins to compile kernel `tilelang_fused_chunk_gdr_fwd_kernel` with `out_idx=None`
+2026-11-19 12:20:42  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:145): TileLang completes to compile kernel `tilelang_fused_chunk_gdr_fwd_kernel`
+{'n': 32, 'width': 146, 'dense': False, 'backend': 'flash_qla', 'ms': 0.21420800685882568, 'max_abs': 0.0009765625, 'mean_abs': 4.518974208167492e-07}
+{'n': 32, 'width': 146, 'dense': True, 'backend': 'persistent_recurrent', 'ms': 0.5921919941902161, 'max_abs': 0.0009765625, 'mean_abs': 3.573841240722686e-07}
+2026-11-19 12:20:43  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:137): TileLang begins to compile kernel `tilelang_fused_chunk_gdr_fwd_kernel` with `out_idx=None`
+2026-11-19 12:20:49  [TileLang:tilelang.jit.kernel:INFO] (kernel.py:145): TileLang completes to compile kernel `tilelang_fused_chunk_gdr_fwd_kernel`
+{'n': 32, 'width': 146, 'dense': True, 'backend': 'flash_qla', 'ms': 0.2104640007019043, 'max_abs': 0.0009765625, 'mean_abs': 4.518974208167492e-07}
+{'n': 32, 'width': 281, 'dense': False, 'backend': 'persistent_recurrent', 'ms': 1.18668794631958, 'max_abs': 0.0009765625, 'mean_abs': 4.19949827801247e-07}
+{'n': 32, 'width': 281, 'dense': False, 'backend': 'flash_qla', 'ms': 0.3816640079021454, 'max_abs': 0.0009765625, 'mean_abs': 5.283562245494977e-07}
+{'n': 32, 'width': 281, 'dense': True, 'backend': 'persistent_recurrent', 'ms': 1.1734399795532227, 'max_abs': 0.0009765625, 'mean_abs': 4.19949827801247e-07}
+{'n': 32, 'width': 281, 'dense': True, 'backend': 'flash_qla', 'ms': 0.36531201004981995, 'max_abs': 0.0009765625, 'mean_abs': 5.283562245494977e-07}
+{'n': 128, 'width': 146, 'dense': False, 'backend': 'persistent_recurrent', 'ms': 2.2558720111846924, 'max_abs': 0.0009765625, 'mean_abs': 3.594825841446436e-07}
+{'n': 128, 'width': 146, 'dense': False, 'backend': 'flash_qla', 'ms': 0.9055359959602356, 'max_abs': 0.00146484375, 'mean_abs': 4.5370319412540994e-07}
+{'n': 128, 'width': 146, 'dense': True, 'backend': 'persistent_recurrent', 'ms': 2.246687889099121, 'max_abs': 0.0009765625, 'mean_abs': 3.594825841446436e-07}
+{'n': 128, 'width': 146, 'dense': True, 'backend': 'flash_qla', 'ms': 0.8766400218009949, 'max_abs': 0.00146484375, 'mean_abs': 4.5370319412540994e-07}
+{'n': 128, 'width': 281, 'dense': False, 'backend': 'persistent_recurrent', 'ms': 4.2954559326171875, 'max_abs': 0.00146484375, 'mean_abs': 4.2035802039208647e-07}
+{'n': 128, 'width': 281, 'dense': False, 'backend': 'flash_qla', 'ms': 1.4415359497070312, 'max_abs': 0.00146484375, 'mean_abs': 5.29493433987227e-07}
+{'n': 128, 'width': 281, 'dense': True, 'backend': 'persistent_recurrent', 'ms': 4.274208068847656, 'max_abs': 0.00146484375, 'mean_abs': 4.2035802039208647e-07}
+{'n': 128, 'width': 281, 'dense': True, 'backend': 'flash_qla', 'ms': 1.435520052909851, 'max_abs': 0.00146484375, 'mean_abs': 5.29493433987227e-07}
+gdn_tile64 exit=0

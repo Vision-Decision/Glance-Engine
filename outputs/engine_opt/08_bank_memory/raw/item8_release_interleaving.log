@@ -1,0 +1,17 @@
+Thu Nov 19 06:31:48 PM UTC 2026
+name, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 0 MiB
+GPU compute process list empty
+6c55309da8444001f5adea3b51619e5cb4036f2234b83ed581f32616976048e7  scan/engine.py
+96eea3e007b2e1c8f61faab57fe9bae60451fa3bb3c0868becf94dcf5ba3b881  scan/bench_bank_memory.py
+a86a4c05f8b58d6701c9803e9b4ea9915df6a2b8fdc8031e3dc9d1b462e16428  scan/bench_bank_precision.py
+fd5a40143695b7aedc47a4a9be32530a468a6fdb97eb3569c5d5b737a7b95b2c  scan/bench_bank_tier.py
+652c1f8e306e28d43cc6ec8189b1c2511333db3eecd02ab0ee4994ae6ad1bb3d  scan/bank_codec.py
+939c131e2154928965cbfef49ee8ff08f4696589d3dc4388984409a610bb3eda  scan/bank_kernels.py
+0804f85b3cc66f305df24896ad392d6ead9eef6e97f1841e152eef61a4924889  scan/bank.py
+cd55e24229883f9310fd5b05b3be36078efb87a82c98f123ace55e1c37390a1d  scan/host_bank.py
+a477ad78aa1bfc77523500ab3ff8755ad775be8e2ea590b6b7b4b42bcd781a72  speed/gdn_branch.py
+python -m speed.test_scheduler_gpu --out /content/out/scan/item8_release_interleaving.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 18105.45it/s]
+{"vs_isolated": {"counts": {"total": 254, "agreed": 254}, "max_abs": {"presence_prob": 0.014418065547943115, "iou_prob": 0.051116347312927246, "box_pred": 0.03906923532485962, "typed_prob": 0.018806621432304382}, "outliers": []}, "vs_shipped": {"counts": {"total": 254, "agreed": 254}, "max_abs": {"presence_prob": 0.013550281524658203, "iou_prob": 0.05073779821395874, "box_pred": 0.04003298282623291, "typed_prob": 0.011805154383182526}, "outliers": []}, "isolated_vs_shipped": {"counts": {"total": 127, "agreed": 127}, "max_abs": {"presence_prob": 0.006076157093048096, "iou_prob": 0.08704698085784912, "box_pred": 0.047692954540252686, "typed_prob": 0.0156438946723938}, "outliers": []}, "limits": {"presence_prob": 0.031703651, "iou_prob": 0.407418222, "box_pred": 0.424944818, "typed_prob": 0.0233531148}, "metrics": {"queue_depth": 0, "queue_limit": 256, "requests": {"completed": 96}, "batch_sizes": {"1": 32, "8": 3, "10": 1, "9": 2, "5": 1, "7": 1}, "latency_ms_histogram": {"2500": 22, "250": 9, "100": 7, "50": 15, "500": 17, "1000": 26}}}
+interleaving exit=0

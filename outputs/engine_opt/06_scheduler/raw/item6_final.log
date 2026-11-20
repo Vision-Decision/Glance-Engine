@@ -1,0 +1,31 @@
+Thu Nov 19 03:24:49 PM UTC 2026
+name, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 0 MiB
+GPU_IDLE
+python -m speed.bench_scheduler --backend scheduled --warm-shapes --tokens 8192 --out /content/out/scan/item6_final.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 16304.02it/s]
+box_1 {'burst_median_ms': 32.22, 'requests_s': 31.79, 'p50_ms': 32.22, 'p90_ms': 32.27, 'p99_ms': 32.29}
+box_4 {'burst_median_ms': 101.33, 'requests_s': 39.01, 'p50_ms': 101.33, 'p90_ms': 105.39, 'p99_ms': 105.4}
+box_16 {'burst_median_ms': 387.67, 'requests_s': 41.31, 'p50_ms': 286.22, 'p90_ms': 387.89, 'p99_ms': 390.33}
+box_64 {'burst_median_ms': 1542.48, 'requests_s': 41.5, 'p50_ms': 882.0, 'p90_ms': 1460.22, 'p99_ms': 1549.06}
+yesno_1 {'burst_median_ms': 32.26, 'requests_s': 31.99, 'p50_ms': 32.26, 'p90_ms': 32.32, 'p99_ms': 32.32}
+yesno_4 {'burst_median_ms': 103.02, 'requests_s': 38.62, 'p50_ms': 103.02, 'p90_ms': 105.47, 'p99_ms': 105.47}
+yesno_16 {'burst_median_ms': 391.07, 'requests_s': 40.82, 'p50_ms': 289.71, 'p90_ms': 391.31, 'p99_ms': 397.2}
+yesno_64 {'burst_median_ms': 1555.42, 'requests_s': 41.05, 'p50_ms': 880.55, 'p90_ms': 1464.24, 'p99_ms': 1570.43}
+multi_1 {'burst_median_ms': 45.33, 'requests_s': 21.96, 'p50_ms': 45.33, 'p90_ms': 46.1, 'p99_ms': 46.12}
+multi_4 {'burst_median_ms': 137.96, 'requests_s': 28.81, 'p50_ms': 137.95, 'p90_ms': 141.68, 'p99_ms': 141.69}
+multi_16 {'burst_median_ms': 534.74, 'requests_s': 29.91, 'p50_ms': 304.63, 'p90_ms': 534.9, 'p99_ms': 541.84}
+multi_64 {'burst_median_ms': 2136.1, 'requests_s': 29.96, 'p50_ms': 1112.89, 'p90_ms': 2124.42, 'p99_ms': 2144.75}
+followup_1 {'burst_median_ms': 11.6, 'requests_s': 86.45, 'p50_ms': 11.6, 'p90_ms': 11.62, 'p99_ms': 11.62}
+followup_4 {'burst_median_ms': 17.42, 'requests_s': 229.18, 'p50_ms': 17.42, 'p90_ms': 17.61, 'p99_ms': 17.61}
+followup_16 {'burst_median_ms': 48.63, 'requests_s': 329.45, 'p50_ms': 32.52, 'p90_ms': 48.63, 'p99_ms': 48.78}
+followup_64 {'burst_median_ms': 175.56, 'requests_s': 364.62, 'p50_ms': 97.29, 'p90_ms': 160.41, 'p99_ms': 176.24}
+gui_1 {'burst_median_ms': 97.01, 'requests_s': 10.31, 'p50_ms': 97.01, 'p90_ms': 97.06, 'p99_ms': 97.06}
+gui_4 {'burst_median_ms': 369.4, 'requests_s': 10.84, 'p50_ms': 276.77, 'p90_ms': 369.72, 'p99_ms': 373.08}
+gui_16 {'burst_median_ms': 1450.99, 'requests_s': 11.03, 'p50_ms': 817.85, 'p90_ms': 1439.97, 'p99_ms': 1456.67}
+gui_64 {'burst_median_ms': 5821.83, 'requests_s': 10.99, 'p50_ms': 3005.99, 'p90_ms': 5363.49, 'p99_ms': 5821.83}
+fresh_1 {'burst_median_ms': 162.01, 'requests_s': 6.28, 'p50_ms': 162.01, 'p90_ms': 162.49, 'p99_ms': 162.66}
+fresh_4 {'burst_median_ms': 627.35, 'requests_s': 6.38, 'p50_ms': 394.21, 'p90_ms': 627.43, 'p99_ms': 629.52}
+fresh_16 {'burst_median_ms': 2501.29, 'requests_s': 6.4, 'p50_ms': 1332.84, 'p90_ms': 2343.33, 'p99_ms': 2502.84}
+fresh_64 {'burst_median_ms': 10020.24, 'requests_s': 6.39, 'p50_ms': 5090.73, 'p90_ms': 9096.17, 'p99_ms': 10015.82}
+exit=0

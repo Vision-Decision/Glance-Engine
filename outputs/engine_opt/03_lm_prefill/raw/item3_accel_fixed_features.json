@@ -1,0 +1,88 @@
+{
+ "cublas": "13.1.1.3",
+ "torch": "2.14.1+cu130",
+ "cuda": "13.0",
+ "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "capability": [
+  12,
+  0
+ ],
+ "triton": "3.8.0",
+ "tf32": false,
+ "bf16_reduced_precision": true,
+ "flash_gdn_available": true,
+ "results": [
+  {
+   "n": 32,
+   "tokens": 4352,
+   "kind": "box",
+   "p_absdiff_max": 0.0007703490555286407,
+   "p_absdiff_mean": 3.551277404767461e-05,
+   "decision_agree": 1.0,
+   "box_absdiff_max": 0.05053946375846863,
+   "box_absdiff_mean": 0.0009541909676045179,
+   "piou_absdiff_max": 0.025881558656692505
+  },
+  {
+   "n": 32,
+   "tokens": 4672,
+   "kind": "noul",
+   "prob_absdiff_max": 0.0012227892875671387,
+   "decision_agree": 1.0
+  },
+  {
+   "n": 64,
+   "tokens": 8704,
+   "kind": "box",
+   "p_absdiff_max": 0.0010299831628799438,
+   "p_absdiff_mean": 2.778074485831894e-05,
+   "decision_agree": 1.0,
+   "box_absdiff_max": 0.3228808343410492,
+   "box_absdiff_mean": 0.0046248892322182655,
+   "piou_absdiff_max": 0.1464325189590454
+  },
+  {
+   "n": 64,
+   "tokens": 9344,
+   "kind": "noul",
+   "prob_absdiff_max": 0.0034410953521728516,
+   "decision_agree": 1.0
+  },
+  {
+   "n": 128,
+   "tokens": 17408,
+   "kind": "box",
+   "p_absdiff_max": 0.0013987571001052856,
+   "p_absdiff_mean": 2.9414235541480593e-05,
+   "decision_agree": 1.0,
+   "box_absdiff_max": 0.16169697046279907,
+   "box_absdiff_mean": 0.002835904946550727,
+   "piou_absdiff_max": 0.08617186546325684
+  },
+  {
+   "n": 128,
+   "tokens": 18688,
+   "kind": "noul",
+   "prob_absdiff_max": 0.006567955017089844,
+   "decision_agree": 1.0
+  },
+  {
+   "n": 256,
+   "tokens": 34816,
+   "kind": "box",
+   "p_absdiff_max": 0.014920830726623535,
+   "p_absdiff_mean": 0.00015919163706712425,
+   "decision_agree": 1.0,
+   "box_absdiff_max": 0.22893428802490234,
+   "box_absdiff_mean": 0.002030822914093733,
+   "piou_absdiff_max": 0.08215340971946716
+  },
+  {
+   "n": 256,
+   "tokens": 37376,
+   "kind": "noul",
+   "prob_absdiff_max": 0.0065679848194122314,
+   "decision_agree": 1.0
+  }
+ ]
+}

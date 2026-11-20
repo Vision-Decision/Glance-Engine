@@ -1,0 +1,10 @@
+Thu Nov 19 09:28:45 AM UTC 2026
+name, driver_version, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 580.82.07, 0 MiB
+GPU compute process list empty
+python -m scan.test_scan_equivalence --real --ckpt /content/ckpt/v1/ckpt_final.pt --measure-reference /content/out/scan/c0_reference_noise.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 16566.23it/s]
+[transformers] Qwen3VL video processing does not apply the per-frame pixel cap the reference implementation (qwen-vl-utils) applies, so some videos cost far more tokens than they would there. In v5.22 the capped behavior will become the default and `cap_pixels_per_frame` will be removed. Pass `cap_pixels_per_frame=True` to adopt the reference behavior now, or `False` to keep the current behavior and silence this warning.
+Reference layout maxima causal {'presence_logit': 0.17065787315368652, 'presence_prob': 0.01585182547569275, 'box_pred': 0.2055225968360901, 'iou_logit': 0.8021910190582275, 'iou_prob': 0.13851138949394226, 'typed_prob': 0.01167655736207962}
+Reference layout maxima block_bidir {'presence_logit': 0.17065787315368652, 'presence_prob': 0.01585182547569275, 'box_pred': 0.21247240900993347, 'iou_logit': 0.9209500551223755, 'iou_prob': 0.20370911061763763, 'typed_prob': 0.01167655736207962}
+reference_noise exit=0

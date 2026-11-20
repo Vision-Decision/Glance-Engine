@@ -1,0 +1,16 @@
+Thu Nov 19 08:34:26 UTC 2026
+name, memory.total [MiB], memory.used [MiB], driver_version
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 97887 MiB, 0 MiB, 580.82.07
+GPU compute process list empty before before in /content/item1-before-2a51eed
+python -m scan.bench_scan --ckpt /content/ckpt/v1/ckpt_final.pt --parts fresh --Tvs 128\,256 --Ns_fresh 32\,64\,128\,256 --n_calls 10 --fresh_kind yesno --fresh_chunked 1 --max_fresh_tokens 16384 --out /content/out/scan/item1_before.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 16705.77it/s]
+fresh 128 32 {"prep_ms": 28.58, "vision_ms": 60.14, "lm_ms": 153.13, "total_ms": 243.97, "total_ms_p90": 249.81, "tokens": 4096, "chunks": 1, "images_per_s": 131.17, "readout": "yesno"}
+fresh 128 64 {"prep_ms": 50.89, "vision_ms": 128.44, "lm_ms": 335.33, "total_ms": 514.92, "total_ms_p90": 1328.32, "tokens": 8192, "chunks": 1, "images_per_s": 124.29, "readout": "yesno"}
+fresh 128 128 {"prep_ms": 96.47, "vision_ms": 265.25, "lm_ms": 2223.64, "total_ms": 2586.16, "total_ms_p90": 2830.69, "tokens": 16384, "chunks": 1, "images_per_s": 49.49, "readout": "yesno"}
+fresh 128 256 {"prep_ms": 206.13, "vision_ms": 530.26, "lm_ms": 2924.24, "total_ms": 3650.0, "total_ms_p90": 3887.53, "tokens": 32768, "chunks": 2, "images_per_s": 70.14, "readout": "yesno"}
+fresh 256 32 {"prep_ms": 46.03, "vision_ms": 145.79, "lm_ms": 312.99, "total_ms": 504.71, "total_ms_p90": 506.31, "tokens": 8192, "chunks": 1, "images_per_s": 63.4, "readout": "yesno"}
+fresh 256 64 {"prep_ms": 88.61, "vision_ms": 293.83, "lm_ms": 1363.44, "total_ms": 1745.94, "total_ms_p90": 2502.66, "tokens": 16384, "chunks": 1, "images_per_s": 36.66, "readout": "yesno"}
+fresh 256 128 {"prep_ms": 177.89, "vision_ms": 587.63, "lm_ms": 2005.78, "total_ms": 2770.87, "total_ms_p90": 3526.77, "tokens": 32768, "chunks": 2, "images_per_s": 46.19, "readout": "yesno"}
+fresh 256 256 {"prep_ms": 354.24, "vision_ms": 1175.31, "lm_ms": 3288.81, "total_ms": 4820.27, "total_ms_p90": 5590.5, "tokens": 65536, "chunks": 4, "images_per_s": 53.11, "readout": "yesno"}
+BENCH_DONE
+stage=before exit=0

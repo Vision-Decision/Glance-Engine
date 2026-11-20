@@ -1,0 +1,471 @@
+{
+ "cublas": "13.1.1.3",
+ "torch": "2.14.1+cu130",
+ "cuda": "13.0",
+ "device": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "capability": [
+  12,
+  0
+ ],
+ "triton": "3.8.0",
+ "tf32": false,
+ "bf16_reduced_precision": true,
+ "results": [
+  {
+   "mode": "causal",
+   "n": 1,
+   "query": 0,
+   "tokens": 146,
+   "captures": 1,
+   "live_graphs": 1,
+   "reserved_GiB": 9.72265625,
+   "eager_ms": 18.01638412475586,
+   "graph_ms": 8.870271682739258,
+   "vs_eager": {
+    "prob_absdiff_max": 5.273934220895171e-06,
+    "decision_agree": 1.0
+   },
+   "vs_original": {
+    "prob_absdiff_max": 4.0619634091854095e-06,
+    "decision_agree": 1.0
+   }
+  },
+  {
+   "mode": "causal",
+   "n": 1,
+   "query": 1,
+   "tokens": 152,
+   "captures": 0,
+   "live_graphs": 1,
+   "reserved_GiB": 9.7265625,
+   "eager_ms": 18.18239974975586,
+   "graph_ms": 8.867839813232422,
+   "vs_eager": {
+    "prob_absdiff_max": 4.043779335916042e-05,
+    "decision_agree": 1.0
+   },
+   "vs_original": {
+    "prob_absdiff_max": 1.6748905181884766e-05,
+    "decision_agree": 1.0
+   }
+  },
+  {
+   "mode": "causal",
+   "n": 1,
+   "query": 2,
+   "tokens": 146,
+   "captures": 0,
+   "live_graphs": 1,
+   "reserved_GiB": 9.7265625,
+   "eager_ms": 18.064512252807617,
+   "graph_ms": 8.86956787109375,
+   "vs_eager": {
+    "prob_absdiff_max": 1.1603930033743382e-05,
+    "decision_agree": 1.0
+   },
+   "vs_original": {
+    "prob_absdiff_max": 1.335999695584178e-05,
+    "decision_agree": 1.0
+   }
+  },
+  {
+   "mode": "causal",
+   "n": 1,
+   "query": 3,
+   "tokens": 146,
+   "captures": 0,
+   "live_graphs": 1,
+   "reserved_GiB": 9.7265625,
+   "eager_ms": 18.28214454650879,
+   "graph_ms": 8.87116813659668,
+   "vs_eager": {
+    "prob_absdiff_max": 5.273934220895171e-06,
+    "decision_agree": 1.0
+   },
+   "vs_original": {
+    "prob_absdiff_max": 4.0619634091854095e-06,
+    "decision_agree": 1.0
+   }
+  },
+  {
+   "mode": "causal",
+   "n": 4,
+   "query": 0,
+   "tokens": 584,
+   "captures": 1,
+   "live_graphs": 2,
+   "reserved_GiB": 10.025390625,
+   "eager_ms": 19.006784439086914,
+   "graph_ms": 20.235647201538086,
+   "vs_eager": {
+    "prob_absdiff_max": 8.431612513959408e-06,
+    "decision_agree": 1.0
+   },
+   "vs_original": {
+    "prob_absdiff_max": 2.827600110322237e-05,
+    "decision_agree": 1.0
+   }
+  },
+  {
+   "mode": "causal",
+   "n": 4,
+   "query": 1,
+   "tokens": 608,
+   "captures": 0,
+   "live_graphs": 2,
+   "reserved_GiB": 10.025390625,
+   "eager_ms": 19.108736038208008,
+   "graph_ms": 20.255647659301758,
+   "vs_eager": {
+    "prob_absdiff_max": 0.00011417991481721401,
+    "decision_agree": 1.0
+   },
+   "vs_original": {
+    "prob_absdiff_max": 7.546658162027597e-05,
+    "decision_agree": 1.0
+   }
+  },
+  {
+   "mode": "causal",
+   "n": 4,
+   "query": 2,
+   "tokens": 584,
+   "captures": 0,
+   "live_graphs": 2,
+   "reserved_GiB": 10.025390625,
+   "eager_ms": 19.045503616333008,
+   "graph_ms": 20.248512268066406,
+   "vs_eager": {
+    "prob_absdiff_max": 2.3918517399579287e-05,
+    "decision_agree": 1.0
+   },
+   "vs_original": {
+    "prob_absdiff_max": 1.991898170672357e-05,
+    "decision_agree": 1.0
+   }
+  },
+  {
+   "mode": "causal",
+   "n": 4,
+   "query": 3,
+   "tokens": 584,
+   "captures": 0,
+   "live_graphs": 2,
+   "reserved_GiB": 10.025390625,
+   "eager_ms": 19.036319732666016,
+   "graph_ms": 20.240224838256836,
+   "vs_eager": {
+    "prob_absdiff_max": 8.431612513959408e-06,
+    "decision_agree": 1.0
+   },
+   "vs_original": {
+    "prob_absdiff_max": 2.827600110322237e-05,
+    "decision_agree": 1.0
+   }
+  },
+  {
+   "mode": "causal",
+   "n": 8,
+   "query": 0,
+   "tokens": 1168,
+   "captures": 1,
+   "live_graphs": 3,
+   "reserved_GiB": 10.263671875,
+   "eager_ms": 31.668703079223633,
+   "graph_ms": 34.1644172668457,
+   "vs_eager": {
+    "prob_absdiff_max": 1.4603137969970703e-05,
+    "decision_agree": 1.0
+   },
+   "vs_original": {
+    "prob_absdiff_max": 1.9490718841552734e-05,
+    "decision_agree": 1.0
+   }
+  },
+  {
+   "mode": "causal",
+   "n": 8,
+   "query": 1,
+   "tokens": 1216,
+   "captures": 0,
+   "live_graphs": 3,
+   "reserved_GiB": 10.302734375,
+   "eager_ms": 31.945119857788086,
+   "graph_ms": 34.18048095703125,
+   "vs_eager": {
+    "prob_absdiff_max": 0.00011655408889055252,
+    "decision_agree": 1.0
+   },
+   "vs_original": {
+    "prob_absdiff_max": 0.00013709068298339844,
+    "decision_agree": 1.0
+   }
+  },
+  {
+   "mode": "causal",
+   "n": 8,
+   "query": 2,
+   "tokens": 1168,
+   "captures": 0,
+   "live_graphs": 3,
+   "reserved_GiB": 10.302734375,
+   "eager_ms": 31.680160522460938,
+   "graph_ms": 34.185150146484375,
+   "vs_eager": {
+    "prob_absdiff_max": 1.4424324035644531e-05,
+    "decision_agree": 1.0
+   },
+   "vs_original": {
+    "prob_absdiff_max": 2.5391578674316406e-05,
+    "decision_agree": 1.0
+   }
+  },
+  {
+   "mode": "causal",
+   "n": 8,
+   "query": 3,
+   "tokens": 1168,
+   "captures": 0,
+   "live_graphs": 3,
+   "reserved_GiB": 10.302734375,
+   "eager_ms": 31.674335479736328,
+   "graph_ms": 34.169822692871094,
+   "vs_eager": {
+    "prob_absdiff_max": 1.4603137969970703e-05,
+    "decision_agree": 1.0
+   },
+   "vs_original": {
+    "prob_absdiff_max": 1.9490718841552734e-05,
+    "decision_agree": 1.0
+   }
+  },
+  {
+   "mode": "block_bidir",
+   "n": 1,
+   "query": 0,
+   "tokens": 146,
+   "captures": 1,
+   "live_graphs": 1,
+   "reserved_GiB": 10.181640625,
+   "eager_ms": 19.18604850769043,
+   "graph_ms": 8.963359832763672,
+   "vs_eager": {
+    "prob_absdiff_max": 7.882219506427646e-06,
+    "decision_agree": 1.0
+   },
+   "vs_original": {
+    "prob_absdiff_max": 9.443785529583693e-06,
+    "decision_agree": 1.0
+   }
+  },
+  {
+   "mode": "block_bidir",
+   "n": 1,
+   "query": 1,
+   "tokens": 152,
+   "captures": 0,
+   "live_graphs": 1,
+   "reserved_GiB": 10.185546875,
+   "eager_ms": 19.397024154663086,
+   "graph_ms": 8.963552474975586,
+   "vs_eager": {
+    "prob_absdiff_max": 2.104043960571289e-05,
+    "decision_agree": 1.0
+   },
+   "vs_original": {
+    "prob_absdiff_max": 1.1682510375976562e-05,
+    "decision_agree": 1.0
+   }
+  },
+  {
+   "mode": "block_bidir",
+   "n": 1,
+   "query": 2,
+   "tokens": 146,
+   "captures": 0,
+   "live_graphs": 1,
+   "reserved_GiB": 10.185546875,
+   "eager_ms": 19.257728576660156,
+   "graph_ms": 8.967967987060547,
+   "vs_eager": {
+    "prob_absdiff_max": 8.225440979003906e-06,
+    "decision_agree": 1.0
+   },
+   "vs_original": {
+    "prob_absdiff_max": 6.481772288680077e-06,
+    "decision_agree": 1.0
+   }
+  },
+  {
+   "mode": "block_bidir",
+   "n": 1,
+   "query": 3,
+   "tokens": 146,
+   "captures": 0,
+   "live_graphs": 1,
+   "reserved_GiB": 10.185546875,
+   "eager_ms": 19.24393653869629,
+   "graph_ms": 8.980735778808594,
+   "vs_eager": {
+    "prob_absdiff_max": 7.882219506427646e-06,
+    "decision_agree": 1.0
+   },
+   "vs_original": {
+    "prob_absdiff_max": 9.443785529583693e-06,
+    "decision_agree": 1.0
+   }
+  },
+  {
+   "mode": "block_bidir",
+   "n": 4,
+   "query": 0,
+   "tokens": 584,
+   "captures": 1,
+   "live_graphs": 2,
+   "reserved_GiB": 10.28125,
+   "eager_ms": 19.273632049560547,
+   "graph_ms": 20.396320343017578,
+   "vs_eager": {
+    "prob_absdiff_max": 1.7762184143066406e-05,
+    "decision_agree": 1.0
+   },
+   "vs_original": {
+    "prob_absdiff_max": 2.5153160095214844e-05,
+    "decision_agree": 1.0
+   }
+  },
+  {
+   "mode": "block_bidir",
+   "n": 4,
+   "query": 1,
+   "tokens": 608,
+   "captures": 0,
+   "live_graphs": 2,
+   "reserved_GiB": 10.28125,
+   "eager_ms": 19.240447998046875,
+   "graph_ms": 20.393695831298828,
+   "vs_eager": {
+    "prob_absdiff_max": 3.30805778503418e-05,
+    "decision_agree": 1.0
+   },
+   "vs_original": {
+    "prob_absdiff_max": 0.0001252293586730957,
+    "decision_agree": 1.0
+   }
+  },
+  {
+   "mode": "block_bidir",
+   "n": 4,
+   "query": 2,
+   "tokens": 584,
+   "captures": 0,
+   "live_graphs": 2,
+   "reserved_GiB": 10.28125,
+   "eager_ms": 19.19843292236328,
+   "graph_ms": 20.390304565429688,
+   "vs_eager": {
+    "prob_absdiff_max": 1.3887882232666016e-05,
+    "decision_agree": 1.0
+   },
+   "vs_original": {
+    "prob_absdiff_max": 2.3186206817626953e-05,
+    "decision_agree": 1.0
+   }
+  },
+  {
+   "mode": "block_bidir",
+   "n": 4,
+   "query": 3,
+   "tokens": 584,
+   "captures": 0,
+   "live_graphs": 2,
+   "reserved_GiB": 10.28125,
+   "eager_ms": 19.185184478759766,
+   "graph_ms": 20.390527725219727,
+   "vs_eager": {
+    "prob_absdiff_max": 1.7762184143066406e-05,
+    "decision_agree": 1.0
+   },
+   "vs_original": {
+    "prob_absdiff_max": 2.5153160095214844e-05,
+    "decision_agree": 1.0
+   }
+  },
+  {
+   "mode": "block_bidir",
+   "n": 8,
+   "query": 0,
+   "tokens": 1168,
+   "captures": 1,
+   "live_graphs": 3,
+   "reserved_GiB": 10.419921875,
+   "eager_ms": 31.900575637817383,
+   "graph_ms": 34.44179153442383,
+   "vs_eager": {
+    "prob_absdiff_max": 1.3891374692320824e-05,
+    "decision_agree": 1.0
+   },
+   "vs_original": {
+    "prob_absdiff_max": 1.5114521374925971e-05,
+    "decision_agree": 1.0
+   }
+  },
+  {
+   "mode": "block_bidir",
+   "n": 8,
+   "query": 1,
+   "tokens": 1216,
+   "captures": 0,
+   "live_graphs": 3,
+   "reserved_GiB": 10.458984375,
+   "eager_ms": 32.142337799072266,
+   "graph_ms": 34.4469108581543,
+   "vs_eager": {
+    "prob_absdiff_max": 0.00027298927307128906,
+    "decision_agree": 1.0
+   },
+   "vs_original": {
+    "prob_absdiff_max": 0.00012182258069515228,
+    "decision_agree": 1.0
+   }
+  },
+  {
+   "mode": "block_bidir",
+   "n": 8,
+   "query": 2,
+   "tokens": 1168,
+   "captures": 0,
+   "live_graphs": 3,
+   "reserved_GiB": 10.458984375,
+   "eager_ms": 31.897951126098633,
+   "graph_ms": 34.4284782409668,
+   "vs_eager": {
+    "prob_absdiff_max": 4.5406632125377655e-06,
+    "decision_agree": 1.0
+   },
+   "vs_original": {
+    "prob_absdiff_max": 1.1585623724386096e-05,
+    "decision_agree": 1.0
+   }
+  },
+  {
+   "mode": "block_bidir",
+   "n": 8,
+   "query": 3,
+   "tokens": 1168,
+   "captures": 0,
+   "live_graphs": 3,
+   "reserved_GiB": 10.458984375,
+   "eager_ms": 31.91654396057129,
+   "graph_ms": 34.43360137939453,
+   "vs_eager": {
+    "prob_absdiff_max": 1.3891374692320824e-05,
+    "decision_agree": 1.0
+   },
+   "vs_original": {
+    "prob_absdiff_max": 1.5114521374925971e-05,
+    "decision_agree": 1.0
+   }
+  }
+ ]
+}

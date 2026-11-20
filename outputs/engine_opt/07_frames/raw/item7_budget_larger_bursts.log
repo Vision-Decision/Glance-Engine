@@ -1,0 +1,13 @@
+Thu Nov 19 05:40:00 PM UTC 2026
+name, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 0 MiB
+GPU_IDLE
+e19af4d85df2573df0fb9d83aecb2774aaea9340e53d0d9f45882234415ae49d  speed/engine.py
+0a869a41d6084b3781ec9773638d302d18f31a2b9c56ce9f9c5ca6f6fe05fae4  speed/decision_worker.py
+4cf59fe91a4637c26df3a2ee6d5d00e6851a5c843c9a3f35a98d839d4118834e  speed/vision_mlp.py
+1219ac6e0fc8e2935312904343afa2b46db6bbd6de484bdbd0528cad4b696d44  scan/engine.py
+python -m speed.bench_scheduler --backend scheduled --warm-shapes --parts fresh --clients 16\,64 --tokens 16384 --out /content/out/scan/item7_budget_larger_bursts.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 15808.83it/s]
+fresh_16 {'burst_median_ms': 2398.17, 'requests_s': 6.68, 'p50_ms': 1353.35, 'p90_ms': 2250.7, 'p99_ms': 2400.56}
+fresh_64 {'burst_median_ms': 9658.52, 'requests_s': 6.62, 'p50_ms': 4994.47, 'p90_ms': 9052.34, 'p99_ms': 9655.68}
+larger_bursts exit=0

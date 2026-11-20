@@ -1,0 +1,48 @@
+Thu Nov 19 02:31:46 PM UTC 2026
+name, driver_version, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 580.82.07, 0 MiB
+GPU compute process list empty
+112c8141744dfc626a75c49707b253cf50d475ffae084d43bc4dd32ed5c68a2b  speed/engine.py
+264dc486606b4e239e9a2aaedc59cd302bc4d38649dc0ae7c5919f4758a09dd8  speed/bench_glance.py
+2411def1e9d7f4b19b0701beb0bb132d6da4441151ccf76f39319ce9a1d0189d  speed/bench_w12.py
+6df0e68afed540b705d9382d07ab698ddced824e03388baf90211e5c65db8422  speed/test_w12.py
+25023c4ce1df39e817adcdb264396eae33253f10e9b6f00d7aa6a8ca875fc317  speed/w12.py
+13b072b822abf9cbdb664032e57387422215e8d72d0e34446becf1206d1b052d  speed/specpilot/w12.cu
+783ab0eca111f8631b32ec7b1ddc786aa12cd120cf19cf72f9fec56a96689d3a  scan/engine.py
+bbd6ba5baf19263dfca5255ef2a4ca23a6abdaab5ed1937b6d15ef64ee83b172  scan/bench_scan.py
+python -m speed.bench_w12 --stage encode --ckpt /content/ckpt/v1/ckpt_final.pt --out /content/out/scan/item5_verified_encode.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 17443.49it/s]
+layers.0.linear_attn.out_proj 4
+layers.1.linear_attn.out_proj 8
+layers.2.linear_attn.out_proj 12
+layers.3.self_attn.o_proj 16
+layers.4.linear_attn.out_proj 20
+layers.5.linear_attn.out_proj 24
+layers.6.linear_attn.out_proj 28
+layers.7.self_attn.o_proj 32
+layers.8.linear_attn.out_proj 36
+layers.9.linear_attn.out_proj 40
+layers.10.linear_attn.out_proj 44
+layers.11.self_attn.o_proj 48
+layers.12.linear_attn.out_proj 52
+layers.13.linear_attn.out_proj 56
+layers.14.linear_attn.out_proj 60
+layers.15.self_attn.o_proj 64
+layers.16.linear_attn.out_proj 68
+layers.17.linear_attn.out_proj 72
+layers.18.linear_attn.out_proj 76
+layers.19.self_attn.o_proj 80
+layers.20.linear_attn.out_proj 84
+layers.21.linear_attn.out_proj 88
+layers.22.linear_attn.out_proj 92
+layers.23.self_attn.o_proj 96
+layers.24.linear_attn.out_proj 100
+layers.25.linear_attn.out_proj 104
+layers.26.linear_attn.out_proj 108
+layers.27.self_attn.o_proj 112
+layers.28.linear_attn.out_proj 116
+layers.29.linear_attn.out_proj 120
+layers.30.linear_attn.out_proj 124
+layers.31.self_attn.o_proj 128
+{'weights': 3569090560, 'bytes': 5366326968, 'escapes': 281134}
+verified_encode exit=0

@@ -1,0 +1,117 @@
+{
+  "vs_isolated": {
+    "counts": {
+      "total": 254,
+      "agreed": 254
+    },
+    "max_abs": {
+      "presence_prob": 0.003019094467163086,
+      "iou_prob": 0.03209495544433594,
+      "box_pred": 0.04254606366157532,
+      "typed_prob": 0.015961050987243652
+    },
+    "outliers": []
+  },
+  "vs_shipped": {
+    "counts": {
+      "total": 254,
+      "agreed": 254
+    },
+    "max_abs": {
+      "presence_prob": 0.012209713459014893,
+      "iou_prob": 0.08711063861846924,
+      "box_pred": 0.04135173559188843,
+      "typed_prob": 0.0274275541305542
+    },
+    "outliers": [
+      {
+        "sample": [
+          0,
+          7
+        ],
+        "image": 1,
+        "question": 1,
+        "actual": {
+          "probs": [
+            0.20511725544929504,
+            0.7948827147483826
+          ]
+        },
+        "expected": {
+          "probs": [
+            0.177689790725708,
+            0.8223102688789368
+          ]
+        },
+        "delta": {
+          "typed_prob": 0.0274275541305542
+        }
+      }
+    ]
+  },
+  "isolated_vs_shipped": {
+    "counts": {
+      "total": 127,
+      "agreed": 127
+    },
+    "max_abs": {
+      "presence_prob": 0.012209713459014893,
+      "iou_prob": 0.08819776773452759,
+      "box_pred": 0.04749792814254761,
+      "typed_prob": 0.0274275541305542
+    },
+    "outliers": [
+      {
+        "sample": [
+          7
+        ],
+        "image": 1,
+        "question": 1,
+        "actual": {
+          "probs": [
+            0.20511725544929504,
+            0.7948827147483826
+          ]
+        },
+        "expected": {
+          "probs": [
+            0.177689790725708,
+            0.8223102688789368
+          ]
+        },
+        "delta": {
+          "typed_prob": 0.0274275541305542
+        }
+      }
+    ]
+  },
+  "limits": {
+    "presence_prob": 0.031703651,
+    "iou_prob": 0.407418222,
+    "box_pred": 0.424944818,
+    "typed_prob": 0.0233531148
+  },
+  "metrics": {
+    "queue_depth": 0,
+    "queue_limit": 256,
+    "requests": {
+      "completed": 96
+    },
+    "batch_sizes": {
+      "1": 32,
+      "8": 3,
+      "10": 1,
+      "9": 2,
+      "5": 1,
+      "7": 1
+    },
+    "latency_ms_histogram": {
+      "2500": 13,
+      "250": 9,
+      "100": 7,
+      "50": 15,
+      "500": 17,
+      "1000": 35
+    }
+  }
+}

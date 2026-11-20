@@ -1,0 +1,96 @@
+{
+ "128": {
+  "hf": {
+   "ms": 4.569056034088135,
+   "error": {
+    "max_abs": 0.0,
+    "mean_abs": 0.0,
+    "relative_max": 0.0,
+    "equal": true
+   }
+  },
+  "linear": {
+   "ms": 0.1603199988603592,
+   "error": {
+    "max_abs": 0.03125,
+    "mean_abs": 0.0003438982821535319,
+    "relative_max": 0.003952569328248501,
+    "equal": false
+   }
+  },
+  "linear_bias_separate": {
+   "ms": 0.1810240000486374,
+   "error": {
+    "max_abs": 0.03125,
+    "mean_abs": 4.981181973562343e-07,
+    "relative_max": 0.003952569328248501,
+    "equal": false
+   }
+  },
+  "conv1x1": {
+   "ms": 0.4221760034561157,
+   "error": {
+    "max_abs": 0.03125,
+    "mean_abs": 4.981181973562343e-07,
+    "relative_max": 0.003952569328248501,
+    "equal": false
+   }
+  },
+  "channels_last": {
+   "ms": 4.516479969024658,
+   "error": {
+    "max_abs": 0.0,
+    "mean_abs": 0.0,
+    "relative_max": 0.0,
+    "equal": true
+   }
+  }
+ },
+ "256": {
+  "hf": {
+   "ms": 9.515583992004395,
+   "error": {
+    "max_abs": 0.0,
+    "mean_abs": 0.0,
+    "relative_max": 0.0,
+    "equal": true
+   }
+  },
+  "linear": {
+   "ms": 0.3005119860172272,
+   "error": {
+    "max_abs": 0.03125,
+    "mean_abs": 0.000336584314936772,
+    "relative_max": 0.003952569328248501,
+    "equal": false
+   }
+  },
+  "linear_bias_separate": {
+   "ms": 0.37619200348854065,
+   "error": {
+    "max_abs": 0.03125,
+    "mean_abs": 4.6471555492644256e-07,
+    "relative_max": 0.003952569328248501,
+    "equal": false
+   }
+  },
+  "conv1x1": {
+   "ms": 0.9325119853019714,
+   "error": {
+    "max_abs": 0.03125,
+    "mean_abs": 4.6471555492644256e-07,
+    "relative_max": 0.003952569328248501,
+    "equal": false
+   }
+  },
+  "channels_last": {
+   "ms": 9.31875228881836,
+   "error": {
+    "max_abs": 0.0,
+    "mean_abs": 0.0,
+    "relative_max": 0.0,
+    "equal": true
+   }
+  }
+ }
+}

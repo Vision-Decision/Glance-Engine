@@ -1,0 +1,17 @@
+paged2 exit=0
+pushed /content/out/scan/item2_paged2.json -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item2_paged2.log -> Vision-Decision/collection-scan-results
+features_final exit=0
+pushed /content/out/scan/item2_features_final.json -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item2_features_final.log -> Vision-Decision/collection-scan-results
+final exit=0
+pushed /content/out/scan/item2_final.json -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item2_final.log -> Vision-Decision/collection-scan-results
+profile_final exit=0
+pushed /content/out/scan/item2_profile_final.json -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item2_profile_final.log -> Vision-Decision/collection-scan-results
+real_final exit=0
+pushed /content/out/scan/item2_real_final.log -> Vision-Decision/collection-scan-results
+equiv_final exit=0
+pushed /content/out/scan/item2_equiv_final.json -> Vision-Decision/collection-scan-results
+pushed /content/out/scan/item2_equiv_final.log -> Vision-Decision/collection-scan-results

@@ -1,0 +1,11 @@
+Thu Nov 19 10:35:23 AM UTC 2026
+name, driver_version, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 580.82.07, 0 MiB
+GPU compute process list empty
+python -m speed.bench_clients --ckpt /content/ckpt/v1/ckpt_final.pt --out /content/out/scan/item2_clients.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 23457.79it/s]
+1 41.123234999759006
+4 165.9957290003149
+16 658.2978939995883
+64 2628.199626999958
+clients exit=0

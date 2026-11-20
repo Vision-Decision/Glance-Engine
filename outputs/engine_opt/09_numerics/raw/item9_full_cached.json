@@ -1,0 +1,64 @@
+{
+ "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "torch": "2.14.1+cu130",
+ "ckpt": "/content/ckpt/v1/ckpt_final.pt",
+ "args": {
+  "ckpt": "/content/ckpt/v1/ckpt_final.pt",
+  "prep": "data/prep/eval_refcoco_val.jsonl",
+  "gprep": "data/prep/eval_grefcoco_val.jsonl",
+  "image_root": "/content/data/coco/train2014",
+  "parts": "cached",
+  "Ns": [
+   256
+  ],
+  "Ns_fresh": [
+   1,
+   2,
+   4,
+   8,
+   16,
+   32,
+   64
+  ],
+  "Tvs": [
+   64,
+   128,
+   256,
+   640
+  ],
+  "max_fresh_tokens": 16384,
+  "fresh_impl": "varlen",
+  "lm_prefill": "fused",
+  "vision_prep": "fused",
+  "fresh_kind": "box",
+  "fresh_chunked": 0,
+  "n_equiv": 24,
+  "clip_cfgs": "4x96,4x48,2x96",
+  "clip_fresh": 1,
+  "cached_tvs": "640",
+  "short": 0,
+  "w12": null,
+  "fp8": 0,
+  "n_acc": 60,
+  "n_calls": 15,
+  "out": "/content/out/scan/item9_full_cached.json"
+ },
+ "n_merged": 200,
+ "cached": {
+  "Tv640_encode_ms_per_image": 39.36653071485807,
+  "Tv640_bank_MB_per_image": 72.8583455979824,
+  "Tv640_N256_box": {
+   "prep_ms": 0.1225200030603446,
+   "model_ms": 95.58667900273576,
+   "total_ms": 95.70919900579611,
+   "total_ms_p90": 109.56900500023039
+  },
+  "Tv640_N256_noul": {
+   "prep_ms": 0.1473299998906441,
+   "model_ms": 175.6941880012164,
+   "total_ms": 175.83023799670627,
+   "total_ms_p90": 190.89258199819596
+  }
+ },
+ "peak_mem_gb": 39.73566913604736
+}

@@ -1,0 +1,1388 @@
+{
+ "128": {
+  "vision": [
+   {
+    "calls": 768,
+    "ms": 8.642899999999988,
+    "transfer_bytes": 0,
+    "kernel": "void pytorch_flash::flash_fwd_splitkv_kernel<Flash_fwd_kernel_traits<64, 64, 256, 4, false, false, cutlass::bfloat16_t, Flash_kernel_traits<64, 64, 256, 4, cutlass::bfloat16_t> >, false, false, false, false, true, false, true, false>(pytorch_flash::Flash_fwd_params)",
+    "op": "aten::_flash_attention_forward",
+    "dims": [
+     [
+      1,
+      468,
+      16,
+      64
+     ],
+     [
+      1,
+      468,
+      16,
+      64
+     ],
+     [
+      1,
+      468,
+      16,
+      64
+     ],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ],
+    "types": [
+     "c10::BFloat16",
+     "c10::BFloat16",
+     "c10::BFloat16",
+     "",
+     "",
+     "Scalar",
+     "Scalar",
+     "Scalar",
+     "Scalar",
+     "Scalar",
+     "Scalar",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    "group": "attention"
+   },
+   {
+    "calls": 24,
+    "ms": 8.274161999999999,
+    "transfer_bytes": 0,
+    "kernel": "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8::Params)",
+    "op": "aten::addmm",
+    "dims": [
+     [
+      1024
+     ],
+     [
+      14976,
+      4096
+     ],
+     [
+      4096,
+      1024
+     ],
+     [],
+     []
+    ],
+    "types": [
+     "c10::BFloat16",
+     "c10::BFloat16",
+     "c10::BFloat16",
+     "Scalar",
+     "Scalar"
+    ],
+    "group": "gemm",
+    "tflops": 364.3954568199173
+   },
+   {
+    "calls": 24,
+    "ms": 7.914832,
+    "transfer_bytes": 0,
+    "kernel": "_fc1",
+    "op": "",
+    "dims": [],
+    "types": [],
+    "group": "other"
+   },
+   {
+    "calls": 24,
+    "ms": 6.284770999999999,
+    "transfer_bytes": 0,
+    "kernel": "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8::Params)",
+    "op": "aten::addmm",
+    "dims": [
+     [
+      3072
+     ],
+     [
+      14976,
+      1024
+     ],
+     [
+      1024,
+      3072
+     ],
+     [],
+     []
+    ],
+    "types": [
+     "c10::BFloat16",
+     "c10::BFloat16",
+     "c10::BFloat16",
+     "Scalar",
+     "Scalar"
+    ],
+    "group": "gemm",
+    "tflops": 359.8063129657389
+   },
+   {
+    "calls": 1,
+    "ms": 3.905048,
+    "transfer_bytes": 0,
+    "kernel": "sm80_xmma_fprop_implicit_gemm_indexed_bf16bf16_bf16f32_f32_nhwckrsc_nhwc_tilesize64x128x32_stage5_warpsize2x2x1_g1_tensor16x8x16_execute_kernel__5x_cudnn",
+    "op": "aten::cudnn_convolution",
+    "dims": [
+     [
+      14976,
+      3,
+      2,
+      16,
+      16
+     ],
+     [
+      1024,
+      3,
+      2,
+      16,
+      16
+     ],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ],
+    "types": [
+     "c10::BFloat16",
+     "c10::BFloat16",
+     "ScalarList",
+     "ScalarList",
+     "ScalarList",
+     "Scalar",
+     "Scalar",
+     "Scalar",
+     "Scalar"
+    ],
+    "group": "gemm"
+   },
+   {
+    "calls": 768,
+    "ms": 2.9532040000000257,
+    "transfer_bytes": 0,
+    "kernel": "void pytorch_flash::flash_fwd_splitkv_combine_kernel<Flash_fwd_kernel_traits<64, 64, 256, 4, false, false, cutlass::bfloat16_t, Flash_kernel_traits<64, 64, 256, 4, cutlass::bfloat16_t> >, 8, 1, true>(pytorch_flash::Flash_fwd_params)",
+    "op": "aten::_flash_attention_forward",
+    "dims": [
+     [
+      1,
+      468,
+      16,
+      64
+     ],
+     [
+      1,
+      468,
+      16,
+      64
+     ],
+     [
+      1,
+      468,
+      16,
+      64
+     ],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ],
+    "types": [
+     "c10::BFloat16",
+     "c10::BFloat16",
+     "c10::BFloat16",
+     "",
+     "",
+     "Scalar",
+     "Scalar",
+     "Scalar",
+     "Scalar",
+     "Scalar",
+     "Scalar",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    "group": "attention"
+   },
+   {
+    "calls": 24,
+    "ms": 2.465392,
+    "transfer_bytes": 0,
+    "kernel": "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8::Params)",
+    "op": "aten::addmm",
+    "dims": [
+     [
+      1024
+     ],
+     [
+      14976,
+      1024
+     ],
+     [
+      1024,
+      1024
+     ],
+     [],
+     []
+    ],
+    "types": [
+     "c10::BFloat16",
+     "c10::BFloat16",
+     "c10::BFloat16",
+     "Scalar",
+     "Scalar"
+    ],
+    "group": "gemm",
+    "tflops": 305.73911185239507
+   },
+   {
+    "calls": 49,
+    "ms": 1.523855,
+    "transfer_bytes": 0,
+    "kernel": "void at::native::vectorized_elementwise_kernel<4, at::native::CUDAFunctor_add<c10::BFloat16>, std::array<char*, 3ul>, false>(int, at::native::CUDAFunctor_add<c10::BFloat16>, std::array<char*, 3ul>)",
+    "op": "aten::add",
+    "dims": [
+     [
+      14976,
+      1024
+     ],
+     [
+      14976,
+      1024
+     ],
+     []
+    ],
+    "types": [
+     "c10::BFloat16",
+     "c10::BFloat16",
+     "Scalar"
+    ],
+    "group": "other",
+    "logical_GBs": 2958.6900695932354
+   },
+   {
+    "calls": 49,
+    "ms": 1.3337079999999997,
+    "transfer_bytes": 0,
+    "kernel": "void at::native::(anonymous namespace)::vectorized_layer_norm_kernel<c10::BFloat16, float, false>(int, float, c10::BFloat16 const*, c10::BFloat16 const*, c10::BFloat16 const*, float*, float*, c10::BFloat16*)",
+    "op": "aten::native_layer_norm",
+    "dims": [
+     [
+      14976,
+      1024
+     ],
+     [],
+     [
+      1024
+     ],
+     [
+      1024
+     ],
+     []
+    ],
+    "types": [
+     "c10::BFloat16",
+     "ScalarList",
+     "c10::BFloat16",
+     "c10::BFloat16",
+     "Scalar"
+    ],
+    "group": "other"
+   },
+   {
+    "calls": 24,
+    "ms": 1.27582,
+    "transfer_bytes": 0,
+    "kernel": "_rotary",
+    "op": "",
+    "dims": [],
+    "types": [],
+    "group": "other"
+   },
+   {
+    "calls": 768,
+    "ms": 1.1892579999999922,
+    "transfer_bytes": 736100352,
+    "kernel": "Memcpy DtoD (Device -> Device)",
+    "op": "aten::copy_",
+    "dims": [
+     [
+      468,
+      16,
+      64
+     ],
+     [
+      468,
+      16,
+      64
+     ],
+     []
+    ],
+    "types": [
+     "c10::BFloat16",
+     "c10::BFloat16",
+     "Scalar"
+    ],
+    "group": "data_movement",
+    "logical_GBs": 1237.9153253541365,
+    "transfer_GBs": 618.9576626770682
+   },
+   {
+    "calls": 1,
+    "ms": 0.34422699999999995,
+    "transfer_bytes": 0,
+    "kernel": "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_128x256_32x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_128x256_32x3_tn_align8::Params)",
+    "op": "aten::addmm",
+    "dims": [
+     [
+      4096
+     ],
+     [
+      3744,
+      4096
+     ],
+     [
+      4096,
+      4096
+     ],
+     [],
+     []
+    ],
+    "types": [
+     "c10::BFloat16",
+     "c10::BFloat16",
+     "c10::BFloat16",
+     "Scalar",
+     "Scalar"
+    ],
+    "group": "gemm",
+    "tflops": 364.95624517542205
+   },
+   {
+    "calls": 2,
+    "ms": 0.291042,
+    "transfer_bytes": 0,
+    "kernel": "void cudnn::engines_precompiled::nchwToNhwcKernel<__nv_bfloat16, __nv_bfloat16, float, false, true, (cudnnKernelDataType_t)0>(cudnn::engines_precompiled::nchw2nhwc_params_t<float>, __nv_bfloat16 const*, __nv_bfloat16*)",
+    "op": "aten::cudnn_convolution",
+    "dims": [
+     [
+      14976,
+      3,
+      2,
+      16,
+      16
+     ],
+     [
+      1024,
+      3,
+      2,
+      16,
+      16
+     ],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ],
+    "types": [
+     "c10::BFloat16",
+     "c10::BFloat16",
+     "ScalarList",
+     "ScalarList",
+     "ScalarList",
+     "Scalar",
+     "Scalar",
+     "Scalar",
+     "Scalar"
+    ],
+    "group": "other"
+   },
+   {
+    "calls": 1,
+    "ms": 0.217857,
+    "transfer_bytes": 0,
+    "kernel": "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_128x256_32x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_128x256_32x3_tn_align8::Params)",
+    "op": "aten::addmm",
+    "dims": [
+     [
+      2560
+     ],
+     [
+      3744,
+      4096
+     ],
+     [
+      4096,
+      2560
+     ],
+     [],
+     []
+    ],
+    "types": [
+     "c10::BFloat16",
+     "c10::BFloat16",
+     "c10::BFloat16",
+     "Scalar",
+     "Scalar"
+    ],
+    "group": "gemm",
+    "tflops": 360.40784037235437
+   },
+   {
+    "calls": 1,
+    "ms": 0.08598399999999999,
+    "transfer_bytes": 0,
+    "kernel": "void at::native::vectorized_elementwise_kernel<4, at::native::bfloat16_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda(float)#1}, std::array<char*, 2ul>, false>(int, at::native::bfloat16_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda(float)#1}, std::array<char*, 2ul>)",
+    "op": "aten::copy_",
+    "dims": [
+     [
+      14976,
+      3,
+      2,
+      16,
+      16
+     ],
+     [
+      14976,
+      3,
+      2,
+      16,
+      16
+     ],
+     []
+    ],
+    "types": [
+     "c10::BFloat16",
+     "float",
+     "Scalar"
+    ],
+    "group": "data_movement",
+    "logical_GBs": 1605.1685895050243
+   },
+   {
+    "calls": 3,
+    "ms": 0.06604900000000001,
+    "transfer_bytes": 131086976,
+    "kernel": "Memset (Device)",
+    "op": "aten::cudnn_convolution",
+    "dims": [
+     [
+      14976,
+      3,
+      2,
+      16,
+      16
+     ],
+     [
+      1024,
+      3,
+      2,
+      16,
+      16
+     ],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ],
+    "types": [
+     "c10::BFloat16",
+     "c10::BFloat16",
+     "ScalarList",
+     "ScalarList",
+     "ScalarList",
+     "Scalar",
+     "Scalar",
+     "Scalar",
+     "Scalar"
+    ],
+    "group": "data_movement",
+    "transfer_GBs": 1984.6928189677358
+   },
+   {
+    "calls": 1,
+    "ms": 0.057825,
+    "transfer_bytes": 0,
+    "kernel": "void at::native::vectorized_elementwise_kernel<4, at::native::bfloat16_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda(float)#1}, std::array<char*, 2ul>, false>(int, at::native::bfloat16_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda(float)#1}, std::array<char*, 2ul>)",
+    "op": "aten::copy_",
+    "dims": [
+     [
+      14976,
+      1024
+     ],
+     [
+      14976,
+      1024
+     ],
+     []
+    ],
+    "types": [
+     "c10::BFloat16",
+     "float",
+     "Scalar"
+    ],
+    "group": "data_movement",
+    "logical_GBs": 1591.224280155642
+   },
+   {
+    "calls": 1,
+    "ms": 0.021793,
+    "transfer_bytes": 0,
+    "kernel": "void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native::CUDAFunctor_add<c10::BFloat16> >(at::TensorIteratorBase&, at::native::CUDAFunctor_add<c10::BFloat16> const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::CUDAFunctor_add<c10::BFloat16> >(at::TensorIteratorBase&, at::native::CUDAFunctor_add<c10::BFloat16> const&)::{lambda(int)#1})",
+    "op": "aten::add_",
+    "dims": [
+     [
+      14976,
+      1024,
+      1,
+      1,
+      1
+     ],
+     [
+      1,
+      1024,
+      1,
+      1,
+      1
+     ],
+     []
+    ],
+    "types": [
+     "c10::BFloat16",
+     "c10::BFloat16",
+     "Scalar"
+    ],
+    "group": "other"
+   },
+   {
+    "calls": 24,
+    "ms": 0.012672000000000001,
+    "transfer_bytes": 44928,
+    "kernel": "Memset (Device)",
+    "op": "aten::addmm",
+    "dims": [
+     [
+      1024
+     ],
+     [
+      14976,
+      4096
+     ],
+     [
+      4096,
+      1024
+     ],
+     [],
+     []
+    ],
+    "types": [
+     "c10::BFloat16",
+     "c10::BFloat16",
+     "c10::BFloat16",
+     "Scalar",
+     "Scalar"
+    ],
+    "group": "data_movement",
+    "tflops": 237931.4269090909,
+    "transfer_GBs": 3.5454545454545454
+   },
+   {
+    "calls": 1,
+    "ms": 0.01216,
+    "transfer_bytes": 0,
+    "kernel": "void at::native::vectorized_elementwise_kernel<4, at::native::GeluCUDAKernelImpl(at::TensorIteratorBase&, at::native::GeluType)::{lambda()#2}::operator()() const::{lambda()#4}::operator()() const::{lambda(c10::BFloat16)#1}, std::array<char*, 2ul>, false>(int, at::native::GeluCUDAKernelImpl(at::TensorIteratorBase&, at::native::GeluType)::{lambda()#2}::operator()() const::{lambda()#4}::operator()() const::{lambda(c10::BFloat16)#1}, std::array<char*, 2ul>)",
+    "op": "aten::gelu",
+    "dims": [
+     [
+      3744,
+      4096
+     ],
+     []
+    ],
+    "types": [
+     "c10::BFloat16",
+     ""
+    ],
+    "group": "other"
+   },
+   {
+    "calls": 1,
+    "ms": 0.000513,
+    "transfer_bytes": 1920,
+    "kernel": "Memset (Device)",
+    "op": "aten::addmm",
+    "dims": [
+     [
+      4096
+     ],
+     [
+      3744,
+      4096
+     ],
+     [
+      4096,
+      4096
+     ],
+     [],
+     []
+    ],
+    "types": [
+     "c10::BFloat16",
+     "c10::BFloat16",
+     "c10::BFloat16",
+     "Scalar",
+     "Scalar"
+    ],
+    "group": "data_movement",
+    "tflops": 244888.4861754386,
+    "transfer_GBs": 3.742690058479532
+   },
+   {
+    "calls": 1,
+    "ms": 0.000416,
+    "transfer_bytes": 1200,
+    "kernel": "Memset (Device)",
+    "op": "aten::addmm",
+    "dims": [
+     [
+      2560
+     ],
+     [
+      3744,
+      4096
+     ],
+     [
+      4096,
+      2560
+     ],
+     [],
+     []
+    ],
+    "types": [
+     "c10::BFloat16",
+     "c10::BFloat16",
+     "c10::BFloat16",
+     "Scalar",
+     "Scalar"
+    ],
+    "group": "data_movement",
+    "tflops": 188743.68,
+    "transfer_GBs": 2.884615384615385
+   }
+  ],
+  "tower_ms": 41.90310287475586,
+  "lm_tokens": 4672,
+  "lm_stages": {
+   "samples": [
+    {
+     "LM dense": 86.94544275105,
+     "GDN": 8.08012817800045,
+     "LM attention": 1.7824321389198303,
+     "heads": 0.6515840291976929
+    },
+    {
+     "LM dense": 87.7286102771759,
+     "GDN": 8.07699179649353,
+     "LM attention": 1.7885439991950989,
+     "heads": 0.6567999720573425
+    },
+    {
+     "LM dense": 88.63651245832443,
+     "GDN": 8.087040409445763,
+     "LM attention": 1.7888959795236588,
+     "heads": 0.6578239798545837
+    }
+   ],
+   "median_ms": {
+    "LM dense": 87.7286102771759,
+    "GDN": 8.08012817800045,
+    "LM attention": 1.7885439991950989,
+    "heads": 0.6567999720573425
+   }
+  }
+ },
+ "256": {
+  "vision": [
+   {
+    "calls": 1536,
+    "ms": 49.28314500000011,
+    "transfer_bytes": 0,
+    "kernel": "void pytorch_flash::flash_fwd_splitkv_kernel<Flash_fwd_kernel_traits<64, 64, 256, 4, false, false, cutlass::bfloat16_t, Flash_kernel_traits<64, 64, 256, 4, cutlass::bfloat16_t> >, false, false, false, false, true, false, true, false>(pytorch_flash::Flash_fwd_params)",
+    "op": "aten::_flash_attention_forward",
+    "dims": [
+     [
+      1,
+      1008,
+      16,
+      64
+     ],
+     [
+      1,
+      1008,
+      16,
+      64
+     ],
+     [
+      1,
+      1008,
+      16,
+      64
+     ],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ],
+    "types": [
+     "c10::BFloat16",
+     "c10::BFloat16",
+     "c10::BFloat16",
+     "",
+     "",
+     "Scalar",
+     "Scalar",
+     "Scalar",
+     "Scalar",
+     "Scalar",
+     "Scalar",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    "group": "attention"
+   },
+   {
+    "calls": 24,
+    "ms": 33.630483,
+    "transfer_bytes": 0,
+    "kernel": "_fc1",
+    "op": "",
+    "dims": [],
+    "types": [],
+    "group": "other"
+   },
+   {
+    "calls": 24,
+    "ms": 31.59943,
+    "transfer_bytes": 0,
+    "kernel": "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8::Params)",
+    "op": "aten::addmm",
+    "dims": [
+     [
+      1024
+     ],
+     [
+      64512,
+      4096
+     ],
+     [
+      4096,
+      1024
+     ],
+     [],
+     []
+    ],
+    "types": [
+     "c10::BFloat16",
+     "c10::BFloat16",
+     "c10::BFloat16",
+     "Scalar",
+     "Scalar"
+    ],
+    "group": "gemm",
+    "tflops": 411.01947418367985
+   },
+   {
+    "calls": 24,
+    "ms": 26.517511,
+    "transfer_bytes": 0,
+    "kernel": "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8::Params)",
+    "op": "aten::addmm",
+    "dims": [
+     [
+      3072
+     ],
+     [
+      64512,
+      1024
+     ],
+     [
+      1024,
+      3072
+     ],
+     [],
+     []
+    ],
+    "types": [
+     "c10::BFloat16",
+     "c10::BFloat16",
+     "c10::BFloat16",
+     "Scalar",
+     "Scalar"
+    ],
+    "group": "gemm",
+    "tflops": 367.34163426303473
+   },
+   {
+    "calls": 1,
+    "ms": 16.747818,
+    "transfer_bytes": 0,
+    "kernel": "sm80_xmma_fprop_implicit_gemm_indexed_bf16bf16_bf16f32_f32_nhwckrsc_nhwc_tilesize64x128x32_stage5_warpsize2x2x1_g1_tensor16x8x16_execute_kernel__5x_cudnn",
+    "op": "aten::cudnn_convolution",
+    "dims": [
+     [
+      64512,
+      3,
+      2,
+      16,
+      16
+     ],
+     [
+      1024,
+      3,
+      2,
+      16,
+      16
+     ],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ],
+    "types": [
+     "c10::BFloat16",
+     "c10::BFloat16",
+     "ScalarList",
+     "ScalarList",
+     "ScalarList",
+     "Scalar",
+     "Scalar",
+     "Scalar",
+     "Scalar"
+    ],
+    "group": "gemm"
+   },
+   {
+    "calls": 49,
+    "ms": 12.749524000000005,
+    "transfer_bytes": 0,
+    "kernel": "void at::native::vectorized_elementwise_kernel<4, at::native::CUDAFunctor_add<c10::BFloat16>, std::array<char*, 3ul>, false>(int, at::native::CUDAFunctor_add<c10::BFloat16>, std::array<char*, 3ul>)",
+    "op": "aten::add",
+    "dims": [
+     [
+      64512,
+      1024
+     ],
+     [
+      64512,
+      1024
+     ],
+     []
+    ],
+    "types": [
+     "c10::BFloat16",
+     "c10::BFloat16",
+     "Scalar"
+    ],
+    "group": "other",
+    "logical_GBs": 1523.3293942581695
+   },
+   {
+    "calls": 1536,
+    "ms": 10.58364500000001,
+    "transfer_bytes": 0,
+    "kernel": "void pytorch_flash::flash_fwd_splitkv_combine_kernel<Flash_fwd_kernel_traits<64, 64, 256, 4, false, false, cutlass::bfloat16_t, Flash_kernel_traits<64, 64, 256, 4, cutlass::bfloat16_t> >, 8, 2, true>(pytorch_flash::Flash_fwd_params)",
+    "op": "aten::_flash_attention_forward",
+    "dims": [
+     [
+      1,
+      1008,
+      16,
+      64
+     ],
+     [
+      1,
+      1008,
+      16,
+      64
+     ],
+     [
+      1,
+      1008,
+      16,
+      64
+     ],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ],
+    "types": [
+     "c10::BFloat16",
+     "c10::BFloat16",
+     "c10::BFloat16",
+     "",
+     "",
+     "Scalar",
+     "Scalar",
+     "Scalar",
+     "Scalar",
+     "Scalar",
+     "Scalar",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    "group": "attention"
+   },
+   {
+    "calls": 24,
+    "ms": 8.999863,
+    "transfer_bytes": 0,
+    "kernel": "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8::Params)",
+    "op": "aten::addmm",
+    "dims": [
+     [
+      1024
+     ],
+     [
+      64512,
+      1024
+     ],
+     [
+      1024,
+      1024
+     ],
+     [],
+     []
+    ],
+    "types": [
+     "c10::BFloat16",
+     "c10::BFloat16",
+     "c10::BFloat16",
+     "Scalar",
+     "Scalar"
+    ],
+    "group": "gemm",
+    "tflops": 360.782744779115
+   },
+   {
+    "calls": 24,
+    "ms": 8.794012000000002,
+    "transfer_bytes": 0,
+    "kernel": "_rotary",
+    "op": "",
+    "dims": [],
+    "types": [],
+    "group": "other"
+   },
+   {
+    "calls": 49,
+    "ms": 8.007058,
+    "transfer_bytes": 0,
+    "kernel": "void at::native::(anonymous namespace)::vectorized_layer_norm_kernel<c10::BFloat16, float, false>(int, float, c10::BFloat16 const*, c10::BFloat16 const*, c10::BFloat16 const*, float*, float*, c10::BFloat16*)",
+    "op": "aten::native_layer_norm",
+    "dims": [
+     [
+      64512,
+      1024
+     ],
+     [],
+     [
+      1024
+     ],
+     [
+      1024
+     ],
+     []
+    ],
+    "types": [
+     "c10::BFloat16",
+     "ScalarList",
+     "c10::BFloat16",
+     "c10::BFloat16",
+     "Scalar"
+    ],
+    "group": "other"
+   },
+   {
+    "calls": 1536,
+    "ms": 2.9678000000000133,
+    "transfer_bytes": 3170893824,
+    "kernel": "Memcpy DtoD (Device -> Device)",
+    "op": "aten::copy_",
+    "dims": [
+     [
+      1008,
+      16,
+      64
+     ],
+     [
+      1008,
+      16,
+      64
+     ],
+     []
+    ],
+    "types": [
+     "c10::BFloat16",
+     "c10::BFloat16",
+     "Scalar"
+    ],
+    "group": "data_movement",
+    "logical_GBs": 2136.8648992519616,
+    "transfer_GBs": 1068.4324496259808
+   },
+   {
+    "calls": 1,
+    "ms": 1.317992,
+    "transfer_bytes": 0,
+    "kernel": "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8::Params)",
+    "op": "aten::addmm",
+    "dims": [
+     [
+      4096
+     ],
+     [
+      16128,
+      4096
+     ],
+     [
+      4096,
+      4096
+     ],
+     [],
+     []
+    ],
+    "types": [
+     "c10::BFloat16",
+     "c10::BFloat16",
+     "c10::BFloat16",
+     "Scalar",
+     "Scalar"
+    ],
+    "group": "gemm",
+    "tflops": 410.59875879064515
+   },
+   {
+    "calls": 2,
+    "ms": 1.203271,
+    "transfer_bytes": 0,
+    "kernel": "void cudnn::engines_precompiled::nchwToNhwcKernel<__nv_bfloat16, __nv_bfloat16, float, false, true, (cudnnKernelDataType_t)0>(cudnn::engines_precompiled::nchw2nhwc_params_t<float>, __nv_bfloat16 const*, __nv_bfloat16*)",
+    "op": "aten::cudnn_convolution",
+    "dims": [
+     [
+      64512,
+      3,
+      2,
+      16,
+      16
+     ],
+     [
+      1024,
+      3,
+      2,
+      16,
+      16
+     ],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ],
+    "types": [
+     "c10::BFloat16",
+     "c10::BFloat16",
+     "ScalarList",
+     "ScalarList",
+     "ScalarList",
+     "Scalar",
+     "Scalar",
+     "Scalar",
+     "Scalar"
+    ],
+    "group": "other"
+   },
+   {
+    "calls": 1,
+    "ms": 0.8495739999999999,
+    "transfer_bytes": 0,
+    "kernel": "void cutlass::Kernel2<cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8>(cutlass_80_tensorop_bf16_s16816gemm_relu_bf16_256x128_32x3_tn_align8::Params)",
+    "op": "aten::addmm",
+    "dims": [
+     [
+      2560
+     ],
+     [
+      16128,
+      4096
+     ],
+     [
+      4096,
+      2560
+     ],
+     [],
+     []
+    ],
+    "types": [
+     "c10::BFloat16",
+     "c10::BFloat16",
+     "c10::BFloat16",
+     "Scalar",
+     "Scalar"
+    ],
+    "group": "gemm",
+    "tflops": 398.11561389590554
+   },
+   {
+    "calls": 1,
+    "ms": 0.377987,
+    "transfer_bytes": 0,
+    "kernel": "void at::native::vectorized_elementwise_kernel<4, at::native::bfloat16_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda(float)#1}, std::array<char*, 2ul>, false>(int, at::native::bfloat16_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda(float)#1}, std::array<char*, 2ul>)",
+    "op": "aten::copy_",
+    "dims": [
+     [
+      64512,
+      3,
+      2,
+      16,
+      16
+     ],
+     [
+      64512,
+      3,
+      2,
+      16,
+      16
+     ],
+     []
+    ],
+    "types": [
+     "c10::BFloat16",
+     "float",
+     "Scalar"
+    ],
+    "group": "data_movement",
+    "logical_GBs": 1572.9180950667615
+   },
+   {
+    "calls": 3,
+    "ms": 0.332034,
+    "transfer_bytes": 536935424,
+    "kernel": "Memset (Device)",
+    "op": "aten::cudnn_convolution",
+    "dims": [
+     [
+      64512,
+      3,
+      2,
+      16,
+      16
+     ],
+     [
+      1024,
+      3,
+      2,
+      16,
+      16
+     ],
+     [],
+     [],
+     [],
+     [],
+     [],
+     [],
+     []
+    ],
+    "types": [
+     "c10::BFloat16",
+     "c10::BFloat16",
+     "ScalarList",
+     "ScalarList",
+     "ScalarList",
+     "Scalar",
+     "Scalar",
+     "Scalar",
+     "Scalar"
+    ],
+    "group": "data_movement",
+    "transfer_GBs": 1617.1097658673511
+   },
+   {
+    "calls": 1,
+    "ms": 0.265858,
+    "transfer_bytes": 0,
+    "kernel": "void at::native::vectorized_elementwise_kernel<4, at::native::bfloat16_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda(float)#1}, std::array<char*, 2ul>, false>(int, at::native::bfloat16_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda(float)#1}, std::array<char*, 2ul>)",
+    "op": "aten::copy_",
+    "dims": [
+     [
+      64512,
+      1024
+     ],
+     [
+      64512,
+      1024
+     ],
+     []
+    ],
+    "types": [
+     "c10::BFloat16",
+     "float",
+     "Scalar"
+    ],
+    "group": "data_movement",
+    "logical_GBs": 1490.8775662195608
+   },
+   {
+    "calls": 1,
+    "ms": 0.190914,
+    "transfer_bytes": 0,
+    "kernel": "void at::native::elementwise_kernel<128, 4, at::native::gpu_kernel_impl_nocast<at::native::CUDAFunctor_add<c10::BFloat16> >(at::TensorIteratorBase&, at::native::CUDAFunctor_add<c10::BFloat16> const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::CUDAFunctor_add<c10::BFloat16> >(at::TensorIteratorBase&, at::native::CUDAFunctor_add<c10::BFloat16> const&)::{lambda(int)#1})",
+    "op": "aten::add_",
+    "dims": [
+     [
+      64512,
+      1024,
+      1,
+      1,
+      1
+     ],
+     [
+      1,
+      1024,
+      1,
+      1,
+      1
+     ],
+     []
+    ],
+    "types": [
+     "c10::BFloat16",
+     "c10::BFloat16",
+     "Scalar"
+    ],
+    "group": "other"
+   },
+   {
+    "calls": 1,
+    "ms": 0.149985,
+    "transfer_bytes": 0,
+    "kernel": "void at::native::vectorized_elementwise_kernel<4, at::native::GeluCUDAKernelImpl(at::TensorIteratorBase&, at::native::GeluType)::{lambda()#2}::operator()() const::{lambda()#4}::operator()() const::{lambda(c10::BFloat16)#1}, std::array<char*, 2ul>, false>(int, at::native::GeluCUDAKernelImpl(at::TensorIteratorBase&, at::native::GeluType)::{lambda()#2}::operator()() const::{lambda()#4}::operator()() const::{lambda(c10::BFloat16)#1}, std::array<char*, 2ul>)",
+    "op": "aten::gelu",
+    "dims": [
+     [
+      16128,
+      4096
+     ],
+     []
+    ],
+    "types": [
+     "c10::BFloat16",
+     ""
+    ],
+    "group": "other"
+   }
+  ],
+  "tower_ms": 206.05824279785156,
+  "lm_tokens": 17984,
+  "lm_stages": {
+   "samples": [
+    {
+     "LM dense": 346.7168667912483,
+     "GDN": 33.065215826034546,
+     "LM attention": 6.665696203708649,
+     "heads": 1.9520319700241089
+    },
+    {
+     "LM dense": 347.3228009343147,
+     "GDN": 33.06313610076904,
+     "LM attention": 6.679263770580292,
+     "heads": 1.9561920166015625
+    },
+    {
+     "LM dense": 347.10414934158325,
+     "GDN": 33.0827831029892,
+     "LM attention": 6.681471586227417,
+     "heads": 1.9520000219345093
+    }
+   ],
+   "median_ms": {
+    "LM dense": 347.10414934158325,
+    "GDN": 33.065215826034546,
+    "LM attention": 6.679263770580292,
+    "heads": 1.9520319700241089
+   }
+  }
+ }
+}

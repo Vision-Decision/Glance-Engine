@@ -1,0 +1,135 @@
+{
+ "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "torch": "2.14.1+cu130",
+ "ckpt": "/content/ckpt/v1/ckpt_final.pt",
+ "args": {
+  "ckpt": "/content/ckpt/v1/ckpt_final.pt",
+  "prep": "data/prep/eval_refcoco_val.jsonl",
+  "gprep": "data/prep/eval_grefcoco_val.jsonl",
+  "image_root": "/content/data/coco/train2014",
+  "parts": "fresh",
+  "Ns": [
+   1,
+   8,
+   16,
+   32,
+   64,
+   128,
+   256
+  ],
+  "Ns_fresh": [
+   32,
+   64,
+   128,
+   256
+  ],
+  "Tvs": [
+   128,
+   256
+  ],
+  "max_fresh_tokens": 4096,
+  "fresh_kind": "yesno",
+  "fresh_chunked": 1,
+  "n_equiv": 24,
+  "clip_cfgs": "4x96,4x48,2x96",
+  "clip_fresh": 1,
+  "cached_tvs": "640,256,64",
+  "short": 0,
+  "fp8": 0,
+  "n_acc": 60,
+  "n_calls": 10,
+  "out": "/content/out/scan/e1b_ours_fresh_c4096.json"
+ },
+ "n_merged": 200,
+ "fresh": {
+  "Tv128_N32": {
+   "prep_ms": 26.422837499922025,
+   "vision_ms": 60.065852499974426,
+   "lm_ms": 152.85032049996516,
+   "total_ms": 241.8063240002084,
+   "total_ms_p90": 248.0386778994216,
+   "tokens": 4096,
+   "chunks": 1,
+   "images_per_s": 132.33731637214095,
+   "readout": "yesno"
+  },
+  "Tv128_N64": {
+   "prep_ms": 46.29012599980342,
+   "vision_ms": 120.11001049995684,
+   "lm_ms": 306.0080060013206,
+   "total_ms": 473.0987365010151,
+   "total_ms_p90": 486.40500600031373,
+   "tokens": 8192,
+   "chunks": 2,
+   "images_per_s": 135.278315206117,
+   "readout": "yesno"
+  },
+  "Tv128_N128": {
+   "prep_ms": 93.26572700138058,
+   "vision_ms": 240.24807499972667,
+   "lm_ms": 612.6762049989338,
+   "total_ms": 951.2264560016774,
+   "total_ms_p90": 984.250505098862,
+   "tokens": 16384,
+   "chunks": 4,
+   "images_per_s": 134.56312026688866,
+   "readout": "yesno"
+  },
+  "Tv128_N256": {
+   "prep_ms": 198.41387049928016,
+   "vision_ms": 481.18319750028604,
+   "lm_ms": 1226.6921360014749,
+   "total_ms": 1907.301182000083,
+   "total_ms_p90": 1967.6940867964731,
+   "tokens": 32768,
+   "chunks": 8,
+   "images_per_s": 134.2210671371507,
+   "readout": "yesno"
+  },
+  "Tv256_N32": {
+   "prep_ms": 40.64296250089683,
+   "vision_ms": 135.42316499933804,
+   "lm_ms": 292.29687949919025,
+   "total_ms": 468.4176770006161,
+   "total_ms_p90": 469.71650579907873,
+   "tokens": 8192,
+   "chunks": 2,
+   "images_per_s": 68.31509904772,
+   "readout": "yesno"
+  },
+  "Tv256_N64": {
+   "prep_ms": 85.99336999941443,
+   "vision_ms": 270.8400299998175,
+   "lm_ms": 584.7709885001677,
+   "total_ms": 941.8508045000635,
+   "total_ms_p90": 945.5884627011983,
+   "tokens": 16384,
+   "chunks": 4,
+   "images_per_s": 67.95131425722074,
+   "readout": "yesno"
+  },
+  "Tv256_N128": {
+   "prep_ms": 172.2633549979946,
+   "vision_ms": 541.5888359993914,
+   "lm_ms": 1169.7369929997876,
+   "total_ms": 1883.3782619994963,
+   "total_ms_p90": 1890.6108465022044,
+   "tokens": 32768,
+   "chunks": 8,
+   "images_per_s": 67.96298044987961,
+   "readout": "yesno"
+  },
+  "Tv256_N256": {
+   "prep_ms": 343.7593630005722,
+   "vision_ms": 1082.8604740017909,
+   "lm_ms": 2339.3259550020957,
+   "total_ms": 3764.711427000293,
+   "total_ms_p90": 3778.465929601043,
+   "tokens": 65536,
+   "chunks": 16,
+   "images_per_s": 67.9998998499547,
+   "readout": "yesno"
+  }
+ },
+ "peak_mem_gb": 29.34339475631714
+}

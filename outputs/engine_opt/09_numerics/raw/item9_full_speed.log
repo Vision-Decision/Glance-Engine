@@ -1,0 +1,21 @@
+Thu Nov 19 07:18:39 PM UTC 2026
+name, driver_version, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 580.82.07, 0 MiB
+GPU compute process list empty
+GLANCE_BOX_REDUCTION=tiled
+python -m speed.bench_glance --modes eng_fused --parts lat\,followup --ckpt /content/ckpt/v1/ckpt_final.pt --out /content/out/scan/item9_full_speed.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 20231.11it/s]
+eng_fused  bs1_box_N1 {"prep_ms_median": 2.25, "vision_ms_median": 9.81, "lm_ms_median": 26.13, "model_ms_median": 35.92, "model_ms_p90": 36.67, "total_ms_median": 38.15, "total_ms_p90": 39.04, "ttfa_ms_median": 38.15, "q_per_s": 26.09, "n_calls": 50, "questions_per_call": 1}
+eng_fused  bs1_box_N2 {"prep_ms_median": 2.06, "vision_ms_median": 9.91, "lm_ms_median": 26.23, "model_ms_median": 36.11, "model_ms_p90": 36.88, "total_ms_median": 38.21, "total_ms_p90": 39.02, "ttfa_ms_median": 38.21, "q_per_s": 52.15, "n_calls": 50, "questions_per_call": 2}
+eng_fused  bs1_box_N4 {"prep_ms_median": 2.31, "vision_ms_median": 9.84, "lm_ms_median": 26.33, "model_ms_median": 36.12, "model_ms_p90": 36.84, "total_ms_median": 38.35, "total_ms_p90": 39.3, "ttfa_ms_median": 38.35, "q_per_s": 103.66, "n_calls": 50, "questions_per_call": 4}
+eng_fused  bs1_box_N8 {"prep_ms_median": 2.26, "vision_ms_median": 9.91, "lm_ms_median": 26.97, "model_ms_median": 36.71, "model_ms_p90": 38.83, "total_ms_median": 39.08, "total_ms_p90": 41.27, "ttfa_ms_median": 39.08, "q_per_s": 201.11, "n_calls": 50, "questions_per_call": 8}
+eng_fused  bs1_box_N16 {"prep_ms_median": 3.1, "vision_ms_median": 9.82, "lm_ms_median": 29.8, "model_ms_median": 39.39, "model_ms_p90": 43.52, "total_ms_median": 42.5, "total_ms_p90": 46.71, "ttfa_ms_median": 42.5, "q_per_s": 366.74, "n_calls": 50, "questions_per_call": 16}
+eng_fused  bs1_box_N32 {"prep_ms_median": 3.38, "vision_ms_median": 9.86, "lm_ms_median": 36.23, "model_ms_median": 46.15, "model_ms_p90": 47.1, "total_ms_median": 49.49, "total_ms_p90": 50.47, "ttfa_ms_median": 49.49, "q_per_s": 647.6, "n_calls": 50, "questions_per_call": 32}
+eng_fused  bs1_box_N64 {"prep_ms_median": 4.39, "vision_ms_median": 9.86, "lm_ms_median": 46.53, "model_ms_median": 56.48, "model_ms_p90": 59.63, "total_ms_median": 60.84, "total_ms_p90": 64.24, "ttfa_ms_median": 60.84, "q_per_s": 1044.03, "n_calls": 50, "questions_per_call": 64}
+eng_fused followup_box_N1 {"prep_ms_median": 0.31, "model_ms_median": 9.09, "model_ms_p90": 9.14, "total_ms_median": 9.4, "total_ms_p90": 9.44, "ttfa_ms_median": 9.4, "q_per_s": 106.22, "n_calls": 50, "questions_per_call": 1}
+eng_fused followup_mixed_N1 {"prep_ms_median": 0.31, "model_ms_median": 9.1, "model_ms_p90": 9.14, "total_ms_median": 9.42, "total_ms_p90": 9.46, "ttfa_ms_median": 9.42, "q_per_s": 106.16, "n_calls": 50, "questions_per_call": 1}
+eng_fused followup_box_N8 {"prep_ms_median": 0.62, "model_ms_median": 10.28, "model_ms_p90": 10.42, "total_ms_median": 10.9, "total_ms_p90": 11.07, "ttfa_ms_median": 10.9, "q_per_s": 731.48, "n_calls": 50, "questions_per_call": 8}
+eng_fused followup_mixed_N8 {"prep_ms_median": 0.83, "model_ms_median": 14.74, "model_ms_p90": 15.67, "total_ms_median": 15.59, "total_ms_p90": 16.69, "ttfa_ms_median": 15.59, "q_per_s": 507.27, "n_calls": 50, "questions_per_call": 8}
+eng_fused followup_box_N32 {"prep_ms_median": 1.49, "model_ms_median": 18.55, "model_ms_p90": 19.64, "total_ms_median": 20.03, "total_ms_p90": 21.21, "ttfa_ms_median": 20.03, "q_per_s": 1599.87, "n_calls": 50, "questions_per_call": 32}
+eng_fused followup_mixed_N32 {"prep_ms_median": 2.26, "model_ms_median": 38.1, "model_ms_p90": 43.01, "total_ms_median": 40.35, "total_ms_p90": 45.29, "ttfa_ms_median": 40.35, "q_per_s": 779.83, "n_calls": 50, "questions_per_call": 32}
+speed exit=0

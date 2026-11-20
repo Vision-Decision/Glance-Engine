@@ -1,0 +1,11 @@
+Thu Nov 19 01:58:37 PM UTC 2026
+name, driver_version, memory.used [MiB]
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 580.82.07, 0 MiB
+GPU compute process list empty
+cda4f10367e262a06d8c48d4d24ece9a3f6a8b0df8f106bc15eb20a061188f32  speed/engine.py
+909b1daf956f0b8f75ac6e6cd9cdf1531d0f0f98c416fd8afcd27b6993f8282c  speed/bench_glance.py
+c19c419f4750920de68e82f132bcadbfc9546f61c4c0558836051152532d0f48  speed/bench_w12.py
+0f8d494ddb6fdd32093180eea9fd0bd7b8edbba53ae214e69b39beb55ee0c557  speed/w12.py
+ncu --profile-from-start off --clock-control none --cache-control none --metrics dram__bytes.sum\,gpu__time_duration.sum --page raw --csv --print-units base --log-file /content/out/scan/item5_counters.csv python -m speed.bench_w12 --stage counters --ckpt /content/ckpt/v1/ckpt_final.pt --out /content/out/scan/item5_counters.json 
+Loading weights:   0%|          | 0/723 [00:00<?, ?it/s]Loading weights: 100%|██████████| 723/723 [00:00<00:00, 20057.29it/s]
+counters exit=0

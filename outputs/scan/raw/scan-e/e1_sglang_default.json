@@ -1,0 +1,49 @@
+{
+ "backend": "sglang",
+ "version": "0.5.23",
+ "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+ "engine_args": {
+  "model_path": "Qwen/Qwen3.5-4B",
+  "mem_fraction_static": "0.8",
+  "context_length": "4096",
+  "random_seed": "0",
+  "max_running_requests": "256",
+  "chunked_prefill_size": "16384",
+  "log_level": "error"
+ },
+ "args": {
+  "prep": "data/prep/eval_refcoco_val.jsonl",
+  "image_root": "/content/data/coco/train2014",
+  "parts": "clips",
+  "Ns": "8,64,256",
+  "n_calls": 8,
+  "max_running": 256,
+  "max_batched": 16384,
+  "gpu_mem": 0.8,
+  "server_kw": "",
+  "out": "/content/out/scan/e1_sglang_default.json"
+ },
+ "modes": {
+  "clips_f4_v96_N8_yesno": {
+   "total_ms": 107.91695700004311,
+   "total_ms_p90": 132.34182039992675,
+   "n_calls": 8,
+   "cached_prompt_tokens_mean": 192.0,
+   "prompt_tokens_mean": 261.0
+  },
+  "clips_f4_v96_N64_yesno": {
+   "total_ms": 598.1164209999861,
+   "total_ms_p90": 606.4657689000001,
+   "n_calls": 8,
+   "cached_prompt_tokens_mean": 198.0,
+   "prompt_tokens_mean": 261.0
+  },
+  "clips_f4_v96_N256_yesno": {
+   "total_ms": 2236.4321945000256,
+   "total_ms_p90": 2265.969362500016,
+   "n_calls": 8,
+   "cached_prompt_tokens_mean": 240.0,
+   "prompt_tokens_mean": 261.0
+  }
+ }
+}
