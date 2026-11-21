@@ -1,0 +1,2 @@
+name, clocks.current.sm [MHz], clocks.max.sm [MHz], power.limit [W], temperature.gpu
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 180 MHz, 2430 MHz, 600.00 W, 31
